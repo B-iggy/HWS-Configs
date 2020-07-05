@@ -38,3 +38,4 @@ I credit Vermillion for his Reforged Galaxy Config from which I might take inspi
 Pull requests are welcome, if you describe what your goal of your change is and how it could benefit the gameplay on HWS.
 
 Feedback about the HWS Config files are most welcome in form of ["Issues"](https://github.com/B-iggy/HWS-Configs/issues). That way I can relate directly on the proper Config part and reference your "Issue" Feedback in a commit.
+
