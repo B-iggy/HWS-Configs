@@ -2,7 +2,7 @@
 
 ## Info
 
-HWS Configs have the goal to enrich the Multiplayer gaming experience, because the Vanilla Config files have the focus on Singleplayer. 
+HWS Configs have the goal to enrich the Multiplayer gaming experience for the [HWS Servers](https://empyrion-homeworld.net), because the Vanilla Config files have the focus on Singleplayer. 
 In concentrate heavily on performance and fun, hence some values may differ from Vanilla.
 
 I value feedback, so the Config files are constantly changing based on the Community interaction with them.
