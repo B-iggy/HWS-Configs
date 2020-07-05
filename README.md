@@ -25,7 +25,7 @@ https://docs.google.com/spreadsheets/u/1/d/1uxoPbrFKitNpAbOTHwXrMG4Ms1bHQsd1jzPt
 
 **WARNING:** This will overwrite the Vanilla Configuration and with that the Vanilla game experience! Make backups of your Vanilla Config files.
 HWS Config files can cause errors or crashes at any time.
-*if this happen you can also create an ["Issue"](https://github.com/B-iggy/HWS-Configs/issues) and let me know what went wrong*
+*If this happen you can also create an ["Issue"](https://github.com/B-iggy/HWS-Configs/issues) and let me know what went wrong*
 
 ## Changelog
 
