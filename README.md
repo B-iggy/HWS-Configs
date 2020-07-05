@@ -13,7 +13,7 @@ Other Server Owners may use my HWS Configs by giving proper credit.
 
 ## Setup
 
-1. Download the master zip
+1. [Download the master zip](https://github.com/B-iggy/HWS-Configs/archive/master.zip)
 2. Unzip the files
 3. Put the files in Content/Configuration or in your Content/Scenarios/YourScenario/Content/Configuration
 4. Restart your game or reload your savegame or rejoin the server
