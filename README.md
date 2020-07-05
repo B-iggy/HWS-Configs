@@ -27,9 +27,10 @@ HWS Config files can cause errors or crashes at any time.
 HWS uses a detailed Rock-Paper-Scissors principle for Weapons and Materials. A spreadsheet about it can be found here:
 https://docs.google.com/spreadsheets/u/1/d/1uxoPbrFKitNpAbOTHwXrMG4Ms1bHQsd1jzPt1v40kzw/edit?usp=sharing
 
+
 ## Changelog
 
-Click on the "Commits" link at the top to see what I changed with what commit. I try to explain changes as detailed as possible.
+Click on the "[Commits](https://github.com/B-iggy/HWS-Configs/commits/master)" link at the top to see what I changed with what commit. I try to explain changes as detailed as possible.
 
 ## Contribution
 
