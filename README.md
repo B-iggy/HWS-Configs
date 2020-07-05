@@ -11,6 +11,14 @@ The main intention for this repository is for HWS players to test and work with 
 
 Other Server Owners may use my HWS Configs by giving proper credit.
 
+
+### Effectiveness Weapon System (EWS)
+
+HWS uses a detailed Rock-Paper-Scissors principle for Weapons and Materials. A spreadsheet about it can be found here:
+https://docs.google.com/spreadsheets/u/1/d/1uxoPbrFKitNpAbOTHwXrMG4Ms1bHQsd1jzPt1v40kzw/edit?usp=sharing
+
+
+
 ## Setup
 
 1. [Download the master zip](https://github.com/B-iggy/HWS-Configs/archive/master.zip)
@@ -21,12 +29,6 @@ Other Server Owners may use my HWS Configs by giving proper credit.
 **WARNING:** This will overwrite the Vanilla Configuration and with that the Vanilla game experience! Make backups of your Vanilla Config files.
 HWS Config files can cause errors or crashes at any time.
 *if this happen you can also create an ["Issue"](https://github.com/B-iggy/HWS-Configs/issues) and let me know what went wrong*
-
-## Effectiveness Weapon System (EWS)
-
-HWS uses a detailed Rock-Paper-Scissors principle for Weapons and Materials. A spreadsheet about it can be found here:
-https://docs.google.com/spreadsheets/u/1/d/1uxoPbrFKitNpAbOTHwXrMG4Ms1bHQsd1jzPt1v40kzw/edit?usp=sharing
-
 
 ## Changelog
 
