@@ -11,13 +11,10 @@ The main intention for this repository is for HWS players to test and work with 
 
 Other Server Owners may use my HWS Configs by giving proper credit.
 
-
 ### Effectiveness Weapon System (EWS)
 
 HWS uses a detailed Rock-Paper-Scissors principle for Weapons and Materials. A spreadsheet about it can be found here:
 https://docs.google.com/spreadsheets/u/1/d/1uxoPbrFKitNpAbOTHwXrMG4Ms1bHQsd1jzPt1v40kzw/edit?usp=sharing
-
-
 
 ## Setup
 
