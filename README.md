@@ -19,6 +19,7 @@ Other Server Owners may use my HWS Configs by giving proper credit.
 
 **WARNING:** This will overwrite the Vanilla Configuration and with that the Vanilla game experience! Make backups of your Vanilla Config files.
 HWS Config files can cause errors or crashes at any time.
+*if this happen you can also create an ["Issue"](https://github.com/B-iggy/HWS-Configs/issues) and let me know what went wrong*
 
 ## Effectiveness Weapon System (EWS)
 
