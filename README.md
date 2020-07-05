@@ -13,8 +13,9 @@ Other Server Owners may use my HWS Configs by giving proper credit.
 
 ## Setup
 
-1. Unzip the files
-2. Put the files in Content/Configuration or in your Content/Scenarios/YourScenario/Content/Configuration
+1. Download the master zip
+2. Unzip the files
+3. Put the files in Content/Configuration or in your Content/Scenarios/YourScenario/Content/Configuration
 
 **WARNING:** This will overwrite the Vanilla Configuration and with that the Vanilla game experience! Make backups of your Vanilla Config files.
 HWS Config files can cause errors or crashes at any time.
