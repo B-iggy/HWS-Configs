@@ -27634,7 +27634,6 @@ HullCombatSmallBlocks
 ### ====================
 
 
-
 # { +Block Id: 2003, Name: WindowHeavySmallBlocks
   # Material: hullarmored, display: true
   # Shape: ModelEntity
