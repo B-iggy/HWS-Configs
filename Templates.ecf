@@ -5300,8 +5300,6 @@
   Target: "SuitC"
   { Child Inputs
     IronOre: 3
-    SiliconOre: 2
-    CopperOre: 1
   }
 }
 
