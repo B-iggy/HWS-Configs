@@ -1716,9 +1716,11 @@ HullCombatSmallBlocks
 }
 
 { +Block Id: 261, Name: ConsoleMS01
+  Class: NPCDialogue
   Material: metallight, display: true
   Shape: ModelEntity
   ShowBlockName: true
+  NPCModelRotation: false
   Model: @models/Blocks/Mothership/ConsoleMS01Prefab
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
@@ -9040,9 +9042,11 @@ HullCombatSmallBlocks
   TemplateRoot: ConsoleBlocks
 }
 { +Block Id: 636, Name: ConsoleLargeMS01
+  Class: NPCDialogue
   Group: cpgEquipment
   Material: metallight, display: true
   Shape: ModelEntity
+  NPCModelRotation: false
   Model: @models/Blocks/Mothership/ConsoleLargeMS01Prefab
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
@@ -17523,6 +17527,8 @@ HullCombatSmallBlocks
   ShowUser: Yes
 }
 { +Block Id: 1247, Name: ControlStationNPC, Ref: NPCAlienTemplate
+  Class: NPCDialogue
+  NPCModelRotation: false
   Group: cpgCrewStationAlien
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
@@ -20062,7 +20068,9 @@ HullCombatSmallBlocks
   ShowUser: Yes
 }
 { +Block Id: 1455, Name: ControlStationHuman, Ref: NPCHumanTemplate
+  Class: NPCDialogue
   Group: cpgCrewStationHuman
+  NPCModelRotation: false
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
