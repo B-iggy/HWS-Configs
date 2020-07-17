@@ -2855,7 +2855,7 @@ HullCombatSmallBlocks
   Model: Entities/Farming/ModernFarm/TomatoStage1Prefab
   IsAccessible: false, type: bool
   Collide: "bullet,rocket,melee,sight"
-  AllowPlacingAt: "Base,MS", display: truetrue
+  AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   Place: Face
@@ -2876,7 +2876,7 @@ HullCombatSmallBlocks
   IsAccessible: false, type: bool
   Collide: "bullet,rocket,melee,sight"
   Category: Farming
-  AllowPlacingAt: "Base,MS", display: truetrue
+  AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   Place: Face
@@ -7049,6 +7049,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Category: Weapons/Items
+  AllowedInBlueprint: false, display: true
   Info: bkiTurretZiraxMSLaser, display: true
   PickupTarget: TurretMSLaserBlocks
   Material: metalhard, display: true
@@ -7090,6 +7091,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Category: Weapons/Items
+  AllowedInBlueprint: false, display: true
   Info: bkiTurretZiraxMSPlasma, display: true
   PickupTarget: TurretMSLaserBlocks
   Material: metalhard, display: true
@@ -7140,6 +7142,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Category: Weapons/Items
+  AllowedInBlueprint: false, display: true
   Info: bkiTurretZiraxMSRocket, display: true
   PickupTarget: TurretMSRocketBlocks
   Material: metalhard, display: true
@@ -10973,7 +10976,7 @@ HullCombatSmallBlocks
 { +Block Id: 723, Name: LandinggearMSLight, Ref: LandinggearMSHeavy
   Model: @models/Blocks/Landinggears/LandinggearLightRetractPrefab
   # Model: @models/Blocks/Landinggears/LandinggearLightPrefab
-  SizeInBlocks: "1,1,2", display: truetrue
+  SizeInBlocks: "1,1,2", display: true
   HitPoints: 350, type: int, display: true
   Mass: 1700, type: float, display: true, formatter: Kilogram
 }
@@ -18270,6 +18273,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Face
+  MaxCount: 1, type: int, display: true
   AllowPlacingAt: "MS", display: true
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
@@ -21355,6 +21359,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Face
+  MaxCount: 1, type: int, display: true
   AllowPlacingAt: "GV", display: true
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
@@ -22268,6 +22273,7 @@ HullCombatSmallBlocks
   WeaponItem: DetectorSVWeapon
   WeaponItemRotation: false
   SizeInBlocks: "1,1,1", display: true
+  MaxCount: 1, type: int, display: true
   AllowPlacingAt: "SS", display: true
   Mass: 55, type: float, display: true, formatter: Kilogram
   Volume: 31.25, type: float, display: true, formatter: Liter
