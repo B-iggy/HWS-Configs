@@ -1984,6 +1984,7 @@ HullCombatSmallBlocks
 #  Texture: 50
 #  SoundOpen: UseActions/WeaponOpenClose
 #  SoundClose: UseActions/WeaponOpenClose
+  IsOxygenTight: true, display: true
 #  IsActivateable: true
 #  IsRetractable: true, display: true
 #  Place: WeaponDir
@@ -2027,6 +2028,7 @@ HullCombatSmallBlocks
 #  Model: @models/Blocks/WeaponsShip/WeaponSSGaussRetractPrefab
 #  # Model: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
 #  DropMeshfile: Entities/Misc/BagSmallPrefab
+  IsOxygenTight: true, display: true
 #  IsTextureable: true   # !!!
 #  IsGPUInstance: false  # !!!
 #  Texture: 50
@@ -4737,6 +4739,7 @@ HullCombatSmallBlocks
   # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
 
+  IsOxygenTight: true, display: true
   IsTextureable: true   # !!!
   IsGPUInstance: false  # !!!
   Texture: 50
@@ -4791,6 +4794,7 @@ HullCombatSmallBlocks
   Texture: 50
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
+  IsOxygenTight: true, display: true
   IsActivateable: true
   IsRetractable: true, display: true
 
@@ -4843,6 +4847,7 @@ HullCombatSmallBlocks
   Texture: 50
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
+  IsOxygenTight: true, display: true
   IsActivateable: true
   IsRetractable: true, display: true
 
@@ -4891,6 +4896,7 @@ HullCombatSmallBlocks
   # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
 
+  IsOxygenTight: true, display: true
   IsTextureable: true   # !!!
   IsGPUInstance: false  # !!!
   Texture: 50
@@ -4944,6 +4950,7 @@ HullCombatSmallBlocks
   # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
 
+  IsOxygenTight: true, display: true
   IsTextureable: true   # !!!
   IsGPUInstance: false  # !!!
   Texture: 50
@@ -9308,6 +9315,7 @@ HullCombatSmallBlocks
   Texture: 50
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
+  IsOxygenTight: true, display: true
   IsActivateable: true
   IsRetractable: true, display: true
   Place: WeaponDir
@@ -9356,6 +9364,7 @@ HullCombatSmallBlocks
   Texture: 50
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
+  IsOxygenTight: true, display: true
   IsActivateable: true
   IsRetractable: true, display: true
   Place: WeaponDir
@@ -9953,6 +9962,7 @@ HullCombatSmallBlocks
   Texture: 50
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
+  IsOxygenTight: true, display: true
   IsActivateable: true
   IsRetractable: true, display: true
   BlockColor: "110,110,110"
@@ -21486,6 +21496,7 @@ HullCombatSmallBlocks
   # Mesh-Damage-3: Mesh/D2
   # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  IsOxygenTight: true, display: true
   IsTextureable: true   # !!!
   IsGPUInstance: false  # !!!
   Texture: 50
