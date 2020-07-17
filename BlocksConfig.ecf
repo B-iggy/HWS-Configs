@@ -18283,7 +18283,6 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Face
-  MaxCount: 1, type: int, display: true
   AllowPlacingAt: "MS", display: true
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
@@ -21369,7 +21368,6 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Face
-  MaxCount: 1, type: int, display: true
   AllowPlacingAt: "GV", display: true
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
@@ -22284,7 +22282,6 @@ HullCombatSmallBlocks
   WeaponItem: DetectorSVWeapon
   WeaponItemRotation: false
   SizeInBlocks: "1,1,1", display: true
-  MaxCount: 1, type: int, display: true
   AllowPlacingAt: "SS", display: true
   Mass: 55, type: float, display: true, formatter: Kilogram
   Volume: 31.25, type: float, display: true, formatter: Liter
