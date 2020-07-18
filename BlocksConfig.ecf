@@ -1509,6 +1509,59 @@ HullCombatSmallBlocks
 
 /* 131 - 255 available free */
 
+{ +Block Id: 254, Name: WarpDriveT2
+  Class: WarpDrive
+  Group: cpgWarp
+  IndexName: WarpDrive
+  Material: metal, display: true
+  Shape: ModelEntity
+  ShowBlockName: true
+  Model: @models/Blocks/Mothership/WarpDriveT2Prefab
+  Mesh-Damage-1: Mesh/D0
+  Mesh-Damage-2: Mesh/D1
+  Mesh-Damage-3: Mesh/D2
+  Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Place: Free
+  CustomIcon: WarpDrive
+  AllowPlacingAt: MS, display: true
+  SizeInBlocks: "3,2,5", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 4800, type: float, display: true, formatter: Liter
+  Mass: 70000, type: float, display: true, formatter: Kilogram
+  HitPoints: 500, type: int, display: true
+  IsDuplicateable: false
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
+  IsOxygenTight: false, display: true
+  # ModelOffset: "0,0.5,0"
+  # BlockColor: "26,50,89"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: Devices
+  Info: bkiWarpDrive, display: true
+  EnergyIn: 50, type: int, display: true, formatter: Watt
+  CPUIn: 50000, type: int, display: true
+
+  BlastParticleIndex: 4
+  BlastRadius: 5
+  BlastDamage: 200
+
+  ItemPerAU: PentaxidCrystal, display: true
+  CostPerAU: 1, display: true
+  CostPerLY: 2, display: true
+  RangeAU: 50, display: true
+  RangeLY: 70, display: true
+
+  Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
+  Temperature: 90, display: true
+
+  UnlockCost: 30, display: true
+  UnlockLevel: 25, display: true
+  TechTreeParent: WarpDrive
+  TechTreeNames: Capital Vessel
+}
+
 #{ Block Id: 255, Name: "M77 Torpedo Launcher"
 #  Class: Weapon
 #  AllowedInBlueprint: false, display: true
@@ -26514,59 +26567,6 @@ HullCombatSmallBlocks
 #}
 
 ####
-
-{ +Block Id: 725, Name: WarpDriveT2
-  Class: WarpDrive
-  Group: cpgWarp
-  IndexName: WarpDrive
-  Material: metal, display: true
-  Shape: ModelEntity
-  ShowBlockName: true
-  Model: @models/Blocks/Mothership/WarpDriveT2Prefab
-  Mesh-Damage-1: Mesh/D0
-  Mesh-Damage-2: Mesh/D1
-  Mesh-Damage-3: Mesh/D2
-  Mesh-Damage-4: Mesh/D3
-  DropMeshfile: Entities/Misc/BagSmallPrefab
-  Place: Free
-  CustomIcon: WarpDrive
-  AllowPlacingAt: MS, display: true
-  SizeInBlocks: "3,2,5", display: true
-  SizeInBlocksLocked: "Base,MS"
-  Volume: 4800, type: float, display: true, formatter: Liter
-  Mass: 70000, type: float, display: true, formatter: Kilogram
-  HitPoints: 500, type: int, display: true
-  IsDuplicateable: false
-  MaxCount: 1, type: int, display: true
-  ForceMaxCount: true
-  IsOxygenTight: false, display: true
-  # ModelOffset: "0,0.5,0"
-  # BlockColor: "26,50,89"
-  StackSize: 50000
-  BlockColor: "110,110,110"
-  Category: Devices
-  Info: bkiWarpDrive, display: true
-  EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 50000, type: int, display: true
-
-  BlastParticleIndex: 4
-  BlastRadius: 5
-  BlastDamage: 200
-
-  ItemPerAU: PentaxidCrystal, display: true
-  CostPerAU: 1, display: true
-  CostPerLY: 2, display: true
-  RangeAU: 50, display: true
-  RangeLY: 70, display: true
-
-  Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
-  Temperature: 90, display: true
-
-  UnlockCost: 30, display: true
-  UnlockLevel: 25, display: true
-  TechTreeParent: WarpDrive
-  TechTreeNames: Capital Vessel
-}
 
 ###small cpu extenders
 
