@@ -2098,7 +2098,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 100
 }
-# Now used as PentaxidTank -> deco block UserHidden
+# Now used as PentaxidTank -> deco block UserHidden FREE
 { Block Id: 271, Name: SciencelabMS
   Material: metal, display: true
   Shape: ModelEntity
@@ -4487,7 +4487,7 @@ HullCombatSmallBlocks
   TechTreeNames: Capital Vessel
 }
 
-# not yet used
+# not yet used TEST !!
 { Block Id: 421, Name: SensorSS
   Material: metal, display: true
   Shape: ModelEntity
@@ -5076,7 +5076,7 @@ HullCombatSmallBlocks
 { Block Id: 441, Name: InteriorBlock03, Ref: Hull
   Texture: "12,29,15,15,15,15"
 }
-# Obsolete but dont delete
+# Obsolete but dont delete FREE
 { Block Id: 442, Name: InteriorLight, Ref: Hull
   Texture: 14
   ShowUser: NoButCSV    # reported by HWS

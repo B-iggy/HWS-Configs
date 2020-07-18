@@ -204,7 +204,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     AllowRemote: false  
-    ROF: 0.01, type: float, display: true, formatter: ROF
+    ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 150, display: false
     NoiseStrength: 120, display: false 
     CameraShake: 1  
@@ -897,7 +897,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Tools
 }
 # not used anymore
-{ Item Id: 12, Name: Fillertool
+{ Item Id: 12, Name: Fillertool FREE
   Meshfile: Entities/Items/Weapons/DrillV2/FillerToolPrefab
   Material: metalweapon
   HoldType: 16
@@ -955,7 +955,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_2: 0, param1: dirt|stone|wood   
   }
 }
-# not used anymore
+# not used anymore FREE
 { Item Id: 13, Name: ChangeTool
   /*Class: RotateBlock*/
   Meshfile: Entities/Items/Tools/ChangeToolPrefab
@@ -1969,7 +1969,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
-    ROF: 0.01, type: float, display: true, formatter: ROF
+    ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 198, display: false
     NoiseStrength: 100, display: false
     BulletSpread: 0.13, display: true
@@ -2523,7 +2523,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
     Class: Ranged
-    ROF: 0.085, type: float, display: true, formatter: ROF
+    ROF: 0.15, type: float, display: true, formatter: ROF
     Range: 187, display: false
     BulletSpread: 0.075, display: true
     Recoil: 0.32, display: true
@@ -2576,7 +2576,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   { Child 0
     Class: Ranged
-    ROF: 0.085, type: float, display: true, formatter: ROF
+    ROF: 0.13, type: float, display: true, formatter: ROF
     ReloadDelay: 3, display: true
     Range: 224, display: false
     BulletSpread: 0.038, display: true
