@@ -3166,6 +3166,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   BlockColor: "110,110,110"
   Place: Free
+  PickupTarget: RockDust
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
@@ -3190,6 +3191,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   BlockColor: "110,110,110"
   Place: Free
+  PickupTarget: RockDust
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
@@ -20379,6 +20381,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   # ModelOffset: "0,0.5,0"
   Place: Free
+  PickupTarget: RockDust
   AllowPlacingAt: "Base,MS", display: false
   Info: bkiBlockGroup, display: true
   Mass: 80, type: float, display: true, formatter: Kilogram
