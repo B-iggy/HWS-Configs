@@ -1,5 +1,4 @@
-﻿
-TraderNPCConfig.ecf
+﻿TraderNPCConfig.ecf
 TokenConfig.ecf
 StatusEffect.ecf
 StatusEffects.ecf
@@ -15,6 +14,5 @@ Dialogues.csv
 DefReputation.ecf
 Containers.ecf
 Config_Example.ecf
-BlockShapesWindow.ecf
 BAIConfig.ecf
 Animations.ecf

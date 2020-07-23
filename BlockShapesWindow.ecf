@@ -1,0 +1,103 @@
+# _Handling Notes_
+#
+# Max of 22 TabGroups
+# Max 8x13 shape slots per page
+# Each TabGroup can have unlimited pages. Page-break is done automatically after 8 rows of a page are filled - either with blocks or by <newline>.
+#
+# Each tab group will create a tab that will apply a formatting filter to a set of blocks, defined in a child element
+# ParentBlocks: provide a comma delimited string of parent block ids (from BlocksConfig.ecf)
+# Shapes: provide a comma delimited string of child block shape names and formatting tokens:
+#   Use <empty> for placing a blank slot  (You cannot just use a syntax like , , , , for empty slots!)
+#   Use <newline> to break a line 
+#   Use <pagebreak> to break a page
+#
+# To allow a filter to be used by all parent blocks, do not provide a ParentBlocks value. You must provide one Shapes value.
+# To allow a filter to exclude a set of parent blocks, provide a ParentBlocks value and no Shapes value.
+#
+# The first shape in the filter represents the shape icon used for the tab. To override this, supply an 'Icon' name to use.
+# Use 'shapeswdw reload' in the ingame console to reload the shapes menu and update to the changes you made. Also works when the file is opened in parallel! 
+#
+# _Notes_
+# You need to use the  KEY name of the shape. To find the KEY name of the shape, open the localization.csv and search for your localization term. 
+# The FIRST entry in the row of localization terms is always the KEY
+# Do NOT use RETURN or SHIFT-RETURN when setting up the TabGroups, pages and shapes. This might result in a CoQ. 
+# Make sure you only use each shape name ONCE per TabGroup. Multiple use will cause issues with the list.
+# Tip: For setup or debugging any config file (like this or the localization.csv etc), use a free tool like Notepad++ and use 
+# setting 'View > Non Printable Signs > show all' to show linebreaks and other usually hidden characters!
+# 
+#  _IMPORTANT_
+#  Concerning shapes that should not be available in either large (CVBA) or small (SVHV) grid, like the corridor shapes: see example below how this is handled by 
+#  setting Child0 and 1. If you do NOT set Child1, but only Child0, both grids will use the same shapes automatically.
+#  The 'ParentBlocks' line indicates the Large Grid '396,399,402,405,408,411,1322,1481' and the Small Grid '380,393,1478,1594'
+#  If you want one grid size to not use ANY of the child blocks, just leave out the 'Shapes' part"
+#
+
+{ TabGroup Id: 0
+  Name: "Basic Shapes"
+  Icon: "BasicShapes"
+  
+  {  Child 0
+     Shapes: "Cube, CubeHalf, CubeQuarter, CubeEighth, <newline>, RampC, RampCMedium, RampCLow, RampD, RampDLow, <newline>, RampADouble, CutCornerA, RampA, CutCornerC, CutCornerEMedium, NotchedB, SlicedCornerD, <newline>, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, <newline>, CornerDoubleA1, CornerDoubleA3, CornerA, CornerHalfA1, CutCornerE, CornerC, CornerHalfA3, <newline>, Wall, WallLow, Beam, WallCorner, WallLShape, WallSloped, WallSloped3Corner, WallSlopedRound, WallEdgeRound, WallCornerRoundB, <newline>, EdgeRound, RoundCornerA, CornerRoundADouble, CornerRoundATriple, CornerRoundBMediumQuarter, CornerRoundB, <newline>, Cylinder, Cube, CylinderThin, CylinderThinTJoint, CylinderThinXJoint, PipesFence, FenceTop, PipesL"
+  } 
+}
+
+{ TabGroup Id: 1
+  Name: "All Shapes"
+  Icon: "AllShapes"
+  
+  {  Child 0
+     ParentBlocks: "396,399,402,405,408,411,1322,1395,1481"
+     Shapes: "Cube, CubeSliced, CubeLShape, CubeStepped, CubeSteppedEdge, CubeHalfCubeConnector, CubeHalfRamp, CubeHalf, CubeQuarter, CubeQuarterEdge, CubeEighth, RampA, RampB, RampC, RampCMedium, RampBMedium, RampCLow, RampD, RampDLow, RampE, RampEHalf, RampADouble, RampBDouble, RampADoubleHalf, RampBDoubleHalf, RampAHalfleft, RampAHalfright, RampCHalf, RampCMediumHalfright, RampCMediumHalfleft, RampCMediumQuarter, CutCornerA, CutCornerB, CutCornerC, CutCornerD, CutCornerE, CutCornerDMedium, CutCornerEMedium, CutCornerDLow, SlicedCornerA1, SlicedCornerA2, SlicedCornerA1Medium, SlicedCornerA1Low, SlicedCornerB1, SlicedCornerB2, SlicedCornerB1Medium, SlicedCornerB2Medium, NotchedA, NotchedB, NotchedC, SlicedCornerD, NotchedBMedium, NotchedCMedium, SlicedCornerDMedium, NotchedCLow, PyramidA, EdgeRound, EdgeRoundHalf, EdgeRoundThin, EdgeRoundMedium, EdgeRoundLow, EdgeRoundMediumHalfDouble, EdgeRoundMediumHalf, EdgeRoundMediumQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth, RoundCornerA, CornerRoundAMedium, CornerRoundALow, CornerRoundAMediumQuarter, CornerRoundALowQuarter, CornerRoundB, CornerRoundBMedium, CornerRoundBLow, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, EdgeRoundDoubleA, EdgeRoundDoubleAHalf, RampRoundADouble, RampRoundADoubleHalf, RampRoundBDouble, RampRoundC, RampRoundDDouble, RampRoundE, RampRoundF, CornerRoundADouble, CornerRoundATriple, RampRoundFTriple, SmallCornerRoundA, SmallCornerRoundB, SmallCornerRoundB2, SmallCornerRoundC, Cylinder, Cube, CylinderL, CylinderThin, CylinderThinTJoint, CylinderThin3Way, CylinderThinXJoint, CylinderThin4Way, CylinderThin5Way, Cube, PipesFence, PipesFenceDiagonal, PipesFenceKinked, PipesL, PipesT, PipesX, FenceTop, FenceTopDiagonal, ConeB, SphereHalf, Cone, CornerDoubleA1, CornerDoubleA2, CornerDoubleA3, CornerDoubleB1, CornerDoubleB2, CornerDoubleB3, CornerA, CornerB, CornerC, CornerCMedium, CornerCLow, CornerHalfA1, CornerHalfA2, CornerHalfA3, CornerHalfA3Medium, CornerHalfA3Low, CornerHalfB, CornerHalfC, CornerSmallA, CornerSmallB, CornerSmallBMedium, CornerSmallBMediumLow, CornerSmallBLow, CornerSmallC, CornerSmallCMedium, CornerSmallCMediumLow, CornerSmallCLow, RampConnectorAleft, RampConnectorAright, RampConnectorBleft, RampConnectorBright, RampConnectorCleft, RampConnectorCright, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CylinderRoundTransition, CubeRoundConnectorA, CubeRoundConnectorAMedium, CubeRoundConnectorALow, CubeRoundConnectorBleft, CubeRoundConnectorBright, RampRoundConnectorAleft, RampRoundConnectorAright, RampRoundConnectorBleft, RampRoundConnectorBright, CubeRoundTransitionleft, CubeRoundTransitionright, CylinderCubeConnector, CylinderCubeHalfConnector, CylinderWallConnector, Wall, WallLow, Beam, BeamQuarter, WallSlopedAright, WallSlopedAleft, WallSlopedC, WallSlopedCMediumright, WallSlopedCMediumleft, CylinderFramed, CubeFramed, WallUShape, WallCorner, WallLShape, WallLShapeMedium, WallLShapeLow, WallDouble, WallMediumDouble, WallLowDouble, WallSlopedADouble, WallSlopedBDouble, WallSlopedCDouble, WallSlopedBDoubleMedium, WallSlopedCDoubleMedium, WallSlopedCDoubleLow, WallEdge, WallCornerSloped, WallSloped, WallSloped3Corner, WallSloped3CornerLow, WallEdgeRound, WallSlopedRound, WallEdgeRound3Way, WallCornerRoundA, WallCornerRoundB, WallCornerRoundC, WallSlopedBold, CorridorWallA, CorridorWallB, CorridorEdgeA, CorridorEdgeB, CorridorEdgeC, CorridorPillarA, CorridorPillarB, CorridorPillarC, CorridorPillarD, CorridorRoof, CorridorRoofCorner, CorridorRoofCornerInverted, CorridorRoofCornerRound, CorridorBulkyWallA, CorridorBulkyWallAWindowed, CorridorBulkyWallB, CorridorBulkyWallBWindowed, CorridorRampA, CorridorRampB, DoorframeA, DoorframeB, DoorframeC "
+  }
+  
+  {  Child 1
+     ParentBlocks: "380,393,1478,1594"
+     Shapes: "Cube, CubeSliced, CubeLShape, CubeStepped, CubeSteppedEdge, CubeHalfCubeConnector, CubeHalfRamp, CubeHalf, CubeQuarter, CubeQuarterEdge, CubeEighth, RampA, RampB, RampC, RampCMedium, RampBMedium, RampCLow, RampD, RampDLow, RampE, RampEHalf, RampADouble, RampBDouble, RampADoubleHalf, RampBDoubleHalf, RampAHalfleft, RampAHalfright, RampCHalf, RampCMediumHalfright, RampCMediumHalfleft, RampCMediumQuarter, CutCornerA, CutCornerB, CutCornerC, CutCornerD, CutCornerE, CutCornerDMedium, CutCornerEMedium, CutCornerDLow, SlicedCornerA1, SlicedCornerA2, SlicedCornerA1Medium, SlicedCornerA1Low, SlicedCornerB1, SlicedCornerB2, SlicedCornerB1Medium, SlicedCornerB2Medium, NotchedA, NotchedB, NotchedC, SlicedCornerD, NotchedBMedium, NotchedCMedium, SlicedCornerDMedium, NotchedCLow, PyramidA, EdgeRound, EdgeRoundHalf, EdgeRoundThin, EdgeRoundMedium, EdgeRoundLow, EdgeRoundMediumHalfDouble, EdgeRoundMediumHalf, EdgeRoundMediumQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth, RoundCornerA, CornerRoundAMedium, CornerRoundALow, CornerRoundAMediumQuarter, CornerRoundALowQuarter, CornerRoundB, CornerRoundBMedium, CornerRoundBLow, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, EdgeRoundDoubleA, EdgeRoundDoubleAHalf, RampRoundADouble, RampRoundADoubleHalf, RampRoundBDouble, RampRoundC, RampRoundDDouble, RampRoundE, RampRoundF, CornerRoundADouble, CornerRoundATriple, RampRoundFTriple, SmallCornerRoundA, SmallCornerRoundB, SmallCornerRoundB2, SmallCornerRoundC, Cylinder, Cube, CylinderL, CylinderThin, CylinderThinTJoint, CylinderThin3Way, CylinderThinXJoint, CylinderThin4Way, CylinderThin5Way, Cube, PipesFence, PipesFenceDiagonal, PipesFenceKinked, PipesL, PipesT, PipesX, FenceTop, FenceTopDiagonal, ConeB, SphereHalf, Cone, CornerDoubleA1, CornerDoubleA2, CornerDoubleA3, CornerDoubleB1, CornerDoubleB2, CornerDoubleB3, CornerA, CornerB, CornerC, CornerCMedium, CornerCLow, CornerHalfA1, CornerHalfA2, CornerHalfA3, CornerHalfA3Medium, CornerHalfA3Low, CornerHalfB, CornerHalfC, CornerSmallA, CornerSmallB, CornerSmallBMedium, CornerSmallBMediumLow, CornerSmallBLow, CornerSmallC, CornerSmallCMedium, CornerSmallCMediumLow, CornerSmallCLow, RampConnectorAleft, RampConnectorAright, RampConnectorBleft, RampConnectorBright, RampConnectorCleft, RampConnectorCright, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CylinderRoundTransition, CubeRoundConnectorA, CubeRoundConnectorAMedium, CubeRoundConnectorALow, CubeRoundConnectorBleft, CubeRoundConnectorBright, RampRoundConnectorAleft, RampRoundConnectorAright, RampRoundConnectorBleft, RampRoundConnectorBright, CubeRoundTransitionleft, CubeRoundTransitionright, CylinderCubeConnector, CylinderCubeHalfConnector, CylinderWallConnector, Wall, WallLow, Beam, BeamQuarter, WallSlopedAright, WallSlopedAleft, WallSlopedC, WallSlopedCMediumright, WallSlopedCMediumleft, CylinderFramed, CubeFramed, WallUShape, WallCorner, WallLShape, WallLShapeMedium, WallLShapeLow, WallDouble, WallMediumDouble, WallLowDouble, WallSlopedADouble, WallSlopedBDouble, WallSlopedCDouble, WallSlopedBDoubleMedium, WallSlopedCDoubleMedium, WallSlopedCDoubleLow, WallEdge, WallCornerSloped, WallSloped, WallSloped3Corner, WallSloped3CornerLow, WallEdgeRound, WallSlopedRound, WallEdgeRound3Way, WallCornerRoundA, WallCornerRoundB, WallCornerRoundC, WallSlopedBold"
+  }
+}
+  
+{ TabGroup Id: 2
+  Name: "Cubes and Ramps"
+  
+  { Child 0
+    Shapes:  "Cube, CubeSliced, CubeLShape, CubeStepped, CubeSteppedEdge, CubeHalfCubeConnector, CubeHalfRamp, CubeHalf, CubeQuarter, CubeQuarterEdge, CubeEighth, <newline>, RampA, RampB, RampC, RampCMedium, RampBMedium, RampCLow, RampD, RampDLow, RampE, RampEHalf, <newline>, RampADouble, RampBDouble, RampADoubleHalf, RampBDoubleHalf, RampAHalfleft, RampAHalfright, RampCHalf, RampCMediumHalfright, RampCMediumHalfleft, RampCMediumQuarter, <newline>, CutCornerA, CutCornerB, CutCornerC, CutCornerD, CutCornerE, CutCornerDMedium, CutCornerEMedium, CutCornerDLow, <newline>, SlicedCornerA1, SlicedCornerA2, SlicedCornerA1Medium, SlicedCornerA1Low, <newline>, SlicedCornerB1, SlicedCornerB2, SlicedCornerB1Medium, SlicedCornerB2Medium, <newline>, NotchedA, NotchedB, NotchedC, SlicedCornerD, NotchedBMedium, NotchedCMedium, SlicedCornerDMedium, NotchedCLow, <newline>, PyramidA"
+  }
+}
+
+{ TabGroup Id: 3
+  Name: "Round Shapes and Pipes"
+  
+  { Child 0
+    Shapes: "EdgeRound, EdgeRoundHalf, EdgeRoundThin, EdgeRoundMedium, EdgeRoundLow, <newline>, EdgeRoundMediumHalfDouble, EdgeRoundMediumHalf, EdgeRoundMediumQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth, <newline>, RoundCornerA, CornerRoundAMedium, CornerRoundALow, CornerRoundAMediumQuarter, CornerRoundALowQuarter, CornerRoundB, CornerRoundBMedium, CornerRoundBLow, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, <newline>, EdgeRoundDoubleA, EdgeRoundDoubleAHalf, RampRoundADouble, RampRoundADoubleHalf, RampRoundBDouble, RampRoundC, RampRoundDDouble, RampRoundE, RampRoundF, <newline>, CornerRoundADouble, CornerRoundATriple, RampRoundFTriple, SmallCornerRoundA, SmallCornerRoundB, SmallCornerRoundB2, SmallCornerRoundC, <newline>, Cylinder, Cube, CylinderL, CylinderThin, CylinderThinTJoint, CylinderThin3Way, CylinderThinXJoint, CylinderThin4Way, CylinderThin5Way, Cube, <newline>, PipesFence, PipesFenceDiagonal, PipesFenceKinked, PipesL, PipesT, PipesX, FenceTop, FenceTopDiagonal, <newline>, ConeB, SphereHalf, Cone"
+  }
+}
+
+{ TabGroup Id: 4
+  Name: "Corners and Connectors"
+  
+  { Child 0
+    Shapes: "CornerDoubleA1, CornerDoubleA2, CornerDoubleA3, CornerDoubleB1, CornerDoubleB2, CornerDoubleB3, <newline>, CornerA, CornerB, CornerC, CornerCMedium, CornerCLow, <newline>, CornerHalfA1, CornerHalfA2, CornerHalfA3, CornerHalfA3Medium, CornerHalfA3Low, <newline>, CornerHalfB, CornerHalfC, <newline>, CornerSmallA, CornerSmallB, CornerSmallBMedium, CornerSmallBMediumLow, CornerSmallBLow, CornerSmallC, CornerSmallCMedium, CornerSmallCMediumLow, CornerSmallCLow, <newline>, RampConnectorAleft, RampConnectorAright, RampConnectorBleft, RampConnectorBright, RampConnectorCleft, RampConnectorCright, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, <newline>, CylinderRoundTransition, CubeRoundConnectorA, CubeRoundConnectorAMedium, CubeRoundConnectorALow, CubeRoundConnectorBleft, CubeRoundConnectorBright, RampRoundConnectorAleft, RampRoundConnectorAright, RampRoundConnectorBleft, RampRoundConnectorBright, CubeRoundTransitionleft, CubeRoundTransitionright, <newline>,CylinderCubeConnector, CylinderCubeHalfConnector, CylinderWallConnector"
+  }
+}
+
+{ TabGroup Id: 5
+  Name: "Thin Walls"
+  
+  { Child 0
+    Shapes: "Wall, WallLow, Beam, BeamQuarter, <newline>, WallSlopedAright, WallSlopedAleft, WallSlopedC, WallSlopedCMediumright, WallSlopedCMediumleft, <newline>, CylinderFramed, CubeFramed, WallUShape, WallCorner, WallLShape, WallLShapeMedium, WallLShapeLow, <newline>, WallDouble, WallMediumDouble, WallLowDouble, WallSlopedADouble, WallSlopedBDouble, WallSlopedCDouble, WallSlopedBDoubleMedium, WallSlopedCDoubleMedium, WallSlopedCDoubleLow, <newline>, WallEdge, WallCornerSloped, WallSloped, WallSloped3Corner, WallSloped3CornerLow, <newline>, WallEdgeRound, WallSlopedRound, WallEdgeRound3Way, WallCornerRoundA, WallCornerRoundB, WallCornerRoundC, <newline>, WallSlopedBold"
+  }
+}
+
+{ TabGroup Id: 6
+  Name: "Corridor Elements"
+  
+  { Child 0
+    ParentBlocks: "396,399,402,405,408,411,1322,1395,1481"
+    Shapes: "CorridorWallA, CorridorWallB, CorridorEdgeA, CorridorEdgeB, CorridorEdgeC, <newline>, CorridorPillarA, CorridorPillarB, CorridorPillarC, CorridorPillarD, <newline>, CorridorRoof, CorridorRoofCorner, CorridorRoofCornerInverted, CorridorRoofCornerRound, <newline>, CorridorBulkyWallA, CorridorBulkyWallAWindowed, CorridorBulkyWallB, CorridorBulkyWallBWindowed, <newline>, CorridorRampA, CorridorRampB, <newline>, DoorframeA, DoorframeB, DoorframeC"
+  }
+  
+  { Child 1
+    ParentBlocks: "380,393,1478,1594"
+    # no blocks for this tab for the listed parent blocks
+  }
+}

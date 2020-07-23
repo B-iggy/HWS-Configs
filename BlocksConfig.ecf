@@ -3860,7 +3860,7 @@ HullCombatSmallBlocks
   HitPoints: 50, type: int, display: true
   Mass: 8, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 2
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullArmoredFullSmall, display: true
   DowngradeTo: PlasticFullSmall
 }
@@ -3887,7 +3887,7 @@ HullCombatSmallBlocks
   Mass: 32, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 2
   Category: BuildingBlocks
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullCombatFullSmall, display: true
 }
 { +Block Id: 384, Name: HullArmoredThinSmall, Ref: HullArmoredFullSmall
@@ -3986,7 +3986,7 @@ HullCombatSmallBlocks
   HitPoints: 50, type: int, display: true
   Mass: 70, type: float, display: true, formatter: Kilogram
   Category: BuildingBlocks
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullArmoredFull, display: true
 
   ShowUser: NoButCSV    # reported by HWS
@@ -4040,7 +4040,7 @@ HullCombatSmallBlocks
   Mass: 230, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 2      # attention: block is used on Base,MS,SS,GV
   Category: BuildingBlocks
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   ShowUser: NoButCSV    # reported by HWS
 }
@@ -4095,7 +4095,7 @@ HullCombatSmallBlocks
   Mass: 360, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: ConcreteFull, display: true
 }
 
@@ -4146,7 +4146,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   Mass: 1100, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: ConcreteArmoredFull, display: true
   DowngradeTo: WoodFull
 }
@@ -4196,7 +4196,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   Mass: 1000, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullArmoredFullLarge, display: true
   DowngradeTo: PlasticFullLarge
 }
@@ -4245,7 +4245,7 @@ HullCombatSmallBlocks
   HitPoints: 1000, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullCombatFullLarge, display: true
 }
 
@@ -4292,7 +4292,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   Mass: 3910, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   Radiation: 9, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
 }
 
@@ -4342,7 +4342,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   Mass: 4000, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 }
 
 { +Block Id: 413, Name: HullCombatThinLarge, Ref: HullCombatFullLarge
@@ -18299,6 +18299,7 @@ HullCombatSmallBlocks
   Mass: 1000, type: float, display: true, formatter: Kilogram
   Place: Free
   TemplateRoot: ConcreteDestroyedBlocks
+  PickupTarget: ConcreteDestroyedBlocks
   StackSize: 50000
   IsAccessible: false, type: bool
   AllowPlacingAt: Base, display: true
@@ -18596,7 +18597,7 @@ HullCombatSmallBlocks
   HitPoints: 2200, type: int, display: true
   Mass: 4000, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   # UpgradeTo: HullFullLarge, display: true
 }
 
@@ -19414,7 +19415,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   Mass: 1000, type: float, display: true, formatter: Kilogram
   Category: BuildingBlocks
-  ChildShapes: "CubeDestroyed, CutCornerEDestroyed, CutCornerBDestroyed, SlicedCornerA1Destroyed, CornerHalfBDestroyed, CornerSmallCDestroyed, CornerCDestroyed, CornerHalfA3Destroyed, RampCMediumDestroyed, RampADestroyed, RampCDestroyed, CornerRoundBDestroyed, CornerRoundADoubleDestroyed, RoundCornerADestroyed, CubeRoundConnectorADestroyed, EdgeRoundDestroyed, CylinderDestroyed, RampRoundFTripleDestroyed, RampRoundFDestroyed, SmallCornerRoundBDestroyed, SmallCornerRoundADestroyed, SphereHalfDestroyed, ConeDestroyed, ConeBDestroyed, CutCornerCDestroyed, Cylinder6WayDestroyed, CornerRoundATripleDestroyed, CornerADestroyed, CornerHalfA1Destroyed, CornerDoubleA3Destroyed, CornerSmallBDestroyed, PyramidADestroyed"
+  ChildShapes: "CubeDestroyed, CutCornerEDestroyed, CutCornerBDestroyed, SlicedCornerA1Destroyed, CornerHalfBDestroyed, CornerSmallCDestroyed, CornerCDestroyed, CornerHalfA3Destroyed, RampCMediumDestroyed, RampADestroyed, RampCDestroyed, CornerRoundBDestroyed, CornerRoundADoubleDestroyed, RoundCornerADestroyed, CubeRoundConnectorADestroyed, EdgeRoundDestroyed, CylinderDestroyed, RampRoundFTripleDestroyed, RampRoundFDestroyed, SmallCornerRoundBDestroyed, SmallCornerRoundADestroyed, SphereHalfDestroyed, ConeDestroyed, ConeBDestroyed, CutCornerCDestroyed, CubeDestroyed, CornerRoundATripleDestroyed, CornerADestroyed, CornerHalfA1Destroyed, CornerDoubleA3Destroyed, CornerSmallBDestroyed, PyramidADestroyed"
   UpgradeTo: HullFullLarge, display: true
   IsOxygenTight: false, display: true
 }
@@ -19464,7 +19465,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   Mass: 15, type: float, display: true, formatter: Kilogram
   Category: BuildingBlocks
-  ChildShapes: "CubeDestroyed, CutCornerEDestroyed, CutCornerBDestroyed, SlicedCornerA1Destroyed, CornerHalfBDestroyed, CornerSmallCDestroyed, CornerCDestroyed, CornerHalfA3Destroyed, RampCMediumDestroyed, RampADestroyed, RampCDestroyed, CornerRoundBDestroyed, CornerRoundADoubleDestroyed, RoundCornerADestroyed, CubeRoundConnectorADestroyed, EdgeRoundDestroyed, CylinderDestroyed, RampRoundFTripleDestroyed, RampRoundFDestroyed, SmallCornerRoundBDestroyed, SmallCornerRoundADestroyed, SphereHalfDestroyed, ConeDestroyed, ConeBDestroyed, CutCornerCDestroyed, Cylinder6WayDestroyed, CornerRoundATripleDestroyed, CornerADestroyed, CornerHalfA1Destroyed, CornerDoubleA3Destroyed, CornerSmallBDestroyed, PyramidADestroyed"
+  ChildShapes: "CubeDestroyed, CutCornerEDestroyed, CutCornerBDestroyed, SlicedCornerA1Destroyed, CornerHalfBDestroyed, CornerSmallCDestroyed, CornerCDestroyed, CornerHalfA3Destroyed, RampCMediumDestroyed, RampADestroyed, RampCDestroyed, CornerRoundBDestroyed, CornerRoundADoubleDestroyed, RoundCornerADestroyed, CubeRoundConnectorADestroyed, EdgeRoundDestroyed, CylinderDestroyed, RampRoundFTripleDestroyed, RampRoundFDestroyed, SmallCornerRoundBDestroyed, SmallCornerRoundADestroyed, SphereHalfDestroyed, ConeDestroyed, ConeBDestroyed, CutCornerCDestroyed, CubeDestroyed, CornerRoundATripleDestroyed, CornerADestroyed, CornerHalfA1Destroyed, CornerDoubleA3Destroyed, CornerSmallBDestroyed, PyramidADestroyed"
   UpgradeTo: HullFullSmall, display: true
   IsOxygenTight: false, display: true
 }
@@ -19520,7 +19521,7 @@ HullCombatSmallBlocks
   HitPoints: 400, type: int, display: true
   Mass: 300, type: float, display: true, formatter: Kilogram
   Category: BuildingBlocks
-  ChildShapes: "CubeDestroyed, CutCornerEDestroyed, CutCornerBDestroyed, SlicedCornerA1Destroyed, CornerHalfBDestroyed, CornerSmallCDestroyed, CornerCDestroyed, CornerHalfA3Destroyed, RampCMediumDestroyed, RampADestroyed, RampCDestroyed, CornerRoundBDestroyed, CornerRoundADoubleDestroyed, RoundCornerADestroyed, CubeRoundConnectorADestroyed, EdgeRoundDestroyed, CylinderDestroyed, RampRoundFTripleDestroyed, RampRoundFDestroyed, SmallCornerRoundBDestroyed, SmallCornerRoundADestroyed, SphereHalfDestroyed, ConeDestroyed, ConeBDestroyed, CutCornerCDestroyed, Cylinder6WayDestroyed, CornerRoundATripleDestroyed, CornerADestroyed, CornerHalfA1Destroyed, CornerDoubleA3Destroyed, CornerSmallBDestroyed, PyramidADestroyed"
+  ChildShapes: "CubeDestroyed, CutCornerEDestroyed, CutCornerBDestroyed, SlicedCornerA1Destroyed, CornerHalfBDestroyed, CornerSmallCDestroyed, CornerCDestroyed, CornerHalfA3Destroyed, RampCMediumDestroyed, RampADestroyed, RampCDestroyed, CornerRoundBDestroyed, CornerRoundADoubleDestroyed, RoundCornerADestroyed, CubeRoundConnectorADestroyed, EdgeRoundDestroyed, CylinderDestroyed, RampRoundFTripleDestroyed, RampRoundFDestroyed, SmallCornerRoundBDestroyed, SmallCornerRoundADestroyed, SphereHalfDestroyed, ConeDestroyed, ConeBDestroyed, CutCornerCDestroyed, CubeDestroyed, CornerRoundATripleDestroyed, CornerADestroyed, CornerHalfA1Destroyed, CornerDoubleA3Destroyed, CornerSmallBDestroyed, PyramidADestroyed"
   UpgradeTo: ConcreteFull, display: true
   IsOxygenTight: false, display: true
 }
@@ -19555,7 +19556,7 @@ HullCombatSmallBlocks
   BlockSizeScale: 8
   TemplateRoot: AlienLargeBlocks
   PickupTarget: AlienLargeBlocks
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   Radiation: 0
 }
 { +Block Id: 1397, Name: AlienThinLarge, Ref: AlienThin
@@ -20386,7 +20387,7 @@ HullCombatSmallBlocks
   HitPoints: 20, type: int, display: true
   Mass: 3, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 2
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullFullSmall, display: true
 }
 
@@ -20433,7 +20434,7 @@ HullCombatSmallBlocks
   HitPoints: 200, type: int, display: true
   Mass: 100, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 8
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   UpgradeTo: HullFullLarge, display: true
 }
 
@@ -21479,7 +21480,7 @@ HullCombatSmallBlocks
   Mass: 500, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   Category: Devices
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   MaxCount: 0, type: int, display: true
   BlastParticleIndex: 4
@@ -21513,7 +21514,7 @@ HullCombatSmallBlocks
   CPUIn: 10, type: int, display: true
   Mass: 1000, type: float, display: true, formatter: Kilogram
   Category: Devices
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   MaxCount: 0, type: int, display: true
   BlastParticleIndex: 4
@@ -21809,7 +21810,7 @@ HullCombatSmallBlocks
   HitPoints: 400, type: int, display: true
   Mass: 64, type: float, display: true, formatter: Kilogram
   BlockSizeScale: 2
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 }
 
 { +Block Id: 1596, Name: HullCombatThinSmall, Ref: HullCombatFullSmall
@@ -23150,8 +23151,8 @@ HullCombatSmallBlocks
   BlastParticleIndex: 4
   BlastRadius: 1
   BlastDamage: 50
-  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium, SlopeHalf, CornerSmallA"
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium"
+  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium, SlopeHalf, CornerSmallA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium"
 
   # ShowUser: No
 
@@ -23186,8 +23187,8 @@ HullCombatSmallBlocks
   CPUIn: 15, type: int, display: true
   EnergyIn: 1, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
-  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium, SlopeHalf, CornerSmallA"
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium"
+  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium, SlopeHalf, CornerSmallA"
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium"
 
 
   UnlockCost: 7, display: true
@@ -23848,6 +23849,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Info: bkiBlockGroup, display: true
   TemplateRoot: WoodBlocks
+  PickupTarget: WoodBlocks
   StackSize: 50000
   SizeInBlocks: "1,1,1", display: true
   ChildBlocks: "TribalBarrels, TribalBox, TribalBarrow, TribalBoat, TribalBaskets, TribalBed1, TribalBed2, TribalBookcase1, TribalBookcase2, TribalBuckets, TribalCabinet1, TribalCabinet2, TribalCauldron, TribalCauldron2, TribalTub, TribalDryFish, TribalLoom, TribalOven, TribalHearth, TribalSacks, TribalTable1, TribalTable2, TribalChair, TribalWoodSaw, TribalFirewood, TribalTrunkAxe, TribalTorch, TribalFirepit"
@@ -24765,55 +24767,55 @@ HullCombatSmallBlocks
 # ============================ Extended 3 ============================
 # BA / CV
 { +Block Id: 1837, Name: WoodExtended3, Ref: WoodFull
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: ConcreteExtended3, display: true
 }
 { +Block Id: 1838, Name: ConcreteExtended3, Ref: ConcreteFull
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: ConcreteArmoredExtended3, display: true
 }
 { +Block Id: 1839, Name: ConcreteArmoredExtended3, Ref: ConcreteArmoredFull
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 }
 { +Block Id: 1840, Name: PlasticExtendedLarge3, Ref: PlasticFullLarge
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: HullExtendedLarge3, display: true
 }
 { +Block Id: 1841, Name: HullExtendedLarge3, Ref: HullFullLarge
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: HullArmoredExtendedLarge3, display: true
   DowngradeTo: PlasticExtendedLarge3
 }
 { +Block Id: 1842, Name: HullArmoredExtendedLarge3, Ref: HullArmoredFullLarge
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: HullCombatExtendedLarge3, display: true
 }
 { +Block Id: 1843, Name: HullCombatExtendedLarge3, Ref: HullCombatFullLarge
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 }
 { +Block Id: 1844, Name: AlienExtended3, Ref: AlienFull
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 }
 # SV / HV
 { +Block Id: 1845, Name: PlasticExtendedSmall3, Ref: PlasticFullSmall
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: HullExtendedSmall3, display: true
 }
 { +Block Id: 1846, Name: HullExtendedSmall3, Ref: HullFullSmall
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: HullArmoredExtendedSmall3, display: true
   DowngradeTo: PlasticExtendedSmall3
 }
 { +Block Id: 1847, Name: HullArmoredExtendedSmall3, Ref: HullArmoredFullSmall
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
   UpgradeTo: HullCombatExtendedSmall3, display: true
 }
 { +Block Id: 1848, Name: HullCombatExtendedSmall3, Ref: HullCombatFullSmall
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 }
 # BA / CV
 { +Block Id: 1849, Name: AlienExtendedLarge3, Ref: AlienFullLarge
-  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  ChildShapes: "CubeSliced, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 }
 # ============================ Extended 4 ============================
 # BA / CV
@@ -27288,7 +27290,7 @@ HullCombatSmallBlocks
   # Info: bkiHull, display: true
   # HitPoints: 50, type: int, display: true
   # Mass: 8, type: float, display: true, formatter: Kilogram
-  # ChildShapes: "CorridorPillarD, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  # ChildShapes: "CorridorPillarD, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 # }
 # { Block Id: 1992, Name: HullTestShapes2
   # DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -27396,7 +27398,7 @@ HullCombatSmallBlocks
   # SizeInBlocks: "2,2,2"
   # ModelScale: 2
   # Category: BuildingBlocks
-  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   # ShowUser: No
 # }
@@ -27443,7 +27445,7 @@ HullCombatSmallBlocks
   # SizeInBlocks: "4,4,4"
   # ModelScale: 4
   # Category: BuildingBlocks
-  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   # ShowUser: No
 # }
@@ -27482,7 +27484,7 @@ HullCombatSmallBlocks
   # Info: bkiHull, display: true
   # HitPoints: 50, type: int, display: true
   # Mass: 8, type: float, display: true, formatter: Kilogram
-  # ChildShapes: "CorridorPillarD, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, CylinderThin6Way, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
+  # ChildShapes: "CorridorPillarD, CubeStepped, RampConnectorDleft, RampConnectorDright, RampConnectorEleft, RampConnectorFright, CubeDummy, CubeDummy, CornerDoubleA2, CornerDoubleB2, CornerDoubleB1, CornerSmallBMedium, CornerSmallBLow, CornerHalfA3Low, CornerSmallCLow, CornerB, CornerHalfA2, CornerCLow, CornerHalfC, CornerRoundBMediumQuarter, CornerRoundBLowQuarter, PipesX, PipesFenceKinked, CubeDummy, PipesL, PipesT, Cube, CornerRoundAMediumQuarter, CornerRoundALowQuarter, EdgeRoundLowHalf, EdgeRoundLowQuarter, EdgeRoundLowEighth"
 # }
 # { Block Id: 1992, Name: HullTestShapes2
   # DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -27590,7 +27592,7 @@ HullCombatSmallBlocks
   # SizeInBlocks: "2,2,2"
   # ModelScale: 2
   # Category: BuildingBlocks
-  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   # ShowUser: No
 # }
@@ -27637,7 +27639,7 @@ HullCombatSmallBlocks
   # SizeInBlocks: "4,4,4"
   # ModelScale: 4
   # Category: BuildingBlocks
-  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 
   # ShowUser: No
 # }
