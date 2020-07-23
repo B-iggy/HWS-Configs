@@ -3194,7 +3194,7 @@
 
 { +Template Name: AssaultRifle
   CraftTime: 30 #A2 5.8mmBullet 3
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     MechanicalComponents: 5
     Electronics: 1
@@ -3232,7 +3232,7 @@
 
 { +Template Name: Sniper
   CraftTime: 30 #A2 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     MechanicalComponents: 5
     SteelPlate: 2
@@ -3493,6 +3493,16 @@
     DrillAttachment: 1
   }
 }
+{ +Template Name: DrillAttachmentSVT2
+  CraftTime: 40 #D1 SV 20
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    Motor: 5
+    MechanicalComponents: 45
+    ZascosiumAlloy: 22
+    PowerCoil: 3
+  }
+}
 
 { +Template Name: DrillAttachmentCV
   CraftTime: 20 #A2 HV 10
@@ -3719,7 +3729,7 @@
 /* Turrets for HV */
 { +Template Name: TurretGVMinigunBlocks #"Minigun Turret"
   CraftTime: 30 #A2 5 "15mmBullet"
-  Target: "LargeC,AdvC"
+  Target: "BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 25
     Electronics: 2
@@ -3774,6 +3784,16 @@
   }
 }
 
+{ +Template Name: TurretSVSmall
+  CraftTime: 60 #A2 5 "15mmBullet"
+  Target: "BaseC,LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 25
+    Electronics: 2
+    Motor: 1
+    OpticalFiber: 2
+  }
+}
 
 { +Template Name: TurretMSToolBlocks
   CraftTime: 30 #D1 20 
@@ -3833,7 +3853,7 @@
 { +Template Name: 5.8mmBullet
   OutputCount: 50 #A2 Assaultrifle
   CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 8
     CopperIngot: 4
@@ -3857,7 +3877,7 @@
 { +Template Name: 12.7mmBullet
   OutputCount: 15 #A2 1 Sniper
   CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 6
     CopperIngot: 2

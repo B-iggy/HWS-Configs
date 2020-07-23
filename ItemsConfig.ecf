@@ -5609,11 +5609,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     ROF: 0.5, type: float, display: true, formatter: ROF
+    AllowAt: "Planet,Space"
     Range: 650, display: false
     RangeSpace: 1300, display: false
-    AmmoCapacity: 60, display: false   # no need to display since unlimited ammo
-    # AmmoUnlimited: true
+    # Damage: 2000, display: true
+    AmmoCapacity: 500, display: false       # no need to display since unlimited ammo
     AmmoType: TurretEnemyLaserChargeT2, display: true
+    # AmmoUnlimited: true
+    Automatic: true
     NoiseStrength: 100, display: false
     ReloadDelay: 0.6, display: true
     SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
@@ -5621,6 +5624,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     # PfxMuzzle: turretMuzzleFire
+    # ParticleTransform: Muzzle/Particle1
   }
 }
 
@@ -11764,7 +11768,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 1004, Name: Liquors, Ref: TradingGoodsTemplate
+  MarketPrice: 350
   ShowUser: Yes
+  { Child 0
+    Class: Eat
+    ROF: 1, type: float
+    AddHealth: -5, display: HealthValue
+    AddStamina: -20, display: StaminaValue
+    AddFood: -2, display: FoodValue
+    AddOxygen: 0
+	AddTemperature: +10, display: TemperatureValue
+    SfxBegin: UseActions/playerDrinking
+    Buff: "Hangover"
+    Buff_chance: "0.25"
+  }
 }
 { +Item Id: 1005, Name: Narcotics , Ref: TradingGoodsTemplate
   ShowUser: Yes
@@ -11776,6 +11793,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 1008, Name: Leather , Ref: TradingGoodsTemplate
+  MarketPrice: 260
   ShowUser: Yes
 }
 { +Item Id: 1009, Name: ToxicWaste , Ref: TradingGoodsTemplate
@@ -11794,9 +11812,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 1014, Name: Filters , Ref: TradingGoodsTemplate
+  MarketPrice: 25
   ShowUser: Yes
 }
 { +Item Id: 1015, Name: SpareParts , Ref: TradingGoodsTemplate
+  MarketPrice: 500
   ShowUser: Yes
 }
 { +Item Id: 1016, Name: ScienceEquipment , Ref: TradingGoodsTemplate
@@ -11865,7 +11885,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 2.9, display: true
     Bullet_use_per_shot: 0.25
     Particles: diggerplasma              # particle effect shown at impact
-    ParticleTransform: Muzzle/Particle1  # particle effect shown at muzzle  
+    PfxMuzzle: flamethrower_v1
+    /*ParticleTransform: Muzzle/Flamethrower_v1  # particle effect shown at muzzle  */
     /*             SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
     SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop    */
     SfxBegin: Weapons/Player/Drill/weapon_flame_005_start
