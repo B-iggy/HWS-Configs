@@ -11770,18 +11770,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 1004, Name: Liquors, Ref: TradingGoodsTemplate
   MarketPrice: 350
   ShowUser: Yes
-  { Child 0
-    Class: Eat
-    ROF: 1, type: float
-    AddHealth: -5, display: HealthValue
-    AddStamina: -20, display: StaminaValue
-    AddFood: -2, display: FoodValue
-    AddOxygen: 0
-	AddTemperature: +10, display: TemperatureValue
-    SfxBegin: UseActions/playerDrinking
-    Buff: "Hangover"
-    Buff_chance: "0.25"
-  }
 }
 { +Item Id: 1005, Name: Narcotics , Ref: TradingGoodsTemplate
   ShowUser: Yes
