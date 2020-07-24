@@ -11311,7 +11311,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.3, type: float, display: true  # better: 0.085
   SpeedFac: 0.5, type: float, display: true  # better: 0.085
   JumpFac: 0.3, type: float, display: true
-  JetpackFac: 0.7, type: float, display: true
+  JetpackFac: 1.0, type: float, display: true
   FoodFac: 0.5, type: float, display: true
   StaminaFac: 0.7, type: float, display: true
 
@@ -11488,7 +11488,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { Item Id: 651, Name: JetpackBoostEpic , Ref: JetpackBoost
-  JetpackFac: -0.5, type: float, display: true
+  JetpackFac: -0.26, type: float, display: true
   
   ShowUser: Yes
 }
