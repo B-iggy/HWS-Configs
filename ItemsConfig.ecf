@@ -1272,8 +1272,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 55, type: float, display: true, formatter: Kilogram
   Volume: 60, type: float, display: true, formatter: Liter
   #just for display - BlastRadius and BlastDamage is controlled by "SciFiCannonPlasmaCharge"
+  Damage: 687, display: true
   BlastRadius: 3, display: true
-  BlastDamage: 550, display: true
+  BlastDamage: 500, display: true
   # Explosion Radius: 3, display: true
   Durability: 100, display: false
   DegradationProb: 1, type: float, display: false
@@ -2859,10 +2860,110 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Tools
 }
 
+{ Item Id: 42, Name: FlameThrower
+  Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
+  PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 15
+  StackSize: 1
+  Category: Weapons/Items
+  Mass: 8, type: float, display: false, formatter: Kilogram
+  Info: bkiDrill, display: true
+  # Info: bkiDrillT2, display: true
+  Durability: 500, display: false
+  DegradationProb: 0.2, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
 
-# free
+  ShowUser: No
 
-#{ +Item Id: 43, Name: "M77 Torpedo Launcher Weapon"
+  { Child 0
+    Class: Ranged
+    ROF: 0.25, type: float
+    Range: 6, display: false
+    BulletsPerShot: 8
+    BulletSpread: 1
+    RaySpread: 1, display: true
+    Recoil: 0, display: true
+    NoiseStrength: 40, display: false
+    CameraShake: 0
+    IgnoreAtmo: true
+    Buff: "Fire"
+    Buff_chance: 1
+    Automatic: true
+    Damage: 50
+    Radius: 3
+    AmmoCapacity: 50, display: true
+    AmmoType: BioFuel, display: true
+    UseSingleMagazine: true
+    ReloadDelay: 2.9, display: true
+    Bullet_use_per_shot: 0.25
+    # Particles: diggerplasma              # particle effect shown at impact
+    PfxMuzzle: flamethrower_v1
+    /*ParticleTransform: Muzzle/Flamethrower_v1  # particle effect shown at muzzle  */
+    /*             SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
+    SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop    */
+    SfxBegin: Weapons/Player/Drill/weapon_flame_005_start
+    SfxLoop: Weapons/Player/Drill/weapon_flame_005_loop
+    SfxStop: Weapons/Player/Drill/Mute
+    SfxReload: UseActions/oxygen_tank_release_air
+    # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
+    DamageMultiplier_1: 2, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 2, param1: wood|woodblock|plastic
+    DamageMultiplier_3: 0.0001, param1: dirt|stone|rock
+    DamageMultiplier_4: 0, param1: concrete|hull|hullarmored|hullcombat|metal|metalhard
+    DamageMultiplier_5: 0, param1: shield
+    DamageMultiplier_6: 5, param1: human
+  }
+
+  UnlockCost: 0
+  UnlockLevel: 0
+  TechTreeNames: Hidden
+}
+
+{ Item Id: 43, Name: PlasmaCannonAlien
+  Meshfile: Entities/Items/Weapons/Flamethrower/AlienFlamethrowerPrefab
+  PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 15
+  StackSize: 1
+  Category: Weapons/Items
+  Info: bkiWeaponHandheldIgnoringAtmo, display: true
+  Mass: 45, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
+  #just for display - BlastRadius and BlastDamage is controlled by "SciFiCannonPlasmaCharge"
+  Damage: 1000, display: true
+  BlastRadius: 3, display: true
+  BlastDamage: 500, display: true
+  # Explosion Radius: 3, display: true
+  Durability: 350, display: false
+  DegradationProb: 1, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  { Child 0
+    Class: LauncherSS
+    AllowRemote: false
+    ROF: 1, type: float, display: true, formatter: ROF
+    Range: 450, display: false
+    NoiseStrength: 100, display: false
+    CameraShake: 1
+    Recoil: 0, display: true
+    IgnoreAtmo: true, display: true
+    AmmoCapacity: 5, display: true
+    AmmoType: PlasmaCannonAlienCharge, display: true
+    ReloadDelay: 3, display: true
+    SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
+    PfxMuzzle: SniperMuzzleLaserRed
+  }
+
+  UnlockCost: 0
+  UnlockLevel: 0
+  TechTreeNames: Hidden
+}
+
+# available free 44-47 (+4)
+
+#{ +Item Id: 44, Name: "M77 Torpedo Launcher Weapon"
 #  Meshfile: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
 #  DropMeshfile: Entities/Misc/BagSmallPrefab
 #  ShowUser: NoButCSV
@@ -2893,7 +2994,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 #  }
 #}
 
-#{ +Item Id: 44, Name: "M77 Torpedo"
+#{ +Item Id: 45, Name: "M77 Torpedo"
 #  Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
 #  DropMeshfile: Entities/Misc/BagSmallPrefab
 #  CustomIcon: BombDrone
@@ -3292,6 +3393,43 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_16: 1, param1: rock
     BlastDamageMultiplier_17: 5, param1: shield
     BlastDamageMultiplier_18: 1, param1: plastic
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
+
+{ +Item Id: 66, Name: PlasmaCannonAlienCharge
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: EnergyCellHydrogen
+  Material: metalweapon
+  HoldType: 0
+  Canhold: false
+  Info: bkiAmmoHoming, display: true
+  Category: Weapons/Items
+  StackSize: 2000
+  Mass: 4, type: float, display: true, formatter: Kilogram
+  Volume: 0.5, type: float, display: true, formatter: Liter
+  { Child 0
+    Class: Projectile
+    Damage: 1000, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 650, display: true
+    Speed: 90
+    Range: 450
+    NoiseStrength: 80, display: false
+    Ballistic: false
+    HomingSpeed: 2, display: true
+
+    DamageMultiplier_1: 0, param1: dirt|stone
+    DamageMultiplier_2: 1.1, param1: hullarmored|hullcombat
+    # DamageMultiplier_3: 10,   param1: rock
+    DamageMultiplier_4: 1.1,   param1: shield
+    BlastDamageMultiplier_1: 1.1, param1: hullarmored|hullcombat
+    BlastDamageMultiplier_2: 0.5, param1: dirt|stone
+    BlastDamageMultiplier_3: 0, param1: shield
   }
 
   UnlockLevel: 1
@@ -7230,7 +7368,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Hidden
 }
 { +Item Id: 178, Name: TurretEnemyLaserChargeT2
-  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotGreenAlien
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketGreenPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
   AllowPlacingAt: "Base,MS", display: false
@@ -11858,7 +11996,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     ROF: 0.25, type: float
-    Range: 30, display: false
+    Range: 8, display: false
+    BulletsPerShot: 8
+    BulletSpread: 0
+    RaySpread: 1, display: true
+    Recoil: 0, display: true
     NoiseStrength: 40, display: false 
     CameraShake: 0 
     IgnoreAtmo: true
@@ -11872,7 +12014,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     UseSingleMagazine: true
     ReloadDelay: 2.9, display: true
     Bullet_use_per_shot: 0.25
-    Particles: diggerplasma              # particle effect shown at impact
+    # Particles: diggerplasma              # particle effect shown at impact
     PfxMuzzle: flamethrower_v1
     /*ParticleTransform: Muzzle/Flamethrower_v1  # particle effect shown at muzzle  */
     /*             SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
@@ -11880,7 +12022,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Weapons/Player/Drill/weapon_flame_005_start
     SfxLoop: Weapons/Player/Drill/weapon_flame_005_loop
     SfxStop: Weapons/Player/Drill/Mute
-    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    SfxReload: UseActions/oxygen_tank_release_air
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
     DamageMultiplier_1: 0.1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 0.1, param1: wood
