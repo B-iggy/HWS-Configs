@@ -1959,7 +1959,7 @@ HullCombatSmallBlocks
   Mesh-Damage-3: Mesh/D2
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
-  AllowPlacingAt: MS, display: true
+  AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   Mass: 72, type: float, display: true, formatter: Kilogram
@@ -1968,6 +1968,7 @@ HullCombatSmallBlocks
   IsLockable: true
   IsOxygenTight: false, display: true
   Info: bkiPassengerSeat, display: true
+  YawRotation: 150          # how far in degrees head of player can be rotated (default 75°)
   StackSize: 50000
   BlockColor: "110,110,110"
   Category: Devices
@@ -3529,6 +3530,52 @@ HullCombatSmallBlocks
   TemplateRoot: ConsoleBlocks
 }
 
+{ +Block Id: 345, Name: TurretSVSmall
+  Class: TurretManual
+  IndexName: Turret
+  Group: cpgTurret
+  CustomIcon: TurretGVMinigun
+  Material: metalhard
+  Shape: Turret
+  Place: Face
+  Model: @models/Blocks/Turrets/TurretGVMinigunV2Prefab
+  # Mesh-Damage-1: Mesh/D0
+  # Mesh-Damage-2: Mesh/D1
+  # Mesh-Damage-3: Mesh/D2
+  # Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  WeaponItem: TurretGVMinigunWeapon
+  # TemplateRoot: TurretGVMinigunBlocks
+  SoundOnEnter: UseActions/DOOROpen02
+  IsActivateable: true
+  IsActivateableInCP: true
+  Info: bkiTurret, display: true
+  Category: Weapons/Items
+  BlockColor: "110,110,110"
+  # ModelOffset: "0,0.5,0"
+  AllowPlacingAt: SS, display: true
+  SizeInBlocks: "3,1,3", display: true
+  Volume: 281.25, type: float, display: true, formatter: Liter
+  Mass: 500, type: float, display: true, formatter: Kilogram
+  StackSize: 500
+  MaxCount: 6, type: int, display: true
+  BlastParticleIndex: 11
+  BlastRadius: 2
+  BlastDamage: 50
+  EnergyIn: 15, type: int, display: true, formatter: Watt
+  CPUIn: 1100, type: int, display: true
+  HitPoints: 550, type: int, display: true
+  RotSpeed: 140, type: int, display: true
+  Zoom: 5, type: float
+
+  UnlockCost: 7, display: true
+  UnlockLevel: 5, display: true
+  TechTreeParent: WeaponSV02
+  TechTreeNames: Small Vessel
+
+  # Showuser: No
+}
+
 #{ Block Id: 344, Name: RockFormationESnow, Ref: RockFormationO
 #  Model: Environment/Rocks/Misc/RockFormationESnowPrefab
 #}
@@ -4907,7 +4954,7 @@ HullCombatSmallBlocks
   IsRetractable: true, display: true
 
   Place: WeaponDir
-  AllowPlacingAt: SS, display: true
+  AllowPlacingAt: "GV,SS", display: true
   SizeInBlocks: "1,4,1", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
   Mass: 1645, type: float, display: true, formatter: Kilogram
@@ -4932,7 +4979,7 @@ HullCombatSmallBlocks
   UnlockCost: 25, display: true
   UnlockLevel: 20, display: true
   TechTreeParent: WeaponSV01
-  TechTreeNames: Small Vessel
+  TechTreeNames: "Hover Vessel,Small Vessel"
 }
 # Plasma Cannon
 { +Block Id: 431, Name: WeaponSV04
@@ -5872,6 +5919,7 @@ HullCombatSmallBlocks
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
   Class: NPCDialogue
+  Info: bkiGamblingTableTwoPerson, display: true
   Group: cpgCrewStationAlien
   IsAccessible: true, type: bool
   NPCModelRotation: false
@@ -5882,6 +5930,7 @@ HullCombatSmallBlocks
 { +Block Id: 475, Name: GamblingTableMultiplePeople, Ref: NPCAlienTemplate
   Class: NPCDialogue
   NPCModelRotation: false
+  Info: bkiGamblingTableMultiplePeople, display: true
   Group: cpgCrewStationAlien
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
@@ -8838,6 +8887,7 @@ HullCombatSmallBlocks
 { +Block Id: 613, Name: Sofa, Ref: DecoTemplate
   Group: cpgEquipment
   IsAccessible: true, type: bool
+  Class: PassengerSeat
   IsLockable: true
   BuffNameActivate: StaminaRecover, display: StatusEffect
   # CanPickup: true
@@ -8862,6 +8912,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 615, Name: KitchenTable, Ref: DecoTemplate
   Group: cpgEquipment
+  Class: PassengerSeat
   IsAccessible: true, type: bool
   IsLockable: true
   BuffNameActivate: StaminaRecover, display: StatusEffect
@@ -8884,10 +8935,14 @@ HullCombatSmallBlocks
 }
 { +Block Id: 618, Name: ControlStation, Ref: DecoTemplate
   # CanPickup: true
+  Class: PassengerSeat
+  Group: cpgEquipment
   BlockColor: "170,170,170"
   Info: bkiDecoModel, display: true
   Model: Entities/Decorations/HomeSweetHome/ControlStationPrefab
   ShowUser: Yes
+  IsAccessible: true, type: bool
+  IsLockable: true
 }
 { +Block Id: 619, Name: BathroomCounter, Ref: DecoTemplate
   Class: Container
@@ -8905,6 +8960,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 620, Name: Toilet, Ref: DecoTemplate
   Model: Entities/Decorations/HomeSweetHome/ToiletPrefab
+  Class: PassengerSeat
   BlockColor: "220,220,220"
   Group: cpgEquipment
   IsAccessible: true, type: bool
@@ -10023,7 +10079,7 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   Place: WeaponDir
   SizeInBlocks: "1,6,1", display: true
-  AllowPlacingAt: GV, display: true
+  AllowPlacingAt: "GV", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
   Mass: 400, type: float, display: true, formatter: Kilogram
   Info: bkiDrill, display: true
@@ -12688,7 +12744,54 @@ HullCombatSmallBlocks
   Model: Entities/Misc/DummyPrefab
 }
 
-# 852 available free ROCKS
+# available 852
+{ +Block Id: 852, Name: DrillAttachmentSVT2
+  LootList: 37   /* still used? */
+  IndexName: WeaponShip
+  Group: cpgHarvest
+  Material: metalhard
+  Shape: ModelEntity
+  ShowBlockName: true
+  CustomIcon: DrillAttachmentT2
+  WeaponItem: DrillAttachmentT2Weapon
+  Model: @models/Blocks/WeaponsShip/DrillAttachmentT2RetractPrefab
+  # Model: @models/Blocks/WeaponsShip/DrillAttachmentPrefab
+  # Mesh-Damage-1: Mesh/D0
+  # Mesh-Damage-2: Mesh/D1
+  # Mesh-Damage-3: Mesh/D2
+  # Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  IsTextureable: true   # !!!
+  IsGPUInstance: false  # !!!
+  Texture: 50
+  SoundOpen: UseActions/WeaponOpenClose
+  SoundClose: UseActions/WeaponOpenClose
+  IsActivateable: true
+  IsRetractable: true, display: true
+  BlockColor: "110,110,110"
+  Place: WeaponDir
+  SizeInBlocks: "1,6,1", display: true
+  AllowPlacingAt: "SS", display: true
+  Volume: 82.5, type: float, display: true, formatter: Liter
+  Mass: 850, type: float, display: true, formatter: Kilogram
+  Info: bkiDrill, display: true
+  Category: Weapons/Items
+  EnergyDynamicGroup: Drill
+  EnergyIn: 400, type: int, display: true, formatter: Watt
+  CPUIn: 380, type: int, display: true
+  EnergyInIdle: 1, type: int, display: true, formatter: Watt
+  HitPoints: 800, type: int, display: true
+  StackSize: 1000
+  MaxCount: 6, type: int, display: true
+  BlastParticleIndex: 4
+  BlastRadius: 2
+  BlastDamage: 80
+
+  UnlockCost: 12, display: true
+  UnlockLevel: 10, display: true
+  TechTreeParent: ContainerHarvestControllerSmall
+  TechTreeNames: Small Vessel
+}
 
 { Block Id: 853, Name: GrassBlue03, Ref: GrassGreen01
   Model: Entities/Misc/DummyPrefab
@@ -15385,6 +15488,7 @@ HullCombatSmallBlocks
 { +Block Id: 1073, Name: ScifiLargeSofa, Ref: DecoTemplate
   Group: cpgEquipment
   IsAccessible: true, type: bool
+  Class: PassengerSeat
   IsLockable: true
   BuffNameActivate: StaminaRecover, display: StatusEffect
   # CanPickup: true
@@ -15437,6 +15541,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1076, Name: ScifiSofa, Ref: DecoTemplate
   Group: cpgEquipment
+  Class: PassengerSeat
   IsAccessible: true, type: bool
   IsLockable: true
   BuffNameActivate: StaminaRecover, display: StatusEffect
@@ -15461,6 +15566,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1078, Name: ScifiTable, Ref: DecoTemplate
   Group: cpgEquipment
+  Class: PassengerSeat
   IsAccessible: true, type: bool
   IsLockable: true
   Model: Entities/Decorations/Sci-Fi_InteriorPack/ScifiTablePrefab
@@ -15536,7 +15642,10 @@ HullCombatSmallBlocks
   # IsDuplicateable: false         # problem with mirror Mantis: 03845
 }
 { +Block Id: 1085, Name: ScifiChair, Ref: DecoTemplate
+  Class: PassengerSeat
   Group: cpgEquipment
+  # YawRotation: 150          # how far in degrees head of player can be rotated (default 75°)
+  # IsActivateable: true
   IsAccessible: true, type: bool
   IsLockable: true
   BuffNameActivate: StaminaRecover, display: StatusEffect
@@ -15546,6 +15655,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1086, Name: ScifiTableV2, Ref: DecoTemplate
   Group: cpgEquipment
+  Class: PassengerSeat
   IsAccessible: true, type: bool
   IsLockable: true
   BuffNameActivate: StaminaRecover, display: StatusEffect
@@ -17507,7 +17617,7 @@ HullCombatSmallBlocks
   Mass: 1165, type: float, display: true, formatter: Kilogram
   StackSize: 50000
 
-  EnergyIn: 300, type: int, display: true, formatter: Watt
+  EnergyIn: 650, type: int, display: true, formatter: Watt
   EnergyInIdle: 6, type: int, display: true, formatter: Watt
 
   UnlockCost: 25, display: true
@@ -17549,6 +17659,10 @@ HullCombatSmallBlocks
 { +Block Id: 1240, Name: ScifiTableNPC2, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
+  Class: PassengerSeat
+  Group: cpgEquipment
+  IsAccessible: true, type: bool
+  IsLockable: true
   NPCModelRotation: false
 
   Model: Entities/Decorations/DecoNPC/ScifiTableNPC2Prefab
@@ -17585,6 +17699,10 @@ HullCombatSmallBlocks
 { +Block Id: 1244, Name: ScifiTableV2NPC, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
+  Class: PassengerSeat
+  Group: cpgEquipment
+  IsAccessible: true, type: bool
+  IsLockable: true
   Model: Entities/Decorations/DecoNPC/ScifiTableV2NPCPrefab
   EnergyIn: 0, type: int, display: true, formatter: Watt
   ShowUser: Yes
@@ -17592,7 +17710,11 @@ HullCombatSmallBlocks
 { +Block Id: 1245, Name: SofaNPC, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
+  Class: PassengerSeat
+  Group: cpgEquipment
   Model: Entities/Decorations/DecoNPC/SofaNPCPrefab
+  IsAccessible: true, type: bool
+  IsLockable: true
   SizeInBlocks: "2,1,2", display: true
   ShowUser: Yes
 }
@@ -18353,6 +18475,8 @@ HullCombatSmallBlocks
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   SizeInBlocks: "1,1,1", display: true
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
   # SymType: 4
   StackSize: 50000
   EnergyIn: 320, type: int, display: true, formatter: Watt
@@ -20282,6 +20406,7 @@ HullCombatSmallBlocks
   Class: NPCDialogue
   NPCModelRotation: false
   Group: cpgCrewStationHuman
+  Info: bkiCommandingOfficer2, display: true
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
@@ -20292,6 +20417,7 @@ HullCombatSmallBlocks
 { +Block Id: 1468, Name: SecurityGuard2, Ref: NPCHumanTemplate
   Class: NPCDialogue
   Group: cpgCrewStationHuman
+  Info: bkiSecurityGuard2, display: true
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
@@ -20302,6 +20428,7 @@ HullCombatSmallBlocks
   Class: NPCDialogue
   NPCModelRotation: false
   Group: cpgCrewStationAlien
+  Info: bkiCommandingOfficerAlien, display: true
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
@@ -20312,6 +20439,7 @@ HullCombatSmallBlocks
 { +Block Id: 1470, Name: SecurityGuardAlien , Ref: NPCAlienTemplate
   Class: NPCDialogue
   Group: cpgCrewStationAlien
+  Info: bkiSecurityGuardAlien, display: true
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
@@ -20323,6 +20451,7 @@ HullCombatSmallBlocks
 { +Block Id: 1471, Name: StandingTalon, Ref: NPCAlienTemplate
   Class: NPCDialogue
   Group: cpgCrewStationAlien
+  Info: bkiStandingTalon, display: true
   AllowedInBlueprint: false, display: true
   IsAccessible: true, type: bool
   # CanPickup: true
@@ -21439,6 +21568,8 @@ HullCombatSmallBlocks
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   SizeInBlocks: "1,1,1", display: true
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
   # SymType: 4
   StackSize: 50000
   EnergyIn: 5, type: int, display: true, formatter: Watt
@@ -21578,7 +21709,7 @@ HullCombatSmallBlocks
   Info: bkiDrill, display: true
   Category: Weapons/Items
   EnergyDynamicGroup: Drill
-  EnergyIn: 820, type: int, display: true, formatter: Watt
+  EnergyIn: 2220, type: int, display: true, formatter: Watt
   CPUIn: 4000, type: int, display: true
   EnergyInIdle: 16, type: int, display: true, formatter: Watt
   Mass: 3650, type: float, display: true, formatter: Kilogram
@@ -22350,6 +22481,8 @@ HullCombatSmallBlocks
   WeaponItemRotation: false
   SizeInBlocks: "1,1,1", display: true
   AllowPlacingAt: "SS", display: true
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
   Mass: 55, type: float, display: true, formatter: Kilogram
   Volume: 31.25, type: float, display: true, formatter: Liter
   Range: 3500, type: int, display: true
@@ -23220,12 +23353,12 @@ HullCombatSmallBlocks
   CPUIn: 15, type: int, display: true
   MaxVolumeCapacity: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
-  AllowPlacingAt: "GV", display: true
+  AllowPlacingAt: "GV,SS", display: true
 
   UnlockCost: 5, display: true
   UnlockLevel: 3, display: true
   TechTreeParent: ContainerSmallBlocks
-  TechTreeNames: Hover Vessel
+  TechTreeNames: "Small Vessel,Hover Vessel"
 }
 { +Block Id: 1687, Name: ContainerHarvestControllerLarge, Ref: ContainerControllerLarge
   Class: ContainerController
