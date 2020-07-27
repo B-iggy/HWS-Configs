@@ -7328,7 +7328,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 554, Name: OxygenGenerator
   Class: O2Generator
-  Material: metal, display: true
+  Material: metal
   Shape: ModelEntity
   Model: @models/Blocks/Terrain/OxygenGeneratorPrefab
   Mesh-Damage-1: Mesh/D0
@@ -7343,33 +7343,33 @@ HullCombatSmallBlocks
   Info: bkiOxygenGenerator, display: true
   IsTerrainDecoration: true
   /* oxygengenerator should run with 1 energycell (FuelValue 10kWh) => 60min */
-  EnergyIn: 10, type: int, display: true, formatter: Watt
-  StackSize: 50000
+  EnergyIn: 20, type: int, display: true, formatter: Watt
+  StackSize: 1000
   CanPickup: true
   XpFactor: 0  # to avoid farming of xp through placement/pickup cycle
   ForceNoPvEDamage: true
   Category: Devices
   AllowPlacingAt: Terrain, display: true
-  # SizeInBlocks: "1,2,3", display: true    # removed to avoid problem with "cutting out water"
-  Volume: 800, type: float, display: true, formatter: Liter
-  Mass: 500, type: float, display: true, formatter: Kilogram
+  SizeInBlocks: "1,2,3", display: true    # removed to avoid problem with "cutting out water"
+  Volume: 400, type: float, display: true, formatter: Liter
+  Mass: 570, type: float, display: true, formatter: Kilogram
   BlastParticleIndex: 4
   BlastRadius: 2
   BlastDamage: 50
   HitPoints: 80, type: int, display: true
   FuelAccept: "EnergyCell, EnergyCellLarge, FusionCell, BioFuel"
 
-  # UnlockCost: 2, display: true
-  # UnlockLevel: 2, display: true
-  # TechTreeParent: WaterGenerator
-  # TechTreeNames: Misc
+  UnlockCost: 7, display: true
+  UnlockLevel: 10, display: true
+  TechTreeParent: WaterGenerator
+  TechTreeNames: Misc
 
   MapIcon: map_OxyGenerator
   MapName: OxygenGenerator
 
   Temperature: 30, display: true
 
-  ShowUser: No
+  ShowUser: Yes
 }
 
 /* For space POIs */
@@ -10527,18 +10527,28 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   Info: bkiOxygenHydrogenGenerator, display: true
   BlockColor: "45,90,45"
+  EnergyIn: 150, type: int, display: true, formatter: Watt
+  StackSize: 1000
+  CanPickup: true
+  XpFactor: 0  # to avoid farming of xp through placement/pickup cycle
+  ForceNoPvEDamage: true
+  Category: Devices
+  AllowPlacingAt: Terrain, display: true
+  SizeInBlocks: "1,2,3", display: true    # removed to avoid problem with "cutting out water"
+  Volume: 400, type: float, display: true, formatter: Liter
+  Mass: 610, type: float, display: true, formatter: Kilogram
 
-  # UnlockCost: 10, display: true
-  # UnlockLevel: 7, display: true
-  # TechTreeParent: OxygenGenerator
-  # TechTreeNames: Misc
+  UnlockCost: 12, display: true
+  UnlockLevel: 20, display: true
+  TechTreeParent: OxygenGenerator
+  TechTreeNames: Misc
 
   MapIcon: map_OxyGenerator2
   MapName: OxygenHydrogenGenerator
 
   Temperature: 30, display: true
 
-  ShowUser: No
+  ShowUser: Yes
 }
 { Block Id: 707, Name: InsanityPepperStage3
   Class: CropsGrown
