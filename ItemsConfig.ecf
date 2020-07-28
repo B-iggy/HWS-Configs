@@ -2963,75 +2963,75 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 # available free 44-47 (+4)
 
-#{ +Item Id: 44, Name: "M77 Torpedo Launcher Weapon"
-#  Meshfile: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  ShowUser: NoButCSV
-#  Canhold: false
-#  Material: metalweapon
-#  CustomIcon: ThrusterGVRoundArmored
-#  HoldType: 0
-#  StackSize: 500
-#  Mass: 2000, type: float, display: false, formatter: Kilogram
-#  Category: Weapons/Items
-#  { Child 0
-#    Class: LauncherSS
-#    IsShootThroughCrosshair: false
-#    ROF: 11, type: float, display: true, formatter: ROF
-#    Range: 0, display: false
-#    RangeSpace: 0, display: false
-#    AmmoCapacity: 1, display: true
-#    AmmoType: "M77 Torpedo", display: true
-#    BulletSpread: 10, display: false
-#    Automatic: false
-#    NoiseStrength: 200, display: false
-#    AutoReload: true
-#    CheckObstructed: false
-#    ReloadDelay: 13, display: true # adapt sound
-#    SfxBegin: UseActions/BarrelClose
-#    SfxNoAmmo: Weapons/Misc/weapon_outofammo_002
-#    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
-#  }
-#}
+{ +Item Id: 44, Name: "M77 Torpedo Launcher Weapon"
+  Meshfile: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  ShowUser: NoButCSV
+  Canhold: false
+  Material: metalweapon
+  CustomIcon: ThrusterGVRoundArmored
+  HoldType: 0
+  StackSize: 500
+  Mass: 2000, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: LauncherSS
+    IsShootThroughCrosshair: false
+    ROF: 11, type: float, display: true, formatter: ROF
+    Range: 0, display: false
+    RangeSpace: 0, display: false
+    AmmoCapacity: 1, display: true
+    AmmoType: "M77 Torpedo", display: true
+    BulletSpread: 10, display: false
+    Automatic: false
+    NoiseStrength: 200, display: false
+    AutoReload: true
+    CheckObstructed: false
+    ReloadDelay: 13, display: true # adapt sound
+    SfxBegin: UseActions/BarrelClose
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_002
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+  }
+}
 
-#{ +Item Id: 45, Name: "M77 Torpedo"
-#  Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  CustomIcon: BombDrone
-#  Material: metalweapon
-#  AllowPlacingAt: SS, display: false
-#  HoldType: 0
-#  StackSize: 50000
-#  Canhold: false
-#  Mass: 459, type: float, display: true, formatter: Kilogram
-#  Volume: 31.25, type: float, display: true, formatter: Liter
-#  Info: "A high-impact torpedo. Designed to be launched while dive-bombing a ground target. Bombs inherit the speed of the vehicle that launched them and safely disarm if they exceed their target distance.", display: true
-#  Category: Weapons/Items
-#  { Child 0
-#    Class: Projectile
-#    Damage: 2500
-#    NoiseStrength: 1000, display: false
-#    BlastParticleIndex: 3
-#    BlastRadius: 4, display: true
-#    BlastDamage: 7150, display: true
-#    Speed: 10
-#    Range: 100
-#    SpeedSpace: 15
-#    RangeSpace: 750
-#    Ballistic: false
-#
-#    DamageMultiplier_1: 0.5, param1: head|body
-#    DamageMultiplier_2: 0.01, param1: stone|dirt
-#    DamageMultiplier_3: 10,   param1: rock    # can destroy rocks
-#    DamageMultiplier_4: 0.04,   param1: shield
-#    BlastDamageMultiplier_1: 1.25, param1: head|body
-#    BlastDamageMultiplier_2: 0.5, param1: stone|dirt
-#    BlastDamageMultiplier_4: 0,   param1: shield
-#  }
-#
-#  UnlockLevel: 1
-#  TechTreeNames: Hidden
-#}
+{ +Item Id: 45, Name: "M77 Torpedo"
+  Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: BombDrone
+  Material: metalweapon
+  AllowPlacingAt: SS, display: false
+  HoldType: 0
+  StackSize: 50000
+  Canhold: false
+  Mass: 459, type: float, display: true, formatter: Kilogram
+  Volume: 31.25, type: float, display: true, formatter: Liter
+  Info: "A high-impact torpedo. Designed to be launched while dive-bombing a ground target. Bombs inherit the speed of the vehicle that launched them and safely disarm if they exceed their target distance.", display: true
+  Category: Weapons/Items
+  { Child 0
+    Class: Projectile
+    Damage: 2500
+    NoiseStrength: 1000, display: false
+    BlastParticleIndex: 3
+    BlastRadius: 4, display: true
+    BlastDamage: 7150, display: true
+    Speed: 10
+    Range: 100
+    SpeedSpace: 15
+    RangeSpace: 750
+    Ballistic: false
+
+    DamageMultiplier_1: 0.5, param1: head|body
+    DamageMultiplier_2: 0.01, param1: stone|dirt
+    DamageMultiplier_3: 10,   param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0.04,   param1: shield
+    BlastDamageMultiplier_1: 1.25, param1: head|body
+    BlastDamageMultiplier_2: 0.5, param1: stone|dirt
+    BlastDamageMultiplier_4: 0,   param1: shield
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
 
 # Debug weapons
 { +Item Id: 48, Name: RocketLauncherDebug, Ref: RocketLauncher
@@ -3799,63 +3799,63 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
 }
 
-#{ +Item Id: 98, Name: "Alien Energy Railgun Weapon"
-#  Meshfile: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  ShowUser: NoButCSV  # reported by HWS
-#  Canhold: false
-#  Material: metalweapon
-#  HoldType: 0
-#  StackSize: 50000
-#  Mass: 2715, type: float, display: false, formatter: Kilogram
-#  Category: Weapons/Items
-#  { Child 0
-#    Class: Ranged
-#    AllowAt: Space
-#    ROF: 0.6, type: float, display: true, formatter: ROF
-#    Range: 510, display: false
-#    RangeSpace: 925, display: false
-#    Damage: 1000, display: true
-#    Automatic: true
-#    AmmoCapacity: 150, display: true
-#    AmmoType: "Alien Energy Railgun Bullet", display: true
-#    NoiseStrength: 100, display: false
-#    AutoReload: true
-#    CheckObstructed: true
-#    ReloadDelay: 1, display: true # adapt sound
-#    SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
-#    /* SfxBegin: Weapons/SS/LaserSS/weapon_laser_001   */
-#    SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
-#    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
-#    PfxMuzzle: turretMuzzleFire
-#
-#    # Tracer: Weapons/Projectiles/TracerLaserShotBlueCV
-#    TracerPerBullet: 1
-#    TracerSpeed: 600
-#
-#    DamageMultiplier_1: 0.3, param1: head|body
-#    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood
-#    DamageMultiplier_3: 0.083, param1: shield
-#  }
-#}
+{ +Item Id: 98, Name: "Alien Energy Railgun Weapon"
+  Meshfile: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  ShowUser: NoButCSV  # reported by HWS
+  Canhold: false
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 50000
+  Mass: 2715, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: Ranged
+    AllowAt: Space
+    ROF: 0.6, type: float, display: true, formatter: ROF
+    Range: 510, display: false
+    RangeSpace: 925, display: false
+    Damage: 1000, display: true
+    Automatic: true
+    AmmoCapacity: 150, display: true
+    AmmoType: "Alien Energy Railgun Bullet", display: true
+    NoiseStrength: 100, display: false
+    AutoReload: true
+    CheckObstructed: true
+    ReloadDelay: 1, display: true # adapt sound
+    SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
+    /* SfxBegin: Weapons/SS/LaserSS/weapon_laser_001   */
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: turretMuzzleFire
 
-#{ +Item Id: 99, Name: "Alien Energy Railgun Bullet"
-#  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  Material: metalweapon
-#  AllowPlacingAt: MS, display: false
-#  HoldType: 0
-#  StackSize: 50000
-#  Canhold: false
-#  Mass: 10, type: float, display: true, formatter: Kilogram
-#  Volume: 5, type: float, display: true, formatter: Liter
-#  Info: bkiAmmo, display: true
-#  Category: Weapons/Items
-#  CustomIcon: ScifiContainer2Small
-#
-#  UnlockLevel: 1
-#  TechTreeNames: Hidden
-#}
+    # Tracer: Weapons/Projectiles/TracerLaserShotBlueCV
+    TracerPerBullet: 1
+    TracerSpeed: 600
+
+    DamageMultiplier_1: 0.3, param1: head|body
+    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood
+    DamageMultiplier_3: 0.083, param1: shield
+  }
+}
+
+{ +Item Id: 99, Name: "Alien Energy Railgun Bullet"
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metalweapon
+  AllowPlacingAt: MS, display: false
+  HoldType: 0
+  StackSize: 50000
+  Canhold: false
+  Mass: 10, type: float, display: true, formatter: Kilogram
+  Volume: 5, type: float, display: true, formatter: Liter
+  Info: bkiAmmo, display: true
+  Category: Weapons/Items
+  CustomIcon: ScifiContainer2Small
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
 
 /* CATEGORIE: WEAPONS FOR SS MS id 100-199 */
 { +Item Id: 100, Name: MinigunSSWeapon
@@ -7262,7 +7262,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # BlastRadius: 2, display: true
     # BlastDamage: 400, display: true
     Ballistic: False
-	
+
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
     DamageMultiplier_3: 1, param1: alien
@@ -7301,13 +7301,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # TerrainMode: true
     # AllowAt: "UnderWater, Planet, Space"
     # MiningEnabled: false   # Use only for terrain removal
-    # FlattenTerrain: true	
+    # FlattenTerrain: true
     # ROF: 0.5, type: float
     # Damage: 1500
     # Radius: 5
     # Range: 6, display: false
-    # NoiseStrength: 40, display: false    
-    # CameraShake: 0  
+    # NoiseStrength: 40, display: false
+    # CameraShake: 0
     # IgnoreAtmo: true
     # Automatic: true
     # AmmoCapacity: 0, display: false        # no need to display since unlimited ammo
@@ -7323,9 +7323,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     # DamageMultiplier_1: 0, param1: woodblock|concrete|hull|hullarmored|hullcombat|metal|metalhard|shield
     # DamageMultiplier_2: 0, param1: wood   # no tree cutting
-	
+
     # RadialText: rdlFlattening
-    # RadialDesc: rdlFlatteningTxt 
+    # RadialDesc: rdlFlatteningTxt
     # RadialIcon: Radial_Flattening
   # }
 }
@@ -7353,7 +7353,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 810
     RangeSpace: 875
     Ballistic: false
-	
+
     DamageMultiplier_1: 0.25, param1: head|body
     DamageMultiplier_2: 0, param1: stone|dirt|rock
     DamageMultiplier_3: 0.4, param1: shield
@@ -7569,7 +7569,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 9.75
   ShowUser: Yes
   Info: bkiEnergyCell, display: true
-  
+
   Mass: 14.52, type: float, display: true, formatter: Kilogram
   Volume: 2.1, type: float, display: true, formatter: Liter
 
@@ -7585,9 +7585,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 5.8, type: float, display: true, formatter: Kilogram
   Volume: 2.5, type: float, display: true, formatter: Liter
 }
-# deactivated 
+# deactivated
 { Item Id: 220, Name: MetalPieces, Ref: ComponentsTemplate
-  ShowUser: Yes  
+  ShowUser: Yes
 }
 { +Item Id: 221, Name: ErestrumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/ErestrumOrePrefab
@@ -7708,10 +7708,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 /* Implement that EnergyCellLarge can only be placed into FuelcellMS */
 { +Item Id: 239, Name: EnergyCellLarge, Ref: ComponentsTemplate
   FuelValue: 150, type: int, display: true, formatter: WattHour
-  ShowUser: Yes  
+  ShowUser: Yes
   MarketPrice: 48.75
   Info: bkiEnergyCell, display: true
-  
+
   Mass: 30, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
 
@@ -7724,10 +7724,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { Item Id: 240, Name: EnergyCellHydrogen, Ref: ComponentsTemplate
   FuelValue: 15, type: int, display: true, formatter: WattHour
   ShowUser: NoButCSV
-  
+
   Mass: 20, type: float, display: true, formatter: Kilogram
   Volume: 20, type: float, display: true, formatter: Liter
-  
+
   # UnlockCost: 10, display: true
   # UnlockLevel: 7, display: true
   # TechTreeParent: EnergyCell
@@ -7829,7 +7829,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiPlayerBike, display: true
   StackSize: 50000
   Category: Devices
-  MapIcon: map_PlayerBike 
+  MapIcon: map_PlayerBike
   PickupToToolbar: true
   { Child 0
     Class: PlaceBike
@@ -7992,7 +7992,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1.12, type: float, display: true, formatter: Liter
 }
 { +Item Id: 280, Name: XenoSubstrate, Ref: ComponentsTemplate
-  ShowUser: Yes 
+  ShowUser: Yes
   Mass: 5.4, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
   MarketPrice: 45
@@ -8446,7 +8446,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-# Save game break: move up to components 
+# Save game break: move up to components
 { +Item Id: 325, Name: FusionCell, Ref: ComponentsTemplate
   Mass: 75, type: float, display: true, formatter: Kilogram
   Volume: 10.5, type: float, display: true, formatter: Liter
@@ -8562,39 +8562,39 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 /* Alien SV Homing Plasma */
-#{ +Item Id: 331, Name: "Antimatter Cannon Weapon"
-#  Meshfile: @models/Blocks/WeaponsShip/WeaponSSPlasmaPrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  ShowUser: NoButCSV  # reported by HWS
-#  Canhold: false
-#  Material: metalweapon
-#  HoldType: 0
-#  StackSize: 50000
-#  CustomIcon: PlasmaCannonSSWeapon
-#  Mass: 1682, type: float, display: false, formatter: Kilogram
-#  Category: Weapons/Items
-#  { Child 0
-#    Class: LauncherSS
-#    ROF: 0.8, type: float, display: true, formatter: ROF
-#    Range: 435, display: false
-#    RangeSpace: 725, display: false
-#    AmmoCapacity: 50, display: true
-#    AmmoUnlimited: true
-#    AmmoType: "Antimatter Cannon Charge", display: true
-#    Automatic: true
-#    NoiseStrength: 100, display: false
-#    AutoReload: true
-#    CheckObstructed: true
-#    ReloadDelay: 3, display: true
-#    # SfxBegin: Enemies/Spiders/Spiders_SfxAttack
-#    # SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
-#    SfxBegin: Enemies/RockGolem/MONSTERGrowlDeep08aShort
-#    /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
-#    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
-#    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
-#    PfxMuzzle: SniperMuzzleFireLarge
-#  }
-#}
+{ +Item Id: 331, Name: "Antimatter Cannon Weapon"
+  Meshfile: @models/Blocks/WeaponsShip/WeaponSSPlasmaPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  ShowUser: NoButCSV  # reported by HWS
+  Canhold: false
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 50000
+  CustomIcon: PlasmaCannonSSWeapon
+  Mass: 1682, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.8, type: float, display: true, formatter: ROF
+    Range: 435, display: false
+    RangeSpace: 725, display: false
+    AmmoCapacity: 50, display: true
+    AmmoUnlimited: true
+    AmmoType: "Antimatter Cannon Charge", display: true
+    Automatic: true
+    NoiseStrength: 100, display: false
+    AutoReload: true
+    CheckObstructed: true
+    ReloadDelay: 3, display: true
+    # SfxBegin: Enemies/Spiders/Spiders_SfxAttack
+    # SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
+    SfxBegin: Enemies/RockGolem/MONSTERGrowlDeep08aShort
+    /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: SniperMuzzleFireLarge
+  }
+}
 
 { +Item Id: 332, Name: NutrientSolution, Ref: FoodTemplate
   Info: bkiIngredient, display: true
@@ -8606,7 +8606,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 333, Name: RottenFood, Ref: FoodTemplate
   Info: bkiIngredient, display: true
-  Category: Food 
+  Category: Food
   StackSize: 50000
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
@@ -8614,9 +8614,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  { Child 0
    Class: Eat
    ROF: 1, type: float
-   AddHealth: -10 
-   AddStamina: 0 
-   AddFood: 0 
+   AddHealth: -10
+   AddStamina: 0
+   AddFood: 0
    AddOxygen: 0
    Buff: PoisonFood
    Buff_chance: 1
@@ -8706,7 +8706,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 
-# Delete when save game break 
+# Delete when save game break
 { Item Id: 339, Name: GrilledVegetables, Ref: FoodTemplate
   Info: bkiConsumable, display: true
   Category: Food
@@ -8871,7 +8871,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 9, display: StaminaValue
     AddFood: 18, display: FoodValue
     AddOxygen: 0
-    SfxBegin: UseActions/playerEatingCrunchy    
+    SfxBegin: UseActions/playerEatingCrunchy
     Buff: Indigestion
     Buff_chance: 0.10
   }
@@ -8909,12 +8909,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Eat
     ROF: 1, type: float
-    AddHealth: 0 
+    AddHealth: 0
     AddStamina: 50, display: StaminaValue
     AddFood: 0
     AddOxygen: 0
 	AddTemperature: -8, display: TemperatureValue
-    Debuff: "Hangover,Fire", display: EffectiveAgainst 
+    Debuff: "Hangover,Fire", display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -9328,7 +9328,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  }
 }
 { +Item Id: 375, Name: PowerBar, Ref: FoodTemplate
-  Info: bkiConsumable, display: true  
+  Info: bkiConsumable, display: true
   FoodDecayTime: 90, display: true, type: int
   Category: Food
   FoodDecayedItem: RottenFood
@@ -9492,7 +9492,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddFood: 0
     AddOxygen: 0
     AddTemperature: 8, display: TemperatureValue
-    Debuff: "Hangover,BadTrip", display: EffectiveAgainst 
+    Debuff: "Hangover,BadTrip", display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -9706,9 +9706,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Eat
     ROF: 1, type: float
-    AddHealth: 0 
+    AddHealth: 0
     AddStamina: 5
-    AddFood: 5, display: FoodValue 
+    AddFood: 5, display: FoodValue
     AddOxygen: 0
   #  Debuff: Indigestion, display: EffectiveAgainst
   #  Buff_chance: 0.025
@@ -9725,9 +9725,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Eat
     ROF: 1, type: float
-    AddHealth: 0 
-    AddStamina: 0 
-    AddFood: 12 
+    AddHealth: 0
+    AddStamina: 0
+    AddFood: 12
     AddOxygen: 0
   #  Debuff: Indigestion, display: EffectiveAgainst
   #  Buff_chance: 0.025
@@ -9746,9 +9746,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Eat
     ROF: 1, type: float
-    AddHealth: 0 
-    AddStamina: 150, display: StaminaValue 
-    AddFood: 0 
+    AddHealth: 0
+    AddStamina: 150, display: StaminaValue
+    AddFood: 0
     AddOxygen: 0
     Buff: Hangover
     Buff_chance: 0.025
@@ -9776,8 +9776,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
  # =========================================
  # NPC MELEE ATTACK AND WEAPONS id 500-599
- # ------------------------ 
- # Melee 500-549  
+ # ------------------------
+ # Melee 500-549
  # =========================================
 
 { +Item Id: 500, Name: MeleeTemplate
@@ -9793,7 +9793,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 2, type: float
     Range: 4.5
     Damage: 300
-	
+
     DamageMultiplier_1: 0, param1: wood|stone|rock|dirt|shield
   }
 }
@@ -9835,7 +9835,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
   # free
-  
+
 { +Item Id: 505, Name: MeleeRockGolem, Ref: MeleeTemplate
   { Child 0
     Class: Melee
@@ -9993,8 +9993,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Enemies/Crawler/Crawler_SfxAttack
     Buff: "PoisonBit,OpenWound,DermalParasite"
     Buff_chance: "0.3,0.15,0.1"
-	
-	DamageMultiplier_1: 2.5, param1: metal|metalhard 
+
+	DamageMultiplier_1: 2.5, param1: metal|metalhard
     DamageMultiplier_2: 5, param1: hull|hullarmored|hullcombat|concrete|woodblock
   }
 }
@@ -10079,8 +10079,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Enemies/Spiders/Spiders_SfxAttack
     Buff: "PoisonBit,Stunned"
     Buff_chance: "0.05,0.015"
-	
-	DamageMultiplier_1: 5, param1: metal|metalhard 
+
+	DamageMultiplier_1: 5, param1: metal|metalhard
     DamageMultiplier_2: 10, param1: hull|hullarmored|hullcombat|concrete|woodblock
   }
 }
@@ -10106,8 +10106,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     Buff: "PoisonBit,Stunned"
     Buff_chance: "0.1,0.04"
-	
-	DamageMultiplier_1: 2.5, param1: metal|metalhard 
+
+	DamageMultiplier_1: 2.5, param1: metal|metalhard
     DamageMultiplier_2: 5, param1: hull|hullarmored|hullcombat|concrete|woodblock
   }
 }
@@ -10179,8 +10179,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     Buff: "PoisonBit,OpenWound,DermalParasite"
     Buff_chance: "0.2,0.15,0.02"
-	
-	DamageMultiplier_1: 2.5, param1: metal|metalhard 
+
+	DamageMultiplier_1: 2.5, param1: metal|metalhard
     DamageMultiplier_2: 5, param1: hull|hullarmored|hullcombat|concrete|woodblock
   }
 }
@@ -10234,8 +10234,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Enemies/Triceratops/Triceratops_SfxAttack
     Buff: "OpenWound,FractureClosed,FractureOpen,Mutilation"
     Buff_chance: "0.4,0.25,0.1,0.01"
-	
-	DamageMultiplier_1: 2.5, param1: metal|metalhard 
+
+	DamageMultiplier_1: 2.5, param1: metal|metalhard
     DamageMultiplier_2: 5, param1: hull|hullarmored|hullcombat|concrete|woodblock
   }
 }
@@ -10291,7 +10291,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Ranged
     ROF: 0.2, type: float
     Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
-    Automatic: true    
+    Automatic: true
     Damage: 12
     AmmoCapacity: 200
     AmmoUnlimited: true
@@ -10305,7 +10305,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     PfxMuzzle: turretMuzzleFire
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 2
-	
+
     DamageMultiplier_1: 3, param1: metal
     DamageMultiplier_2: 25, param1: metalhard|concrete|woodblock|hull
     DamageMultiplier_3: 60, param1: hullarmored|hullcombat
@@ -10359,14 +10359,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 30
     Range: 360
     Ballistic: false
-		    
-    DamageMultiplier_1: 0.5, param1: head|body 
+
+    DamageMultiplier_1: 0.5, param1: head|body
 	DamageMultiplier_2: 3, param1: metal
     DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
     DamageMultiplier_4: 60, param1: hullarmored|hullcombat
     DamageMultiplier_5: 0, param1: stone|dirt
     DamageMultiplier_6: 0.1, param1: shield
-    BlastDamageMultiplier_1: 0.5, param1: head|body 
+    BlastDamageMultiplier_1: 0.5, param1: head|body
     BlastDamageMultiplier_2: 0.05, param1: stone|dirt
     BlastDamageMultiplier_3: 0, param1: shield
   }
@@ -10374,7 +10374,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 { +Item Id: 554, Name: minigunDoubleDroneSmall, Ref: minigunDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/minigunDoubleDroneSmallPrefab
-  { Child 0  
+  { Child 0
     Damage: 20
     PfxMuzzle: MuzzleFlashDoubleLarge2
   }
@@ -10403,7 +10403,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Projectile
     Speed: 70
-    Range: 700 
+    Range: 700
   }
 }
 { +Item Id: 558, Name: pulseLaserDrone, Ref: rocketlauncherDroneSmall
@@ -10427,8 +10427,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamage: 0
     Speed: 150
     Range: 625
-		    
-    DamageMultiplier_1: 0.5, param1: head|body 
+
+    DamageMultiplier_1: 0.5, param1: head|body
 	DamageMultiplier_2: 3, param1: metal
     DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
     DamageMultiplier_4: 60, param1: hullarmored|hullcombat
@@ -10505,7 +10505,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 600
     RangeSpace: 800
     Ballistic: false
-	
+
     DamageMultiplier_1: 5, param1: hullarmored
     DamageMultiplier_2: 5, param1: hullcombat
     DamageMultiplier_3: 2, param1: shield
@@ -10542,7 +10542,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 800
     RangeSpace: 900
     Ballistic: false
-	
+
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
     DamageMultiplier_3: 1, param1: alien
@@ -10590,7 +10590,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     PfxMuzzle: SMGAutoMuzzleFire
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 2
-	
+
     DamageMultiplier_1: 0, param1: dirt|stone|wood
   }
 }
@@ -10619,7 +10619,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end     */
     # SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
     # SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
-    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop	
+    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
     SfxBegin: Weapons/Player/Minigun/minigun_start
     SfxLoop: Weapons/Player/Minigun/minigun_loop
     SfxStop: Weapons/Player/Minigun/minigun_end
@@ -10629,9 +10629,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ParticleTransform:     # Particle1 contains the destroy blocks effect
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 2
-    # MaxFireAngle: 20  #(default is 5) 
-	
-    DamageMultiplier_1: 0, param1: wood|stone|dirt 
+    # MaxFireAngle: 20  #(default is 5)
+
+    DamageMultiplier_1: 0, param1: wood|stone|dirt
     DamageMultiplier_2: 5, param1: metal|metalhard
   }
 }
@@ -10651,10 +10651,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     PfxMuzzle: SniperMuzzleLaserGreen
     ParticleTransform:     # Particle1 contains the destroy blocks effect
     Tracer: Weapons/Projectiles/TracerLaserShotGreenZirax
-    TracerPerBullet: 1	
+    TracerPerBullet: 1
     BulletSpread: 0.1, display: true
     TracerSpeed: 200
-    # MaxFireAngle: 20  #(default is 5) 
+    # MaxFireAngle: 20  #(default is 5)
   }
 }
 /* Player used Sentry Gun */
@@ -10686,9 +10686,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     PfxMuzzle: turretMuzzleFire
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 2
-	
+
     DamageMultiplier_1: 0, param1: dirt|stone|rock|wood
-    DamageMultiplier_2: 0.05, param1: shield 
+    DamageMultiplier_2: 0.05, param1: shield
   }
 }
 /* Alien Sentry Gun */
@@ -10719,8 +10719,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     PfxMuzzle: MuzzleFlashDouble
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 1
-	
-    DamageMultiplier_1: 0, param1: dirt|stone|rock|wood 
+
+    DamageMultiplier_1: 0, param1: dirt|stone|rock|wood
     DamageMultiplier_2: 0.05, param1: shield
   }
 }
@@ -10752,7 +10752,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     PfxMuzzle: MuzzleFlashDouble
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 2
-    DamageMultiplier_1: 0, param1: dirt|stone|rock|wood 
+    DamageMultiplier_1: 0, param1: dirt|stone|rock|wood
     DamageMultiplier_2: 0.05, param1: shield
   }
 }
@@ -10778,7 +10778,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 	IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
     Automatic: false
     BulletsPerShot: 8
-    BulletSpread: 0 
+    BulletSpread: 0
     RaySpread: 1.6, display: true
     Damage: 50, display: true
     AmmoCapacity: 5, display: true
@@ -10790,10 +10790,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/RifleReloadSlow
     PfxMuzzle: MuzzleFlash2
     ParticleTransform:     # Particle1 contains the destroy blocks effect
-    # MaxFireAngle: 20  #(default is 5) 
-	
+    # MaxFireAngle: 20  #(default is 5)
+
     DamageMultiplier_1: 2, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 0, param1: wood|stone|dirt 
+    DamageMultiplier_2: 0, param1: wood|stone|dirt
     DamageMultiplier_3: 5, param1: metal|metalhard
   }
 }
@@ -10809,7 +10809,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DegradationProb: 1, type: float, display: false
   { Child 0
     Class: LauncherSS
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 1.5, type: float, display: true, formatter: ROF
     Range: 70, display: false
     Damage: 350, display: true
@@ -10824,7 +10824,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/RifleReloadSlow
     PfxMuzzle: SniperMuzzleFire
     ParticleTransform:     # Particle1 contains the destroy blocks effect
-    # MaxFireAngle: 20  #(default is 5) 
+    # MaxFireAngle: 20  #(default is 5)
   }
 }
 { +Item Id: 576, Name: SpiderRangedWeapon
@@ -10847,7 +10847,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 0.0, display: true
     # SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     SfxBegin: Enemies/Spiders/Spiders_SfxAttack
-	# MaxFireAngle: 20 #we need bigger angle, as the spider firing angle is not perfectly aligned with look angle	
+	# MaxFireAngle: 20 #we need bigger angle, as the spider firing angle is not perfectly aligned with look angle
   }
 }
 { +Item Id: 577, Name: SlimeSpider
@@ -10869,7 +10869,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Ballistic: false
     Buff: Stunned
     Buff_chance: 0.9
-		
+
     DamageMultiplier_1: 0, param1: dirt|stone
     BlastDamageMultiplier_1: 0.05, param1: dirt|stone
   }
@@ -10952,7 +10952,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Ballistic: false
     Buff: "DermalBurn,Stunned,IncreaseRadiation"
     Buff_chance: "0.8,0.015,0.005"
-		
+
     DamageMultiplier_1: 0, param1: dirt|stone
     BlastDamageMultiplier_1: 0.05, param1: dirt|stone
   }
@@ -11033,7 +11033,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 30
     Range: 360
     Ballistic: false
-    
+
     DamageMultiplier_1: 1, param1: head
     DamageMultiplier_2: 1, param1: body
     DamageMultiplier_3: 1, param1: alien
@@ -11082,10 +11082,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxLoop: Weapons/Enemies/Zirax/mute     # define new Zirax and not extend from MinigunZirax
     SfxStop: Weapons/Enemies/Zirax/mute
     ParticleTransform:     # Particle1 contains the destroy blocks effect
-    TracerPerBullet: 1	
+    TracerPerBullet: 1
     BulletSpread: 0.05, display: true
     TracerSpeed: 200
-    # MaxFireAngle: 20  #(default is 5) 
+    # MaxFireAngle: 20  #(default is 5)
   }
 }
 { +Item Id: 588, Name: AlienBug04RangedWeapon
@@ -11095,7 +11095,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   ShowUser: No
   HoldType: 20
- 
+
   Mass: 12, type: float, display: false, formatter: Kilogram
   { Child 0
     Class: LauncherSS
@@ -11116,7 +11116,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 12
     Range: 400      /* Drone will attack from: Range*WeaponRangeFactor */
-	
+
     DamageMultiplier_1: 5, param1: metal
     DamageMultiplier_2: 30, param1: concrete|woodblock|hull
     DamageMultiplier_3: 40, param1: metalhard
@@ -11152,14 +11152,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 30
     Range: 500
     Ballistic: false
-	
-    DamageMultiplier_1: 0.5, param1: head|body 
+
+    DamageMultiplier_1: 0.5, param1: head|body
     DamageMultiplier_2: 3, param1: metal
     DamageMultiplier_3: 50, param1: concrete|woodblock|hull
     DamageMultiplier_4: 60, param1: metalhard|hullarmored|hullcombat
     DamageMultiplier_5: 0, param1: stone|dirt
     DamageMultiplier_6: 0.1, param1: shield
-    BlastDamageMultiplier_1: 0.5, param1: head|body 
+    BlastDamageMultiplier_1: 0.5, param1: head|body
     BlastDamageMultiplier_2: 0, param1: stone|dirt
     BlastDamageMultiplier_3: 2, param1: metalhard|hullarmored|hullcombat
     BlastDamageMultiplier_4: 0, param1: shield
@@ -11177,15 +11177,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: DestroyBlocks
     Automatic: true
     ROF: 1, type: float    # can be changed?
-    Damage: 45, display: true 
+    Damage: 45, display: true
     # SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
     # SfxLoop: Weapons/Enemies/Zirax/EMP_StartWave_02
     SfxBegin: Weapons/Player/Tools/WeaponLightning_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
-    # ParticleTransform: Muzzle/Particle2   
+    # ParticleTransform: Muzzle/Particle2
     Tracer:
-	
-	DamageMultiplier_1: 10, param1: metal|metalhard 
+
+	DamageMultiplier_1: 10, param1: metal|metalhard
     DamageMultiplier_2: 20, param1: hull|hullarmored|hullcombat|concrete|woodblock
     DamageMultiplier_3: 0, param1: stone|dirt
     DamageMultiplier_4: 0.7, param1: shield
@@ -11211,7 +11211,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 { +Item Id: 595, Name: TalonCrossbowWeapon
-  Meshfile: Entities/Items/Weapons/Enemies/TalonCrossbowPrefab  
+  Meshfile: Entities/Items/Weapons/Enemies/TalonCrossbowPrefab
   Material: metalweapon
   HoldType: 15
   StackSize: 1
@@ -11220,7 +11220,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 12, type: float, display: false, formatter: Kilogram
   { Child 0
     Class: LauncherSS
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 2, type: float, display: true, formatter: ROF
     Range: 75, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
@@ -11233,9 +11233,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 6.3, display: true
     SfxBegin: Weapons/Enemies/Talon/CrossbowShot
     PfxMuzzle: MuzzleCrossbowSmoke
-    # MaxFireAngle: 20  #(default is 5) 
-	
-    DamageMultiplier_1: 0, param1: wood|stone|dirt 
+    # MaxFireAngle: 20  #(default is 5)
+
+    DamageMultiplier_1: 0, param1: wood|stone|dirt
 	DamageMultiplier_2: 50, param1: metal|metalhard                                       # do we need it?
     DamageMultiplier_3: 60, param1: hull|hullarmored|hullcombat|concrete|woodblock        # do we need it?
   }
@@ -11256,7 +11256,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 20
     Range: 80      # must be higher than range given in weapon to ensure that particle effect is visible
     Ballistic: False
-		
+
     DamageMultiplier_1: 0, param1: dirt|stone
     BlastDamageMultiplier_1: 0.05, param1: dirt|stone
   }
@@ -11269,7 +11269,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   ShowUser: No
   Mass: 12, type: float, display: false, formatter: Kilogram
-  
+
   { Child 0
     Class: Melee
     ROF: 0, type: float
@@ -11298,7 +11298,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 ## CATEGORIE: PLAYER ARMOR id 600 - 619
 ## max 4 slots per armor in NrSlots
 ## max 15 possible boost per armor in SlotItems
- 
+
 ## Please do not rename - referenced in code
 { +Item Id: 600, Name: ArmorLight
   Class: Armor
@@ -11314,9 +11314,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   Category: Weapons/Items
   Info: bkiPlayerArmor, display: true
-    
+
   Durability: 400, display: true
-  DegradationFac: 0.2, type: float, display: false    # do not display anymore 
+  DegradationFac: 0.2, type: float, display: false    # do not display anymore
   Oxygen: 375, type: int, display: true    # OxygenConsumptionPerMinute = 12.5f;  => consume 500 units of oxygen in 40 min
   Armor: 100, type: int, display: true
   Heat: 10, type: int, display: true
@@ -11325,13 +11325,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.40, type: float, display: true
   PowerFac: 0.66, type: float, display: true  # better: 0.5
   SpeedFac: 0.85, type: float, display: true  # better: 0.5
-  JumpFac: 0.67, type: float, display: true  
-  JetpackFac: 1.20, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/  
+  JumpFac: 0.67, type: float, display: true
+  JetpackFac: 1.20, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
   FoodFac: 1.44, type: float, display: true /*calculations are based on 70 minutes*/
   StaminaFac: 1.21, type: float, display: true /*calculations are based on 20 stamina per second while running*/
   NrSlots: 2, type: int, display: true
   SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, OxygenBoostEpic, MobilityBoostEpic, RadiationBoostEpic"
-  
+
   UnlockCost: 2, display: true
   UnlockLevel: 5, display: true
   TechTreeNames: Weapons
@@ -11349,11 +11349,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 0
   StackSize: 1
   Canhold: false
-  Category: Weapons/Items  
+  Category: Weapons/Items
   Info: bkiPlayerArmor, display: true
-  
+
   Durability: 600, display: true
-  DegradationFac: 0.2, type: float, display: false    # do not display anymore 
+  DegradationFac: 0.2, type: float, display: false    # do not display anymore
   Oxygen: 550, type: int, display: true
   Armor: 150, type: int, display: true
   Heat: 20, type: int, display: true
@@ -11371,7 +11371,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 ## Please do not rename - referenced in code
 { +Item Id: 602, Name: ArmorHeavy
-  Class: Armor  
+  Class: Armor
   RecipeName: HeavyArmor
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -11382,11 +11382,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 0
   StackSize: 1
   Canhold: false
-  Category: Weapons/Items  
+  Category: Weapons/Items
   Info: bkiPlayerArmor, display: true
-     
+
   Durability: 800, display: true
-  DegradationFac: 0.2, type: float, display: false    # do not display anymore 
+  DegradationFac: 0.2, type: float, display: false    # do not display anymore
   Oxygen: 725, type: int, display: true
   Armor: 200, type: int, display: true
   Heat: 30, type: int, display: true
@@ -11403,7 +11403,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, OxygenBoostEpic, MobilityBoostEpic, RadiationBoostEpic"
 }
 
-# Not yet used in game  
+# Not yet used in game
 ## Please do not rename - referenced in code
 { Item Id: 603, Name: ArmorLightEpic, Ref: ArmorLight
   RecipeName: LightArmorEpic
@@ -11411,7 +11411,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 25, type: float, display: false, formatter: Kilogram
   Volume: 24, type: float, display: true, formatter: Liter
   VolumeCapacity: 1999500, type: float, display: true, formatter: Liter
-    
+
   Durability: 500, display: true
   DegradationFac: 0.1, type: float, display: false    # do not display anymore
   Oxygen: 475, type: int, display: true    # OxygenConsumptionPerMinute = 12.5f;  => consume 500 units of oxygen in 40 min
@@ -11432,7 +11432,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 
-# Not yet used in game  
+# Not yet used in game
 ## Please do not rename - referenced in code
 { Item Id: 604, Name: ArmorMediumEpic, Ref: ArmorMedium
   RecipeName: MediumArmorEpic
@@ -11454,10 +11454,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StaminaFac: 0.7, type: float, display: true
 
   NrSlots: 1, type: int, display: true
-  
+
   Mass: 18, type: float, display: false, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
-  
+
   UnlockLevel: 1
   TechTreeParent: # set null in case a custom Config.ecf puts referenced ArmorMedium in TechTree
   TechTreeNames: Hidden
@@ -11485,10 +11485,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodFac: 0.9, type: float, display: true
   StaminaFac: 1.1, type: float, display: true
   NrSlots: 0, type: int, display: true
-  
+
   Mass: 100, type: float, display: false, formatter: Kilogram
   Volume: 60, type: float, display: true, formatter: Liter
-  
+
   UnlockLevel: 1
   TechTreeParent: # set null in case a custom Config.ecf puts referenced ArmorHeavy in TechTree
   TechTreeNames: Hidden
@@ -11508,7 +11508,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   HoldType: 0
   StackSize: 1
-  Category: Weapons/Items 
+  Category: Weapons/Items
   ShowUser: No
 }
 { +Item Id: 621, Name: ArmorBoost, Ref: ArmorBoostTemplate
@@ -11522,21 +11522,21 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   JetpackFac: 0.2, type: float, display: true
   JumpFac: -0.04, type: float, display: true
   FoodFac: 0.26, type: float, display: true
-  
+
   Volume: 2.5, type: float, display: true, formatter: Liter
   Mass: 5.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
 }
 { +Item Id: 622, Name: JetpackBoost, Ref: ArmorBoostTemplate
   JetpackFac: -0.25, type: float, display: true
-  
+
   Volume: 2.25, type: float, display: true, formatter: Liter
   Mass: 4.25, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
 }
 { +Item Id: 623, Name: MultiBoost, Ref: ArmorBoostTemplate
-  Armor: 15, type: int, display: true  
-  Oxygen: 25, type: int, display: true  
+  Armor: 15, type: int, display: true
+  Oxygen: 25, type: int, display: true
   Radiation: 1, type: int, display: true
   Heat: 6, type: int, display: true
   Cold: 3, type: int, display: true
@@ -11554,10 +11554,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 624, Name: OxygenBoost , Ref: ArmorBoostTemplate
   Armor: -10, type: int, display: true
-  Oxygen: 150, type: int, display: true   
-  PowerFac: -0.03, type: float, display: true 
-  SpeedFac: -0.03, type: float, display: true 
-  
+  Oxygen: 150, type: int, display: true
+  PowerFac: -0.03, type: float, display: true
+  SpeedFac: -0.03, type: float, display: true
+
   Volume: 10, type: float, display: true, formatter: Liter
   Mass: 2.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
@@ -11565,7 +11565,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 625, Name: InsulationBoost, Ref: ArmorBoostTemplate
   Heat: 40, type: int, display: true
   Cold: 20, type: int, display: true
-  
+
   Volume: 2.5, type: float, display: true, formatter: Liter
   Mass: 3.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
@@ -11587,7 +11587,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Radiation: 3, type: int, display: true
   PowerFac: -0.02, type: float, display: true
   SpeedFac: -0.05, type: float, display: true
-  
+
   Volume: 7.5, type: float, display: true, formatter: Liter
   Mass: 9.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
@@ -11599,7 +11599,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   JetpackFac: 0.1, type: float, display: true
   PowerFac: -0.2, type: float, display: true
   SpeedFac: -0.2, type: float, display: true
-  
+
   ShowUser: Yes
   Mass: 34.5, type: float, display: false, formatter: Kilogram
   Volume: 14.5, type: float, display: true, formatter: Liter
@@ -11622,12 +11622,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Cold: -6, type: int, display: true
   Radiation: 2, type: int, display: true
   SpeedFac: -0.1, type: float, display: true
-  
+
   ShowUser: Yes
 }
 { Item Id: 651, Name: JetpackBoostEpic , Ref: JetpackBoost
   JetpackFac: -0.26, type: float, display: true
-  
+
   ShowUser: Yes
 }
 { Item Id: 652, Name: MultiBoostEpic , Ref: MultiBoost
@@ -11644,18 +11644,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
   VolumeCapacity: 100000, type: float, display: true, formatter: Liter
   FoodFac: -0.5, type: float, display: true
-  
+
   ShowUser: Yes
 }
 { Item Id: 653, Name: OxygenBoostEpic , Ref: OxygenBoost
   Oxygen: 250, type: int, display: true
-  
+
   ShowUser: Yes
 }
 { Item Id: 654, Name: InsulationBoostEpic , Ref: InsulationBoost
   Heat: 75, type: int, display: true
   Cold: 40, type: int, display: true
-  
+
   ShowUser: Yes
 }
 { Item Id: 655, Name: MobilityBoostEpic , Ref: MobilityBoost
@@ -11669,13 +11669,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { Item Id: 656, Name: RadiationBoostEpic , Ref: RadiationBoost
   Radiation: 15, type: int, display: true
-  
+
   ShowUser: No
 }
 { Item Id: 657, Name: EVABoostEpic , Ref: EVABoost
   Armor: -40, type: int, display: true
   Cold: 300, type: int, display: true
-  
+
   ShowUser: No
 }
 
@@ -11692,21 +11692,21 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   HoldType: 0
   StackSize: 1
-  Category: Weapons/Items 
+  Category: Weapons/Items
   IsNightVisionItem: true
 }
 { +Item Id: 701, Name: OreScanner
-  # Class: ArmorBoost  
+  # Class: ArmorBoost
   Info: bkiOreScanner, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metal
-  Mass: 0.78, type: float, display: true, formatter: Kilogram 
+  Mass: 0.78, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
   Canhold: false
   HoldType: 0
   StackSize: 1
-  Category: Weapons/Items 
+  Category: Weapons/Items
   IsOreScannerItem: true
 
   UnlockCost: 3, display: true
@@ -11715,7 +11715,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Tools
 }
 
-{ +Item Id: 702, Name: RadarSuitT1  
+{ +Item Id: 702, Name: RadarSuitT1
   Info: bkiDetector, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -11726,16 +11726,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   HoldType: 0
   StackSize: 1
-  Category: Weapons/Items 
+  Category: Weapons/Items
   IsRadarItem: true
   Range: 1250, type: int, display: true
   RangeSpace: 5000, type: int, display: true
-  
+
   UnlockCost: 0, display: true
   UnlockLevel: 1, display: true
  # TechTreeParent: SurvivalTool
   TechTreeNames: Tools
-    
+
   { Child 0
     ROF: 5, type: float
     Class: RadarScan
@@ -11748,13 +11748,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { Item Id: 703, Name: RadarSuitDebug, Ref: RadarSuitT1
   Range: 2500, type: int, display: true
-  
+
   UnlockCost: 0
   UnlockLevel: 20
   TechTreeNames: Hidden
 }
 
-{ +Item Id: 704, Name: DetectorHVWeapon 
+{ +Item Id: 704, Name: DetectorHVWeapon
   Meshfile: Entities/Misc/DummyPrefab
   CustomIcon: DetectorSVT1
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -11779,7 +11779,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-{ +Item Id: 705, Name: DetectorSVWeapon 
+{ +Item Id: 705, Name: DetectorSVWeapon
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Category: Weapons/Items
@@ -11803,7 +11803,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-{ +Item Id: 706, Name: DetectorCVWeapon 
+{ +Item Id: 706, Name: DetectorCVWeapon
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Category: Weapons/Items
@@ -11856,7 +11856,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 800, Name: ZiraxAssaultRiflePlayer , Ref: AssaultRifleT2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPlyPrefab
   ShowUser: No
-  
+
   UnlockCost: 0
   UnlockLevel: 25
   TechTreeParent: ""
@@ -11865,12 +11865,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 801, Name: ZiraxShotgunPlayer , Ref: AssaultRifleT2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   ShowUser: No
-  
+
   UnlockCost: 0
   UnlockLevel: 25
   TechTreeParent: ""
   TechTreeNames: Hidden
-} 
+}
 
 /* CATEGORIE: Commodity Trade Items id 1000 - 1100 */
 
@@ -11989,10 +11989,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   # Info: bkiDrillT2, display: true
   Durability: 50000, display: false
   DegradationProb: 0.00, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
-  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+
   ShowUser: No
-  
+
   { Child 0
     Class: Ranged
     ROF: 0.25, type: float
@@ -12001,14 +12001,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BulletSpread: 0
     RaySpread: 1, display: true
     Recoil: 0, display: true
-    NoiseStrength: 40, display: false 
-    CameraShake: 0 
+    NoiseStrength: 40, display: false
+    CameraShake: 0
     IgnoreAtmo: true
     Buff: "Fire"
     Buff_chance: 1
     Automatic: true
-    Damage: 5
-    Radius: 2
+    Damage: 50
+    Radius: 3
     AmmoCapacity: 750, display: true
     AmmoType: BioFuel, display: true
     UseSingleMagazine: true
