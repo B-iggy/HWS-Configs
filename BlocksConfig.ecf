@@ -1562,42 +1562,42 @@ HullCombatSmallBlocks
   TechTreeNames: Capital Vessel
 }
 
-#{ Block Id: 255, Name: "M77 Torpedo Launcher"
-#  Class: Weapon
-#  AllowedInBlueprint: false, display: true
-#  IndexName: WeaponShip
-#  Group: cpgWeapon
-#  Material: metal
-#  Shape: ModelEntity
-#  ShowBlockName: true
-#  CustomIcon: ThrusterGVRoundArmored
-#  WeaponItem: "M77 Torpedo Launcher Weapon"
-#  Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  IsActivateable: true
-#  Place: WeaponDir
-#  AllowPlacingAt: "SS", display: true
-#  SizeInBlocks: "1,2,1", display: true
-#  Volume: 125, type: float, display: true, formatter: Liter
-#  Info: "A heavy Torpedo launcher used for launching M77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
-#  StackSize: 50000
-#  MaxCount: 12, type: int, display: true
-#  IsOxygenTight: false, display: true
-#  Category: Weapons/Items
-#  HitPoints: 75, type: int, display: true
-#  Mass: 2000, type: float, display: true, formatter: Kilogram
-#  EnergyIn: 40, type: int, display: true, formatter: Watt
-#  CPUIn: 6000, type: int, display: false
-#  BlastParticleIndex: 9
-#  BlastRadius: 9
-#  BlastDamage: 2500
-#
-#  ShowUser: Yes
-#  UnlockCost: 25, display: true
-#  UnlockLevel: 25, display: true
-#  TechTreeParent: WeaponSV05Homing
-#  TechTreeNames: Small Vessel
-#}
+{ Block Id: 255, Name: "M77 Torpedo Launcher"
+  Class: Weapon
+  AllowedInBlueprint: false, display: true
+  IndexName: WeaponShip
+  Group: cpgWeapon
+  Material: metal
+  Shape: ModelEntity
+  ShowBlockName: true
+  CustomIcon: ThrusterGVRoundArmored
+  WeaponItem: "M77 Torpedo Launcher Weapon"
+  Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  IsActivateable: true
+  Place: WeaponDir
+  AllowPlacingAt: "SS", display: true
+  SizeInBlocks: "1,2,1", display: true
+  Volume: 125, type: float, display: true, formatter: Liter
+  Info: "A heavy Torpedo launcher used for launching M77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
+  StackSize: 50000
+  MaxCount: 12, type: int, display: true
+  IsOxygenTight: false, display: true
+  Category: Weapons/Items
+  HitPoints: 75, type: int, display: true
+  Mass: 2000, type: float, display: true, formatter: Kilogram
+  EnergyIn: 40, type: int, display: true, formatter: Watt
+  CPUIn: 6000, type: int, display: false
+  BlastParticleIndex: 9
+  BlastRadius: 9
+  BlastDamage: 2500
+
+  ShowUser: Yes
+  UnlockCost: 25, display: true
+  UnlockLevel: 25, display: true
+  TechTreeParent: WeaponSV05Homing
+  TechTreeNames: Small Vessel
+}
 
 /* Block Entity start at id=256 */
 { +Block Id: 256, Name: CapacitorMS
@@ -2017,107 +2017,103 @@ HullCombatSmallBlocks
 }
 
  # Alien SV Homing Plasma
-#{ +Block Id: 268, Name: "Antimatter Cannon"
-#  Class: Weapon
-#  IndexName: WeaponShip
-#  Group: cpgWeapon
-#  Material: metalhard, display: true
-#  Shape: ModelEntity
-#  ShowBlockName: true
-#  WeaponItem: "Antimatter Cannon Weapon"
-#  CustomIcon: PlasmaCannonSSWeapon
-#  Model: @models/Blocks/WeaponsShip/WeaponSSPlasmaRetractPrefab
-#  # Model: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
-#  # Mesh-Damage-1: Mesh/D0
-#  # Mesh-Damage-2: Mesh/D1
-#  # Mesh-Damage-3: Mesh/D2
-#  # Mesh-Damage-4: Mesh/D3
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  IsTextureable: true   # !!!
-#  IsGPUInstance: false  # !!!
-#  Texture: 50
-#  SoundOpen: UseActions/WeaponOpenClose
-#  SoundClose: UseActions/WeaponOpenClose
+{ +Block Id: 268, Name: "Antimatter Cannon"
+  Class: Weapon
+  IndexName: WeaponShip
+  Group: cpgWeapon
+  Material: metalhard, display: true
+  Shape: ModelEntity
+  ShowBlockName: true
+  WeaponItem: "Antimatter Cannon Weapon"
+  CustomIcon: PlasmaCannonSSWeapon
+  Model: @models/Blocks/WeaponsShip/WeaponSSPlasmaRetractPrefab
+  # Model: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
+  # Mesh-Damage-1: Mesh/D0
+  # Mesh-Damage-2: Mesh/D1
+  # Mesh-Damage-3: Mesh/D2
+  # Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  IsTextureable: true   # !!!
+  IsGPUInstance: false  # !!!
+  Texture: 50
+  SoundOpen: UseActions/WeaponOpenClose
+  SoundClose: UseActions/WeaponOpenClose
   IsOxygenTight: true, display: true
-#  IsActivateable: true
-#  IsRetractable: true, display: true
-#  Place: WeaponDir
-#  #Place: Face
-#  AllowPlacingAt: SS, display: true
-#  SizeInBlocks: "3,2,3", display: true
-#  Volume: 62.5, type: float, display: true, formatter: Liter
-#  Mass: 521, type: float, display: true, formatter: Kilogram
-#  Info: "???", display: true
-#  Category: Weapons/Items
-#  BlockColor: "50,50,10"
-#  StackSize: 50000
-#  MaxCount: 4, type: int, display: true
-#  BlastParticleIndex: 4
-#  BlastRadius: 2
-#  BlastDamage: 50
-#  EnergyIn: 6, type: int, display: true, formatter: Watt
-#  CPUIn: 1050, type: int, display: true
-#  HitPoints: 530, type: int, display: true
-#  # Damage: 211, display: true
-#  # AmmoCapacity: 15, display: true
-#  # AmmoType: FastRocket, display: true
-#  # ReloadDelay: 8, display: true
-#  # ROF: 2, type: float, display: true, formatter: ROF
-#  UnlockCost: 9999, display: true
-#  UnlockLevel: 7, display: true
-#  TechTreeParent: WeaponSV02
-#  TechTreeNames: AlienTechnology
-#}
+  IsActivateable: true
+  IsRetractable: true, display: true
+  Place: WeaponDir
+  #Place: Face
+  AllowPlacingAt: SS, display: true
+  SizeInBlocks: "3,2,3", display: true
+  Volume: 62.5, type: float, display: true, formatter: Liter
+  Mass: 521, type: float, display: true, formatter: Kilogram
+  Info: bkiWeaponShipSpace, display: true
+  Category: Weapons/Items
+  BlockColor: "50,50,10"
+  StackSize: 50000
+  MaxCount: 4, type: int, display: true
+  BlastParticleIndex: 4
+  BlastRadius: 2
+  BlastDamage: 50
+  EnergyIn: 6, type: int, display: true, formatter: Watt
+  CPUIn: 1050, type: int, display: true
+  HitPoints: 530, type: int, display: true
+
+  UnlockCost: 9999, display: true
+  UnlockLevel: 7, display: true
+  TechTreeParent: WeaponSV02
+  TechTreeNames: AlienTechnology
+}
 
  # Alien CV Energy Railgun
-#{ Block Id: 269, Name: "Alien Energy Railgun"
-#  Class: Weapon
-#  IndexName: WeaponShip
-#  Group: cpgWeapon
-#  Material: metalhard, display: true
-#  Shape: ModelEntity
-#  ShowBlockName: true
-#  WeaponItem: "Alien Energy Railgun Weapon"
-#  CustomIcon: RailgunSSWeapon
-#  Model: @models/Blocks/WeaponsShip/WeaponSSGaussRetractPrefab
-#  # Model: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
+{ Block Id: 269, Name: "Alien Energy Railgun"
+  Class: Weapon
+  IndexName: WeaponShip
+  Group: cpgWeapon
+  Material: metalhard, display: true
+  Shape: ModelEntity
+  ShowBlockName: true
+  WeaponItem: "Alien Energy Railgun Weapon"
+  CustomIcon: RailgunSSWeapon
+  Model: @models/Blocks/WeaponsShip/WeaponSSGaussRetractPrefab
+  # Model: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   IsOxygenTight: true, display: true
-#  IsTextureable: true   # !!!
-#  IsGPUInstance: false  # !!!
-#  Texture: 50
-#  SoundOpen: UseActions/WeaponOpenClose
-#  SoundClose: UseActions/WeaponOpenClose
-#  IsActivateable: true
-#  IsRetractable: true, display: true
-#  Place: WeaponDir
-#  AllowPlacingAt: MS, display: true
-#  SizeInBlocks: "1,6,1", display: true
-#  SizeInBlocksLocked: "Base,MS"
-#  Volume: 1600, type: float, display: true, formatter: Liter
-#  Mass: 2715, type: float, display: true, formatter: Kilogram
-#  Info: bkiWeaponShipSpace, display: true
-#  Category: Weapons/Items
-#  BlockColor: "110,110,110"
-#  StackSize: 50000
-#  MaxCount: 1, type: int, display: true
-#  BlastParticleIndex: 4
-#  BlastRadius: 2
-#  BlastDamage: 50
-#  EnergyIn: 25, type: int, display: true, formatter: Watt
-#  CPUIn: 7200, type: int, display: true
-#  HitPoints: 3000, type: int, display: true
-#  # Damage: 53, display: true
-#  # AmmoCapacity: 150, display: true
-#  # AmmoType: PulseLaserChargeMSWeapon, display: true
-#  # ReloadDelay: 1, display: true
-#  # ROF: 0.6, type: float, display: true, formatter: ROF
-#
-#  UnlockCost: 27, display: true
-#  UnlockLevel: 25, display: true
-#  TechTreeParent: WeaponMS01
-#  TechTreeNames: Capital Vessel
-#}
+  IsTextureable: true   # !!!
+  IsGPUInstance: false  # !!!
+  Texture: 50
+  SoundOpen: UseActions/WeaponOpenClose
+  SoundClose: UseActions/WeaponOpenClose
+  IsActivateable: true
+  IsRetractable: true, display: true
+  Place: WeaponDir
+  AllowPlacingAt: MS, display: true
+  SizeInBlocks: "1,6,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 1600, type: float, display: true, formatter: Liter
+  Mass: 2715, type: float, display: true, formatter: Kilogram
+  Info: bkiWeaponShipSpace, display: true
+  Category: Weapons/Items
+  BlockColor: "110,110,110"
+  StackSize: 50000
+  MaxCount: 1, type: int, display: true
+  BlastParticleIndex: 4
+  BlastRadius: 2
+  BlastDamage: 50
+  EnergyIn: 25, type: int, display: true, formatter: Watt
+  CPUIn: 7200, type: int, display: true
+  HitPoints: 3000, type: int, display: true
+  # Damage: 53, display: true
+  # AmmoCapacity: 150, display: true
+  # AmmoType: PulseLaserChargeMSWeapon, display: true
+  # ReloadDelay: 1, display: true
+  # ROF: 0.6, type: float, display: true, formatter: ROF
+
+  UnlockCost: 27, display: true
+  UnlockLevel: 25, display: true
+  TechTreeParent: WeaponMS01
+  TechTreeNames: Capital Vessel
+}
 
 { +Block Id: 270, Name: MedicinelabMS
   # Class: MedicStation
@@ -4851,7 +4847,7 @@ HullCombatSmallBlocks
   IsRetractable: true, display: true
 
   Place: WeaponDir
-  AllowPlacingAt: SS, display: true
+  AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,6,1", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
   Mass: 1896, type: float, display: true, formatter: Kilogram
@@ -4876,7 +4872,7 @@ HullCombatSmallBlocks
   UnlockCost: 17, display: true
   UnlockLevel: 15, display: true
   TechTreeParent: WeaponSV02
-  TechTreeNames: Small Vessel
+  TechTreeNames: "Hover Vessel,Small Vessel"
 }
 # Gatling Gun
 { +Block Id: 429, Name: WeaponSV02
@@ -4954,7 +4950,7 @@ HullCombatSmallBlocks
   IsRetractable: true, display: true
 
   Place: WeaponDir
-  AllowPlacingAt: "GV,SS", display: true
+  AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,4,1", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
   Mass: 1645, type: float, display: true, formatter: Kilogram
@@ -5008,7 +5004,7 @@ HullCombatSmallBlocks
   IsRetractable: true, display: true
 
   Place: WeaponDir
-  AllowPlacingAt: SS, display: true
+  AllowPlacingAt: "GV, SS", display: true
   SizeInBlocks: "1,5,1", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
   Mass: 1682, type: float, display: true, formatter: Kilogram
@@ -5033,7 +5029,7 @@ HullCombatSmallBlocks
   UnlockCost: 20, display: true
   UnlockLevel: 17, display: true
   TechTreeParent: WeaponSV05Homing
-  TechTreeNames: Small Vessel
+  TechTreeNames: "Hover Vessel,Small Vessel"
 }
 # Rocket Launcher
 { +Block Id: 432, Name: WeaponSV05
@@ -5086,7 +5082,7 @@ HullCombatSmallBlocks
   UnlockCost: 10, display: true
   UnlockLevel: 7, display: true
   TechTreeParent: WeaponSV02
-  TechTreeNames: Small Vessel
+  TechTreeNames: "Hover Vessel,Small Vessel"
 }
 # Obsolete but dont delete
 { Block Id: 433, Name: CockpitSV_fighter
@@ -12787,8 +12783,8 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 80
 
-  UnlockCost: 12, display: true
-  UnlockLevel: 10, display: true
+  UnlockCost: 25, display: true
+  UnlockLevel: 20, display: true
   TechTreeParent: ContainerHarvestControllerSmall
   TechTreeNames: Small Vessel
 }
@@ -23353,7 +23349,7 @@ HullCombatSmallBlocks
   CPUIn: 15, type: int, display: true
   MaxVolumeCapacity: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
-  AllowPlacingAt: "GV,SS", display: true
+  AllowPlacingAt: "SS,GV", display: true
 
   UnlockCost: 5, display: true
   UnlockLevel: 3, display: true
