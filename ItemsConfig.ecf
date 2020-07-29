@@ -11085,8 +11085,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 25
     AmmoUnlimited: true
     AmmoType: BombDrone, display: true
-    BulletsPerShot: 7
-    BulletSpread: 3
+    BulletsPerShot: 3
+    BulletSpread: 5
     ReloadDelay: 3
     SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
@@ -11106,9 +11106,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Projectile
     Damage: 1000, display: true
+    BlastParticleIndex: 3
     BlastRadius: 1, display: true
     BlastDamage: 10000, display: true
-    BlastParticleIndex: 3
+    Buff: "BrokenLeg,FractureClosed,Mutilation"
+    Buff_chance: "0.2,0.15,0.1"
     Speed: 30
     Range: 360
     Ballistic: false
