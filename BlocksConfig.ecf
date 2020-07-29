@@ -1605,6 +1605,7 @@ HullCombatSmallBlocks
   Temperature: 35, display: false
   ShowUser: Yes
 }
+
 # Laser Turret for HV
 { +Block Id: 253, Name: TurretHVLaser
   Class: TurretManual
@@ -1651,6 +1652,7 @@ HullCombatSmallBlocks
   TechTreeParent: TurretGVPlasmaBlocks
   TechTreeNames: Hover Vessel
 }
+
 { +Block Id: 254, Name: WarpDriveT2
   Class: WarpDrive
   Group: cpgWarp
@@ -1704,7 +1706,7 @@ HullCombatSmallBlocks
   TechTreeNames: Capital Vessel
 }
 
-{ Block Id: 255, Name: "M77 Torpedo Launcher"
+{ Block Id: 255, Name: WeaponSVTorpedoLauncher
   Class: Weapon
   AllowedInBlueprint: false, display: true
   IndexName: WeaponShip
@@ -1713,7 +1715,7 @@ HullCombatSmallBlocks
   Shape: ModelEntity
   ShowBlockName: true
   CustomIcon: ThrusterGVRoundArmored
-  WeaponItem: "M77 Torpedo Launcher Weapon"
+  WeaponItem: WeaponSVTorpedoLauncherWeapon
   Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   IsActivateable: true
@@ -2158,15 +2160,15 @@ HullCombatSmallBlocks
   BlastDamage: 80
 }
 
- # Alien SV Homing Plasma
-{ +Block Id: 268, Name: "Antimatter Cannon"
+ # SV Antimatter Cannon
+{ +Block Id: 268, Name: WeaponSVAntimatterCannon
   Class: Weapon
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metalhard, display: true
   Shape: ModelEntity
   ShowBlockName: true
-  WeaponItem: "Antimatter Cannon Weapon"
+  WeaponItem: WeaponSVAntimatterCannonWeapon
   CustomIcon: PlasmaCannonSSWeapon
   Model: @models/Blocks/WeaponsShip/WeaponSSPlasmaRetractPrefab
   # Model: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
@@ -2202,20 +2204,19 @@ HullCombatSmallBlocks
   HitPoints: 530, type: int, display: true
 
   UnlockCost: 9999, display: true
-  UnlockLevel: 7, display: true
-  TechTreeParent: WeaponSV02
+  UnlockLevel: 25, display: true
   TechTreeNames: AlienTechnology
 }
 
- # Alien CV Energy Railgun
-{ Block Id: 269, Name: "Alien Energy Railgun"
+ # CV Energy Railgun
+{ Block Id: 269, Name: WeaponCVEnergyRailgun
   Class: Weapon
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metalhard, display: true
   Shape: ModelEntity
   ShowBlockName: true
-  WeaponItem: "Alien Energy Railgun Weapon"
+  WeaponItem: WeaponCVEnergyRailgunWeapon
   CustomIcon: RailgunSSWeapon
   Model: @models/Blocks/WeaponsShip/WeaponSSGaussRetractPrefab
   # Model: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
@@ -3604,13 +3605,9 @@ HullCombatSmallBlocks
   Model: Environment/Rocks/Misc/RockFormationLPrefab
 } */
 
-
-
 { Block Id: 342, Name: RockFormationN, Ref: RockFormationO
   Model: Environment/Rocks/Misc/RockFormationNPrefab
 }
-
-# 344 345 available free
 
 { +Block Id: 343, Name: LadderBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -3707,7 +3704,7 @@ HullCombatSmallBlocks
   Zoom: 5, type: float
 
   UnlockCost: 7, display: true
-  UnlockLevel: 5, display: true
+  UnlockLevel: 7, display: true
   TechTreeParent: WeaponSV02
   TechTreeNames: Small Vessel
 
@@ -5115,8 +5112,8 @@ HullCombatSmallBlocks
   # ROF: 0.5, type: float, display: true, formatter: ROF
 
   UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
-  TechTreeParent: WeaponSV01
+  UnlockLevel: 25, display: true
+  TechTreeParent: WeaponSV04
   TechTreeNames: "Hover Vessel,Small Vessel"
 }
 # Plasma Cannon
@@ -10442,7 +10439,7 @@ HullCombatSmallBlocks
   CPUIn: 8870, type: int, display: true
 
   UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockLevel: 25, display: true
   TechTreeParent: ThrusterJetRound3x10x3
   TechTreeNames: Small Vessel
 
@@ -12926,7 +12923,7 @@ HullCombatSmallBlocks
   BlastDamage: 80
 
   UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockLevel: 25, display: true
   TechTreeParent: ContainerHarvestControllerSmall
   TechTreeNames: Small Vessel
 }
@@ -16485,7 +16482,7 @@ HullCombatSmallBlocks
   HitPoints: 350, type: int, display: true
 
   UnlockCost: 10, display: true
-  UnlockLevel: 8, display: true
+  UnlockLevel: 12, display: true
   TechTreeParent: HoverEngineSmall
   TechTreeNames: Hover Vessel
 }
@@ -22040,7 +22037,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Thrusters/ThrusterJetRound3x13x3V2Prefab
 
   UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockLevel: 25, display: true
   IsIgnoreLC: true
   TechTreeParent: ThrusterJetRound3x10x3V2
   TechTreeNames: Small Vessel
@@ -22937,7 +22934,7 @@ HullCombatSmallBlocks
   IsOxygenTight: varies, display: true        # not all child blocks are the same
 
   UnlockCost: 12, display: true
-  UnlockLevel: 10, display: true
+  UnlockLevel: 12, display: true
   TechTreeParent: TurretGVMinigunBlocks
   TechTreeNames: Hover Vessel
 }
@@ -22992,8 +22989,8 @@ HullCombatSmallBlocks
   CPUIn: 5820, type: int, display: true
 
   UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
-  TechTreeParent: TurretGVPlasmaBlocks
+  UnlockLevel: 25, display: true
+  TechTreeParent: TurretGVRocketBlocks
   TechTreeNames: Hover Vessel
 }
 { +Block Id: 1663, Name: TurretGVToolBlocks
@@ -24425,7 +24422,7 @@ HullCombatSmallBlocks
   TemplateRoot: ThrusterGVRoundNormalT2
 
   UnlockCost: 10, display: true
-  UnlockLevel: 10, display: true
+  UnlockLevel: 12, display: true
   TechTreeParent: ThrusterGVRoundBlocks
   TechTreeNames: Hover Vessel
   UpgradeTo: null, display: false
@@ -24658,7 +24655,7 @@ HullCombatSmallBlocks
   MaxCount: 2, type: int, display: true
 
   UnlockCost: 12, display: true
-  UnlockLevel: 10, display: true
+  UnlockLevel: 12, display: true
   TechTreeParent: CockpitBlocksSV
   TechTreeNames: "Small Vessel,Hover Vessel"
 }
@@ -25217,7 +25214,7 @@ HullCombatSmallBlocks
   StackSize: 50000
 
   UnlockCost: 12, display: true
-  UnlockLevel: 10, display: true
+  UnlockLevel: 12, display: true
   TechTreeParent: DrillAttachment
   TechTreeNames: Hover Vessel
 }
@@ -26295,7 +26292,7 @@ HullCombatSmallBlocks
   HitPoints: 330, type: int, display: true
 
   UnlockCost: 20, display: true
-  UnlockLevel: 20, display: true
+  UnlockLevel: 25, display: true
   TechTreeNames: Small Vessel
   TechTreeParent: CPUExtenderSVT3
 
