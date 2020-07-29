@@ -1553,7 +1553,7 @@ HullCombatSmallBlocks
   Radiation: 4.0, display: RadiationLevel
   Temperature: 35, display: false
 
-  UnlockCost: 25, display: true
+  UnlockCost: 9000, display: true
   UnlockLevel: 25, display: true
   TechTreeNames: NaturalScience
 }
@@ -1736,10 +1736,10 @@ HullCombatSmallBlocks
   BlastDamage: 2500
 
   ShowUser: Yes
-  UnlockCost: 25, display: true
+  UnlockCost: 9000, display: true
   UnlockLevel: 25, display: true
-  TechTreeParent: WeaponSV05Homing
-  TechTreeNames: Small Vessel
+  TechTreeParent: AmmoSVTorpedo
+  TechTreeNames: AlienTechnology
 }
 
 /* Block Entity start at id=256 */
@@ -2202,8 +2202,9 @@ HullCombatSmallBlocks
   CPUIn: 1050, type: int, display: true
   HitPoints: 530, type: int, display: true
 
-  UnlockCost: 9999, display: true
+  UnlockCost: 9000, display: true
   UnlockLevel: 25, display: true
+  TechTreeParent: AmmoSVAntimatterCannon
   TechTreeNames: AlienTechnology
 }
 

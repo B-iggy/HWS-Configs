@@ -2977,7 +2977,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     IsShootThroughCrosshair: false
-    ROF: 11, type: float, display: true, formatter: ROF
+    ROF: 20, type: float, display: true, formatter: ROF
     Range: 0, display: false
     RangeSpace: 0, display: false
     AmmoCapacity: 1, display: true
@@ -2987,10 +2987,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 200, display: false
     AutoReload: true
     CheckObstructed: false
-    ReloadDelay: 13, display: true # adapt sound
+    ReloadDelay: 1, display: true # adapt sound
     SfxBegin: UseActions/BarrelClose
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_002
-    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    SfxReload: Weapons/Player/Reload/WeaponJammedSingleShot
   }
 }
 
@@ -3003,17 +3003,17 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 0
   StackSize: 50000
   Canhold: false
-  Mass: 459, type: float, display: true, formatter: Kilogram
+  Mass: 500, type: float, display: true, formatter: Kilogram
   Volume: 31.25, type: float, display: true, formatter: Liter
   Info: "A high-impact torpedo. Designed to be launched while dive-bombing a ground target. Bombs inherit the speed of the vehicle that launched them and safely disarm if they exceed their target distance.", display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 2500
+    Damage: 5000
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
-    BlastRadius: 4, display: true
-    BlastDamage: 7150, display: true
+    BlastRadius: 9, display: true
+    BlastDamage: 30000, display: true
     Speed: 10
     Range: 100
     SpeedSpace: 15
@@ -3029,8 +3029,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_4: 0,   param1: shield
   }
 
-  UnlockLevel: 1
-  TechTreeNames: Hidden
+  ShowUser: Yes
+  UnlockCost: 9000, display: true
+  UnlockLevel: 17, display: true
+  TechTreeNames: AlienTechnology
 }
 
 # Debug weapons
@@ -6166,8 +6168,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_3: 0, param1: shield
   }
 
-  UnlockLevel: 1
-  TechTreeNames: Hidden
+  UnlockCost: 9000, display: true
+  UnlockLevel: 17, display: true
+  TechTreeNames: AlienTechnology
 }
 
 { +Item Id: 156, Name: LargeRocket
@@ -8649,7 +8652,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Material: metalweapon
   HoldType: 0
   StackSize: 50000
-  CustomIcon: PlasmaCannonSSWeapon
+  CustomIcon: PulseLaserMSWeapon
   Mass: 1682, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
   { Child 0
@@ -8658,7 +8661,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 435, display: false
     RangeSpace: 725, display: false
     AmmoCapacity: 50, display: true
-    AmmoUnlimited: true
     AmmoType: AmmoSVAntimatterCannon, display: true
     Automatic: true
     NoiseStrength: 100, display: false
