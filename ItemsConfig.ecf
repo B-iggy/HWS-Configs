@@ -3912,9 +3912,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AutoReload: true
     CheckObstructed: true
     ReloadDelay: 2, display: true # adapt sound
-    SfxBegin: Weapons/Player/Minigun/minigun_start
-    SfxLoop: Weapons/Player/Minigun/minigun_loop
-    SfxStop: Weapons/Player/Minigun/minigun_end
+    SfxBegin: Weapons/Enemies/Drones/minigunLowPitch_start
+    SfxLoop: Weapons/Enemies/Drones/minigunLowPitch_loop
+    SfxStop: Weapons/Player/Minigun/minigun2_end
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: SideAutoMuzzleFire
@@ -4014,7 +4014,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AutoReload: true
     CheckObstructed: true
     ReloadDelay: 2.25, display: true # adapt sound
-    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+    SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: SniperMuzzleFire
@@ -4211,7 +4211,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AutoReload: true
     CheckObstructed: true
     ReloadDelay: 8, display: true # adapt sound
-    SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    SfxBegin: Weapons/LauncherWeapons/weapon_missile_006
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_002
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: SniperMuzzleFireLarge
@@ -4239,7 +4239,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AutoReload: true
     CheckObstructed: true
     ReloadDelay: 4, display: true    # adapt sound
-    SfxBegin: Weapons/ProjectileWeapons/weapon_railgun_004
+    SfxBegin: Weapons/SS/Railgun/FuturisticGunSound02
     /* SfxBegin: Weapons/SS/Railgun/FuturisticGunSound02   */
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
