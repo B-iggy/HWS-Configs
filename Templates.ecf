@@ -5371,27 +5371,38 @@
   }
 }
 
-#{ +Template Name: "M77 Torpedo Launcher"
-#  CraftTime: 90 #D1 20  uses "M77 Torpedo"
-#  Target: AdvC
-#  { Child Inputs
-#    ZascosiumAlloy: 32
-#	SteelPlateArmored: 12
-#	MechanicalComponents: 40
-#    Motor: 12
-#	Computer: 4
-#    Oscillator: 4
-#    PowerCoil: 1
-#  }
-#}
+{ +Template Name: WeaponSVTorpedoLauncher
+  CraftTime: 90 #D1 20  uses "M77 Torpedo"
+  Target: AdvC
+  { Child Inputs
+    ZascosiumAlloy: 32
+	SteelPlateArmored: 12
+	MechanicalComponents: 40
+    Motor: 12
+	Computer: 4
+    Oscillator: 4
+    PowerCoil: 1
+  }
+}
 
-#{ +Template Name: "M77 Torpedo"
-#  OutputCount: 4 #D1 20 for "M77 Torpedo Launcher"
-#  CraftTime: 5
-#  Target: "AdvC"
-#  { Child Inputs
-#    SteelPlate: 4
-#    MagnesiumPowder: 30
-#    NCPowder: 20
-#  }
-#}
+{ +Template Name: AmmoSVTorpedo
+  OutputCount: 4 #D1 20 for "M77 Torpedo Launcher"
+  CraftTime: 5
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 4
+    MagnesiumPowder: 30
+    NCPowder: 20
+  }
+}
+{ +Template Name: PentaxidSeedCrystal
+  DeconOverride: Stop
+  CraftTime: 40
+  Target: "FoodP"
+  { Child Inputs
+    PentaxidElement: 25
+    ErestrumGel: 12
+	NutrientSolution: 5
+    XenoSubstrate: 5
+  }
+}
