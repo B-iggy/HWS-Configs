@@ -2769,7 +2769,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 25, type: int, display: true, formatter: Watt
+  EnergyIn: 3000, type: int, display: true, formatter: Watt
   HitPoints: 120, type: int, display: true
 
   UnlockCost: 0
@@ -6463,7 +6463,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 50000
-  EnergyOut: 3000, type: int, display: true, formatter: Watt
+  EnergyOut: 2500, type: int, display: true, formatter: Watt
   CPUIn: 312, type: int, display: true
   Place: Free
   AllowPlacingAt: "Base,MS", display: true
