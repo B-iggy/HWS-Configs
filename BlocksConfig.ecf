@@ -1509,6 +1509,102 @@ HullCombatSmallBlocks
 
 /* 131 - 255 available free */
 
+
+{ Block Id: 251, Name: PentaxidSeedCrystal
+  Class: PlantGrowing
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: metallight
+  Shape: ModelEntity
+  Model: Entities/Decorations/Plants/GlowTube01DecoPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  { Child PlantGrowing
+    Next: PentaxidSeedCrystal2
+    GrowthRate: 1
+    FertileLevel: 1
+    OnDeath: PlantDead2
+  }
+  IsAccessible: false, type: bool
+  EnergyIn: 4, type: int, display: true, formatter: Watt
+  Collide: "bullet,rocket,melee,sight"
+  CustomIcon: GlowTube01Deco
+  IsColorable: false
+  Place: Free
+  ModelOffset: "0,-0.20,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
+  CropType: PentaxidOre, display: true
+  CropYield: 1, display: true
+  GrowthTimeInfo: 120, type: int, display: true, formatter: Minutes
+  Mass: 20, type: float, display: true, formatter: Kilogram
+  Volume: 12.5, type: float, display: true, formatter: Liter
+  HitPoints: 10, type: int, display: false
+  Info: This Crystal must be grown in a Growing Plot. It drains power and emits radiation that's toxic to other normal plants and animals. Keep it isolated., display: true
+  Category: Farming
+  XpFactor: 0
+  StackSize: 1000
+  PickupTarget: PentaxidSeedCrystal  # disassemble
+  TemplateRoot: PentaxidSeedCrystal2  # deconstruct - to avoid exploit
+  BlastParticleIndex: 10
+  BlastRadius: 5
+  BlastDamage: 750
+  Radiation: 4.0, display: RadiationLevel
+  Temperature: 35, display: false
+
+  UnlockCost: 25, display: true
+  UnlockLevel: 25, display: true
+  TechTreeNames: NaturalScience
+}
+
+{ Block Id: 252, Name: PentaxidSeedCrystal2
+  Model: Entities/Decorations/Plants/GlowTube01DecoPrefab
+  Class: CropsGrown
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: metallight
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  { Child DropOnHarvest
+    Item: PentaxidOre
+    Count: 1
+  }
+  { Child CropsGrown
+    OnHarvest: PentaxidSeedCrystal
+    FertileLevel: 1
+    OnDeath: PlantDead2
+  }
+  IsAccessible: false, type: bool
+  EnergyIn: 3, type: int, display: true, formatter: Watt
+  Collide: "bullet,rocket,melee,sight"
+  CustomIcon: GlowTube01Deco
+  IsColorable: false
+  Place: Free
+  ModelOffset: "0,0.20,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
+  CropType: PentaxidOre, display: true
+  CropYield: 1, display: true
+  GrowthTimeInfo: 1, type: int, display: true, formatter: Minutes
+  Mass: 40, type: float, display: true, formatter: Kilogram
+  Volume: 12.5, type: float, display: true, formatter: Liter
+  HitPoints: 10, type: int, display: false
+  Info: This Crystal must be grown in a Growing Plot. It drains power and emits radiation that's toxic to other normal plants and animals. Keep it isolated., display: true
+  Category: Farming
+  XpFactor: 4
+  StackSize: 1000
+  PickupTarget: PentaxidSeedCrystal  # disassemble
+  TemplateRoot: PentaxidSeedCrystal2  # deconstruct - to avoid exploit
+  BlastParticleIndex: 10
+  BlastRadius: 5
+  BlastDamage: 750
+  Radiation: 5.6, display: RadiationLevel
+  Temperature: 35, display: false
+  ShowUser: Yes
+}
 # Laser Turret for HV
 { +Block Id: 253, Name: TurretHVLaser
   Class: TurretManual
