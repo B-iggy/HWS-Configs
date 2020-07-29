@@ -2963,7 +2963,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 # available free 44-47 (+4)
 
-{ +Item Id: 44, Name: "M77 Torpedo Launcher Weapon"
+{ +Item Id: 44, Name: WeaponSVTorpedoLauncherWeapon
   Meshfile: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   ShowUser: NoButCSV
@@ -2981,7 +2981,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 0, display: false
     RangeSpace: 0, display: false
     AmmoCapacity: 1, display: true
-    AmmoType: "M77 Torpedo", display: true
+    AmmoType: AmmoSVTorpedo, display: true
     BulletSpread: 10, display: false
     Automatic: false
     NoiseStrength: 200, display: false
@@ -2994,7 +2994,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-{ +Item Id: 45, Name: "M77 Torpedo"
+{ +Item Id: 45, Name: AmmoSVTorpedo
   Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   CustomIcon: BombDrone
@@ -3847,7 +3847,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 1000, display: true
     Automatic: true
     AmmoCapacity: 150, display: true
-    AmmoType: "Alien Energy Railgun Bullet", display: true
+    AmmoType: AmmoCVEnergyRailgun, display: true
     NoiseStrength: 100, display: false
     AutoReload: true
     CheckObstructed: true
@@ -3868,7 +3868,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-{ +Item Id: 99, Name: "Alien Energy Railgun Bullet"
+{ +Item Id: 99, Name: AmmoCVEnergyRailgun
   Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
@@ -6130,45 +6130,45 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   UnlockLevel: 1
   TechTreeNames: Hidden
 }
-#{ +Item Id: 606, Name: "Antimatter Cannon Charge"
-#  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketGreenPrefab
-#  # Meshfile: Entities/Items/Weapons/Projectiles/alienRocketPrefab
-#  DropMeshfile: Entities/Misc/BagSmallPrefab
-#  Material: metalweapon
-#  AllowPlacingAt: SS, display: false
-#  CustomIcon: BlastShutterDoors1x1x1
-#  HoldType: 0
-#  StackSize: 50000
-#  Canhold: false
-#  ShowUser: Yes
-#  Mass: 1, type: float, display: true, formatter: Kilogram
-#  Volume: 1.5, type: float, display: true, formatter: Liter
-#  Info: bkiAmmoExplosive, display: true
-#  Category: Weapons/Items
-#  { Child 0
-#    Class: Projectile
-#    Damage: 1000
-#    BlastParticleIndex: 3
-#    BlastRadius: 3, display: true
-#    BlastDamage: 500, display: true
-#    Speed: 170
-#    Range: 500
-#    SpeedSpace: 300
-#    RangeSpace: 1000
-#    HomingSpeed: 5
-#    Ballistic: false
-#
-#    DamageMultiplier_1: 0.15, param1: head|body
-#    DamageMultiplier_2: 0, param1: stone|dirt|rock
-#    DamageMultiplier_3: 0.2, param1: shield
-#    BlastDamageMultiplier_1: 0.15, param1: head|body
-#    BlastDamageMultiplier_2: 0.1, param1: stone|dirt|rock
-#    BlastDamageMultiplier_3: 0, param1: shield
-#  }
-#
-#  UnlockLevel: 1
-#  TechTreeNames: Hidden
-#}
+{ +Item Id: 606, Name: AmmoSVAntimatterCannon
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketGreenPrefab
+  # Meshfile: Entities/Items/Weapons/Projectiles/alienRocketPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metalweapon
+  AllowPlacingAt: SS, display: false
+  CustomIcon: BlastShutterDoors1x1x1
+  HoldType: 0
+  StackSize: 50000
+  Canhold: false
+  ShowUser: Yes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Volume: 1.5, type: float, display: true, formatter: Liter
+  Info: bkiAmmoExplosive, display: true
+  Category: Weapons/Items
+  { Child 0
+    Class: Projectile
+    Damage: 1000
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 170
+    Range: 500
+    SpeedSpace: 300
+    RangeSpace: 1000
+    HomingSpeed: 5
+    Ballistic: false
+
+    DamageMultiplier_1: 0.15, param1: head|body
+    DamageMultiplier_2: 0, param1: stone|dirt|rock
+    DamageMultiplier_3: 0.2, param1: shield
+    BlastDamageMultiplier_1: 0.15, param1: head|body
+    BlastDamageMultiplier_2: 0.1, param1: stone|dirt|rock
+    BlastDamageMultiplier_3: 0, param1: shield
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
 
 { +Item Id: 156, Name: LargeRocket
   Meshfile: Entities/Items/Weapons/Projectiles/RocketLargePrefab
@@ -8641,7 +8641,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 /* Alien SV Homing Plasma */
-{ +Item Id: 331, Name: "Antimatter Cannon Weapon"
+{ +Item Id: 331, Name: WeaponSVAntimatterCannonWeapon
   Meshfile: @models/Blocks/WeaponsShip/WeaponSSPlasmaPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   ShowUser: NoButCSV  # reported by HWS
@@ -8659,7 +8659,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 725, display: false
     AmmoCapacity: 50, display: true
     AmmoUnlimited: true
-    AmmoType: "Antimatter Cannon Charge", display: true
+    AmmoType: AmmoSVAntimatterCannon, display: true
     Automatic: true
     NoiseStrength: 100, display: false
     AutoReload: true
