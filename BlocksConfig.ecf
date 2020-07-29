@@ -4612,16 +4612,16 @@ HullCombatSmallBlocks
   AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,2,1", display: true
   Volume: 62.5, type: float, display: true, formatter: Liter
-  Mass: 262, type: float, display: true, formatter: Kilogram
+  Mass: 300, type: float, display: true, formatter: Kilogram
   Info: bkiGenerator, display: true
   # ModelOffset: "0,0.5,0"
   StackSize: 50000
   IsOxygenTight: true, display: true
   IsActivateable: true
   IsIgnoreLC: true
-  HitPoints: 200, type: int, display: true
-  EnergyOut: 2000, type: int, display: true, formatter: Watt
-  CPUIn: 187, type: int, display: true
+  HitPoints: 250, type: int, display: true
+  EnergyOut: 1250, type: int, display: true, formatter: Watt
+  CPUIn: 200, type: int, display: true
   Category: Devices
   BlastParticleIndex: 2
   BlastRadius: 5
@@ -5995,16 +5995,16 @@ HullCombatSmallBlocks
   AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   Volume: 31.25, type: float, display: true, formatter: Liter
-  Mass: 148, type: float, display: true, formatter: Kilogram
+  Mass: 175, type: float, display: true, formatter: Kilogram
   Info: bkiGenerator, display: true
   # ModelOffset: "0,0.5,0"
   StackSize: 50000
   IsOxygenTight: true, display: true
   IsActivateable: true
   IsIgnoreLC: true
-  HitPoints: 125, type: int, display: true
-  EnergyOut: 1000, type: int, display: true, formatter: Watt
-  CPUIn: 87, type: int, display: true
+  HitPoints: 100, type: int, display: true
+  EnergyOut: 750, type: int, display: true, formatter: Watt
+  CPUIn: 90, type: int, display: true
   Category: Devices
   BlastParticleIndex: 2
   BlastRadius: 3
