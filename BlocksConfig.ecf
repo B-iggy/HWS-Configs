@@ -1509,6 +1509,52 @@ HullCombatSmallBlocks
 
 /* 131 - 255 available free */
 
+# Laser Turret for HV
+{ +Block Id: 253, Name: TurretHVLaser
+  Class: TurretManual
+  IndexName: Turret
+  CustomIcon: TurretZiraxMSLaser
+  Group: cpgTurret
+  Category: Weapons/Items
+  AllowedInBlueprint: false, display: true
+  Info: bkiTurret, display: true
+  Material: metalhard, display: true
+  Shape: Turret
+  Place: Face
+  Model: @models/Blocks/Turrets/TurretZiraxSpherical_LaserPrefab
+  BlockColor: "110,110,110"
+  # Mesh-Damage-1: Mesh/D0
+  # Mesh-Damage-2: Mesh/D1
+  # Mesh-Damage-3: Mesh/D2
+  # Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  # TemplateRoot: TurretMSLaserBlocks
+  SoundOnEnter: UseActions/DOOROpen02
+  SoundRotate: Weapons/Turret/TurretRotateNormal
+  WeaponItem: TurretHVLaserWeapon
+  AllowPlacingAt: GV, display: true
+  SizeInBlocks: "3,1,3", display: true
+  IsActivateable: true
+  IsActivateableInCP: true
+  #IsAccessible: true
+  StackSize: 50000
+  MaxCount: 3, type: int, display: true
+  BlastParticleIndex: 11
+  BlastRadius: 3
+  BlastDamage: 80
+  EnergyIn: 25, type: int, display: true, formatter: Watt
+  CPUIn: 15100, type: int, display: true
+  Volume: 2880, type: float, display: true, formatter: Liter
+  Mass: 11760, type: float, display: true, formatter: Kilogram
+  HitPoints: 3450, type: int, display: true
+  RotSpeed: 100, type: int, display: true
+  Zoom: 5, type: float
+
+  UnlockCost: 20, display: true
+  UnlockLevel: 25, display: true
+  TechTreeParent: TurretGVPlasmaBlocks
+  TechTreeNames: Hover Vessel
+}
 { +Block Id: 254, Name: WarpDriveT2
   Class: WarpDrive
   Group: cpgWarp
