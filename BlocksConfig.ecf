@@ -1520,12 +1520,12 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   { Child PlantGrowing
     Next: PentaxidSeedCrystal2
-    GrowthRate: 1
+    GrowthRate: 180
     FertileLevel: 1
     OnDeath: PlantDead2
   }
   IsAccessible: false, type: bool
-  EnergyIn: 4, type: int, display: true, formatter: Watt
+  EnergyIn: 10, type: int, display: true, formatter: Watt
   Collide: "bullet,rocket,melee,sight"
   CustomIcon: GlowTube01Deco
   IsColorable: false
@@ -1537,14 +1537,14 @@ HullCombatSmallBlocks
   ShowBlockName: true
   CropType: PentaxidOre, display: true
   CropYield: 1, display: true
-  GrowthTimeInfo: 120, type: int, display: true, formatter: Minutes
+  GrowthTimeInfo: 180, type: int, display: true, formatter: Minutes
   Mass: 20, type: float, display: true, formatter: Kilogram
   Volume: 12.5, type: float, display: true, formatter: Liter
   HitPoints: 10, type: int, display: false
-  Info: This Crystal must be grown in a Growing Plot. It drains power and emits radiation that's toxic to other normal plants and animals. Keep it isolated., display: true
+  Info: "This Crystal must be grown in a Growing Plot. It drains power and emits radiation that's toxic to other normal plants and animals. Keep it isolated.", display: true
   Category: Farming
   XpFactor: 0
-  StackSize: 1000
+  StackSize: 50000
   PickupTarget: PentaxidSeedCrystal  # disassemble
   TemplateRoot: PentaxidSeedCrystal2  # deconstruct - to avoid exploit
   BlastParticleIndex: 10
@@ -1576,7 +1576,7 @@ HullCombatSmallBlocks
     OnDeath: PlantDead2
   }
   IsAccessible: false, type: bool
-  EnergyIn: 3, type: int, display: true, formatter: Watt
+  EnergyIn: 5, type: int, display: true, formatter: Watt
   Collide: "bullet,rocket,melee,sight"
   CustomIcon: GlowTube01Deco
   IsColorable: false
@@ -1588,14 +1588,13 @@ HullCombatSmallBlocks
   ShowBlockName: true
   CropType: PentaxidOre, display: true
   CropYield: 1, display: true
-  GrowthTimeInfo: 1, type: int, display: true, formatter: Minutes
   Mass: 40, type: float, display: true, formatter: Kilogram
   Volume: 12.5, type: float, display: true, formatter: Liter
   HitPoints: 10, type: int, display: false
   Info: This Crystal must be grown in a Growing Plot. It drains power and emits radiation that's toxic to other normal plants and animals. Keep it isolated., display: true
   Category: Farming
   XpFactor: 4
-  StackSize: 1000
+  StackSize: 50000
   PickupTarget: PentaxidSeedCrystal  # disassemble
   TemplateRoot: PentaxidSeedCrystal2  # deconstruct - to avoid exploit
   BlastParticleIndex: 10
