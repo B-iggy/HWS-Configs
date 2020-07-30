@@ -1553,7 +1553,7 @@ HullCombatSmallBlocks
   Radiation: 4.0, display: RadiationLevel
   Temperature: 35, display: false
 
-  UnlockCost: 9000, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
   TechTreeNames: NaturalScience
 }
@@ -1618,13 +1618,13 @@ HullCombatSmallBlocks
   Shape: Turret
   Place: Face
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_LaserPrefab
+  TemplateRoot: TurretGVPlasmaBlocks
   BlockColor: "110,110,110"
   # Mesh-Damage-1: Mesh/D0
   # Mesh-Damage-2: Mesh/D1
   # Mesh-Damage-3: Mesh/D2
   # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
-  # TemplateRoot: TurretMSLaserBlocks
   SoundOnEnter: UseActions/DOOROpen02
   SoundRotate: Weapons/Turret/TurretRotateNormal
   WeaponItem: TurretHVLaserWeapon
@@ -1634,22 +1634,22 @@ HullCombatSmallBlocks
   IsActivateableInCP: true
   #IsAccessible: true
   StackSize: 50000
-  MaxCount: 3, type: int, display: true
+  #MaxCount: 3, type: int, display: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 100, type: int, display: true, formatter: Watt
-  CPUIn: 15100, type: int, display: true
+  CPUIn: 11000, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 3450, type: int, display: true
   RotSpeed: 100, type: int, display: true
   Zoom: 5, type: float
 
-  UnlockCost: 20, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
-  TechTreeParent: TurretGVPlasmaBlocks
-  TechTreeNames: Hover Vessel
+  TechTreeParent: AmmoTurretHVLaser
+  TechTreeNames: AlienTechnology
 }
 
 { +Block Id: 254, Name: WarpDriveT2
@@ -1736,7 +1736,7 @@ HullCombatSmallBlocks
   BlastDamage: 2500
 
   ShowUser: Yes
-  UnlockCost: 9000, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
   TechTreeParent: AmmoSVTorpedo
   TechTreeNames: AlienTechnology
@@ -2202,7 +2202,7 @@ HullCombatSmallBlocks
   CPUIn: 1050, type: int, display: true
   HitPoints: 530, type: int, display: true
 
-  UnlockCost: 9000, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
   TechTreeParent: AmmoSVAntimatterCannon
   TechTreeNames: AlienTechnology
@@ -2252,10 +2252,10 @@ HullCombatSmallBlocks
   # ReloadDelay: 1, display: true
   # ROF: 0.6, type: float, display: true, formatter: ROF
 
-  UnlockCost: 27, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
-  TechTreeParent: WeaponMS01
-  TechTreeNames: Capital Vessel
+  TechTreeParent: AmmoCVEnergyRailgun
+  TechTreeNames: AlienTechnology
 }
 
 { +Block Id: 270, Name: MedicinelabMS
@@ -2342,7 +2342,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   BlockColor: "110,110,110"
   Category: Devices
-  Torque: 100, type: int, display: true, formatter: NewtonMeter
+  Torque: 150, type: int, display: true, formatter: NewtonMeter
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 450, type: int, display: true
   BlastParticleIndex: 4
@@ -9711,7 +9711,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 20, type: int, display: true, formatter: Watt
-  CPUIn: 450, type: int, display: true
+  CPUIn: 1300, type: int, display: true
   HitPoints: 5616, type: int, display: true
   RotSpeed: 150, type: int, display: true
   Zoom: 5, type: float
@@ -9748,7 +9748,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 1560, type: int, display: true
+  CPUIn: 1500, type: int, display: true
   HitPoints: 5184, type: int, display: true
   RotSpeed: 120, type: int, display: true
   Zoom: 5, type: float
@@ -10249,6 +10249,7 @@ HullCombatSmallBlocks
   Volume: 281.25, type: float, display: true, formatter: Liter
   Mass: 790, type: float, display: true, formatter: Kilogram
   StackSize: 50000
+  CPUIn: 3000, type: int, display: true
   EnergyIn: 700, type: int, display: true, formatter: Watt
   EnergyInIdle: 14, type: int, display: true, formatter: Watt
   HitPoints: 850, type: int, display: true
@@ -19998,7 +19999,7 @@ HullCombatSmallBlocks
 
   UnlockCost: 15, display: true
   IsIgnoreLC: true
-  UnlockLevel: 12, display: true
+  UnlockLevel: 15, display: true
   TechTreeParent: ThrusterGVRoundNormalT2
   TechTreeNames: Hover Vessel
   UpgradeTo: null, display: false
@@ -22928,7 +22929,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   AllowPlacingAt: GV, display: true
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 450, type: int, display: true
+  CPUIn: 1300, type: int, display: true
   Mass: 530, type: float, display: true, formatter: Kilogram
   Info: bkiBlockGroup, display: true
   IsOxygenTight: varies, display: true        # not all child blocks are the same
@@ -22949,7 +22950,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   BlockColor: "110,110,110"
   Category: Weapons/Items
-  ChildBlocks: "TurretGVPlasma, TurretGVPlasmaRetract"
+  ChildBlocks: "TurretGVPlasma, TurretGVPlasmaRetract, TurretHVLaser"
   MaxCount: 4, type: int, display: true
   StackSize: 50000
 
@@ -22958,10 +22959,9 @@ HullCombatSmallBlocks
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 1050, type: float, display: true, formatter: Kilogram  # do not display mass, otherwise mass from material will be displayed
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 1560, type: int, display: true
 
   UnlockCost: 20, display: true
-  UnlockLevel: 15, display: true
+  UnlockLevel: 17, display: true
   TechTreeParent: TurretGVMinigunBlocks
   TechTreeNames: Hover Vessel
 }
