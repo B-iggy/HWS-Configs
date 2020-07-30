@@ -1612,7 +1612,7 @@ HullCombatSmallBlocks
   CustomIcon: TurretZiraxMSLaser
   Group: cpgTurret
   Category: Weapons/Items
-  AllowedInBlueprint: false, display: true
+  AllowedInBlueprint: true, display: true
   Info: bkiTurret, display: true
   Material: metalhard, display: true
   Shape: Turret
@@ -1707,7 +1707,7 @@ HullCombatSmallBlocks
 
 { Block Id: 255, Name: WeaponSVTorpedoLauncher
   Class: Weapon
-  AllowedInBlueprint: false, display: true
+  AllowedInBlueprint: true, display: true
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metal
