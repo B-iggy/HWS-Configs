@@ -3030,7 +3030,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 
   ShowUser: Yes
-  UnlockCost: 9000, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 17, display: true
   TechTreeNames: AlienTechnology
 }
@@ -3811,6 +3811,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 0
   StackSize: 50000
   Mass: 8500, type: float, display: false, formatter: Kilogram
+  CustomIcon: TurretZiraxMSLaser
   Category: Weapons/Items
   { Child 0
     Class: LauncherSS
@@ -3874,6 +3875,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  CustomIcon: FillerCharge
   AllowPlacingAt: MS, display: false
   HoldType: 0
   StackSize: 50000
@@ -3882,10 +3884,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 5, type: float, display: true, formatter: Liter
   Info: bkiAmmo, display: true
   Category: Weapons/Items
-  CustomIcon: ScifiContainer2Small
 
-  UnlockLevel: 1
-  TechTreeNames: Hidden
+  UnlockCost: 4500, display: true
+  UnlockLevel: 17, display: true
+  TechTreeNames: AlienTechnology
 }
 
 /* CATEGORIE: WEAPONS FOR SS MS id 100-199 */
@@ -6168,7 +6170,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_3: 0, param1: shield
   }
 
-  UnlockCost: 9000, display: true
+  UnlockCost: 4500, display: true
   UnlockLevel: 17, display: true
   TechTreeNames: AlienTechnology
 }
@@ -6668,6 +6670,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 666, display: true
     SpeedSpace: 330, display: true
     RangeSpace: 970, display: true
+    HomingSpeed: 0.30
     Ballistic: false
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
@@ -7443,6 +7446,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
   AllowPlacingAt: "GV", display: false
+  CustomIcon: ScifiContainer2Small
   HoldType: 0
   StackSize: 50000
   Canhold: false
@@ -7483,8 +7487,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 1, param1: plastic
   }
 
-  UnlockLevel: 1
-  TechTreeNames: Hidden
+  UnlockCost: 4500, display: true
+  UnlockLevel: 17, display: true
+  TechTreeNames: AlienTechnology
 }
 
 
