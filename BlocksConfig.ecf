@@ -5737,6 +5737,10 @@ HullCombatSmallBlocks
   /* IsColorable: false   */
   IsTextureable: false
   MarketPrice: 325.61
+
+  UnlockCost: 70, display: true
+  UnlockLevel: 7, display: true
+  TechTreeNames: NaturalScience
 }
 { Block Id: 463, Name: AlienPepperStage2   # Stage2
   Class: PlantGrowing
@@ -6305,6 +6309,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: DurianRoot  # disassemble
   TemplateRoot: AlienPepperStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 190, display: true
+  UnlockLevel: 19, display: true
+  TechTreeParent: DesertPlant20Stage1
+  TechTreeNames: NaturalScience
 }
 /* For planetary POIs */
 { +Block Id: 491, Name: TurretIONCannon
@@ -8454,6 +8463,12 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: WheatStage1  # disassemble
   TemplateRoot: WheatStage2  # deconstruct - to avoid exploit
+
+
+  UnlockCost: 70, display: true
+  UnlockLevel: 7, display: true
+  TechTreeParent: CornStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 592, Name: WheatStage2
   Class: PlantGrowing
@@ -8539,6 +8554,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: TomatoStage1  # disassemble
   TemplateRoot: TomatoStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 130, display: true
+  UnlockLevel: 13, display: true
+  TechTreeParent: WheatStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 595, Name: TomatoStage2
   Class: PlantGrowing
@@ -8624,6 +8644,11 @@ HullCombatSmallBlocks
   GrowthTimeInfo: 145, type: int, display: true, formatter: Minutes
   PickupTarget: PumpkinStage1  # disassemble
   TemplateRoot: PumpkinStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 150, display: true
+  UnlockLevel: 15, display: true
+  TechTreeParent: TomatoStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 598, Name: PumpkinStage2
   Class: PlantGrowing
@@ -8710,6 +8735,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: CornStage1  # disassemble
   TemplateRoot: CornStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 50, display: true
+  UnlockLevel: 5, display: true
+  TechTreeParent: GrowingPotWood
+  TechTreeNames: NaturalScience
 }
 { Block Id: 601, Name: CornStage2
   Class: PlantGrowing
@@ -8910,6 +8940,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: PearthingStage1  # disassemble
   TemplateRoot: PearthingStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 130, display: true
+  UnlockLevel: 13, display: true
+  TechTreeParent: SnakeweedStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 608, Name: PearthingStage2
   Class: PlantGrowing
@@ -9371,6 +9406,12 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: InsanityPepperStage1  # disassemble
   TemplateRoot: InsanityPepperStage2  # deconstruct - to avoid exploit
+
+
+  UnlockCost: 130, display: true
+  UnlockLevel: 13, display: true
+  TechTreeParent: GrowingPot
+  TechTreeNames: NaturalScience
 }
 # Rename: CoffePlantStage2
 { Block Id: 640, Name: InsanityPepperStage2
@@ -9432,6 +9473,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: DesertPlant20Stage1  # disassemble
   TemplateRoot: DesertPlant20Stage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 170, display: true
+  UnlockLevel: 17, display: true
+  TechTreeParent: ElderberryStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 642, Name: DesertPlant20Stage2
   Class: PlantGrowing
@@ -9518,6 +9564,12 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: AlienPlantTube2Stage1  # disassemble
   TemplateRoot: AlienPlantTube2Stage2  # deconstruct - to avoid exploit
+
+
+  UnlockCost: 250, display: true
+  UnlockLevel: 25, display: true
+  TechTreeParent: AlienPalmTreeStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 645, Name: AlienPlantTube2Stage2
   Class: PlantGrowing
@@ -17163,6 +17215,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: ElderberryStage1  # disassemble
   TemplateRoot: ElderberryStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 150, display: true
+  UnlockLevel: 15, display: true
+  TechTreeParent: PearthingStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 1168, Name: ElderberryStage2, Ref: ElderberryStage1
   Model: Entities/Farming/SpeedTrees/ElderberryBushStage2Prefab
@@ -17174,6 +17231,7 @@ HullCombatSmallBlocks
   }
   ShowUser: NoButCSV             # reported by HWS
   PickupTarget: ElderberryStage1
+  TechTreeNames: Hidden
 }
 { Block Id: 1169, Name: ElderberryStage3, Ref: ElderberryStage1
   Model: Entities/Farming/SpeedTrees/ElderberryBushStage3Prefab
@@ -17190,6 +17248,7 @@ HullCombatSmallBlocks
   # ShowUser: NoButCSV             # reported by HWS
   PickupTarget: ElderberryStage1
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
 { Block Id: 1170, Name: ElderberryStage3NoFruit, Ref: ElderberryStage1
   Model: Entities/Farming/SpeedTrees/ElderberryBushStage3NoFruitPrefab
@@ -17201,24 +17260,48 @@ HullCombatSmallBlocks
   }
   ShowUser: NoButCSV             # reported by HWS
   PickupTarget: ElderberryStage1
+  TechTreeNames: Hidden
 }
 # Sprout
-{ Block Id: 1171, Name: AlienPalmTreeStage1, Ref: ElderberryStage1
+{ Block Id: 1171, Name: AlienPalmTreeStage1
   Model: Entities/Farming/SpeedTrees/AlienPalmTreeStage1Prefab
+  Class: PlantGrowing
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: plants, display: true
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   { Child PlantGrowing
     Next: AlienPalmTreeStage2
     GrowthRate: 35
     FertileLevel: 5
     OnDeath: PlantDead2
   }
+  IsAccessible: false, type: bool
+  Collide: "bullet,rocket,melee,sight"
+  Place: Free
+  # ModelOffset: "0,0.5,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
   CropType: Fruit, display: true
   CropYield: 8, display: true
   GrowthTimeInfo: 135, type: int, display: true, formatter: Minutes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Info: bkiPlantSprout, display: true
+  Category: Farming
+  XpFactor: 1
 
   PickupTarget: AlienPalmTreeStage1  # disassemble
   TemplateRoot: AlienPalmTreeStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 210, display: true
+  UnlockLevel: 21, display: true
+  TechTreeParent: AlienplantWormStage1
+  TechTreeNames: NaturalScience
 }
-{ Block Id: 1172, Name: AlienPalmTreeStage2, Ref: ElderberryStage1
+{ Block Id: 1172, Name: AlienPalmTreeStage2, Ref: AlienPalmTreeStage1
   Model: Entities/Farming/SpeedTrees/AlienPalmTreeStage2Prefab
   { Child PlantGrowing
     Next: AlienPalmTreeStage3
@@ -17229,8 +17312,9 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: AlienPalmTreeStage1
   TemplateRoot: AlienPalmTreeStage2
+  TechTreeNames: Hidden
 }
-{ Block Id: 1173, Name: AlienPalmTreeStage3, Ref: ElderberryStage1
+{ Block Id: 1173, Name: AlienPalmTreeStage3, Ref: AlienPalmTreeStage1
   Model: Entities/Farming/SpeedTrees/AlienPalmTreeStage3Prefab
   Class: CropsGrown
   AllowedInBlueprint: false, display: true
@@ -17246,8 +17330,9 @@ HullCombatSmallBlocks
   PickupTarget: AlienPalmTreeStage1
   TemplateRoot: AlienPalmTreeStage2
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
-{ Block Id: 1174, Name: AlienPalmTreeStage3NoFruit, Ref: ElderberryStage1
+{ Block Id: 1174, Name: AlienPalmTreeStage3NoFruit, Ref: AlienPalmTreeStage1
   Model: Entities/Farming/SpeedTrees/AlienPalmTreeStage3NoFruitPrefab
   { Child PlantGrowing
     Next: AlienPalmTreeStage3
@@ -17258,23 +17343,48 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: AlienPalmTreeStage1
   TemplateRoot: AlienPalmTreeStage2
+  TechTreeNames: Hidden
 }
 # Sprout
-{ Block Id: 1175, Name: AlienplantWormStage1, Ref: ElderberryStage1
+{ Block Id: 1175, Name: AlienplantWormStage1
   Model: Entities/Farming/Misc/AlienplantWormStage1Prefab
+  Class: PlantGrowing
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: plants, display: true
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   { Child PlantGrowing
     Next: AlienplantWormStage2
     GrowthRate: 27
     FertileLevel: 5
     OnDeath: PlantDead
   }
+  IsAccessible: false, type: bool
+  Collide: "bullet,rocket,melee,sight"
+  Place: Free
+  # ModelOffset: "0,0.5,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
   CropType: NaturalSweetener, display: true
   CropYield: 2, display: true
   GrowthTimeInfo: 62, type: int, display: true, formatter: Minutes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Info: bkiPlantSprout, display: true
+  Category: Farming
+  XpFactor: 1
+
   PickupTarget: AlienplantWormStage1  # disassemble
   TemplateRoot: AlienplantWormStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 190, display: true
+  UnlockLevel: 19, display: true
+  TechTreeParent: BigFlowerStage1
+  TechTreeNames: NaturalScience
 }
-{ Block Id: 1176, Name: AlienplantWormStage2, Ref: ElderberryStage1
+{ Block Id: 1176, Name: AlienplantWormStage2, Ref: AlienplantWormStage1
   Model: Entities/Farming/Misc/AlienplantWormStage2Prefab
   { Child PlantGrowing
     Next: AlienplantWormStage3
@@ -17285,8 +17395,9 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: AlienplantWormStage1
   TemplateRoot: AlienplantWormStage2
+  TechTreeNames: Hidden
 }
-{ Block Id: 1177, Name: AlienplantWormStage3, Ref: ElderberryStage1
+{ Block Id: 1177, Name: AlienplantWormStage3, Ref: AlienplantWormStage1
   Model: Entities/Farming/Misc/AlienplantWormStage3Prefab
   Class: CropsGrown
   AllowedInBlueprint: false, display: true
@@ -17302,8 +17413,9 @@ HullCombatSmallBlocks
   PickupTarget: AlienplantWormStage1
   TemplateRoot: AlienplantWormStage2
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
-{ Block Id: 1178, Name: AlienplantWormStage3Harvested, Ref: ElderberryStage1
+{ Block Id: 1178, Name: AlienplantWormStage3Harvested, Ref: AlienplantWormStage1
   Model: Entities/Farming/Misc/AlienplantWormStage3HarvestedPrefab
   { Child PlantGrowing
     Next: AlienplantWormStage3
@@ -17314,24 +17426,50 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: AlienplantWormStage1
   TemplateRoot: AlienplantWormStage2
+  TechTreeNames: Hidden
 }
 # Sprout
-{ Block Id: 1179, Name: BulbShroomYoungStage1, Ref: ElderberryStage1
+{ Block Id: 1179, Name: BulbShroomYoungStage1
   # Model: Entities/Farming/Misc/BulbShroomYoungStage1Prefab
   Model: Entities/Farming/Misc/BulbShroomStage1Prefab
+  Class: PlantGrowing
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: plants, display: true
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   { Child PlantGrowing
     Next: BulbShroomYoungStage2
     GrowthRate: 15
     FertileLevel: 5
     OnDeath: PlantDead2
   }
+  IsAccessible: false, type: bool
+  Collide: "bullet,rocket,melee,sight"
+  Place: Free
+  # ModelOffset: "0,0.5,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
   CropType: Vegetables, display: true
   CropYield: 1, display: true
   GrowthTimeInfo: 31, type: int, display: true, formatter: Minutes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Info: bkiPlantSprout, display: true
+  Category: Farming
+  XpFactor: 1
+
+
   PickupTarget: BulbShroomYoungStage1  # disassemble
   TemplateRoot: BulbShroomYoungStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 210, display: true
+  UnlockLevel: 21, display: true
+  TechTreeParent: DurianRoot
+  TechTreeNames: NaturalScience
 }
-{ Block Id: 1180, Name: BulbShroomYoungStage2, Ref: ElderberryStage1
+{ Block Id: 1180, Name: BulbShroomYoungStage2, Ref: BulbShroomYoungStage1
   # Model: Entities/Farming/Misc/BulbShroomYoungStage2Prefab
   Model: Entities/Farming/Misc/BulbShroomStage2Prefab
   { Child PlantGrowing
@@ -17343,8 +17481,9 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: BulbShroomYoungStage1
   TemplateRoot: BulbShroomYoungStage2
+  TechTreeNames: Hidden
 }
-{ Block Id: 1181, Name: BulbShroomStage3, Ref: ElderberryStage1
+{ Block Id: 1181, Name: BulbShroomStage3, Ref: BulbShroomYoungStage1
   Model: Entities/Farming/Misc/BulbShroomStage3Prefab
   Class: CropsGrown
   AllowedInBlueprint: false, display: true
@@ -17360,9 +17499,10 @@ HullCombatSmallBlocks
   PickupTarget: BulbShroomYoungStage1
   TemplateRoot: BulbShroomYoungStage2
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
 # Harvested model
-{ Block Id: 1182, Name: BulbShroomYoungStage3, Ref: ElderberryStage1
+{ Block Id: 1182, Name: BulbShroomYoungStage3, Ref: BulbShroomYoungStage1
   # Model: Entities/Farming/Misc/BulbShroomYoungStage3Prefab
   Model: Entities/Farming/Misc/BulbShroomStage3NoFruitPrefab
   { Child PlantGrowing
@@ -17374,6 +17514,7 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: BulbShroomYoungStage1
   TemplateRoot: BulbShroomYoungStage2
+  TechTreeNames: Hidden
 }
 { +Block Id: 1183, Name: Window_3side1x1, Ref: Window_v1x1
   Model: @models/Blocks/Windows/Standard/Window_3side1x1Prefab
@@ -17779,6 +17920,10 @@ HullCombatSmallBlocks
   Volume: 80, type: float, display: true, formatter: Liter
   UpgradeTo: GrowingPot, display: true
   MarketPrice: 54.15
+
+  UnlockCost: 50, display: true
+  UnlockLevel: 5, display: true
+  TechTreeNames: NaturalScience
 }
 { +Block Id: 1239, Name: GrowingPotWood, Ref: GrowingPot
   # Material: fertilelow, display: true
@@ -17791,6 +17936,10 @@ HullCombatSmallBlocks
   Volume: 80, type: float, display: true, formatter: Liter
   MarketPrice: 58.38
   UpgradeTo: GrowingPotConcrete, display: true
+
+  UnlockCost: 30, display: true
+  UnlockLevel: 3, display: true
+  TechTreeNames: NaturalScience
 }
 { +Block Id: 1240, Name: ScifiTableNPC2, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
@@ -19256,6 +19405,11 @@ HullCombatSmallBlocks
   XpFactor: 1
   PickupTarget: SnakeweedStage1  # disassemble
   TemplateRoot: SnakeweedStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 70, display: true
+  UnlockLevel: 7, display: true
+  TechTreeParent: GrowingPotConcrete
+  TechTreeNames: NaturalScience
 }
 { Block Id: 1368, Name: SnakeweedStage2, Ref: SnakeweedStage1
   Model: Entities/Farming/SpeedTrees/SnakeweedStage2Prefab
@@ -19267,6 +19421,7 @@ HullCombatSmallBlocks
     OnDeath: PlantDead
   }
   ShowUser: NoButCSV             # reported by HWS
+  TechTreeNames: Hidden
 }
 { Block Id: 1369, Name: SnakeweedStage3, Ref: SnakeweedStage1
   Model: Entities/Farming/SpeedTrees/SnakeweedStage3Prefab
@@ -19283,6 +19438,7 @@ HullCombatSmallBlocks
   }
   # ShowUser: NoButCSV    # reported by HWS
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
 { +Block Id: 1370, Name: ArmorLocker
   Class: ArmorLocker
@@ -21292,6 +21448,11 @@ HullCombatSmallBlocks
   PickupTarget: MushroomBellBrown01Stage1  # disassemble
   TemplateRoot: MushroomBellBrown01Stage2  # deconstruct - to avoid exploit
   ShowUser: Yes
+
+  UnlockCost: 170, display: true
+  UnlockLevel: 17, display: true
+  TechTreeParent: PumpkinStage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 1528, Name: MushroomBellBrown01Stage2, Ref: PlantGrowingTemplate
   Model: Entities/Farming/Misc/MushroomBellBrown01Stage2Prefab
@@ -21345,6 +21506,11 @@ HullCombatSmallBlocks
   PickupTarget: CobraLeavesPlantStage1  # disassemble
   TemplateRoot: CobraLeavesPlantStage2  # deconstruct - to avoid exploit
   ShowUser: Yes
+
+  UnlockCost: 190, display: true
+  UnlockLevel: 19, display: true
+  TechTreeParent: MushroomBellBrown01Stage1
+  TechTreeNames: NaturalScience
 }
 { Block Id: 1532, Name: CobraLeavesPlantStage2, Ref: PlantGrowingTemplate
   Model: Entities/Farming/SpeedTrees/CobraLeavesPlantStage2Prefab
@@ -22096,21 +22262,45 @@ HullCombatSmallBlocks
 
 
 # Sprout
-{ Block Id: 1597, Name: CoffeePlantStage1, Ref: ElderberryStage1
+{ Block Id: 1597, Name: CoffeePlantStage1
   Model: Entities/Farming/SpeedTrees/CoffeePlantStage1Prefab
+  Class: PlantGrowing
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: plants, display: true
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   { Child PlantGrowing
     Next: CoffeePlantStage2
     GrowthRate: 36
     FertileLevel: 5
     OnDeath: PlantDead2
   }
+  IsAccessible: false, type: bool
+  Collide: "bullet,rocket,melee,sight"
+  Place: Free
+  # ModelOffset: "0,0.5,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
   CropType: NaturalStimulant, display: true
   CropYield: 6, display: true
   GrowthTimeInfo: 91, type: int, display: true, formatter: Minutes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Info: bkiPlantSprout, display: true
+  Category: Farming
+  XpFactor: 1
+
   PickupTarget: CoffeePlantStage1  # disassemble
   TemplateRoot: CoffeePlantStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 150, display: true
+  UnlockLevel: 15, display: true
+  TechTreeParent: InsanityPepperStage1
+  TechTreeNames: NaturalScience
 }
-{ Block Id: 1598, Name: CoffeePlantStage2, Ref: ElderberryStage1
+{ Block Id: 1598, Name: CoffeePlantStage2, Ref: CoffeePlantStage1
   Model: Entities/Farming/SpeedTrees/CoffeePlantStage2Prefab
   { Child PlantGrowing
     Next: CoffeePlantStage3
@@ -22121,8 +22311,9 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: CoffeePlantStage1  # disassemble
   TemplateRoot: CoffeePlantStage2  # deconstruct - to avoid exploit
+  TechTreeNames: Hidden
 }
-{ Block Id: 1599, Name: CoffeePlantStage3, Ref: ElderberryStage1
+{ Block Id: 1599, Name: CoffeePlantStage3, Ref: CoffeePlantStage1
   Model: Entities/Farming/SpeedTrees/CoffeePlantStage3Prefab
   Class: CropsGrown
   AllowedInBlueprint: false, display: true
@@ -22138,9 +22329,10 @@ HullCombatSmallBlocks
   PickupTarget: CoffeePlantStage1  # disassemble
   TemplateRoot: CoffeePlantStage2  # deconstruct - to avoid exploit
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
 # Harvested model
-{ Block Id: 1600, Name: CoffeePlantStage4, Ref: ElderberryStage1
+{ Block Id: 1600, Name: CoffeePlantStage4, Ref: CoffeePlantStage1
   Model: Entities/Farming/SpeedTrees/CoffeePlantStage4Prefab
   { Child PlantGrowing
     Next: CoffeePlantStage3
@@ -22151,24 +22343,49 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: CoffeePlantStage1  # disassemble
   TemplateRoot: CoffeePlantStage2  # deconstruct - to avoid exploit
+  TechTreeNames: Hidden
 }
 
 # Sprout
-{ Block Id: 1601, Name: BigFlowerStage1, Ref: ElderberryStage1
+{ Block Id: 1601, Name: BigFlowerStage1
   Model: Entities/Farming/Misc/BigFlowerStage1Prefab
+  Class: PlantGrowing
+  AllowedInBlueprint: false, display: true
+  IndexName: Plant
+  Material: plants, display: true
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   { Child PlantGrowing
     Next: BigFlowerStage2
     GrowthRate: 10
     FertileLevel: 5
     OnDeath: PlantDead2
   }
+  IsAccessible: false, type: bool
+  Collide: "bullet,rocket,melee,sight"
+  Place: Free
+  # ModelOffset: "0,0.5,0"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  ShowBlockName: true
   CropType: Buds, display: true
   CropYield: 1, display: true
   GrowthTimeInfo: 27, type: int, display: true, formatter: Minutes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Info: bkiPlantSprout, display: true
+  Category: Farming
+  XpFactor: 1
+
   PickupTarget: BigFlowerStage1  # disassemble
   TemplateRoot: BigFlowerStage2  # deconstruct - to avoid exploit
+
+  UnlockCost: 170, display: true
+  UnlockLevel: 17, display: true
+  TechTreeParent: CoffeePlantStage1
+  TechTreeNames: NaturalScience
 }
-{ Block Id: 1602, Name: BigFlowerStage2, Ref: ElderberryStage1
+{ Block Id: 1602, Name: BigFlowerStage2, Ref: BigFlowerStage1
   Model: Entities/Farming/Misc/BigFlowerStage2Prefab
   { Child PlantGrowing
     Next: BigFlowerStage3
@@ -22179,8 +22396,9 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: BigFlowerStage1  # disassemble
   TemplateRoot: BigFlowerStage2  # deconstruct - to avoid exploit
+  TechTreeNames: Hidden
 }
-{ Block Id: 1603, Name: BigFlowerStage3, Ref: ElderberryStage1
+{ Block Id: 1603, Name: BigFlowerStage3, Ref: BigFlowerStage1
   Model: Entities/Farming/Misc/BigFlowerStage3Prefab
   Class: CropsGrown
   AllowedInBlueprint: false, display: true
@@ -22196,9 +22414,10 @@ HullCombatSmallBlocks
   PickupTarget: BigFlowerStage1  # disassemble
   TemplateRoot: BigFlowerStage2  # deconstruct - to avoid exploit
   XpFactor: 0.25
+  TechTreeNames: Hidden
 }
 # Harvested model
-{ Block Id: 1604, Name: BigFlowerStage4, Ref: ElderberryStage1
+{ Block Id: 1604, Name: BigFlowerStage4, Ref: BigFlowerStage1
   Model: Entities/Farming/Misc/BigFlowerStage4Prefab
   { Child PlantGrowing
     Next: BigFlowerStage3
@@ -22209,6 +22428,7 @@ HullCombatSmallBlocks
   ShowUser: No
   PickupTarget: BigFlowerStage1  # disassemble
   TemplateRoot: BigFlowerStage2  # deconstruct - to avoid exploit
+  TechTreeNames: Hidden
 }
 
 
