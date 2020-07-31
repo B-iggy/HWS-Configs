@@ -162,11 +162,11 @@
 /* *** Building Blocks */
 # Alien building block and 1 terrain: AlienGreen -> has O2 content
 { Material Name: alien
-  damage_category: hullcombat
-  surface_category: dirt
-  particle_category: dirt
-  particle_destroy_category: dirt
-  stepsound: grass
+  damage_category: alien
+  surface_category: alien
+  particle_category: alien
+  particle_destroy_category: alien
+  stepsound: alien
   stability_glue: 200
   Mass: 10, type: float, display: false, formatter: Kilogram
   Hardness: 15, type: float, display: false, formatter: Hardness
@@ -240,11 +240,11 @@
   HitPoints: 80, type: int, display: false
 }
 { Material Name: plastic
-  damage_category: hull
-  surface_category: stone
-  particle_category: stone
-  particle_destroy_category: stone
-  stepsound: wood
+  damage_category: plastic
+  surface_category: plastic
+  particle_category: plastic
+  particle_destroy_category: plastic
+  stepsound: metal
   stability_glue: 960
   Mass: 80, type: float, display: false, formatter: Kilogram
   Hardness: 15, type: float, display: false, formatter: Hardness
