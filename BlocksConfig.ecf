@@ -19960,7 +19960,7 @@ HullCombatSmallBlocks
 }
 
 { +Block Id: 1395, Name: AlienLargeBlocks, Ref: AlienBlocks
-  Material: plastic, display: true
+  Material: alien, display: true
   Info: bkiBlockGroup, display: true
   AllowedInBlueprint: true, display: false
   HitPoints: 2750, type: int, display: false
@@ -19975,7 +19975,7 @@ HullCombatSmallBlocks
   TechTreeNames: ""
 }
 { +Block Id: 1396, Name: AlienFullLarge, Ref: AlienFull
-  Material: plastic, display: true
+  Material: alien, display: true
   AllowedInBlueprint: true, display: false
   HitPoints: 2750, type: int, display: true
   Mass: 1500, type: float, display: true, formatter: Kilogram
@@ -19986,7 +19986,7 @@ HullCombatSmallBlocks
   Radiation: 0
 }
 { +Block Id: 1397, Name: AlienThinLarge, Ref: AlienThin
-  Material: plastic, display: true
+  Material: alien, display: true
   AllowedInBlueprint: true, display: false
   TemplateRoot: AlienLargeBlocks
   PickupTarget: AlienLargeBlocks
