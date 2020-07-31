@@ -1639,7 +1639,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 100, type: int, display: true, formatter: Watt
-  CPUIn: 11000, type: int, display: true
+  CPUIn: 9000, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 3450, type: int, display: true
@@ -1730,7 +1730,7 @@ HullCombatSmallBlocks
   HitPoints: 75, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 6000, type: int, display: false
+  CPUIn: 5000, type: int, display: false
   BlastParticleIndex: 9
   BlastRadius: 9
   BlastDamage: 2500
@@ -2199,7 +2199,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 6, type: int, display: true, formatter: Watt
-  CPUIn: 1050, type: int, display: true
+  CPUIn: 3000, type: int, display: true
   HitPoints: 530, type: int, display: true
 
   UnlockCost: 4500, display: true
@@ -3698,7 +3698,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 30, type: int, display: true, formatter: Watt
-  CPUIn: 1100, type: int, display: true
+  CPUIn: 2000, type: int, display: true
   HitPoints: 550, type: int, display: true
   RotSpeed: 140, type: int, display: true
   Zoom: 5, type: float
@@ -5157,7 +5157,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 750, type: int, display: true
+  CPUIn: 2500, type: int, display: true
   HitPoints: 770, type: int, display: true
   # Damage: 54, display: true
   # AmmoCapacity: 50, display: true
@@ -6266,7 +6266,7 @@ HullCombatSmallBlocks
   Volume: 62.50, type: float, display: true, formatter: Liter
   Mass: 990, type: float, display: true, formatter: Kilogram
   EnergyIn: 15, type: int, display: true, formatter: Watt
-  CPUIn: 970, type: int, display: true
+  CPUIn: 1500, type: int, display: true
   MaxCount: 4, type: int, display: true
   HitPoints: 770, type: int, display: true
   AllowPlacingAt: SS, display: true
