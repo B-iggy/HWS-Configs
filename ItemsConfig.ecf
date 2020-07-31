@@ -2978,15 +2978,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: LauncherSS
     IsShootThroughCrosshair: false
     ROF: 20, type: float, display: true, formatter: ROF
-    Range: 0, display: false
-    RangeSpace: 0, display: false
+    Range: 550, display: true
+    RangeSpace: 1100, display: true
     AmmoCapacity: 1, display: true
     AmmoType: AmmoSVTorpedo, display: true
-    BulletSpread: 10, display: false
     Automatic: false
     NoiseStrength: 200, display: false
     AutoReload: true
-    CheckObstructed: false
+    CheckObstructed: true
     ReloadDelay: 1, display: true # adapt sound
     SfxBegin: UseActions/BarrelClose
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_002
@@ -3014,19 +3013,48 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 9, display: true
     BlastDamage: 30000, display: true
-    Speed: 10
-    Range: 100
-    SpeedSpace: 15
-    RangeSpace: 750
+    Speed: 10, display: true
+    Range: 577, display: true
+    SpeedSpace: 15, display: true
+    RangeSpace: 1155, display: true
     Ballistic: false
 
-    DamageMultiplier_1: 0.5, param1: head|body
-    DamageMultiplier_2: 0.01, param1: stone|dirt
-    DamageMultiplier_3: 10,   param1: rock    # can destroy rocks
-    DamageMultiplier_4: 0.04,   param1: shield
-    BlastDamageMultiplier_1: 1.25, param1: head|body
-    BlastDamageMultiplier_2: 0.5, param1: stone|dirt
-    BlastDamageMultiplier_4: 0,   param1: shield
+    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_3: 1, param1: alien
+    DamageMultiplier_4: 1, param1: metal
+    DamageMultiplier_5: 1, param1: metallight
+    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_7: 1, param1: hull
+    DamageMultiplier_8: 1, param1: hullarmored
+    DamageMultiplier_9: 1, param1: hullcombat
+    DamageMultiplier_10: 100, param1: concrete
+    DamageMultiplier_11: 10, param1: dirt
+    DamageMultiplier_12: 10, param1: stone
+    DamageMultiplier_13: 10, param1: wood
+    DamageMultiplier_14: 10, param1: woodblock
+    DamageMultiplier_15: 10, param1: plants
+    DamageMultiplier_16: 10, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 1, param1: plastic
+    BlastDamageMultiplier_1: 1, param1: head
+    BlastDamageMultiplier_2: 1, param1: body
+    BlastDamageMultiplier_3: 1, param1: alien
+    BlastDamageMultiplier_4: 1, param1: metal
+    BlastDamageMultiplier_5: 1, param1: metallight
+    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_7: 1, param1: hull
+    BlastDamageMultiplier_8: 1, param1: hullarmored
+    BlastDamageMultiplier_9: 1, param1: hullcombat
+    BlastDamageMultiplier_10: 100, param1: concrete
+    BlastDamageMultiplier_11: 10, param1: dirt
+    BlastDamageMultiplier_12: 10, param1: stone
+    BlastDamageMultiplier_13: 10, param1: wood
+    BlastDamageMultiplier_14: 10, param1: woodblock
+    BlastDamageMultiplier_15: 10, param1: plants
+    BlastDamageMultiplier_16: 10, param1: rock
+    BlastDamageMultiplier_17: 1, param1: shield
+    BlastDamageMultiplier_18: 1, param1: plastic
   }
 
   ShowUser: Yes
