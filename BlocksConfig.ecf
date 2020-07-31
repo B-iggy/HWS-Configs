@@ -2168,7 +2168,7 @@ HullCombatSmallBlocks
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: WeaponSVAntimatterCannonWeapon
-  CustomIcon: PlasmaCannonSSWeapon
+  CustomIcon: PulseLaserMSWeapon
   Model: @models/Blocks/WeaponsShip/WeaponSSPlasmaRetractPrefab
   # Model: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
   # Mesh-Damage-1: Mesh/D0
@@ -4621,7 +4621,7 @@ HullCombatSmallBlocks
   IsActivateable: true
   IsIgnoreLC: true
   HitPoints: 250, type: int, display: true
-  EnergyOut: 1250, type: int, display: true, formatter: Watt
+  EnergyOut: 1300, type: int, display: true, formatter: Watt
   CPUIn: 200, type: int, display: true
   Category: Devices
   BlastParticleIndex: 2
@@ -5157,7 +5157,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 2500, type: int, display: true
+  CPUIn: 1700, type: int, display: true
   HitPoints: 770, type: int, display: true
   # Damage: 54, display: true
   # AmmoCapacity: 50, display: true
@@ -6008,7 +6008,7 @@ HullCombatSmallBlocks
   IsActivateable: true
   IsIgnoreLC: true
   HitPoints: 100, type: int, display: true
-  EnergyOut: 750, type: int, display: true, formatter: Watt
+  EnergyOut: 770, type: int, display: true, formatter: Watt
   CPUIn: 90, type: int, display: true
   Category: Devices
   BlastParticleIndex: 2
