@@ -1730,7 +1730,7 @@ HullCombatSmallBlocks
   HitPoints: 75, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 5000, type: int, display: false
+  CPUIn: 10000, type: int, display: true
   BlastParticleIndex: 9
   BlastRadius: 9
   BlastDamage: 2500
