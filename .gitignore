@@ -1,13 +1,10 @@
 ﻿TraderNPCConfig.ecf
 TokenConfig.ecf
-StatusEffect.ecf
-StatusEffects.ecf
 SqlQueries.txt
 LootGroups.ecf
 GalaxyConfig.ecf
 FactionWarfare.ecf
 EGroupsConfig.ecf
-EClassConfig.ecf
 Dialogues.ecf
 Dialogues.csv
 DefReputation.ecf
