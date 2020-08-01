@@ -69,18 +69,19 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 14
   StackSize: 1
   Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
+  Info: "A standard-issue sidearm for personel defense. It's rated for underwater use.", display: true
   Mass: 2.1, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.31, type: float, display: false
+  DegradationProb: 1.0, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: Ranged
     AllowRemote: true
+    AllowAt: "UnderWater,Space,Planet", display: true
     ROF: 0.2, type: float, display: true, formatter: ROF
-    Range: 90, display: false
-    NoiseStrength: 60, display: false   
+    Range: 110, display: false
+    NoiseStrength: 40, display: false
     CameraShake: 1  
     Automatic: false
     BulletSpread: 0.2, display: true
@@ -89,7 +90,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 15, display: true
     AmmoType: 50Caliber, display: true
     ReloadDelay: 2.1, display: true
-    SfxBegin: Weapons/Player/Pistol/Baghira
+    SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
     SfxNoAmmo: Weapons/Misc/MagnumDryFire
     SfxReload: Weapons/Player/Reload/PistolReloadNormal
     # PfxMuzzle: fire_muzzle_pistol
@@ -134,26 +135,28 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 6.2, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.625, type: float, display: false
+  DegradationProb: 1.0, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: Ranged
     AllowRemote: false   
     ROF: 1, type: float, display: true, formatter: ROF
     Range: 60, display: false
-    NoiseStrength: 80, display: false   
+    NoiseStrength: 180, display: false
     CameraShake: 3
     Automatic: false
     BulletsPerShot: 8
-    BulletSpread: 0
-    RaySpread: 1, display: true
-    Recoil: 2.1, display: true
-    Damage: 110, display: true
+    BulletSpread: 0.3
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.1,0.03"
+    RaySpread: 1.25, display: true
+    Recoil: 2.5, display: true
+    Damage: 100, display: true
     AmmoCapacity: 5, display: true
     AmmoType: ShotgunShells, display: true
-    ReloadDelay: 3, display: true
-    # SfxBegin: Weapons/Player/Shotgun/Stakeout
-    SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-01
+    ReloadDelay: 4, display: true
+    SfxBegin: Weapons/Player/Shotgun/Stakeout
+    # SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-01
     SfxNoAmmo: Weapons/Misc/PumpgunDryFire
     SfxReload: Weapons/Player/Reload/RifleReloadSlow
     PfxMuzzle: MuzzleFlash2
@@ -195,26 +198,29 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
+  Info: "A portable rotary cannon for manned emplacements. This weapon has safeties in place to prevent personal injury. Change mode with RMB.", display: true
   Mass: 39, type: float, display: true, formatter: Kilogram
-  Volume: 20, type: float, display: true, formatter: Liter
+  Volume: 30, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.05, type: float, display: false
+  DegradationProb: 0.08, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire  
+  RadialMenu: true
   { Child 0
     Class: Ranged
     AllowRemote: false  
     ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 150, display: false
-    NoiseStrength: 120, display: false 
-    CameraShake: 1  
+    NoiseStrength: 200, display: false
+    CameraShake: 1
     Automatic: true, display: true
-    BulletSpread: 0.4, display: true
-    Recoil: 0.4, display: true
-    Damage: 30, display: true
-    AmmoCapacity: 250, display: true
+    BulletSpread: 0.3, display: true
+    Recoil: 0.8, display: true
+    Damage: 65, display: true
+    AmmoCapacity: 300, display: true
     AmmoType: 8.3mmBullet, display: true
-    ReloadDelay: 3.9, display: true
+    ReloadDelay: 6.5, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.07
     SfxBegin: Weapons/Player/Minigun/minigun_start
     SfxLoop: Weapons/Player/Minigun/minigun_loop
     SfxStop: Weapons/Player/Minigun/minigun_end
@@ -222,25 +228,50 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
     PfxMuzzle: MuzzleFlash9
     Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 2
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 10, param1: body
-    DamageMultiplier_3: 1, param1: alien
-    DamageMultiplier_4: 1, param1: metal
-    DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
-    DamageMultiplier_7: 1, param1: hull
-    DamageMultiplier_8: 1, param1: hullarmored
-    DamageMultiplier_9: 1, param1: hullcombat
-    DamageMultiplier_10: 1, param1: concrete
-    DamageMultiplier_11: 0, param1: dirt
-    DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 1, param1: wood
-    DamageMultiplier_14: 1, param1: woodblock
-    DamageMultiplier_15: 1, param1: plants
-    DamageMultiplier_16: 1, param1: rock
-    DamageMultiplier_17: 0.1, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
+    DamageMultiplier_1: 1.5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.02, param1: wood       # able to destroy trees
+    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
+    DamageMultiplier_4: 0, param1: shield
+
+	 RadialText: Limiter - ON # add text
+     RadialDesc: Safety systems engaged for easy handling by ground personel # add text
+     RadialIcon: Radial_Downgrade
+  }
+  { Child 1
+    Class: Ranged
+    AllowRemote: false
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    Range: 150, display: false
+    NoiseStrength: 120, display: false
+    CameraShake: 1
+    BulletSpread: 0.75, display: true
+    Recoil: 1.5, display: true
+    Damage: 120, display: true
+    AmmoCapacity: 300, display: true
+    AmmoType: 8.3mmBullet, display: true
+    ReloadDelay: 6.5, display: true
+    Automatic: true, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.05
+    SfxBegin: Weapons/Player/Minigun/minigun_start
+    SfxLoop: Weapons/Player/Minigun/minigun_loop
+    SfxStop: Weapons/Player/Minigun/minigun_end
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
+    SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
+    PfxMuzzle: MuzzleFlash9
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 1
+
+    DamageMultiplier_1: 1.5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.05, param1: wood       # able to destroy trees
+    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
+    DamageMultiplier_4: 0, param1: shield
+
+     RadialText: Limiter - OFF # add text
+     RadialDesc: Safety systems disengaged for use from a vehicle-mounted position # add text
+     RadialIcon: Radial_Upgrade
   }
 
   UnlockCost: 17, display: true
@@ -277,8 +308,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 25, display: true
     AmmoType: 5.8mmBullet, display: true
     ReloadDelay: 3.1, display: true
-    SfxBegin: Weapons/Player/AssaultRifle/M41APulseRifle-03_start
-    SfxLoop: Weapons/Player/AssaultRifle/M41APulseRifle-03_loop
+    Buff: "OpenWound"
+    Buff_chance: 0.05
+    SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
+    SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
+    SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_start
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_end
+    # SfxBegin: Weapons/Player/AssaultRifle/M41APulseRifle-03_start
+    # SfxLoop: Weapons/Player/AssaultRifle/M41APulseRifle-03_loop
     /* SfxStop: Weapons/Player/AssaultRifle/M41APulseRifle-16_end   */
     SfxNoAmmo: Weapons/Misc/G36DryFire
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
@@ -327,18 +366,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
+  Info: "A long ranged anti-personel and anti-materiel rifle weapon with a telescopic sight that has become the standard LRSW.", display: true
   Mass: 9.1, type: float, display: true, formatter: Kilogram
   Volume: 9, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.625, type: float, display: false
+  DegradationProb: 1.25, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: Ranged
     AllowRemote: false  
     ROF: 0.5, type: float, display: true, formatter: ROF
     Range: 303, display: false
-    NoiseStrength: 100, display: false  
+    NoiseStrength: 150, display: false
     CameraShake: 2   
     Automatic: false
     BulletSpread: 0.03, display: true
@@ -347,9 +386,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 6, display: true
     AmmoType: 12.7mmBullet, display: true
     # ReloadDelay: 3.7, display: true
-    ReloadDelay: 3.1, display: true
-    SfxBegin: Weapons/Player/Sniper/desert_eagle
-    # SfxBegin: Weapons/Player/Rifle/M24
+    ReloadDelay: 4.1, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.2
+    # SfxBegin: Weapons/Player/Sniper/desert_eagle
+    SfxBegin: Weapons/Player/Rifle/M24
     SfxNoAmmo: Weapons/Misc/AK47DryFire01
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     PfxMuzzle: MuzzleFlash6
@@ -485,30 +526,32 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
+  Info: "An advanced semi-automatic combat shotgun used by elite personel for close quarters combat. It has a larger magazine and more stopping power than it's standard issue counterpart.", display: true
   Mass: 9.1, type: float, display: true, formatter: Kilogram
   Volume: 5.5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.469, type: float, display: false
+  DegradationProb: 0.75, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: Ranged
     AllowRemote: false  
     ROF: 0.85, type: float, display: true, formatter: ROF
     Range: 66, display: false
-    NoiseStrength: 80, display: false    
+    NoiseStrength: 180, display: false
     CameraShake: 3  
     Automatic: false
     BulletsPerShot: 8
-    BulletSpread: 0
-    RaySpread: 0.750, display: true
+    BulletSpread: 0.2
+    RaySpread: 1, display: true
     Recoil: 1.68, display: true
     Damage: 115, display: true
     AmmoCapacity: 7, display: true
     AmmoType: ShotgunShells, display: true
-    ReloadDelay: 2.85, display: true
-    # SfxBegin: Weapons/Player/Shotgun/w1200_fire
-    SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-03
+    ReloadDelay: 3, display: true
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.1,0.03"
+    SfxBegin: Weapons/Player/Shotgun/w1200_fire
+    # SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-03
     SfxNoAmmo: Weapons/Misc/PumpgunDryFire02
     SfxReload: Weapons/Player/Reload/RifleReloadSlow
     PfxMuzzle: MuzzleFlash4
@@ -564,11 +607,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     AllowRemote: false  
-    ROF: 3.0, type: float, display: true, formatter: ROF
+    ROF: 3.7, type: float, display: true, formatter: ROF
     Damage: 1100, display: true
     Range: 200, display: false
-    NoiseStrength: 140, display: false 
-    Recoil: 2.4, display: true
+    NoiseStrength: 190, display: false
+    Recoil: 7, display: true
     CameraShake: 3  
     AmmoCapacity: 6, display: true
     AmmoType: SlowRocket, display: true
@@ -610,7 +653,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     CameraShake: 0    
     IgnoreAtmo: true
     Automatic: true
-    Damage: 132
+    Damage: 120
     # Recoil: 0.2, display: true
     Radius: 3
     ReturnFactor: 0.333, display: true
@@ -1036,24 +1079,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 14
   StackSize: 1
   Category: Weapons/Items
-  Info: bkiWeaponHandheldIgnoringAtmo, display: true
+  Info: "Utilizing a pulsed laser array this weapon can produce collimated hard light beams that ignore atmospheric density and deal extreme thermal damage to the target.", display: true
   Mass: 2.5, type: float, display: true, formatter: Kilogram
   Volume: 1.6, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.625, type: float, display: false
+  DegradationProb: 1.0, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
     AllowRemote: false  
-    ROF: 0.2, type: float, display: true, formatter: ROF
+    ROF: 0.35, type: float, display: true, formatter: ROF
     Range: 90, display: false
     NoiseStrength: 20, display: false 
     CameraShake: 1  
     IgnoreAtmo: true, display: true
-    Automatic: false  
+    Automatic: true
     BulletSpread: 0, display: true
     Recoil: 0.2, display: true
-    Damage: 110, display: true
+    Damage: 85, display: true
     AmmoCapacity: 20, display: true
     AmmoType: PulseLaserChargePistol, display: true
     ReloadDelay: 2.5, display: true
@@ -1115,32 +1158,37 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
+  Info: "A lightweight squad automatic weapon that's standard issue for military and tactical personel for rear support. It has superior range and damage over speed.", display: true
   Mass: 4, type: float, display: true, formatter: Kilogram
   Volume: 5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.08, type: float, display: false
+  DegradationProb: 0.40, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
     Class: Ranged
     AllowRemote: false
     ROF: 0.2, type: float, display: true, formatter: ROF
-    Range: 150, display: false
+    Range: 170, display: false
     NoiseStrength: 100, display: false
     CameraShake: 1
     Automatic: true, display: true
     BulletSpread: 0.16, display: true
-    Recoil: 0.4, display: true
-    Damage: 77, display: true
-    AmmoCapacity: 20, display: true
+    Recoil: 0.6, display: true
+    Damage: 70, display: true
+    AmmoCapacity: 30, display: true
     AmmoType: 5.8mmBullet, display: true
-    ReloadDelay: 3.1, display: true
-    SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Modern_start
-    SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_loop
-    SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_end
+    ReloadDelay: 3.75, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.08
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Modern_start
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_end
     # SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_start
     # SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_loop
     # SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_end
+    SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_start
+    SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_end
     SfxNoAmmo: Weapons/Misc/AK47DryFire01
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     PfxMuzzle: MuzzleFlash1
@@ -1181,11 +1229,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  Info: bkiWeaponHandheldIgnoringAtmo, display: true
+  Info: "Utilizing a pulsed laser array this weapon can produce collimated hard light beams that ignore atmospheric density and deal extreme thermal damage to the target.", display: true
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.125, type: float, display: false
+  DegradationProb: 0.33, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   # DamageMultiplier_1: 4, param1: head, display: DmgMultiplierHead
   # Damage: 135, display: true
@@ -1194,9 +1242,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowRemote: false
     ROF: 0.25, type: float, display: true, formatter: ROF
     Range: 150, display: false
-    NoiseStrength: 80, display: false
+    NoiseStrength: 40, display: false
     CameraShake: 1
-    BulletSpread: 0, display: true
+    BulletSpread: 0, display: false
     Recoil: 0.3, display: true
     IgnoreAtmo: true, display: true
     Automatic: true, display: true
@@ -1204,9 +1252,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 25, display: true
     AmmoType: PulseLaserChargeRifle, display: true
     ReloadDelay: 3.0, display: true
-    SfxBegin: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_start
-    SfxLoop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_loop
-    SfxStop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_end
+    # ParticleTransform: Muzzle/Particle1
+    Buff: "DermalBurn"
+    Buff_chance: 0.08
+    UseSingleMagazine: true
+	SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
+    # SfxBegin: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_start
+    # SfxLoop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_loop
+    # SfxStop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_end
     # SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
     SfxNoAmmo: Weapons/Misc/G36DryFire
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
@@ -1272,13 +1325,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 55, type: float, display: true, formatter: Kilogram
   Volume: 60, type: float, display: true, formatter: Liter
   #just for display - BlastRadius and BlastDamage is controlled by "SciFiCannonPlasmaCharge"
-  Damage: 687, display: true
+  Damage: 600, display: true
   BlastRadius: 3, display: true
   BlastDamage: 500, display: true
   # Explosion Radius: 3, display: true
   Durability: 100, display: false
   DegradationProb: 1, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  RadialMenu: true
   { Child 0
     Class: LauncherSS
     AllowRemote: false
@@ -1291,11 +1345,52 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     IgnoreAtmo: true, display: true
     AmmoCapacity: 7, display: true
     AmmoType: SciFiCannonPlasmaCharge, display: true
-    ReloadDelay: 4.1, display: true
+    ReloadDelay: 5.0, display: true
+    # Buff: "DermalBurn,Mutilation"
+    # Buff_chance: "0.75,0.1"
     SfxBegin: Weapons/Player/Cannon/BLASTERComplexFireSciFiChargePowerfulDeepRelease
-    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
     SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
-    PfxMuzzle: SniperMuzzleFire
+    PfxMuzzle: PlasmaMuzzleFlashPrefab
+
+	RadialText: Anti-Personel Mode # add text
+    RadialDesc: Erestrum plasma within an asymmetrical magnetic field causes widespread thermal damage to the target area
+    RadialIcon: Radial_Defence
+  }
+  { Child 1
+    Class: Ranged
+    AllowRemote: false
+    ROF: 1.5, type: float, display: true, formatter: ROF
+    Range: 250, display: false
+    Damage: 850, display: true
+    NoiseStrength: 180, display: false
+    CameraShake: 4
+    Automatic: false
+    BulletSpread: 0.2, display: true
+    Recoil: 5.0, display: true
+    IgnoreAtmo: true, display: true
+    AmmoCapacity: 5, display: true
+    AmmoType: SciFiCannonPlasmaCharge, display: true
+    ReloadDelay: 5.0, display: true
+    Buff: "DermalBurn,IncreaseRadiation"
+    Buff_chance: "0.75,0.1"
+    SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
+    SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
+    PfxMuzzle: PlasmaMuzzleFlashPrefab
+
+    Tracer: Weapons/Projectiles/TracerLaserShotBlueCV
+    TracerPerBullet: 1
+    TracerSpeed: 250
+
+    DamageMultiplier_1: 4.0, param1: head
+    DamageMultiplier_2: 1.5, param1: metal|metallight|metalhard
+    DamageMultiplier_3: 0, param1: dirt|stone|rock
+    DamageMultiplier_4: 0.075, param1: shield
+
+	RadialText: Particle Beam Mode # add text
+    RadialDesc: Erestrum plasma is propelled along a electromagnetic channel between the muzzle and target at supersonic speeds dealing thermal penetrating damage.
+    RadialIcon: Radial_Upgrade
   }
 
   UnlockCost: 25, display: true
@@ -1310,11 +1405,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
+  Info: "A long ranged anti-materiel rifle with advanced telescopic sights and aim stabilizers allowing longer shots with more penetrative power against armored targets.", display: true
   Mass: 10, type: float, display: true, formatter: Kilogram
   Volume: 12, type: float, display: true, formatter: Liter
   Durability: 500, display: false
-  DegradationProb: 0.469, type: float, display: false
+  DegradationProb: 1.5, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
@@ -1325,12 +1420,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     CameraShake: 2
     Automatic: false
     BulletSpread: 0.023, display: true
-    Recoil: 1.02, display: true
+    Recoil: 0.88, display: true
     Damage: 300, display: true
     AmmoCapacity: 8, display: true
     AmmoType: 12.7mmBullet, display: true
-    ReloadDelay: 2.945, display: true
-    SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-02-Single_Shot-01
+    ReloadDelay: 4.25, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.6
+	SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
+    # SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-02-Single_Shot-01
     SfxNoAmmo: Weapons/Misc/AK47DryFire01
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # SfxReload: Weapons/Player/Rifle/M16ChargingHandle01_V2
@@ -1645,20 +1743,25 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4BlackT2Prefab
   PickupToToolbar: true
   Durability: 500, display: false
-  DegradationProb: 0.233, type: float, display: false
+  Info: "A specialist sidearm with a larger magazine and holosight. It possesses superior stopping power and can operate underwater."", display: true
+  DegradationProb: 0.75, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
+    AllowAt: "UnderWater,Space,Planet"
     ROF: 0.17, type: float, display: true, formatter: ROF
-    Range: 99, display: false
+    Range: 135, display: false
     NoiseStrength: 60, display: false
     BulletSpread: 0.15, display: true
     Recoil: 0.64, display: true
-    Damage: 66, display: true
+    Damage: 70, display: true
     AllowRemote: true
     AmmoCapacity: 15, display: true
     ReloadDelay: 2.375, display: true
-    SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
+    Buff: "OpenWound"
+    Buff_chance: 0.25
+    SfxBegin: Weapons/Player/Sniper/desert_eagle
+    # SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -1681,8 +1784,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
   { Child 1
     Class: Zoom
-    ZoomOut: 40
-    ZoomIn: 40
+    ZoomOut: 30
+    ZoomIn: 30
     RedDot: true
   }
 
@@ -1793,7 +1896,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     AllowRemote: false
-    HarvestSupport: false
+    HarvestSupport: true
     ROF: 0.25, type: float
     Range: 2, display: false
     NoiseStrength: 60, display: false
@@ -1803,7 +1906,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 85, display: true
     AmmoCapacity: 125, display: true
     AmmoType: BioFuel, display: true
-    ReloadDelay: 3.8, display: true
+    ReloadDelay: 5.5, display: true
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.4,0.2"
     UseSingleMagazine: true
     /* SfxBegin: Weapons/Player/Tools/Chainsaw_start   */
     SfxLoop: Weapons/Player/Tools/Chainsaw_loop
@@ -1843,7 +1948,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiEpicWeapon, display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
-  DegradationProb: 0.039, type: float, display: false
+  DegradationProb: 0.045, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
@@ -1851,16 +1956,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 198, display: false
     NoiseStrength: 100, display: false
     BulletSpread: 0.06, display: true
-    Recoil: 0.288, display: true
-    Damage: 110, display: true
+    Recoil: 0.36, display: true
+    Damage: 120, display: true
     AmmoCapacity: 45, display: true
-    ReloadDelay: 3, display: true
-    SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_start
-    SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_loop
-    SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_end
-    # SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
-    # SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
-    # SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
+    ReloadDelay: 3.75, display: true
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_start
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_end
+    SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -1905,23 +2010,25 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiEpicWeapon, display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
-  DegradationProb: 0.305, type: float, display: false
+  DegradationProb: 0.48, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     ROF: 0.425, type: float, display: true, formatter: ROF
     Range: 550, display: true
-    RangeSpace: 550, display: true
+    RangeSpace: 700, display: true
     NoiseStrength: 100, display: false
     BulletSpread: 0.011, display: true
-    Recoil: 0.528, display: true
+    Recoil: 0.728, display: true
     AmmoType: 15mmBullet, display: true
-    Damage: 500, display: true
+    Damage: 450, display: true
     AmmoCapacity: 10, display: true
     ReloadDelay: 5, display: true
+    Buff: "OpenWound,FractureOpen"
+    Buff_chance: "0.6,0.3"
     # AmmoType: PulseLaserChargeRifle, display: true
-    # SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
-    SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-01-Single_Shot-03
+    SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
+    #SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-01-Single_Shot-03
     # PfxMuzzle: MuzzleFlash5
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
@@ -1944,7 +2051,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
   { Child 1
     Class: Zoom
-    ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
+    # ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
+	ZoomOverlay: Entities/Items/Weapons/SniperScopes/Scope04
     ZoomOut: 40
     ZoomIn: 5
     RedDot: true
@@ -1963,28 +2071,66 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 26, Name: MinigunEpic, Ref: Minigun
   Meshfile: Entities/Items/Weapons/ScifiMinigun/ScifiMinigunEpicPrefab
   PickupToToolbar: true
-  Info: bkiEpicWeapon, display: true
+  Info: "An experimental rotary laser cannon developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. It's equipped with a secondary firing mode activated with RMB. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
-  DegradationProb: 0.024, type: float, display: false
+  DegradationProb: 0.025, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
-  { Child 0
+  RadialMenu: true
+  { Child 0        # Normal Mode
+    Class: Ranged
     ROF: 0.1, type: float, display: true, formatter: ROF
-    Range: 198, display: false
-    NoiseStrength: 100, display: false
-    BulletSpread: 0.13, display: true
-    Recoil: 0.20, display: true
+    Range: 178, display: false
+    NoiseStrength: 200, display: false
+    BulletSpread: 0.25, display: false
+    Recoil: 0.4, display: true
     Damage: 70, display: true
-    AmmoCapacity: 500, display: true
-    AmmoType: PulseLaserChargeRifle, display: true
-    ReloadDelay: 3.5, display: true
+    AmmoCapacity: 250, display: true
+    AmmoType: PulseLaserChargeSS, display: true
+    Automatic: true
+    ReloadDelay: 3.149, display: true
+    Buff: "RadiationBurn,DermalBurn"
+    Buff_chance: "0.08,0.08"
+    UseSingleMagazine: true
     SfxBegin: Weapons/Player/Minigun/minigun2_start
     SfxLoop: Weapons/Player/Minigun/minigun2_loop
     SfxStop: Weapons/Player/Minigun/minigun2_end
     PfxMuzzle: SniperMuzzleLaserRed
     Tracer: Weapons/Projectiles/TracerLaserShotRed
     TracerPerBullet: 2
+
+    DamageMultiplier_1: 2, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.09, param1: wood       # able to destroy trees
+    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
+    DamageMultiplier_4: 0.05, param1: shield
+
+     RadialText: Limiter - ON # add text
+     RadialDesc: Compensators reduce the strain on the wielder for easy handling # add text
+     RadialIcon: Radial_Downgrade
+  }
+  { Child 1       # Beam Mode
+    Class: Ranged
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    Range: 198, display: false
+    NoiseStrength: 100, display: false
+    Recoil: 0.8, display: true
+    Damage: 130, display: true
+    BulletSpread: 0.5, display: false
+    AmmoCapacity: 250, display: true
+    AmmoType: PulseLaserChargeSS, display: true
+    Automatic: true
+    ReloadDelay: 3.149, display: true
+    Bullet_use_per_shot: 2
+    Buff: "RadiationBurn,DermalBurn,Stunned"
+    Buff_chance: "0.08,0.08,0.08"
+    UseSingleMagazine: true
+    SfxBegin: Weapons/Player/Minigun/minigun2_start
+    SfxLoop: Weapons/Player/Minigun/minigun2_loop
+    SfxStop: Weapons/Player/Minigun/minigun2_end
+    PfxMuzzle: SniperMuzzleLaserRed
+    Tracer: Weapons/Projectiles/TracerLaserShotRed
+    TracerPerBullet: 1
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -2004,6 +2150,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 1, param1: plastic
+
+     RadialText: Limiter - OFF
+     RadialDesc: Multiple Heat Sinks allow this weapon to be fired at maximum output from a vehicle-mounted position # add text
+     RadialIcon: Radial_Upgrade
   }
 
   UnlockCost: 0
@@ -2018,24 +2168,26 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 27, Name: Shotgun2Epic, Ref: Shotgun2
   Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
   PickupToToolbar: true
-  Info: bkiEpicWeapon, display: true
+  Info: "An advanced combat shotgun developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
-  DegradationProb: 0.305, type: float, display: false
+  DegradationProb: 0.50, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
-    ROF: 0.850, type: float, display: true, formatter: ROF
+    ROF: 0.85, type: float, display: true, formatter: ROF
     Automatic: true, display: true
     Range: 79, display: false
-    NoiseStrength: 100, display: false
-    BulletSpread: 0
-    RaySpread: 0.375, display: true
-    Recoil: 1.008, display: true
+    NoiseStrength: 120, display: false
+    BulletSpread: 0.1
+    RaySpread: 0.475, display: true
+    Recoil: 1.38, display: true
     Damage: 150, display: true
     AmmoCapacity: 11, display: true
     ReloadDelay: 3, display: true
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.2,0.1"
     SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-05
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
@@ -2077,21 +2229,25 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle4EpicPrefab
   # HoldType: 16           # no weapon shaking animation
   PickupToToolbar: true
-  Info: bkiEpicWeapon, display: true
+  Info: "A superior plasma rifle developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
-  DegradationProb: 0.07, type: float, display: false
+  DegradationProb: 0.1, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
-    Damage: 185, display: true
-    ROF: 0.170, type: float, display: true, formatter: ROF
+    Damage: 195, display: true
+    ROF: 0.20, type: float, display: true, formatter: ROF
     ReloadDelay: 4, display: true
+    Buff: "RadiationBurn,DermalBurn"
+    Buff_chance: "0.05,0.2"
     # CameraShake: 0
-    Recoil: 0.144, display: true
-    AmmoCapacity: 50, display: true
-    Range: 200, display: false
+    Recoil: 0.375, display: true
+    AmmoCapacity: 30, display: true
+    AmmoType: SciFiCannonPlasmaCharge, display: true
+    Range: 168, display: false
     NoiseStrength: 80, display: false
+	SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
     # SfxBegin: Weapons/Player/Tools/WeaponLightning_start
     # SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
     # ParticleTransform: Muzzle/Particle3
@@ -2140,19 +2296,59 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 29, Name: ScifiCannonEpic, Ref: ScifiCannon
   Meshfile: Entities/Items/Weapons/ScifiCannon/ScifiCannonEpicPrefab
   PickupToToolbar: true
-  Info: bkiEpicWeapon, display: true
+  Info: "An experimental plasma cannon developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. It's equipped with an Anti-Ship mode that can be activated with RMB. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
-  Durability: 700, display: false
-  DegradationProb: 0.488, type: float, display: false
+  Durability: 500, display: false
+  DegradationProb: 0.66, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  RadialMenu: true
   { Child 0
     AllowAt: "UnderWater, Planet, Space"
-    ROF: 0.5, type: float, display: true, formatter: ROF
+    ROF: 0.7, type: float, display: true, formatter: ROF
     Automatic: true, display: true
-    AmmoCapacity: 10, display: true
+    AmmoCapacity: 7, display: true
     Recoil: 1.44, display: true
-    ReloadDelay: 6, display: true
+    ReloadDelay: 7, display: true
+
+	RadialText: Anti-Personel Mode # add text
+    RadialDesc: Erestrum plasma within an asymmetrical magnetic field causes widespread thermal damage to the target area # add text
+    RadialIcon: Radial_Downgrade
+  }
+  { Child 1
+    Class: Ranged
+    AllowRemote: false
+    ROF: 1.1, type: float, display: true, formatter: ROF
+    Range: 300, display: false
+    Damage: 1500, display: true
+    NoiseStrength: 250, display: false
+    CameraShake: 4
+    Automatic: false
+    BulletSpread: 0.1, display: true
+    Recoil: 5.0, display: true
+    AmmoCapacity: 7, display: true
+    AmmoType: SciFiCannonPlasmaCharge, display: true
+    ReloadDelay: 7, display: true
+    Buff: "DermalBurn,IncreaseRadiation"
+    Buff_chance: "0.75,0.1"
+    SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
+    SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
+    PfxMuzzle: PlasmaMuzzleFlashPrefab
+
+    Tracer: Weapons/Projectiles/TracerLaserShotBlueCV
+    TracerPerBullet: 1
+    TracerSpeed: 250
+
+    DamageMultiplier_1: 2.0, param1: body
+    DamageMultiplier_2: 1.5, param1: metal|metallight|metalhard|hull|hullarmored|hullcombat
+    DamageMultiplier_3: 0, param1: dirt|stone|rock
+    DamageMultiplier_4: 0.1, param1: shield
+    DamageMultiplier_5: 3.0, param1: head
+
+	RadialText: Anti-Ship Mode # add text
+    RadialDesc: Erestrum plasma within a strong electromagnet field can be propelled at high speed and bore through thick armor before detonating # add text
+    RadialIcon: Radial_Upgrade
   }
 
   UnlockCost: 0
@@ -2167,7 +2363,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 30, Name: PistolEpic, Ref: Pistol
   Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4EpicPrefab
   PickupToToolbar: true
-  Info: bkiEpicWeapon, display: true
+  Info: "An improved automatic pistol developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
   DegradationProb: 0.3, type: float, display: false
@@ -2175,15 +2371,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
+    AllowAt: "UnderWater,Space,Planet"
     ROF: 0.170, type: float, display: true, formatter: ROF
     Range: 110, display: false
     BulletSpread: 0.075, display: true
     Recoil: 0.25, display: true
-    Damage: 77, display: true
+    Damage: 95, display: true
     AllowRemote: false
     Automatic: true, display: true
     AmmoCapacity: 24, display: true
     ReloadDelay: 3.7, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.2
     SfxBegin: Weapons/Player/Pistol/AWDS_AR_ HK53_Heavy_Single
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
@@ -2342,20 +2541,21 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 33, Name: RocketLauncherT2, Ref: RocketLauncher
   Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/SciFiGrenadeLauncherT2Prefab
   PickupToToolbar: true
-  Durability: 500, display: false
+  Durability: 100, display: false
+  Info: "An improved variant of Rocket Launcher designed to operate using laser-guided microrockets for anti-aircraft engagements where the targets are protected behind armor.", display: true
   #just for display, see ammo "SlowRocketHoming"
   BlastRadius: 3, display: true
   BlastDamage: 500, display: true
-  DegradationProb: 0.75, type: float, display: false
+  DegradationProb: 0.65, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: LauncherSS
     ROF: 1, type: float, display: true, formatter: ROF
-    Recoil: 1.92, display: true
+    Recoil: 5.70, display: true
     Range: 700, display: true
     AmmoCapacity: 1, display: true
     AmmoType: SlowRocketHoming, display: true
-    ReloadDelay: 4.275, display: true
+    ReloadDelay: 5.3, display: true
   }
   { Child 1
     Class: Zoom
@@ -2373,13 +2573,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 34, Name: RocketLauncherEpic, Ref: RocketLauncher
   Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/SciFiGrenadeLauncherEpicPrefab
   PickupToToolbar: true
-  Info: bkiEpicWeapon, display: true
+  Info: "A refined version of the standard UCH Rocket Launcher developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   #just for display, see ammo
   BlastRadius: 3, display: true
   BlastDamage: 500, display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
-  Durability: 500, display: false
-  DegradationProb: 0.7, type: float, display: false
+  Durability: 250, display: false
+  DegradationProb: 0.5, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
@@ -2465,23 +2665,26 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   # Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackPrefab
   PickupToToolbar: true
   Durability: 500, display: false
-  DegradationProb: 0.06, type: float, display: false
+  DegradationProb: 0.25, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
     Class: Ranged
     ROF: 0.17, type: float, display: true, formatter: ROF
-    Range: 165, display: false
+    Range: 185, display: false
     BulletSpread: 0.12, display: true
     Recoil: 0.48, display: true
-    Damage: 70, display: true
-    AmmoCapacity: 28, display: true
+    Damage: 75, display: true
+    AmmoCapacity: 30, display: true
     ReloadDelay: 2.945, display: true
     # SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
     # SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
     # SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end
-    SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Heavy_start
-    SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Heavy_loop
-    SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Heavy_end
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Heavy_start
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Heavy_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Heavy_end
+    SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_start
+    SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_end
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -2520,7 +2723,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   # Meshfile: Entities/Items/Weapons/PulseRifle/PulseRifleT2Prefab
   PickupToToolbar: true
   Durability: 500, display: false
-  DegradationProb: 0.094, type: float, display: false
+  DegradationProb: 0.2, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
     Class: Ranged
@@ -2565,31 +2768,46 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeParent: PulseRifle
   TechTreeNames: Weapons
 }
-{ +Item Id: 38, Name: PulseRifleEpic, Ref: PulseRifle
+{ +Item Id: 38, Name: PulseRifleEpic
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackEpicPrefab
   # Meshfile: Entities/Items/Weapons/PulseRifle/PulseRifleEpicPrefab
   PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 15
+  StackSize: 1
+  Category: Weapons/Items
   Durability: 500, display: false
-  DegradationProb: 0.061, type: float, display: false
+  DegradationProb: 0.1, type: float, display: false
   RepairDisabled: true, display: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
-  Info: bkiEpicWeapon, display: true
+  Info: "An automatic electromagnetic rifle developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
+  Mass: 4.2, type: float, display: true, formatter: Kilogram
+  Volume: 5, type: float, display: true, formatter: Liter
   { Child 0
     Class: Ranged
     ROF: 0.13, type: float, display: true, formatter: ROF
     ReloadDelay: 3, display: true
     Range: 224, display: false
-    BulletSpread: 0.038, display: true
+    BulletSpread: 0.09, display: false
     Recoil: 0.192, display: true
     Automatic: true, display: true
-    Damage: 130, display: true
-    AmmoCapacity: 56, display: true
+    Damage: 120, display: true
+    NoiseStrength: 120, display: false
+    AmmoCapacity: 50, display: true
     AmmoType: PulseLaserChargeRifle, display: true
+    Buff: "RadiationBurn,DermalBurn"
+    Buff_chance: "0.3,0.1"
 
     PfxMuzzle: SniperMuzzleLaserGreen
     Tracer: Weapons/Projectiles/TracerLaserShotGreen
-    TracerPerBullet: 2
+    TracerPerBullet: 1
+    #SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    #SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    #SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
+    SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
+    SfxNoAmmo: Weapons/Misc/G36DryFire
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -2798,6 +3016,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RadialDesc: rdlDeconstructTxt
     RadialIcon: Radial_Deconstruct
   }
+  { Child 3
+    ROF: 5, type: float
+    Class: RadarScan
+    Range: 1000
+    RangeSpace: 4000
+    DiscoveryFac: 0.30
+    ShowObjectTime: 30
+    AllowAt: "UnderWater, Planet, Space"
+
+    RadialText: Detector
+    # RadialDesc: Detects structures and ore deposits up to 1km away
+    RadialDesc: bkiDetector
+    RadialIcon: Radial_Upgrade
+  }
   UnlockLevel: 1
   TechTreeNames: Tools
 }
@@ -2927,7 +3159,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  Info: bkiWeaponHandheldIgnoringAtmo, display: true
+  Info: "Some kind of plasma cannon of alien origin. It fires electro-magnetically guided balls of exotic plasma at a target.", display: true
   Mass: 45, type: float, display: true, formatter: Kilogram
   Volume: 50, type: float, display: true, formatter: Liter
   #just for display - BlastRadius and BlastDamage is controlled by "SciFiCannonPlasmaCharge"
@@ -3946,7 +4178,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 2, display: true # adapt sound
     SfxBegin: Weapons/Enemies/Drones/minigunLowPitch_start
     SfxLoop: Weapons/Enemies/Drones/minigunLowPitch_loop
-    SfxStop: Weapons/Player/Minigun/minigun2_end
+    SfxStop: Weapons/Enemies/Drones/minigunLowPitch_end
+    # SfxBegin: Weapons/Player/Minigun/minigun_start
+    # SfxLoop: Weapons/Player/Minigun/minigun_loop
+    # SfxStop: Weapons/Player/Minigun/minigun_end
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: SideAutoMuzzleFire
@@ -5883,6 +6118,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 1455, display: true
     RangeSpace: 950, display: true
     Ballistic: false
+    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.2,0.5,0.2,0.3"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -5945,6 +6182,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastRadius: 2, display: true
     BlastDamage: 1025, display: true
     NoiseStrength: 100, display: false
+    Buff: "FractureOpen,BrokenLeg,OpenWound,Mutilation"
+    Buff_chance: "0.3,0.5,0.7,0.2"
     Speed: 1650, display: true
     Range: 518, display: true
     SpeedSpace: 2700, display: true
@@ -6017,6 +6256,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 140, display: true
     RangeSpace: 1155, display: true
     Ballistic: false
+    Buff: "FractureOpen,OpenWound,BrokenLeg"
+    Buff_chance: "0.2,0.7,0.4"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6189,6 +6430,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1000
     HomingSpeed: 5
     Ballistic: false
+    Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.1,0.7,0.2,0.3"
 
     DamageMultiplier_1: 0.15, param1: head|body
     DamageMultiplier_2: 0, param1: stone|dirt|rock
@@ -6228,6 +6471,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 173, display: true
     RangeSpace: 1250, display: true
     Ballistic: false
+    Buff: "FractureOpen,BrokenLeg,Mutilation,Stunned"
+    Buff_chance: "0.3,0.3,0.3,0.5"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6296,6 +6541,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 800, display: true
     RangeSpace: 1000, display: true
     Ballistic: false
+    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6363,6 +6610,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1200, display: true
     HomingSpeed: 3.95
     Ballistic: false
+    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
+    Buff_chance: "0.1,0.6,0.3,0.2"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6431,6 +6680,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1100, display: true
     HomingSpeed: 1
     Ballistic: false
+    Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.2,0.7,0.3,0.5"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6498,6 +6749,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 500, display: true
     RangeSpace: 1789, display: true
     Ballistic: false
+    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.2,0.4,0.1,0.2"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6566,6 +6819,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1108, display: true
     HomingSpeed: 3
     Ballistic: false
+    Buff: "OpenWound,Mutilation,Stunned"
+    Buff_chance: "0.4,0.1,0.2"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6633,6 +6888,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 1045, display: true
     RangeSpace: 1100, display: true
     Ballistic: false
+    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.3,0.5,0.2,0.3"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6700,6 +6957,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 970, display: true
     HomingSpeed: 0.30
     Ballistic: false
+    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation,Stunned"
+    Buff_chance: "0.4,0.7,0.4,0.15,0.25"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6752,6 +7011,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   ShowUser: No
+  CustomIcon: PulseLaserChargeBA
   Mass: 1, type: float, display: true, formatter: Kilogram
   Volume: 1.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
@@ -6767,6 +7027,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 1100, display: true
     RangeSpace: 1000, display: true
     Ballistic: false
+    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.3,0.15,0.1"
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -6974,6 +7236,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 1000, display: true
     SpeedSpace: 1900, display: true
     Ballistic: false
+    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7156,6 +7420,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1200, display: true
     HomingSpeed: 2.5
     Ballistic: false
+    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
+    Buff_chance: "0.2,0.7,0.3,0.1"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7208,6 +7474,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 400, display: true
     RangeSpace: 1250, display: true
     Ballistic: false
+    Buff: "BrokenLeg,Stunned,Mutilation"
+    Buff_chance: "0.4,0.5,0.15"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7262,6 +7530,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 954, display: true
     HomingSpeed: 3.8
     Ballistic: false
+    Buff: "Stunned,OpenWound,BrokenLeg,Mutilation"
+    Buff_chance: "0.4,0.6,0.3,0.1"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7325,6 +7595,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # BlastRadius: 2, display: true
     # BlastDamage: 400, display: true
     Ballistic: False
+    Buff: "FractureOpen,OpenWound,PoisonBit,BrokenLeg"
+    Buff_chance: "0.2,0.7,0.4,0.4"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7416,6 +7688,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 810
     RangeSpace: 875
     Ballistic: false
+    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.7,0.7,0.3,0.5"
 
     DamageMultiplier_1: 0.25, param1: head|body
     DamageMultiplier_2: 0, param1: stone|dirt|rock
@@ -7454,6 +7728,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 810
     RangeSpace: 1300
     Ballistic: false
+    Buff: "InfectedWound,DermalBurn,RadiationBurn,IncreaseRadiation"
+    Buff_chance: "0.25,1,0.5,0.75"
 
     DamageMultiplier_1: 0.25, param1: head|body
     DamageMultiplier_2: 0, param1: stone|dirt|rock
@@ -7569,16 +7845,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/MagnesiumOrePrefab
   Mass: 6.51, type: float, display: true, formatter: Kilogram
   Volume: 2.2, type: float, display: true, formatter: Liter
-  MarketPrice: 15
+  Info: "A variant of Magnesite. This ore can be processed in a constructor into a powder used primarily in incendiary and explosive weapons.", display: true
   XpFactor: 35
+  MarketPrice: 50
   ShowUser: Yes
 }
 { +Item Id: 201, Name: IronOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/IronOrePrefab
   Mass: 16.48, type: float, display: true, formatter: Kilogram
   Volume: 3.2, type: float, display: true, formatter: Liter
-  MarketPrice: 10
+  Info: A dense ore known as Magnetite that consists primarily of iron that can be refined in a Constructor or Furnace., display: true
   XpFactor: 20
+  MarketPrice: 85
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -7586,16 +7864,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/CobaltOrePrefab
   Mass: 26.03, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
-  MarketPrice: 10
+  Info: A mineral-rich ore consisting primarily of Cobalt that can be refined in a Constructor or Furnace., display: true
   XpFactor: 25
+  MarketPrice: 200
   ShowUser: Yes
 }
 { +Item Id: 203, Name: SiliconOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/SiliconOrePrefab
   Mass: 4.64, type: float, display: true, formatter: Kilogram
   Volume: 2, type: float, display: true, formatter: Liter
-  MarketPrice: 10
+  Info: A crystalline mineral known as Quartzite. A vital source of pure Silicon when processed in a Constructor or Furnace., display: true
   XpFactor: 30
+  MarketPrice: 100
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -7603,16 +7883,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/NeodymiumOrePrefab
   Mass: 24.62, type: float, display: true, formatter: Kilogram
   Volume: 3.4, type: float, display: true, formatter: Liter
-  MarketPrice: 20
+  Info: A Neodymium-rich variant of Bastnasite that can be refined into pure Neodymium with a Constructor or Furnace, display: true
   XpFactor: 35
+  MarketPrice: 400
   ShowUser: Yes
 }
 { +Item Id: 205, Name: CopperOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/CopperOrePrefab
   Mass: 20.39, type: float, display: true, formatter: Kilogram
   Volume: 2.8, type: float, display: true, formatter: Liter
-  MarketPrice: 10
+  Info: A copper-rich ore known as Bornite that can be processed into Copper using a Constructor or Furnace., display: true
   XpFactor: 25
+  MarketPrice: 125
   ShowUser: Yes
   NoRepairInputItem: true  # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -7620,68 +7902,91 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/PromethiumOrePrefab
   Mass: 23.74, type: float, display: true, formatter: Kilogram
   Volume: 4.1, type: float, display: true, formatter: Liter
-  MarketPrice: 10
+  Info: A radioactive crystalline mineral rich in Promethium. It can be refined in a constructor into a fine powder and pressed into pellets., display: true
   XpFactor: 30
+  MarketPrice: 15
   ShowUser: Yes
 }
 { +Item Id: 207, Name: OpticalFiber, Ref: ComponentsTemplate     # former: Cables
   ShowUser: Yes
   Mass: 0.12, type: float, display: true, formatter: Kilogram
   Volume: 0.2, type: float, display: true, formatter: Liter
+  Info: A fiberoptic cable used for data transmission and signal relay., display: true
+  MarketPrice: 41
 }
 { +Item Id: 208, Name: MechanicalComponents, Ref: ComponentsTemplate    # former: MetalComponents
   ShowUser: Yes
-  Mass: 0.63, type: float, display: true, formatter: Kilogram
-  Volume: 0.12, type: float, display: true, formatter: Liter
+  Mass: 0.65, type: float, display: true, formatter: Kilogram
+  Volume: 0.24, type: float, display: true, formatter: Liter
+  Info: An assortment of smaller metal components used in most mechanical devices., display: true
+  MarketPrice: 34
 }
 { +Item Id: 209, Name: CapacitorComponent, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 42, type: float, display: true, formatter: Kilogram
   Volume: 9, type: float, display: true, formatter: Liter
+  Info: A heavy industrial capacitor module used in some devices to store and output large amounts of energy., display: true
+  MarketPrice: 10385
 }
 { +Item Id: 210, Name: Computer, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 12, type: float, display: true, formatter: Kilogram
-  Volume: 40, type: float, display: true, formatter: Liter
+  Volume: 8, type: float, display: true, formatter: Liter
+  Info: A dedicated computer hard drive used as the brain of many devices., display: true
+  MarketPrice: 2456
 }
 { +Item Id: 211, Name: EnergyMatrix, Ref: ComponentsTemplate     #former: ControlPanel
   ShowUser: Yes
   Mass: 17.2, type: float, display: true, formatter: Kilogram
   Volume: 2.1, type: float, display: true, formatter: Liter
+  MarketPrice: 2250
+  Info: An electrical component that interfaces between computer and electrical systems to regulate the throughput of power., display: true
 }
 { +Item Id: 212, Name: Electronics, Ref: ComponentsTemplate
   ShowUser: Yes
-  Mass: 0.86, type: float, display: true, formatter: Kilogram
-  Volume: 0.32, type: float, display: true, formatter: Liter
+  Mass: 2.86, type: float, display: true, formatter: Kilogram
+  Volume: 0.42, type: float, display: true, formatter: Liter
+  MarketPrice: 110
+  Info: An assortment of circuitboards and cables used in every electronic device., display: true
 }
 { +Item Id: 213, Name: FluxCoil, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 39.1, type: float, display: true, formatter: Kilogram
   Volume: 9, type: float, display: true, formatter: Liter
+  MarketPrice: 8125
+  Info: An advanced electromagnetic coil used for generating magnetic fields on a large scale., display: true
 }
 { +Item Id: 214, Name: Motor, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 24.28, type: float, display: true, formatter: Kilogram
   Volume: 3.5, type: float, display: true, formatter: Liter
+  MarketPrice: 1360
+  Info: A highly-efficient electric motor used in many devices with moving parts., display: true
 }
 { +Item Id: 215, Name: Nanotubes, Ref: ComponentsTemplate    # former: Pipes
   ShowUser: Yes
   Mass: 0.57, type: float, display: true, formatter: Kilogram
   Volume: 2.25, type: float, display: true, formatter: Liter
+  MarketPrice: 62
+  Info: Inert carbon-plastic tubes used to transport fluids and as a structural element in lightweight designs., display: true
 }
 { +Item Id: 216, Name: CobaltAlloy, Ref: ComponentsTemplate    # former: ReactorCore
   ShowUser: Yes
   Mass: 6.29, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
+  MarketPrice: 385
+  Info: An HSS steel alloy used in aerospace engineering for its high heat resistance and superior hardness., display: true
 }
 { +Item Id: 217, Name: SteelPlate, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 11.8, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
+  MarketPrice: 110
+  Info: A steel plate with a foamsteel core that provides improved impact resistance and durability., display: true
 }
 { +Item Id: 218, Name: EnergyCell, Ref: ComponentsTemplate
   FuelValue: 30, type: int, display: true, formatter: WattHour
-  MarketPrice: 9.75
+  MarketPrice: 938
   ShowUser: Yes
   Info: bkiEnergyCell, display: true
 
@@ -7699,16 +8004,23 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 5.8, type: float, display: true, formatter: Kilogram
   Volume: 2.5, type: float, display: true, formatter: Liter
+  MarketPrice: 500
+  Info: Silicate-based glass used in windows and optical lenses., display: true
 }
 # deactivated
 { Item Id: 220, Name: MetalPieces, Ref: ComponentsTemplate
   ShowUser: Yes
+  Mass: 0.8, type: float, display: true, formatter: Kilogram
+  Volume: 0.5, type: float, display: true, formatter: Liter
+  MarketPrice: 48
+  Info: Scrap metal that can be melted down in a furnace for raw materials., display: true
 }
 { +Item Id: 221, Name: ErestrumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/ErestrumOrePrefab
   Mass: 14.36, type: float, display: true, formatter: Kilogram
   Volume: 7.1, type: float, display: true, formatter: Liter
-  MarketPrice: 40
+  MarketPrice: 2400
+  Info: A radioactive mineral comprised of Erestrum. An element unique to the Andromeda Galaxy., display: true
   XpFactor: 45
   ShowUser: Yes
 }
@@ -7716,107 +8028,125 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/ZascosiumOrePrefab
   Mass: 16.22, type: float, display: true, formatter: Kilogram
   Volume: 7.6, type: float, display: true, formatter: Liter
-  MarketPrice: 40
+  MarketPrice: 2800
+  Info: A rare-earth mineral comprised of Zascosium. An element unique to the Andromeda Galaxy., display: true
   XpFactor: 45
   ShowUser: Yes
 }
 { +Item Id: 223, Name: MagnesiumPowder, Ref: ComponentsTemplate
   Mass: 0.43, type: float, display: true, formatter: Kilogram
   Volume: 0.25, type: float, display: true, formatter: Liter
-  MarketPrice: 9.75
+  Info: A hazardous powdered form of Magnesium. Easily ignited it burns at over 3000 degrees and used in explosives and incendiary applications., display: true
   ShowUser: Yes
+  MarketPrice: 250
 }
 { +Item Id: 224, Name: IronIngot, Ref: ComponentsTemplate
   Mass: 5.9, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 6.50
+  Info: An industrial ingot of Iron. The primary building material of all human technology and engineering., display: true
   ShowUser: Yes
+  MarketPrice: 200
 }
 { +Item Id: 225, Name: CobaltIngot, Ref: ComponentsTemplate
   Mass: 6.68, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 6.50
+  Info: Commonly used in high-strength alloys and some electronics., display: true
   ShowUser: Yes
+  MarketPrice: 475
 }
 { +Item Id: 226, Name: SiliconIngot, Ref: ComponentsTemplate
   Mass: 1.9, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 6.50
+  Info: A common material used in everything from insulation to glass., display: true
   ShowUser: Yes
+  MarketPrice: 225
 }
 { +Item Id: 227, Name: NeodymiumIngot, Ref: ComponentsTemplate
-  Mass: 5.25, type: float, display: true, formatter: Kilogram
+  Mass: 5.26, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 13
+  Info: Commonly used in high-strength electromagnets and Neodymium-doped glass lenses used in laser transmitters and weapons., display: true
   ShowUser: Yes
+  MarketPrice: 900
 }
 { +Item Id: 228, Name: CopperIngot, Ref: ComponentsTemplate
   Mass: 6.71, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 6.50
+  Info: A thermally and electrically conductive metal used in almost every kind of electronic component., display: true
   ShowUser: Yes
+  MarketPrice: 300
 }
 { +Item Id: 229, Name: PromethiumPellets, Ref: ComponentsTemplate
   Mass: 2.18, type: float, display: true, formatter: Kilogram
   Volume: 0.3, type: float, display: true, formatter: Liter
-  MarketPrice: 1.30
+  Info: Compressed discs of promethium crystal that are used in power cells using thermal and piezoelectric catalysts to generate energy., display: true
   ShowUser: Yes
+  MarketPrice: 150
 }
 { +Item Id: 230, Name: ErestrumIngot, Ref: ComponentsTemplate
   Mass: 4.65, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 26
+  Info: A green-lustred metal similar in some aspects to Beryllium. Its extremely low melting point and magnetic properties makes it ideal for plasma-based applications., display: true
   ShowUser: Yes
+  MarketPrice: 1400
 }
 { +Item Id: 231, Name: ZascosiumIngot, Ref: ComponentsTemplate
   Mass: 5.36, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 26
+  Info: A unique metal that oxides red. Zascosium has high reflectivity when polished and exceptional hardness but is brittle., display: true
   ShowUser: Yes
+  MarketPrice: 1600
 }
 { +Item Id: 232, Name: CrushedStone, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/CrushedStonePrefab
   Mass: 5.38, type: float, display: true, formatter: Kilogram
   Volume: 2, type: float, display: true, formatter: Liter
-  MarketPrice: 5
+  Info: Chunks of broken stone with trace amounts of several metals., display: true
   XpFactor: 1
+  MarketPrice: 25
   ShowUser: Yes
 }
 { +Item Id: 233, Name: RockDust, Ref: ComponentsTemplate
   Mass: 2.67, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
-  MarketPrice: 1.63
+  Info: A fine powder made from crushed stone used as a binder in concrete, display: true
+  MarketPrice: 15
   ShowUser: Yes
 }
 { +Item Id: 234, Name: Oscillator, Ref: ComponentsTemplate     #former: AdvancedCPU
   Mass: 8.27, type: float, display: true, formatter: Kilogram
   Volume: 2.5, type: float, display: true, formatter: Liter
+  MarketPrice: 1880
   ShowUser: Yes
 }
 { +Item Id: 235, Name: PlasticMaterial, Ref: ComponentsTemplate
   Mass: 0.18, type: float, display: true, formatter: Kilogram
   Volume: 0.12, type: float, display: true, formatter: Liter
-  MarketPrice: 0.20
+  Info: Raw composite that can be refined with igneous stone dust to form Basalt Fiber. A fireproof and lightweight building material., display: true
   ShowUser: Yes
+  MarketPrice: 30
 }
 { +Item Id: 236, Name: SathiumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/SathiumOrePrefab
   Mass: 51.3, type: float, display: true, formatter: Kilogram
   Volume: 8.4, type: float, display: true, formatter: Liter
-  MarketPrice: 40
+  Info: A dense mineral ore rich in exotic metals with high amounts of Sathium. A metal unique to the Andromeda Galaxy., display: true
   XpFactor: 45
+  MarketPrice: 2000
   ShowUser: Yes
 }
 { +Item Id: 237, Name: SathiumIngot, Ref: ComponentsTemplate
   Mass: 14.44, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
+  Info: An extremely hard and durable metal similar to Tungsten. Sathium is used in armor plating and radiation shielding., display: true
   ShowUser: Yes
-  MarketPrice: 26
+  MarketPrice: 1000
 }
 { +Item Id: 238, Name: PowerCoil, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 184.9, type: float, display: true, formatter: Kilogram
   Volume: 24.5, type: float, display: true, formatter: Liter
+  MarketPrice: 63137
+  Info: An electromagnetic coil array used for building up and releasing huge amounts of power., display: true
 }
 
 /* ID 239 is hard coded */
@@ -7824,7 +8154,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 239, Name: EnergyCellLarge, Ref: ComponentsTemplate
   FuelValue: 150, type: int, display: true, formatter: WattHour
   ShowUser: Yes
-  MarketPrice: 48.75
+  MarketPrice: 4700
   Info: bkiEnergyCell, display: true
 
   Mass: 30, type: float, display: true, formatter: Kilogram
@@ -7838,6 +8168,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 # Not used anymore
 { Item Id: 240, Name: EnergyCellHydrogen, Ref: ComponentsTemplate
   FuelValue: 15, type: int, display: true, formatter: WattHour
+  Info: A hydrogen fuel cell used in a fusion reactor to initiate and sustain a fusion reaction., display: true
   ShowUser: NoButCSV
 
   Mass: 20, type: float, display: true, formatter: Kilogram
@@ -7852,34 +8183,40 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 241, Name: HydrogenBottle, Ref: ComponentsTemplate
   Mass: 17.25, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
-  MarketPrice: 5
+  Info: A tank of compressed Hydrogen used as a supercoolant or as fuel for a Fusion Reactor., display: true
   ShowUser: Yes
+  MarketPrice: 166
 }
 { +Item Id: 242, Name: WoodLogs, Ref: OreTemplate
   Meshfile: Entities/Items/Resources/WoodLogsPrefab
   Mass: 8, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
-  MarketPrice: 5
+  Info: Fiberous material obtained from trees that can be processed into numerous organic compounds., display: true
   XpFactor: 20
+  MarketPrice: 120
   ShowUser: Yes
 }
 { +Item Id: 243, Name: WoodPlanks, Ref: ComponentsTemplate
-  Mass: 0.2, type: float, display: true, formatter: Kilogram
-  Volume: 0.1, type: float, display: true, formatter: Liter
-  MarketPrice: 0.13
+  Mass: 1.25, type: float, display: true, formatter: Kilogram
+  Volume: 1.5, type: float, display: true, formatter: Liter
+  Info: A good old piece of wood you can use to make housing or furniture., display: true
   ShowUser: Yes
+  MarketPrice: 15
 }
 { +Item Id: 244, Name: Cement, Ref: ComponentsTemplate
   Mass: 16.14, type: float, display: true, formatter: Kilogram
   Volume: 7.55, type: float, display: true, formatter: Liter
+  Info: A mix of sand and gravel that when mixed with water will produce Concrete., display: true
   ShowUser: Yes
+  MarketPrice: 105
 }
 { +Item Id: 245, Name: PentaxidOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/PentaxidOrePrefab
   Mass: 88.88, type: float, display: true, formatter: Kilogram
   Volume: 16.85, type: float, display: true, formatter: Liter
-  MarketPrice: 70
+  Info: A highly radioactive unstable crystal that can be refined into an even more unstable form used in quantum technology., display: true
   XpFactor: 60
+  MarketPrice: 600
   ShowUser: Yes
 }
 /* Used for PentaxidTank */
@@ -7888,14 +8225,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 12.82, type: float, display: true, formatter: Kilogram
   Volume: 2.4, type: float, display: true, formatter: Liter
-  Info: bkiPentaxidTank, display: true
+  Info: Refined Pentaxid Crystals that are highly unstable and can be easily excited into releasing huge quantities of energy., display: true
   ShowUser: Yes
-  MarketPrice: 45.50
+  MarketPrice: 300
 }
 { +Item Id: 247, Name: SteelPlateArmored, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 28.88, type: float, display: true, formatter: Kilogram
   Volume: 1.5, type: float, display: true, formatter: Liter
+  MarketPrice: 625
+  Info: An armor plate made from compressed Sathium with a foam-cell core for improved strength and durability., display: true
 }
 ## Please do not rename - referenced in code
 { +Item Id: 248, Name: MoneyCard, Ref: ComponentsTemplate
@@ -7910,20 +8249,22 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/GoldOrePrefab
   Mass: 8.11, type: float, display: true, formatter: Kilogram
   Volume: 2.17, type: float, display: true, formatter: Liter
-  MarketPrice: 30
+  Info: A rare mix of igneous rock and native gold that can be refined into pure gold., display: true
   XpFactor: 60
+  MarketPrice: 800
   ShowUser: Yes
 }
 { +Item Id: 250, Name: GoldIngot, Ref: ComponentsTemplate
   Mass: 14.49, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 195
+  Info: Universally accepted as currency., display: true
   ShowUser: Yes
 }
 { +Item Id: 251, Name: GoldCoins, Ref: ComponentsTemplate
-  Info: bkiCurrency, display: true
-  Mass: 1.44, type: float, display: true, formatter: Kilogram
-  Volume: 1.0, type: float, display: true, formatter: Liter
+  # Info: bkiCurrency, display: true
+  Info: Embossed gold coins that can be exchanged for credits by inserting them into the coin slot on an ATM. Can also be melted down in a furnace., display: true
+  Mass: 0.36, type: float, display: true, formatter: Kilogram
+  Volume: 0.02, type: float, display: true, formatter: Liter
   Credits: 50, display: true
   ShowUser: Yes
 }
@@ -7955,57 +8296,73 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 254, Name: AutoMinerCore, Ref: ComponentsTemplate
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
+  Info: The core component used in Automining technology responsible for non-destructive metal extraction., display: true
   ShowUser: Yes
+  MarketPrice: 147647
 }
 { +Item Id: 255, Name: PistolKit, Ref: ComponentsTemplate
   Mass: 1.25, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
+  Info: A case containing upgrade components for handheld firearms and personal tools., display: true
   StackSize: 50000
   ShowUser: Yes
+  MarketPrice: 10000
 }
 { +Item Id: 256, Name: RifleKit, Ref: ComponentsTemplate
   Mass: 2.5, type: float, display: true, formatter: Kilogram
   Volume: 20, type: float, display: true, formatter: Liter
+  Info: A case containing upgrade components for rifles and advanced tools., display: true
   StackSize: 50000
   ShowUser: Yes
+  MarketPrice: 12500
 }
 { +Item Id: 257, Name: SniperKit, Ref: ComponentsTemplate
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
+  Info: "A case containing compensators for anti-material rifles so they don't break the wielder's shoulder.", display: true
   StackSize: 50000
   ShowUser: Yes
+  MarketPrice: 15000
 }
 { +Item Id: 258, Name: ShotgunKit, Ref: ComponentsTemplate
   Mass: 2.5, type: float, display: true, formatter: Kilogram
   Volume: 15, type: float, display: true, formatter: Liter
+  Info: A case containing replacement barrels and reloader for shotguns., display: true
   StackSize: 50000
   ShowUser: Yes
+  MarketPrice: 15000
 }
 { +Item Id: 259, Name: HeavyWeaponKit, Ref: ComponentsTemplate
   Mass: 15, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
+  Info: A large container with precision parts for upgrading heavy weapons., display: true
   StackSize: 50000
+  MarketPrice: 20000
   ShowUser: Yes
 }
 { +Item Id: 260, Name: LaserKit, Ref: ComponentsTemplate
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 20, type: float, display: true, formatter: Liter
+  Info: A padded case containing a sensitive laser focusing array used in high-powered lasers., display: true
   StackSize: 50000
+  MarketPrice: 17500
   ShowUser: Yes
 }
 { +Item Id: 261, Name: PentaxidElement, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 2.21, type: float, display: true, formatter: Kilogram
   Volume: 0.25, type: float, display: true, formatter: Liter
-  MarketPrice: 18.20
+  MarketPrice: 95
+  Info: Isolated into pure elemental Pentaxium form. This element has measurable levels of exotic matter and is key to all quantum technology., display: true
 }
 
 { +Item Id: 262, Name: IceBlocks, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/IceBlocksPrefab
-  Mass: 4, type: float, display: true, formatter: Kilogram
+  Mass: 4.6, type: float, display: true, formatter: Kilogram
   Volume: 5, type: float, display: true, formatter: Liter
-  MarketPrice: 5
-  XpFactor: 10
+  Info: Frozen water that can be used as coolant or melted into drinkable water., display: true
+  XpFactor: 2
+  MarketPrice: 55
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8014,8 +8371,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/TitanOrePrefab
   Mass: 8.07, type: float, display: true, formatter: Kilogram
   Volume: 3.5, type: float, display: true, formatter: Liter
-  MarketPrice: 20
+  Info: A mineral variant of Rutile. High in Titanium that can be processed in a Constructor or Furnace., display: true
   XpFactor: 20
+  MarketPrice: 1200
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8023,59 +8381,70 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 264, Name: TitanRods, Ref: ComponentsTemplate
   Mass: 3.38, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 13
+  Info: Round ingots of Titanium used in many industrial applications and steel alloys., display: true
   ShowUser: Yes
+  MarketPrice: 700
 }
 
 { +Item Id: 265, Name: TitanPlates, Ref: ComponentsTemplate
   Mass: 15, type: float, display: true, formatter: Kilogram
   Volume: 3, type: float, display: true, formatter: Liter
+  Info: A plate of Titanium metal with a foam metal core for added strength and durability., display: true
   ShowUser: Yes
+  MarketPrice: 375
 }
 
 { +Item Id: 266, Name: AluminiumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/AluminiumOrePrefab
-  Mass: 8.07, type: float, display: true, formatter: Kilogram
+  Mass: 4.48, type: float, display: true, formatter: Kilogram
   Volume: 3.5, type: float, display: true, formatter: Liter
-  MarketPrice: 20
+  Info: A sedimentary variant of Bauxite. A source of Aluminium when refined., display: true
   XpFactor: 20
+  MarketPrice: 600
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
 
 { +Item Id: 267, Name: AluminiumPowder, Ref: ComponentsTemplate
-  Mass: 3.38, type: float, display: true, formatter: Kilogram
+  Mass: 2.02, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 13
+  Info: Powdered Aluminium metal used in casting electroplating alloying and some incendiary devices., display: true
   ShowUser: Yes
+  MarketPrice: 350
 }
 
 { +Item Id: 268, Name: AluminiumCoil, Ref: ComponentsTemplate
-  Mass: 15, type: float, display: true, formatter: Kilogram
+  Mass: 8.1, type: float, display: true, formatter: Kilogram
   Volume: 3, type: float, display: true, formatter: Liter
+  MarketPrice: 1875
+  Info: A conductive coil of aluminium used in electronics and heating elements., display: true
   ShowUser: Yes
 }
 { +Item Id: 269, Name: PlatinOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/PlatinumOrePrefab
-  Mass: 5, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
-  MarketPrice: 45
+  Mass: 41.2, type: float, display: true, formatter: Kilogram
+  Volume: 4.5, type: float, display: true, formatter: Liter
+  Info: A dense metallic ore of Sperrylite. It's rich in platinum but is toxic due to high arsenic content. Must be processed in a furnace., display: true
   XpFactor: 20
+  MarketPrice: 4000
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
 
 { +Item Id: 270, Name: PlatinBar, Ref: ComponentsTemplate
-  Mass: 2, type: float, display: true, formatter: Kilogram
-  Volume: 0.1, type: float, display: true, formatter: Liter
-  MarketPrice: 29.25
+  Mass: 16.09, type: float, display: true, formatter: Kilogram
+  Volume: 0.75, type: float, display: true, formatter: Liter
+  Info: A valuable and extremely dense metal used in a variety of applications from catalysts to thruster shielding., display: true
   ShowUser: Yes
+  MarketPrice: 2500
 }
 
 { +Item Id: 271, Name: PlatinOunce, Ref: ComponentsTemplate
-  Mass: 0.2, type: float, display: true, formatter: Kilogram
-  Volume: 0.01, type: float, display: true, formatter: Liter
+  Mass: 4.0, type: float, display: true, formatter: Kilogram
+  Volume: 0.5, type: float, display: true, formatter: Liter
+  Info: A folded bar of Platinum Foil. Unfolded it's used in various applications for it's resistance to corrosion and friction., display: true
   ShowUser: Yes
+  MarketPrice: 781
 }
 
 # Save game break: move down to food items, e.g. Id: 327
@@ -8100,45 +8469,56 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 1.6, type: float, display: true, formatter: Kilogram
   Volume: 0.25, type: float, display: true, formatter: Liter
+  MarketPrice: 250
+  Info: A treated form of Erestrum to keep it in a semifluid state. Used primarily for plasma applications., display: true
 }
 { +Item Id: 279, Name: ZascosiumAlloy, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 7.33, type: float, display: true, formatter: Kilogram
-  Volume: 1.12, type: float, display: true, formatter: Liter
+  Volume: 1.5, type: float, display: true, formatter: Liter
+  MarketPrice: 3250
+  Info: An alloy of Zascosium and Erestrum that exhibits both Zascosium's strength with Erestrum's conductivity. Used in superconductors., display: true
 }
 { +Item Id: 280, Name: XenoSubstrate, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 5.4, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
-  MarketPrice: 45
+  MarketPrice: 700
+  Info: Inert alien biomaterial that exhibits both organic and synthetic behaviour with extreme resilience and easy malleability., display: true
 }
 { +Item Id: 281, Name: NCPowder, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 0.18, type: float, display: true, formatter: Kilogram
   Volume: 0.15, type: float, display: true, formatter: Liter
+  Info: A highly flammable compound used in smokeless propellant charges and ammunition., display: true
+  MarketPrice: 4
 }
 { +Item Id: 282, Name: SmallOptronicBridge, Ref: ComponentsTemplate
   Mass: 16, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
-  MarketPrice: 37885.58
+  Info: A complex computing component used in advanced CPUs., display: true
+  MarketPrice: 77150
   ShowUser: Yes
 }
 { +Item Id: 283, Name: SmallOptronicMatrix, Ref: ComponentsTemplate
   Mass: 30, type: float, display: true, formatter: Kilogram
   Volume: 1.5, type: float, display: true, formatter: Liter
-  MarketPrice: 64236.90
+  Info: A complex computing component used in advanced CPUs., display: true
+  MarketPrice: 119525
   ShowUser: Yes
 }
 { +Item Id: 284, Name: LargeOptronicBridge, Ref: ComponentsTemplate
   Mass: 200, type: float, display: true, formatter: Kilogram
   Volume: 3.25, type: float, display: true, formatter: Liter
-  MarketPrice: 55229.20
+  Info: A complex computing component used in advanced CPUs., display: true
+  MarketPrice: 259087
   ShowUser: Yes
 }
 { +Item Id: 285, Name: LargeOptronicMatrix, Ref: ComponentsTemplate
   Mass: 400, type: float, display: true, formatter: Kilogram
   Volume: 8.5, type: float, display: true, formatter: Liter
-  MarketPrice: 96208.32
+  Info: A complex computing component used in advanced CPUs., display: true
+  MarketPrice: 627041
   ShowUser: Yes
 }
 
@@ -8163,6 +8543,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 301, Name: Steak, Ref: FoodTemplate
   Mass: 0.24, type: float, display: true, formatter: Kilogram
   Volume: 0.27, type: float, display: true, formatter: Liter
+  Info: A grilled steak made from processed meat. It looks tasty but I make no guarantees on the flavor., display: true
   FoodDecayTime: 13, display: true, type: int
   FoodDecayedItem: RottenFood
   ShowUser: Yes
@@ -8181,6 +8562,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 302, Name: Meat, Ref: FoodTemplate
   Mass: 0.35, type: float, display: true, formatter: Kilogram
   Volume: 0.31, type: float, display: true, formatter: Liter
+  Info: "It's some kind of unidentifiable meat. I wouldn't recommend eating this raw.", display: true
   FoodDecayTime: 10, display: true, type: int
   FoodDecayedItem: RottenFood
   Category: Food
@@ -8200,7 +8582,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 303, Name: Spice, Ref: FoodTemplate
   Mass: 0.03, type: float, display: true, formatter: Kilogram
   Volume: 0.05, type: float, display: true, formatter: Liter
-  Info: bkiIngredient, display: true
+  Info: Dried Cobraleaves which has a smell and flavor similar to cinnamon with a hint of spiciness., display: true
   Category: Ingredients
   FoodDecayTime: 74, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8222,6 +8604,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 304, Name: OpuntiaCactusSpears, Ref: FoodTemplate
   Mass: 0.11, type: float, display: true, formatter: Kilogram
   Volume: 0.32, type: float, display: true, formatter: Liter
+  Info: The fruit of the Opuntia cactus. Delicious and refreshing if a little sour., display: true
   Category: Ingredients
   FoodDecayTime: 30, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8240,16 +8623,19 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 { +Item Id: 305, Name: Fiber, Ref: FoodTemplate
-  Info: bkiIngredient, display: true
   Category: Components
   StackSize: 50000
   ShowUser: Yes
+  Info: Plant fibers that can be processed into a multitude of components from building blocks to ammunition., display: true
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
   MarketPrice: 0.22
 }
 { +Item Id: 306, Name: AkuaWine, Ref: FoodTemplate
+  Mass: 1.50, type: float, display: true, formatter: Kilogram
+  Volume: 1.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
+  Info: A bottle of Akuan Wine made from Akuan Berries and artificially aged using a Food Processor. None of the class of a real Terran vintage of course., display: true
   { Child 0
     Class: Eat
     ROF: 1, type: float
@@ -8259,13 +8645,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddOxygen: 0
 	AddTemperature: -8, display: TemperatureValue
     SfxBegin: UseActions/playerDrinking
-    Buff: "Hangover,Intoxication"
-    Buff_chance: "0.4,0.2"
+    Buff: "Hangover"
+    Buff_chance: "0.4"
    # Debuff: Cold, display: EffectiveAgainst
   }
 }
 { +Item Id: 307, Name: Medikit02, Ref: FoodTemplate
-  Mass: 0.4, type: float, display: true, formatter: Kilogram
+  Mass: 0.75, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Category: Medical
   Info: bkiMedikit02, display: true
@@ -8284,7 +8670,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 { +Item Id: 308, Name: Medikit03, Ref: FoodTemplate
-  Mass: 0.4, type: float, display: true, formatter: Kilogram
+  Mass: 0.75, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Category: Medical
   Info: bkiMedikit03, display: true
@@ -8297,7 +8683,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 0
     AddFood: 0
     AddOxygen: 0
-    AddRadiation: -7, display: RadiationValue
+	AddRadiation: -5, display: RadiationValue
     Buff: MedikitApplied
     Debuff: "DermalParasite,EndoParasite,AlienParasite,RadiationBurn,RadiationPoisoning,RadiationSickness", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
@@ -8306,7 +8692,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 309, Name: AlienParts01, Ref: FoodTemplate
   Mass: 0.3, type: float, display: true, formatter: Kilogram
   Volume: 0.14, type: float, display: true, formatter: Liter
-  Info: bkiIngredient, display: true
+  Info: A fleshy plant growth filled with a strong anesthetic sap possessing anti-bacterial and anti-microbial properties., display: true
   Category: Food
   StackSize: 50000
   ShowUser: Yes
@@ -8314,7 +8700,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 310, Name: AlienParts02, Ref: FoodTemplate
   Mass: 0.52, type: float, display: true, formatter: Kilogram
   Volume: 0.71, type: float, display: true, formatter: Liter
-  Info: bkiIngredient, display: true
+  Info: A gland retrieved from an alien creature that scans have identified to have medical uses if processed properly., display: true
   Category: Food
   StackSize: 50000
   ShowUser: Yes
@@ -8322,7 +8708,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 311, Name: AlienParts03, Ref: FoodTemplate
   Mass: 0.35, type: float, display: true, formatter: Kilogram
   Volume: 0.21, type: float, display: true, formatter: Liter
-  Info: bkiIngredient, display: true
+  Info: A hard mollusk-like growth whose body contains enzymes and poisons that can be diluted and processed for medical applications., display: true
   Category: Food
   StackSize: 50000
   ShowUser: Yes
@@ -8336,7 +8722,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 313, Name: Stew, Ref: FoodTemplate
   Mass: 0.75, type: float, display: true, formatter: Kilogram
   Volume: 2, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: "A big bowl of Dino Stew (may not contain actual dinosaur) complete with a variety of toppings and seasonings. This is the best meal around and it's best to eat it while it's hot.", display: true
   Category: Food
   FoodDecayTime: 28, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8355,7 +8741,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 314, Name: Bread, Ref: FoodTemplate
   Mass: 0.15, type: float, display: true, formatter: Kilogram
   Volume: 3.2, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: Regular white bread with a nice crunchy crust on top that would be great as a sandwich., display: true
   Category: Food
   FoodDecayTime: 113, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8373,7 +8759,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 315, Name: Fruit, Ref: FoodTemplate
   Mass: 0.08, type: float, display: true, formatter: Kilogram
   Volume: 0.18, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: A suspicious breed of fruit unique to the Andromeda galaxy. It should be safe to eat right?, display: true
   Category: Ingredients
   FoodDecayTime: 25, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8392,8 +8778,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 { +Item Id: 316, Name: Grain, Ref: FoodTemplate
-  Info: bkiConsumable, display: true
   Category: Ingredients
+  Info: Seemingly ordinary grain that's used to make bread and pastries. It's probably a bit hard to digest., display: true
   FoodDecayTime: 50, display: true, type: int
   FoodDecayedItem: RottenFood
   Mass: 0.06, type: float, display: true, formatter: Kilogram
@@ -8415,7 +8801,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 317, Name: Egg, Ref: FoodTemplate
   Mass: 0.6, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: A mystery egg about the size of an Ostrich egg with a red yolk. Probably not a good idea to eat this raw., display: true
   Category: Ingredients
   FoodDecayTime: 32, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8429,13 +8815,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddOxygen: 0
     SfxBegin: UseActions/playerEatingPain
     Buff: Indigestion
-    Buff_chance: 0.8
+    Buff_chance: 0.6
   }
 }
 { +Item Id: 318, Name: Varonroot, Ref: FoodTemplate
   Mass: 0.05, type: float, display: true, formatter: Kilogram
   Volume: 0.12, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: A tough and extremely spicy root from the Varon plant. Possesses detectable concentrations of both a powerful stimulant and a muscle relaxant., display: true
   Category: Ingredients
   StackSize: 50000
   FoodDecayTime: 160, display: true, type: int
@@ -8457,7 +8843,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 319, Name: NaturalStimulant, Ref: FoodTemplate
   Mass: 0.07, type: float, display: true, formatter: Kilogram
   Volume: 0.08, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: A toxic plant that has developed something similar to caffeine as a defense against being eaten by wildlife., display: true
   Category: Ingredients
   FoodDecayTime: 60, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8473,25 +8859,26 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: UseActions/playerEatingSoft
     Debuff: Stunned, display: EffectiveAgainst
     Buff: "Indigestion,BadTrip"
-    Buff_chance: "0.5,0.9"
+    Buff_chance: "0.4,0.7"
   }
 }
 { +Item Id: 320, Name: AlienTooth, Ref: FoodTemplate
   Mass: 0.01, type: float, display: true, formatter: Kilogram
   Volume: 0.01, type: float, display: true, formatter: Liter
-  Info: bkiIngredient, display: true
+  Info: A sharp tooth of some unidentified alien creature. It appears to be hollow., display: true
   Category: Medical
   StackSize: 50000
   ShowUser: Yes
 }
 # delete when save game break
 { +Item Id: 321, Name: Ribs, Ref: FoodTemplate
- Info: bkiConsumable, display: true
+ Info: Some delicious spare ribs coated in special barbeque sauce. Why are these things so messy to eat?, display: true
  Category: Food
  StackSize: 50000
  FoodDecayTime: 21, display: true, type: int
  FoodDecayedItem: RottenFood
- ShowUser: NoButCSV
+ # ShowUser: NoButCSV
+  ShowUser: Yes
  { Child 0
    Class: Eat
    ROF: 1, type: float
@@ -8525,7 +8912,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 # delete when save game break
 { +Item Id: 323, Name: SpaceOrange, Ref: FoodTemplate
- Info: bkiConsumable, display: true
+ Info: A strange orange-like fruit. The zirax seem to eat them but I have no idea where they get them., display: true
  Category: Ingredients
  FoodDecayTime: 35, display: true, type: int
  FoodDecayedItem: RottenFood
@@ -8579,7 +8966,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 326, Name: Milk, Ref: FoodTemplate
   Mass: 1.08, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
-  Info: bkiConsumable, display: true
+  Info: A bottle of questionable milk., display: true
   Category: Food
   FoodDecayTime: 20, display: true, type: int
   FoodDecayedItem: RottenFood
@@ -8741,6 +9128,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  Mass: 0.01, type: float, display: true, formatter: Kilogram
+  Volume: 0.01, type: float, display: true, formatter: Liter
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -8749,7 +9138,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 0
     AddFood: -50
     AddOxygen: 0
-    Debuff: "InfectedWound,Necrosis,OpenWound,DermalBurn,Frostbite", display: EffectiveAgainst
+    Debuff: "InfectedWound,Necrosis,DermalBurn,Frostbite", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
     Buff: Indigestion
     Buff_chance: 0.15
@@ -8799,6 +9188,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiRadiationImmunity, display: true
   Category: Medical
   StackSize: 50000
+  Mass: 0.02, type: float, display: true, formatter: Kilogram
+  Volume: 0.02, type: float, display: true, formatter: Liter
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9777,6 +10168,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  Mass: 0.02, type: float, display: true, formatter: Kilogram
+  Volume: 0.02, type: float, display: true, formatter: Liter
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9900,7 +10293,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   Candrop: false
   HoldType: 6
-  StackSize: 50000
+  StackSize: 1
   ShowUser: No
   { Child 0
     Class: Melee
@@ -9918,21 +10311,21 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 0, type: float
     Range: 3
-    Damage: 300
+    Damage: 360
     SfxBegin: Enemies/ArmoredGolem/ArmoredGolem_SfxAttack
-    Buff: "OpenWound,FractureClosed,FractureOpen,Mutilation"
-    Buff_chance: "0.4,0.25,0.1,0.01"
+    Buff: "OpenWound,FractureClosed,FractureOpen,Mutilation,Stunned"
+    Buff_chance: "0.3,0.15,0.1,0.01,0.25"
   }
 }
 { +Item Id: 502, Name: MeleeTotalHorror, Ref: MeleeTemplate
   { Child 0
     Class: Melee
     ROF: 2, type: float
-    Range: 3.5
-    Damage: 130
+    Range: 3.0
+    Damage: 150
     SfxBegin: Enemies/TotalHorror/TotalHorror_SfxAttack
-    Buff: "FractureOpen,AlienParasite"
-    Buff_chance: "0.2,0.05"
+    Buff: "FractureOpen,EndoParasite,OpenWound"
+    Buff_chance: "0.1,0.05,0.35"
   }
 }
 { +Item Id: 503, Name: MeleeTalonGuardian, Ref: MeleeTemplate
@@ -9940,7 +10333,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 1.5, type: float
     Range: 3.5
-    Damage: 120
+    Damage: 130
     Sphere: 0.5
     SfxBegin: Enemies/TalonGuardian/WhooshWideSlow
     Buff: "OpenWound"
@@ -9956,8 +10349,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.75, type: float
     Range: 4
     Damage: 170
-    Buff: "FractureClosed,FractureOpen,Mutilation"
-    Buff_chance: "0.25,0.1,0.01"
+    Buff: "FractureClosed,FractureOpen,Mutilation,Stunned"
+    Buff_chance: "0.25,0.1,0.01,0.20"
     SfxBegin: Enemies/RockGolem/MONSTERGrowlDeep08aShort
   }
 }
@@ -9970,7 +10363,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 150
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     Buff: "Frostbite,DermalParasite"
-    Buff_chance: "0.4,0.15"
+    Buff_chance: "0.15,0.25"
   }
 }
 { +Item Id: 507, Name: MeleeMegalonopsGrey, Ref: MeleeTemplate
@@ -9978,7 +10371,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 6.5
-    Damage: 100
+    Damage: 120
     SfxBegin: Enemies/Megalonops/Megalonops_SfxAttack
     Buff: OpenWound
     Buff_chance: 0.1
@@ -9989,7 +10382,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 9
-    Damage: 150
+    Damage: 160
     SfxBegin: Enemies/Megalonops/HybridGrowl02
     Buff: OpenWound
     Buff_chance: 0.2
@@ -10000,10 +10393,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 6.5
-    Damage: 180
+    Damage: 220
     SfxBegin: Enemies/LizardMule/LizardMule_SfxAttack
-    Buff: OpenWound
-    Buff_chance: 0.2
+    Buff: "FractureClosed,FractureOpen,BrokenLeg"
+    Buff_chance: "0.25,0.1,0.3"
   }
 }
 { +Item Id: 510, Name: MeleeLizardMuleBaby, Ref: MeleeTemplate
@@ -10025,7 +10418,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 75
     SfxBegin: Enemies/Spinosaurus/HybridGrowl
     Buff: OpenWound
-    Buff_chance: 0.1
+    Buff_chance: 0.15
   }
 }
 { +Item Id: 512, Name: MeleeTriceratops, Ref: MeleeTemplate
@@ -10037,7 +10430,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 200
     SfxBegin: Enemies/Triceratops/Triceratops_SfxAttack
     Buff: "OpenWound,FractureClosed,FractureOpen,Mutilation"
-    Buff_chance: "0.4,0.25,0.1,0.01"
+    Buff_chance: "0.4,0.25,0.1,0.03"
   }
 }
 { +Item Id: 513, Name: MeleeGolem2, Ref: MeleeTemplate
@@ -10045,7 +10438,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 5
-    Damage: 150
+    Damage: 170
     SfxBegin: Enemies/GolemDesert/GolemDesert_SfxAttack
     Buff: "FractureClosed,FractureOpen,Mutilation"
     Buff_chance: "0.25,0.1,0.01"
@@ -10069,10 +10462,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 5
-    Damage: 120
+    Damage: 180
     SfxBegin: Enemies/Otyugh/Otyugh_SfxAttack
-    Buff: "PoisonBit,FractureOpen,EndoParasite"
-    Buff_chance: "0.2,0.15,0.1"
+    Buff: "FractureClosed,FractureOpen,Mutilation,OpenWound"
+    Buff_chance: "0.25,0.1,0.01,0.4"
   }
 }
 { +Item Id: 516, Name: MeleePlantMonster, Ref: MeleeTemplate
@@ -10080,7 +10473,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 3.5
-    Damage: 90
+    Damage: 120
     SfxBegin: Enemies/PlantMonster/PlantMonster_SfxAttack
     Buff: "PoisonBit,OpenWound"
     Buff_chance: "0.2,0.15"
@@ -10093,7 +10486,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 2
     Damage: 75
     SfxBegin: Enemies/Slime/Slime_SfxAttack
-    Buff: "Frostbite,DermalParasite"
+    Buff: "Frostbite,IncreaseRadiation"
     Buff_chance: "0.4,0.15"
   }
 }
@@ -10188,7 +10581,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 0, type: float
     Range: 2.5
-    Damage: 20
+    Damage: 50
     Sphere: 0.05
     SfxBegin: Enemies/Spiders/Spiders_SfxAttack
     Buff: "PoisonBit,Stunned"
@@ -10204,7 +10597,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 0, type: float
     Range: 3.5
-    Damage: 120
+    Damage: 170
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     Buff: "PoisonBit,Stunned"
     Buff_chance: "0.08,0.02"
@@ -10234,7 +10627,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 50
     SfxBegin: Enemies/Raptor/Raptor_SfxAttack
     Buff: "OpenWound,FractureOpen"
-    Buff_chance: "0.2,0.02"
+    Buff_chance: "0.3,0.02"
   }
 }
 { +Item Id: 529, Name: MeleeHexapod, Ref: MeleeTemplate
@@ -10242,10 +10635,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 3.5
-    Damage: 100
+    Damage: 130
     SfxBegin: Enemies/Hexapod/Hexapod_SfxAttack
-    Buff: "DermalParasite,EndoParasite,AlienParasite"
-    Buff_chance: "0.3,0.15,0.05"
+    Buff: "DermalParasite,EndoParasite,Stunned"
+    Buff_chance: "0.3,0.10,0.2"
   }
 }
 { +Item Id: 530, Name: MeleeOverseer, Ref: MeleeTemplate
@@ -10254,10 +10647,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 5.5
-    Damage: 120
+    Damage: 190
     SfxBegin: Enemies/Overseer/Overseer_SfxAttack
     Buff: "IncreaseRadiation,EndoParasite,AlienParasite"
-    Buff_chance: "0.3,0.15,0.05"
+    Buff_chance: "0.3,0.15,0.2"
   }
 }
 { +Item Id: 531, Name: MeleeOviraptor, Ref: MeleeTemplate
@@ -10266,10 +10659,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 0, type: float
     Range: 3.5
-    Damage: 100
+    Damage: 140
     SfxBegin: Enemies/Oviraptor/Oviraptor_SfxAttack
     Buff: OpenWound
-    Buff_chance: 0.1
+    Buff_chance: 0.3
   }
 }
 { +Item Id: 532, Name: MeleeParasaur, Ref: MeleeTemplate
@@ -10277,7 +10670,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 6.5
-    Damage: 100
+    Damage: 140
     SfxBegin: Enemies/Parasaur/Parasaur_SfxAttack
     Buff: OpenWound
     Buff_chance: 0.1
@@ -10289,7 +10682,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 3.5
-    Damage: 100
+    Damage: 120
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     Buff: "PoisonBit,OpenWound,DermalParasite"
     Buff_chance: "0.2,0.15,0.02"
@@ -10305,7 +10698,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 2, type: float
     Range: 2.5
-    Damage: 100
+    Damage: 170
     SfxBegin: Enemies/Hexapod/Hexapod_SfxAttack
     Buff: "DermalParasite,EndoParasite,AlienParasite"
     Buff_chance: "0.3,0.15,0.05"
@@ -10317,8 +10710,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Melee
     ROF: 0, type: float
-    Range: 2.0
-    Damage: 100
+    Range: 3.0
+    Damage: 130
     SfxBegin: Enemies/Raptor/Raptor_SfxAttack
     Buff: "OpenWound,FractureOpen"
     Buff_chance: "0.2,0.02"
@@ -10333,8 +10726,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 3.5
     Damage: 100
     SfxBegin: Enemies/LizardMule/LizardMule_SfxAttack
-    Buff: OpenWound
-    Buff_chance: 0.2
+    Buff: "OpenWound,BrokenLeg"
+    Buff_chance: "0.2,0.2"
   }
 }
 
@@ -10343,11 +10736,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Melee
     ROF: 0, type: float
-    Range: 3.8
+    Range: 4.0
     Damage: 200
     SfxBegin: Enemies/Triceratops/Triceratops_SfxAttack
-    Buff: "OpenWound,FractureClosed,FractureOpen,Mutilation"
-    Buff_chance: "0.4,0.25,0.1,0.01"
+    Buff: "OpenWound,FractureClosed,FractureOpen,Mutilation,BrokenLeg"
+    Buff_chance: "0.4,0.25,0.1,0.01,0.25"
 
 	DamageMultiplier_1: 2.5, param1: metal|metalhard
     DamageMultiplier_2: 5, param1: hull|hullarmored|hullcombat|concrete|woodblock
@@ -10361,9 +10754,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0, type: float
     Range: 3
     Damage: 150
-    SfxBegin: Enemies/Worm/MonsterScreams-16
-    Buff: "FractureOpen"
-    Buff_chance: "0.4"
+    SfxBegin: Enemies/Otyugh/Otyugh_SfxAttack
+    Buff: "OpenWound,InfectedWound"
+    Buff_chance: "0.4,0.15"
   }
 }
 
@@ -10373,9 +10766,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 0, type: float
     Range: 1.8
-    Damage: 50
+    Damage: 75
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
-    Buff: "FractureOpen"
+    Buff: "OpenWound,FractureOpen"
     Buff_chance: "0.4,0.15"
   }
 }
@@ -10388,8 +10781,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 2.3
     Damage: 50
     SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
-    Buff: "FractureOpen"
-    Buff_chance: "0.4,0.15"
+    Buff: "Stunned,FractureOpen"
+    Buff_chance: "0.25,0.15"
   }
 }
 
@@ -10408,9 +10801,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Automatic: true
     Damage: 12
     AmmoCapacity: 200
+    NoiseStrength: 150, display: false
     AmmoUnlimited: true
     AmmoType: 30mmBullet, display: true
     ReloadDelay: 3.1
+    Buff: "OpenWound"
+    Buff_chance: "0.05"
     SfxBegin: Weapons/Enemies/Drones/minigunLowPitch_start
     SfxLoop: Weapons/Enemies/Drones/minigunLowPitch_loop
     SfxStop: Weapons/Enemies/Drones/minigunLowPitch_end
@@ -10450,7 +10846,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoUnlimited: true
     AmmoType: rocketDrone, display: true
     ReloadDelay: 3
-    SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    # SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    SfxBegin: Weapons/LauncherWeapons/weapon_missile_006
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: rocketlauncherMSMuzzleFire
@@ -10473,6 +10870,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 30
     Range: 360
     Ballistic: false
+    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
+    Buff_chance: "0.1,0.3,0.2,0.05"
 
     DamageMultiplier_1: 0.5, param1: head|body
 	DamageMultiplier_2: 3, param1: metal
@@ -10490,6 +10889,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Enemies/Drones/Weapons/minigunDoubleDroneSmallPrefab
   { Child 0
     Damage: 20
+	ROF: 0.1, type: float
     PfxMuzzle: MuzzleFlashDoubleLarge2
   }
 }
@@ -10516,8 +10916,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Projectiles/LaserShotGreenAlien
   { Child 0
     Class: Projectile
-    Speed: 70
+    Speed: 100
     Range: 700
+    Buff: "BrokenLeg,DermalBurn,RadiationBurn"
+    Buff_chance: "0.1,0.5,0.2"
+	Ballistic: False
   }
 }
 { +Item Id: 558, Name: pulseLaserDrone, Ref: rocketlauncherDroneSmall
@@ -10526,6 +10929,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: LauncherSS
     ROF: 1.2, type: float
     AmmoType: pulseLaserChargeDrone
+    PfxMuzzle: SniperMuzzleLaserGreen
     SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
     /* SfxBegin: Weapons/SS/LaserSS/BLASTERLargeFastKickback(stereo)   */
   }
@@ -10539,8 +10943,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 0
     BlastRadius: 0
     BlastDamage: 0
-    Speed: 150
+    Speed: 170
     Range: 625
+    Buff: "RadiationBurn,DermalBurn"
+    Buff_chance: "0.1,0.3"
 
     DamageMultiplier_1: 0.5, param1: head|body
 	DamageMultiplier_2: 3, param1: metal
@@ -10550,31 +10956,55 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_6: 0.1, param1: shield
   }
 }
-{ +Item Id: 560, Name: cannonDroneSmall, Ref: minigunDroneSmall
+{ +Item Id: 560, Name: cannonDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/cannonDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
   { Child 0
     Class: Ranged
     ROF: 1, type: float
+    Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
     Automatic: false
     Damage: 85
-    AmmoType: 50Caliber, display: true
-    SfxBegin: Weapons/Player/Misc/Single/Cannon_2_short
-    SfxLoop: Misc/MuteSound
-    SfxStop: Misc/MuteSound
+    AmmoCapacity: 200
+    NoiseStrength: 150, display: false
+    AmmoUnlimited: true
+    AmmoType: 30mmBullet, display: true
+    ReloadDelay: 3.1
+    Buff: "OpenWound"
+    Buff_chance: "0.05"
+    # SfxBegin: Weapons/Player/Misc/Single/Cannon_2_short
+	SfxBegin: Weapons/Player/Misc/Single/AWDSDracoHeavySingle
+    # SfxLoop: Misc/MuteSound
+    # SfxStop: Misc/MuteSound
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/weapon_reload_standard
+    PfxMuzzle: turretMuzzleFire
+    Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 1
+
+    DamageMultiplier_1: 3, param1: metal
+    DamageMultiplier_2: 10, param1: metalhard|concrete|woodblock
+    DamageMultiplier_3: 15, param1: hullarmored|hullcombat|hull
+    DamageMultiplier_4: 0, param1: stone|dirt
+    DamageMultiplier_5: 0.25, param1: shield
   }
 }
-{ +Item Id: 561, Name: cannonDoubleDroneLarge, Ref: minigunDroneSmall
+{ +Item Id: 561, Name: cannonDoubleDroneLarge, Ref: cannonDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/cannonDoubleDroneLargePrefab
   { Child 0
     Class: Ranged
-    ROF: 0.8, type: float
+    ROF: 0.6, type: float
     Automatic: false
-    Damage: 90
-    AmmoType: 50Caliber, display: true
-    SfxBegin: Weapons/Player/Misc/Single/Cannon_2_short
-    SfxLoop: Misc/MuteSound
-    SfxStop: Misc/MuteSound
+    Damage: 150
+    AmmoType: 30mmBulet, display: true
+    # SfxBegin: Weapons/Player/Misc/Single/Cannon_2_short
+	SfxBegin: Weapons/Player/Misc/Single/AWDSDracoHeavySingle
+    # SfxLoop: Misc/MuteSound
+    # SfxStop: Misc/MuteSound
     PfxMuzzle: MuzzleFlashDoubleLarge
     TracerPerBullet: 1
   }
@@ -10583,7 +11013,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Enemies/Drones/Weapons/plasmaDroneLargePrefab
   { Child 0
     Class: LauncherSS
-    ROF: 1.3, type: float
+    ROF: 0.75, type: float
     AmmoType: plasmaCannonChargeDrone, display: true
     SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
   }
@@ -10593,9 +11023,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Enemies/Drones/Weapons/plasmaSpaceDronePrefab
   { Child 0
     Class: LauncherSS
-    ROF: 0.6, type: float
-    Range: 600
-    RangeSpace: 750
+    ROF: 0.5, type: float
+    Range: 650
+    PfxMuzzle: SniperMuzzleLaserGreen
     AmmoType: plasmaChargeSpaceDrone, display: true
     SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
   }
@@ -10610,15 +11040,17 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
   { Child 0
     Class: Projectile
-    Damage: 300, display: true
+    Damage: 450, display: true
     BlastParticleIndex: 7
-    BlastRadius: 2, display: true
+    BlastRadius: 3, display: true
     BlastDamage: 600, display: true
     Speed: 300
     Range: 700
     SpeedSpace: 600
     RangeSpace: 800
     Ballistic: false
+    Buff: "RadiationBurn,DermalBurn,IncreaseRadiation"
+    Buff_chance: "0.2,0.3,0.25"
 
     DamageMultiplier_1: 5, param1: hullarmored
     DamageMultiplier_2: 5, param1: hullcombat
@@ -10630,11 +11062,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
   { Child 0
     Class: LauncherSS
-    ROF: 0.6, type: float
+    ROF: 0.1, type: float
     Range: 800
     RangeSpace: 900
     AmmoType: laserChargeSpaceDrone, display: true
-    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+    # SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+    SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
   }
 }
 { +Item Id: 566, Name: laserChargeSpaceDrone
@@ -10647,6 +11080,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
   { Child 0
     Class: Projectile
+    Buff: "DermalBurn,RadiationBurn"
+    Buff_chance: "0.3,0.1"
     Damage: 120, display: true
     BlastParticleIndex: 12
     BlastRadius: 2, display: true
@@ -10694,11 +11129,17 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 12
     AmmoCapacity: 200
     AmmoUnlimited: true
-    AmmoType: 30mmBullet, display: true
+    AmmoType: 8.3mmBullet, display: true
+    BulletSpread: 0.1, display: true
     ReloadDelay: 3.1
-    SfxBegin: Weapons/SS/MinigunSS/AK-47ShortBurst05SS_start
-    SfxLoop: Weapons/SS/MinigunSS/AK-47ShortBurst05SS_loop
-    SfxStop: Weapons/SS/MinigunSS/AK-47ShortBurst05SS_end
+    Buff: "OpenWound"
+    Buff_chance: 0.03
+    SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Modern_start
+    SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_end
+    # SfxBegin: Weapons/SS/MinigunSS/AK-47ShortBurst05SS_start
+    # SfxLoop: Weapons/SS/MinigunSS/AK-47ShortBurst05SS_loop
+    # SfxStop: Weapons/SS/MinigunSS/AK-47ShortBurst05SS_end
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/weapon_reload_standard
     PfxMuzzle: SMGAutoMuzzleFire
@@ -10718,31 +11159,36 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 12, type: float, display: false, formatter: Kilogram
   { Child 0
     Class: Ranged
-    ROF: 0.15, type: float
-    Range: 80, display: false
+    ROF: 0.1, type: float
+    Range: 100, display: false
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
     Automatic: true
-    Damage: 18, display: true
+    Damage: 40, display: true
     AmmoCapacity: 250, display: true
     AmmoUnlimited: true
     AmmoType: 8.3mmBullet, display: true
-    BulletSpread: 0.5, display: true
+    BulletSpread: 1.15, display: true
     ReloadDelay: 6.3, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.03
     /*   SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
     SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
     SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end     */
     # SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
     # SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
     # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
-    SfxBegin: Weapons/Player/Minigun/minigun_start
-    SfxLoop: Weapons/Player/Minigun/minigun_loop
-    SfxStop: Weapons/Player/Minigun/minigun_end
+    SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
+    SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
+    SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end
+    # SfxBegin: Weapons/Player/Minigun/minigun_start
+    # SfxLoop: Weapons/Player/Minigun/minigun_loop
+    # SfxStop: Weapons/Player/Minigun/minigun_end
     SfxNoAmmo: Weapons/Misc/P90DryFire
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: SMGAutoMuzzleFire
-    ParticleTransform:     # Particle1 contains the destroy blocks effect
+    # ParticleTransform:     # Particle1 contains the destroy blocks effect
     Tracer: Weapons/Projectiles/TracerOrange1
-    TracerPerBullet: 2
+    TracerPerBullet: 1
     # MaxFireAngle: 20  #(default is 5)
 
     DamageMultiplier_1: 0, param1: wood|stone|dirt
@@ -10755,8 +11201,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     ROF: 0.8, type: float, display: true, formatter: ROF
-    Range: 100, display: false
-    Damage: 75, display: true
+    Range: 130, display: false
+    Damage: 100, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
     Automatic: true
     SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
@@ -10766,7 +11212,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ParticleTransform:     # Particle1 contains the destroy blocks effect
     Tracer: Weapons/Projectiles/TracerLaserShotGreenZirax
     TracerPerBullet: 1
-    BulletSpread: 0.1, display: true
+    Buff: "DermalBurn"
+    Buff_chance: 0.075
+    BulletSpread: 0.77, display: true
     TracerSpeed: 200
     # MaxFireAngle: 20  #(default is 5)
   }
@@ -10784,6 +11232,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     IsShootThroughCrosshair: true
+    AllowAt: "UnderWater,Space,Planet"
     ROF: 0.5, type: float, display: true, formatter: ROF
     Range: 260, display: false
     RangeSpace: 300, display: false
@@ -10791,13 +11240,22 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 80, display: true
     AmmoCapacity: 250, display: true
     AutoReload: true
+    Buff: "OpenWound"
+    Buff_chance: 0.05
     /* AmmoUnlimited: true     */
     AmmoType: 5.8mmBullet, display: true
-    ReloadDelay: 0.5, display: true
-    SfxBegin: Weapons/Player/Misc/Single/M16GAU5AinHeavySingle
+    ReloadDelay: 1.5, display: true
+    # SfxBegin: Weapons/Player/Misc/Single/M16GAU5AinHeavySingle
+    # SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
+    # SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
+    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
+	SfxBegin: Weapons/Player/Pistol/AWDS_AR_ HK53_Heavy_Single
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/weapon_reload_standard
-    PfxMuzzle: turretMuzzleFire
+    PfxMuzzle: MuzzleFlash3
     Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 2
 
@@ -10817,21 +11275,28 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
   { Child 0
     Class: Ranged
+    AllowAt: "UnderWater,Space,Planet"
     IsShootThroughCrosshair: true
-    ROF: 0.8, type: float
-    Range: 260, display: false
+    ROF: 0.5, type: float
+    Range: 275, display: false
     RangeSpace: 300, display: false
     Automatic: false
-    Damage: 30, display: true
+    Damage: 70, display: true
     AmmoCapacity: 100, display: true
     # AmmoUnlimited: true
     AmmoType: 30mmBullet, display: true
     ReloadDelay: 0.8, display: true
-    SfxBegin: Weapons/Player/Misc/Single/ak47_fire
-    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    Buff: "DermalBurn"
+    Buff_chance: 0.05
+    UseSingleMagazine: true
+    SfxBegin: Weapons/Player/LaserPistol/LaserPistol
+    SfxNoAmmo: Weapons/Misc/G36DryFire
+    # SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+    # SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/weapon_reload_standard
-    PfxMuzzle: MuzzleFlashDouble
-    Tracer: Weapons/Projectiles/TracerOrange1
+    # PfxMuzzle: MuzzleFlashDouble
+    PfxMuzzle: SniperMuzzleLaserRed
+    Tracer: Weapons/Projectiles/TracerLaserShotRed
     TracerPerBullet: 1
 
     DamageMultiplier_1: 0, param1: dirt|stone|rock|wood
@@ -10850,22 +11315,30 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
   { Child 0
     Class: Ranged
+    AllowAt: "UnderWater,Space,Planet"
     IsShootThroughCrosshair: true
     ROF: 0.6, type: float
     Range: 260, display: false
     RangeSpace: 300, display: false
     Automatic: false
-    Damage: 30, display: true
+    Damage: 50, display: true
     AmmoCapacity: 100, display: true
+    BulletSpread: 0.1, display: true
     # AmmoUnlimited: true
     AmmoType: 5.8mmBullet, display: true
     ReloadDelay: 0.6, display: true
-    SfxBegin: Weapons/Player/Misc/Single/g3_fire
-    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    Buff: "DermalBurn"
+    Buff_chance: 0.05
+    UseSingleMagazine: true
+    SfxBegin: Weapons/Player/LaserPistol/LaserPistol
+    SfxNoAmmo: Weapons/Misc/G36DryFire
+    # SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+    # SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/weapon_reload_standard
     PfxMuzzle: MuzzleFlashDouble
-    Tracer: Weapons/Projectiles/TracerOrange1
-    TracerPerBullet: 2
+    Tracer: Weapons/Projectiles/TracerLaserShotRed
+    TracerPerBullet: 1
+
     DamageMultiplier_1: 0, param1: dirt|stone|rock|wood
     DamageMultiplier_2: 0.05, param1: shield
   }
@@ -10873,8 +11346,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 573, Name: minigunDroneAttackBase, Ref: minigunDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/minigunDronePrefab
   { Child 0
-    ROF: 0.4, type: float
-    Damage: 15
+    ROF: 0.1, type: float
+    Damage: 16
   }
 }
 { +Item Id: 574, Name: ZiraxShotgunWeapon
@@ -10888,14 +11361,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     ROF: 1.5, type: float, display: true, formatter: ROF
-    Range: 30, display: false
+    Range: 60, display: false
 	IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
     Automatic: false
-    BulletsPerShot: 8
+    BulletsPerShot: 7
     BulletSpread: 0
     RaySpread: 1.6, display: true
-    Damage: 50, display: true
-    AmmoCapacity: 5, display: true
+    Damage: 77, display: true
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.15,0.05"
+    AmmoCapacity: 15, display: true
     AmmoUnlimited: true
     AmmoType: ShotgunShells, display: true
     ReloadDelay: 3.5, display: true
@@ -10954,10 +11429,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0, type: float
     Range: 20, display: false
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 120, display: true
+    Damage: 160, display: true
     AmmoCapacity: 250, display: true
     AmmoUnlimited: true
     AmmoType: SlimeSpider, display: true
+    Buff: "PoisonBit"
+    Buff_chance: 0.25
     ReloadDelay: 0.0, display: true
     # SfxBegin: Enemies/CaveWorm/CritterSFX-Short_3
     SfxBegin: Enemies/Spiders/Spiders_SfxAttack
@@ -10973,14 +11450,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
   { Child 0
     Class: Projectile
-    Damage: 120
+    Damage: 140
     BlastParticleIndex: 0
     BlastRadius: 0
     BlastDamage: 0
-    Speed: 20
+    Speed: 50
     HomingSpeed: 1
     Range: 100      # must be higher than range given in weapon to ensure that particle effect is visible
-    Ballistic: false
+    Ballistic: true
     Buff: Stunned
     Buff_chance: 0.9
 
@@ -10996,7 +11473,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.5, type: float, display: true, formatter: ROF
     Range: 100, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 50, display: true
+    Damage: 70, display: true
     Automatic: false
     SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
     SfxLoop: Weapons/Enemies/Zirax/mute     # define new Zirax and not extend from MinigunZirax
@@ -11014,7 +11491,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.8, type: float, display: true, formatter: ROF
     Range: 100, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 100, display: true
+    Damage: 130, display: true
     Automatic: false
     SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
     SfxLoop: Weapons/Enemies/Zirax/mute     # define new Zirax and not extend from MinigunZirax
@@ -11036,13 +11513,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     ROF: 0, type: float
-    Range: 30, display: true
+    Range: 35, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 35, display: true
+    Damage: 75, display: true
     AmmoCapacity: 250, display: true
     AmmoUnlimited: true
     AmmoType: SlimeAlienBug, display: true
     ReloadDelay: 6.3, display: true
+    Buff: "PoisonBit"
+    Buff_chance: 0.1
     SfxBegin: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxAttack
 	# MaxFireAngle: 15 #we need bigger angle, as the bug firing angle is not perfectly aligned with look angle
   }
@@ -11058,9 +11537,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 120
     BlastParticleIndex: 0
-    BlastRadius: 0
-    BlastDamage: 0
-    Speed: 20
+    BlastRadius: 1
+    BlastDamage: 20
+    Speed: 40
     HomingSpeed: 0.8
     Range: 100
     Ballistic: false
@@ -11076,30 +11555,69 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     ROF: 1.0, type: float, display: true, formatter: ROF
-    Range: 50, display: false
+    Range: 90, display: false
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 75, display: true
+    Damage: 90, display: true
     Automatic: false
+    Buff: "DermalBurn"
+    Buff_chance: 0.03
     SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
     SfxLoop: Weapons/Enemies/Zirax/mute     # define new Zirax and not extend from MinigunZirax
     SfxStop: Weapons/Enemies/Zirax/mute
     PfxMuzzle: SniperMuzzleLaserRed
     Tracer: Weapons/Projectiles/TracerLaserShotRedZirax
     TracerPerBullet: 1
-    TracerSpeed: 100
+    TracerSpeed: 90
     # MaxFireAngle: 30  # need a big value (default is 5) as the mechs have the weapon far from the center
   }
 }
 { +Item Id: 583, Name: AssaultMechWeapon, Ref: ZiraxMinigunWeapon
   Meshfile: Entities/Items/Weapons/Enemies/AssaultMechWeaponPrefab
-  # # MaxFireAngle: 30  # need a big value (default is 5) as the mechs have the weapon far from the center > CHECK
+  Material: metalweapon
+  HoldType: 15
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  Mass: 12, type: float, display: false, formatter: Kilogram
+  { Child 0
+    Class: Ranged
+    ROF: 0.1, type: float
+    Range: 300, display: false
+    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
+    Automatic: true
+    Damage: 100, display: true
+    AmmoCapacity: 250, display: true
+    AmmoUnlimited: true
+    AmmoType: 15mmBullet, display: true
+    BulletSpread: 0.9, display: true
+    ReloadDelay: 12.5, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.08
+    SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
+    # SfxBegin: Weapons/Player/Minigun/minigun_start
+    # SfxLoop: Weapons/Player/Minigun/minigun_loop
+    # SfxStop: Weapons/Player/Minigun/minigun_end
+    SfxNoAmmo: Weapons/Misc/P90DryFire
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: SMGAutoMuzzleFire
+    ParticleTransform:     # Particle1 contains the destroy blocks effect
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 1
+    # MaxFireAngle: 30  # need a big value (default is 5) as the mechs have the weapon far from the center > CHECK
+
+    DamageMultiplier_1: 0, param1: wood|stone|dirt
+    DamageMultiplier_2: 5, param1: metal|metalhard|hull|hullarmored|hullcombat
+    DamageMultiplier_3: 1.25, param1: head, display: DmgMultiplierHead
+  }
 }
 
 { +Item Id: 584, Name: BaseAttackDroneWeapon, Ref: rocketlauncherDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/BaseAttackDroneWeapon
   { Child 0
     Class: LauncherSS
-    ROF: 2, type: float
+    ROF: 1.7, type: float
     Range: 350      /* Drone will attack from: Range*WeaponRangeFactor */
     AmmoType: rocketDrone, display: true
     SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
@@ -11191,10 +11709,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxSniperPrefab
   { Child 0
     ROF: 2, type: float
-    Range: 110, display: false
+    Range: 220, display: false
     Damage: 150, display: true
     Automatic: false
-    SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-02-Single_Shot-01
+    Buff: "OpenWound"
+    Buff_chance: 0.07
+    # SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-02-Single_Shot-01
+    SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
     SfxLoop: Weapons/Enemies/Zirax/mute     # define new Zirax and not extend from MinigunZirax
     SfxStop: Weapons/Enemies/Zirax/mute
     ParticleTransform:     # Particle1 contains the destroy blocks effect
@@ -11218,10 +11739,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0, type: float
     Range: 30, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 35, display: true
+    Damage: 55, display: true
     AmmoCapacity: 250, display: true
     AmmoUnlimited: true
     AmmoType: SlimeAlienBug, display: true
+    Buff: "PoisonBit"
+    Buff_chance: 0.25
     ReloadDelay: 6.3, display: true
     SfxBegin: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxAttack
 	# MaxFireAngle: 15 #we need bigger angle, as the bug may be not perfectly rotated when firing
@@ -11264,8 +11787,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 70, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 500, display: true
-    Speed: 30
+    BlastDamage: 700, display: true
+    Buff: "BrokenLeg,FractureClosed,Mutilation"
+    Buff_chance: "0.1,0.05,0.05"
+    Speed: 35
     Range: 500
     Ballistic: false
 
@@ -11372,6 +11897,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 20
     Range: 80      # must be higher than range given in weapon to ensure that particle effect is visible
     Ballistic: False
+    Buff: "OpenWound,PoisonBit"
+    Buff_chance: "0.1,0.25"
 
     DamageMultiplier_1: 0, param1: dirt|stone
     BlastDamageMultiplier_1: 0.05, param1: dirt|stone
@@ -11392,7 +11919,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 2.3
     Damage: 50
     SfxBegin: Enemies/TalonGuardian/WhooshWideSlow
-    Buff: "FractureOpen"
+    Buff: "Stunned,IncreaseRadiation"
     Buff_chance: "0.4,0.15"
   }
 }
@@ -11403,11 +11930,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Melee
     ROF: 0, type: float
     Range: 3.5
-    Damage: 120
+    Damage: 150
     Sphere: 0.5
     SfxBegin: Enemies/TalonGuardian/WhooshWideSlow
-    Buff: "OpenWound"
-    Buff_chance: "0.15"
+    Buff: "OpenWound,Stunned"
+    Buff_chance: "0.15,0.15"
   }
 }
 
@@ -11835,7 +12362,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiDetector, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
-  Material: metal
+  Material: metalweapon
   Mass: 1.3, type: float, display: true, formatter: Kilogram
   Volume: 1.7, type: float, display: true, formatter: Liter
   # Info: bkiNightVision, display: true
@@ -11969,18 +12496,115 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 /* CATEGORIE: New Weapon Items id 800 - 1000 */
 
-{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer , Ref: AssaultRifleT2
+{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPlyPrefab
   ShowUser: No
+  Durability: 150, display: false
+  DegradationProb: 0.65, type: float, display: false
+  RepairDisabled: true, display: true
+  PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 15
+  StackSize: 1
+  CustomIcon: AssaultRifleDebug
+  Category: Weapons/Items
+  Info: "A zirax heavy assault rifle. It appears to be compatible with standard rifle rounds but it's not going to be possible to repair it.", display: true
+  Mass: 6.2, type: float, display: true, formatter: Kilogram
+  Volume: 4.75, type: float, display: true, formatter: Liter
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+  { Child 0
+    Class: Ranged
+    AllowRemote: false
+    ROF: 0.2, type: float, display: true, formatter: ROF
+    Range: 174, display: false
+    NoiseStrength: 120, display: false
+    CameraShake: 2
+    Automatic: true, display: true
+    BulletSpread: 0.12, display: true
+    Recoil: 0.75, display: true
+    Damage: 88, display: true
+    AmmoCapacity: 30, display: true
+    AmmoType: 8.3mmBullet, display: true
+    ReloadDelay: 3.75, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.08
+    # SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+    SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
+    SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
+    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
+    SfxNoAmmo: Weapons/Misc/AK47DryFire01
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    PfxMuzzle: MuzzleFlash1
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 1
+
+    DamageMultiplier_1: 2.5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0, param1: shield
+  }
+  { Child 1
+    Class: Zoom
+	ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew03
+    ZoomOut: 40
+    ZoomIn: 40
+  }
 
   UnlockCost: 0
   UnlockLevel: 25
   TechTreeParent: ""
   TechTreeNames: Hidden
 }
-{ +Item Id: 801, Name: ZiraxShotgunPlayer , Ref: AssaultRifleT2
+{ +Item Id: 801, Name: ZiraxShotgunPlayer
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   ShowUser: No
+  PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 15
+  StackSize: 1
+  CustomIcon: RocketLauncherDebug
+  Category: Weapons/Items
+  Info: A standard-issue zirax shotgun. It seems to be compatible with regular shotgun ammunition but won't be repairable., display: true
+  Mass: 11.2, type: float, display: true, formatter: Kilogram
+  Volume: 5.1, type: float, display: true, formatter: Liter
+  Durability: 50, display: false
+  DegradationProb: 0.9, type: float, display: false
+  RepairDisabled: true, display: true
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  { Child 0
+    Class: Ranged
+    AllowRemote: false
+    ROF: 1, type: float, display: true, formatter: ROF
+    Range: 70, display: false
+    NoiseStrength: 190, display: false
+    CameraShake: 4
+    Automatic: false
+    BulletsPerShot: 7
+    BulletSpread: 0.4
+    RaySpread: 1, display: true
+    Recoil: 1.68, display: true
+    Damage: 120, display: true
+    AmmoCapacity: 6, display: true
+    AmmoType: ShotgunShells, display: true
+    ReloadDelay: 4.5, display: true
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.1,0.03"
+    SfxBegin: Weapons/Player/Shotgun/w1200_fire
+    SfxNoAmmo: Weapons/Misc/PumpgunDryFire02
+    SfxReload: Weapons/Player/Reload/RifleReloadSlow
+    PfxMuzzle: MuzzleFlash4
+
+    DamageMultiplier_1: 2.0, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.015, param1: wood       # able to destroy trees
+    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
+    DamageMultiplier_4: 0.4, param1: metal       # able to destroy door
+    DamageMultiplier_6: 0, param1: shield
+  }
+  { Child 1
+    Class: Zoom
+    ZoomOut: 40
+    ZoomIn: 40
+    RedDot: true
+  }
 
   UnlockCost: 0
   UnlockLevel: 25
@@ -12268,3 +12892,81 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 # =============================================================================
+
+{ +Item Id: 47, Name: MedicGun
+  Meshfile: Entities/Items/Weapons/MultiToolT1Prefab
+  CustomIcon: ChangeTool
+  PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 16
+  StackSize: 1
+  Category: Weapons/Items
+  Info: A specialized injector gun for administering medical aid to an ally in the field., display: true
+  Mass: 4.1, type: float, display: true, formatter: Kilogram
+  Volume: 5.5, type: float, display: true, formatter: Liter
+  Durability: 250, display: false
+  DegradationProb: 1.0, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  RadialMenu: true
+  { Child 0
+    Class: Ranged
+    AllowRemote: true
+    AllowAt: "UnderWater,Space,Planet"
+    ROF: 0.25, type: float, display: true, formatter: ROF
+    Range: 2, display: false
+    NoiseStrength: 5, display: false
+    CameraShake: 1
+    IgnoreAtmo: true
+    Automatic: true
+    BulletSpread: 0
+    Recoil: 0.1
+    Damage: 1
+    UseSingleMagazine: true
+    AmmoCapacity: 6, display: true
+    AmmoType: Medikit04, display: true
+    ReloadDelay: 2.5, display: true
+    Buff: "Injector01"
+    Buff_chance: 1
+    SfxBegin: UseActions/oxygen_tank_open
+    SfxNoAmmo: Weapons/Misc/MagnumDryFire
+    SfxReload: Weapons/Player/Reload/PistolReloadNormal
+    ParticleTransform: Muzzle/Particle2
+
+    RadialText: Heal Ally
+    RadialDesc: Provides a small heal for another player
+    RadialIcon: TmpEff_Health
+  }
+  { Child 1
+    Class: Ranged
+    AllowRemote: true
+    AllowAt: "UnderWater,Space,Planet"
+    ROF: 0.25, type: float, display: true, formatter: ROF
+    Range: 2, display: false
+    NoiseStrength: 5, display: false
+    CameraShake: 1
+    IgnoreAtmo: true
+    Automatic: false
+    BulletSpread: 0
+    Recoil: 0.1
+    Damage: 1
+    UseSingleMagazine: true
+    AmmoCapacity: 6, display: true
+    AmmoType: Medikit04, display: true
+    ReloadDelay: 2.5, display: true
+    Buff: "Injector02"
+    Buff_chance: 1
+    SfxBegin: UseActions/oxygen_tank_open
+    SfxNoAmmo: Weapons/Misc/MagnumDryFire
+    SfxReload: Weapons/Player/Reload/PistolReloadNormal
+    ParticleTransform: Muzzle/Particle3
+
+    RadialText: Treat Ally
+    RadialDesc: Treats a wide variety of status effects for another player
+    RadialIcon: TmpEff_BadTrip
+  }
+
+  UnlockCost: 6, display: true
+  UnlockLevel: 5, display: true
+  #TechTreeParent: SurvivalTool
+  TechTreeNames: Tools
+}
