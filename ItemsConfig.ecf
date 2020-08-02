@@ -4091,59 +4091,102 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-{ +Item Id: 98, Name: WeaponCVEnergyRailgunWeapon
-  Meshfile: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
+{ +Item Id: 98, Name: WeaponCVTorpedoLauncherWeapon
+  Meshfile: @models/Blocks/Turrets/TurretsEnemy/turretIONcannonPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   ShowUser: NoButCSV  # reported by HWS
   Canhold: false
+  CustomIcon: RailgunSSWeapon
   Material: metalweapon
   HoldType: 0
   StackSize: 50000
-  Mass: 2715, type: float, display: false, formatter: Kilogram
+  Mass: 8500, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
   { Child 0
-    Class: Ranged
-    AllowAt: Space
-    ROF: 0.6, type: float, display: true, formatter: ROF
-    Range: 510, display: false
-    RangeSpace: 925, display: false
-    Damage: 1000, display: true
-    Automatic: true
-    AmmoCapacity: 150, display: true
-    AmmoType: AmmoCVEnergyRailgun, display: true
-    NoiseStrength: 100, display: false
+    Class: LauncherSS
+    IsShootThroughCrosshair: false
+    ROF: 20, type: float, display: true, formatter: ROF
+    Range: 748, display: true
+    Speed: 10, display: true
+    SpeedSpace: 15, display: true
+    RangeSpace: 1050, display: true
+    AmmoCapacity: 50, display: false   # no need to display since unlimited ammo
+    # AmmoUnlimited: true
+    AmmoType: AmmoCVTorpedo, display: true
     AutoReload: true
     CheckObstructed: true
-    ReloadDelay: 1, display: true # adapt sound
-    SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
-    /* SfxBegin: Weapons/SS/LaserSS/weapon_laser_001   */
-    SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
+    NoiseStrength: 100, display: false
+    ReloadDelay: 1, display: true
+    SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: turretMuzzleFire
-
-    # Tracer: Weapons/Projectiles/TracerLaserShotBlueCV
-    TracerPerBullet: 1
-    TracerSpeed: 600
-
-    DamageMultiplier_1: 0.3, param1: head|body
-    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood
-    DamageMultiplier_3: 0.083, param1: shield
   }
 }
 
-{ +Item Id: 99, Name: AmmoCVEnergyRailgun
+{ +Item Id: 99, Name: AmmoCVTorpedo
   Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
-  Material: metalweapon
   CustomIcon: FillerCharge
+  Material: metalweapon
   AllowPlacingAt: MS, display: false
   HoldType: 0
   StackSize: 50000
   Canhold: false
-  Mass: 10, type: float, display: true, formatter: Kilogram
-  Volume: 5, type: float, display: true, formatter: Liter
-  Info: bkiAmmo, display: true
+  Mass: 500, type: float, display: true, formatter: Kilogram
+  Volume: 31.25, type: float, display: true, formatter: Liter
+  Info: "A high-impact torpedo. Designed to be launched while dive-bombing a ground target. Bombs inherit the speed of the vehicle that launched them and safely disarm if they exceed their target distance.", display: true
   Category: Weapons/Items
+  { Child 0
+    Class: Projectile
+    Damage: 5000
+    NoiseStrength: 1000, display: false
+    BlastParticleIndex: 3
+    BlastRadius: 9, display: true
+    BlastDamage: 30000, display: true
+    Speed: 10, display: true
+    Range: 577, display: true
+    SpeedSpace: 15, display: true
+    RangeSpace: 1155, display: true
+    Ballistic: false
+
+    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_3: 1, param1: alien
+    DamageMultiplier_4: 1, param1: metal
+    DamageMultiplier_5: 1, param1: metallight
+    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_7: 1, param1: hull
+    DamageMultiplier_8: 1, param1: hullarmored
+    DamageMultiplier_9: 1, param1: hullcombat
+    DamageMultiplier_10: 20, param1: concrete
+    DamageMultiplier_11: 10, param1: dirt
+    DamageMultiplier_12: 10, param1: stone
+    DamageMultiplier_13: 10, param1: wood
+    DamageMultiplier_14: 10, param1: woodblock
+    DamageMultiplier_15: 10, param1: plants
+    DamageMultiplier_16: 10, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 1, param1: plastic
+    BlastDamageMultiplier_1: 1, param1: head
+    BlastDamageMultiplier_2: 1, param1: body
+    BlastDamageMultiplier_3: 1, param1: alien
+    BlastDamageMultiplier_4: 1, param1: metal
+    BlastDamageMultiplier_5: 1, param1: metallight
+    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_7: 1, param1: hull
+    BlastDamageMultiplier_8: 1, param1: hullarmored
+    BlastDamageMultiplier_9: 1, param1: hullcombat
+    BlastDamageMultiplier_10: 20, param1: concrete
+    BlastDamageMultiplier_11: 10, param1: dirt
+    BlastDamageMultiplier_12: 10, param1: stone
+    BlastDamageMultiplier_13: 10, param1: wood
+    BlastDamageMultiplier_14: 10, param1: woodblock
+    BlastDamageMultiplier_15: 10, param1: plants
+    BlastDamageMultiplier_16: 10, param1: rock
+    BlastDamageMultiplier_17: 1, param1: shield
+    BlastDamageMultiplier_18: 1, param1: plastic
+  }
 
   UnlockCost: 4500, display: true
   UnlockLevel: 17, display: true
