@@ -157,8 +157,6 @@
   HitPoints: 100, type: int, display: true
 }  
   
-
-
 /* *** Building Blocks */
 # Alien building block and 1 terrain: AlienGreen -> has O2 content
 { Material Name: alien
@@ -183,7 +181,7 @@
   stepsound: wood
   stability_glue: 360
   Mass: 30, type: float, display: false, formatter: Kilogram
-  Hardness: 5, type: float, display: false, formatter: Hardness
+  Hardness: 15, type: float, display: false, formatter: Hardness
   HitPoints: 10, type: int, display: false
 }
 { Material Name: concrete
@@ -236,7 +234,7 @@
   stepsound: metal
   stability_glue: 100
   Mass: 20, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 35, type: float, display: false, formatter: Hardness
   HitPoints: 80, type: int, display: false
 }
 { Material Name: plastic
