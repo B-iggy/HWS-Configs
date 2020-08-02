@@ -1892,6 +1892,7 @@ HullCombatSmallBlocks
 { +Block Id: 260, Name: FuelTankMSLarge, Ref: FuelTankMSSmall
   # LootList: 23    # 20 slots
   Model: @models/Blocks/Mothership/FuelTankMSLargePrefab
+  Material: metal, display: true
   HitPoints: 80, type: int, display: true
   FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel"
   FuelCapacity: 2700, type: int, display: true
@@ -2209,14 +2210,14 @@ HullCombatSmallBlocks
 }
 
  # CV Energy Railgun
-{ Block Id: 269, Name: WeaponCVEnergyRailgun
+{ Block Id: 269, Name: WeaponCVTorpedoLauncher
   Class: Weapon
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metalhard, display: true
   Shape: ModelEntity
   ShowBlockName: true
-  WeaponItem: WeaponCVEnergyRailgunWeapon
+  WeaponItem: WeaponCVTorpedoLauncherWeapon
   CustomIcon: RailgunSSWeapon
   Model: @models/Blocks/WeaponsShip/WeaponSSGaussRetractPrefab
   # Model: @models/Blocks/WeaponsShip/WeaponMSPlasmaPrefab
@@ -2235,7 +2236,7 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base,MS"
   Volume: 1600, type: float, display: true, formatter: Liter
   Mass: 2715, type: float, display: true, formatter: Kilogram
-  Info: bkiWeaponShipSpace, display: true
+  Info: "A heavy Laser Torpedo launcher used for launching L77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 50000
@@ -2254,7 +2255,7 @@ HullCombatSmallBlocks
 
   UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
-  TechTreeParent: AmmoCVEnergyRailgun
+  TechTreeParent: AmmoCVTorpedo
   TechTreeNames: AlienTechnology
 }
 
