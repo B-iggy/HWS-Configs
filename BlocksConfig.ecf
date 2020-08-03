@@ -3190,6 +3190,7 @@ HullCombatSmallBlocks
   Place: Free
   EnergyIn: 1200, type: int, display: true, formatter: Watt
   EnergyInIdle: 40, type: int, display: true, formatter: Watt
+  CPUIn: 3100, type: int, display: true
 }
 { +Block Id: 322, Name: TurretMSToolRetract, Ref: TurretDrillTemplate
   Model: @models/Blocks/Turrets/TurretMSToolRetractPrefab
@@ -3206,6 +3207,7 @@ HullCombatSmallBlocks
   Mass: 14910, type: float, display: true, formatter: Kilogram
   Volume: 4700, type: float, display: true, formatter: Liter
   HitPoints: 10250, type: int, display: true
+  CPUIn: 3100, type: int, display: true
   Place: Free
 
   EnergyIn: 2450, type: int, display: true, formatter: Watt
@@ -10334,6 +10336,7 @@ HullCombatSmallBlocks
   TechTreeNames: Hidden
   EnergyIn: 1150, type: int, display: true, formatter: Watt
   EnergyInIdle: 33, type: int, display: true, formatter: Watt
+  CPUIn: 3000, type: int, display: true
 
   ShowUser: No
 }
@@ -16063,6 +16066,7 @@ HullCombatSmallBlocks
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 9660, type: float, display: true, formatter: Kilogram
   SizeInBlocks: "3,1,3", display: true
+  CPUIn: 3000, type: int, display: true
 
   EnergyIn: 2400, type: int, display: true, formatter: Watt
   EnergyInIdle: 19, type: int, display: true, formatter: Watt
