@@ -1641,9 +1641,9 @@ HullCombatSmallBlocks
   EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 9000, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
-  Mass: 11760, type: float, display: true, formatter: Kilogram
-  HitPoints: 3450, type: int, display: true
-  RotSpeed: 100, type: int, display: true
+  Mass: 3060, type: float, display: true, formatter: Kilogram
+  HitPoints: 3500, type: int, display: true
+  RotSpeed: 130, type: int, display: true
   Zoom: 5, type: float
 
   UnlockCost: 4500, display: true
@@ -1723,13 +1723,13 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,2,1", display: true
   Volume: 125, type: float, display: true, formatter: Liter
   Info: "A heavy Torpedo launcher used for launching M77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
-  StackSize: 50000
+  StackSize: 1
   MaxCount: 1, type: int, display: true
   IsOxygenTight: false, display: true
   Category: Weapons/Items
   HitPoints: 75, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
-  EnergyIn: 50, type: int, display: true, formatter: Watt
+  EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 10000, type: int, display: true
   BlastParticleIndex: 9
   BlastRadius: 9
@@ -2234,18 +2234,18 @@ HullCombatSmallBlocks
   AllowPlacingAt: MS, display: true
   SizeInBlocks: "1,6,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 1600, type: float, display: true, formatter: Liter
-  Mass: 2715, type: float, display: true, formatter: Kilogram
+  Volume: 2000, type: float, display: true, formatter: Liter
+  Mass: 3000, type: float, display: true, formatter: Kilogram
   Info: "A heavy Laser Torpedo launcher used for launching L77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
   Category: Weapons/Items
   BlockColor: "110,110,110"
-  StackSize: 50000
+  StackSize: 1
   MaxCount: 1, type: int, display: true
   BlastParticleIndex: 4
   BlastRadius: 2
   BlastDamage: 50
-  EnergyIn: 25, type: int, display: true, formatter: Watt
-  CPUIn: 7200, type: int, display: true
+  EnergyIn: 1000, type: int, display: true, formatter: Watt
+  CPUIn: 30000, type: int, display: true
   HitPoints: 3000, type: int, display: true
   # Damage: 53, display: true
   # AmmoCapacity: 150, display: true
