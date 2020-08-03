@@ -1638,7 +1638,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 100, type: int, display: true, formatter: Watt
+  EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 9000, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
@@ -9736,7 +9736,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 2
   BlastDamage: 50
-  EnergyIn: 15, type: int, display: true, formatter: Watt
+  EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 900, type: int, display: true
   HitPoints: 2160, type: int, display: true
   RotSpeed: 140, type: int, display: true
@@ -9773,7 +9773,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 2
   BlastDamage: 50
-  EnergyIn: 20, type: int, display: true, formatter: Watt
+  EnergyIn: 15, type: int, display: true, formatter: Watt
   CPUIn: 1300, type: int, display: true
   HitPoints: 5616, type: int, display: true
   RotSpeed: 150, type: int, display: true
@@ -10605,8 +10605,8 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 30, type: int, display: true, formatter: Watt
-  CPUIn: 1300, type: int, display: true
+  EnergyIn: 45, type: int, display: true, formatter: Watt
+  CPUIn: 11000, type: int, display: true
   HitPoints: 19600, type: int, display: true
   RotSpeed: 140, type: int, display: true
   Zoom: 5, type: float
@@ -10646,7 +10646,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 200, type: int, display: true, formatter: Watt
+  EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 22300, type: int, display: true
   HitPoints: 17800, type: int, display: true
   RotSpeed: 110, type: int, display: true
@@ -11090,8 +11090,8 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 2
   BlastDamage: 50
-  EnergyIn: 60, type: int, display: true, formatter: Watt
-  CPUIn: 5820, type: int, display: true
+  EnergyIn: 50, type: int, display: true, formatter: Watt
+  CPUIn: 5800, type: int, display: true
   HitPoints: 6480, type: int, display: true
   RotSpeed: 80, type: int, display: true
   Zoom: 5, type: float
@@ -16048,6 +16048,7 @@ HullCombatSmallBlocks
   EnergyInIdle: 8, type: int, display: true, formatter: Watt
   Volume: 281.25, type: float, display: true, formatter: Liter
   Mass: 420, type: float, display: true, formatter: Kilogram
+  CPUIn: 3000, type: int, display: true
 }
 { +Block Id: 1105, Name: TurretMSTool, Ref: TurretDrillTemplate
   Model: @models/Blocks/Turrets/TurretMSToolPrefab
@@ -16871,7 +16872,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 60, type: int, display: true, formatter: Watt
+  EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 8600, type: int, display: true
   Mass: 5980, type: float, display: true, formatter: Kilogram
   HitPoints: 11500, type: int, display: true
@@ -16908,7 +16909,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 100, type: int, display: true, formatter: Watt
+  EnergyIn: 110, type: int, display: true, formatter: Watt
   CPUIn: 10500, type: int, display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
   HitPoints: 18700, type: int, display: true
@@ -16985,7 +16986,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  CPUIn: 1300, type: int, display: true
+  CPUIn: 10100, type: int, display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
   HitPoints: 19600, type: int, display: true
   RotSpeed: 150, type: int, display: true
@@ -17026,7 +17027,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 100, type: int, display: true, formatter: Watt
+  EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 2800, type: int, display: true
   Mass: 6000, type: float, display: true, formatter: Kilogram
   HitPoints: 11500, type: int, display: true
@@ -17065,7 +17066,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 200, type: int, display: true, formatter: Watt
+  EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 15100, type: int, display: true
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 16000, type: int, display: true
@@ -17106,7 +17107,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 150, type: int, display: true, formatter: Watt
+  EnergyIn: 100, type: int, display: true, formatter: Watt
   CPUIn: 22600, type: int, display: true
   Mass: 19800, type: float, display: true, formatter: Kilogram
   HitPoints: 20500, type: int, display: true
@@ -23022,7 +23023,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 22120, type: int, display: true
   Mass: 13660, type: float, display: true, formatter: Kilogram
-  EnergyIn: 50, type: int, display: true, formatter: Watt
+  EnergyIn: 95, type: int, display: true, formatter: Watt
+  CPUIn: 11100, type: int, display: true
 }
 { +Block Id: 1653, Name: TurretBasePlasmaRetract, Ref: TurretBasePlasma
   Model: @models/Blocks/Turrets/TurretMSPlasmaRetractPrefab
@@ -23039,7 +23041,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 19960, type: int, display: true
   Mass: 16140, type: float, display: true, formatter: Kilogram
-  EnergyIn: 150, type: int, display: true, formatter: Watt
+  EnergyIn: 200, type: int, display: true, formatter: Watt
+  CPUIn: 22400, type: int, display: true
 }
 { +Block Id: 1654, Name: TurretBaseCannonRetract, Ref: TurretBaseCannon
   Model: @models/Blocks/Turrets/TurretMSCannonRetractPrefab
@@ -23056,6 +23059,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 12400, type: int, display: true
   Mass: 13840, type: float, display: true, formatter: Kilogram
+  CPUIn: 8700, type: int, display: true
+  EnergyIn: 60, type: int, display: true, formatter: Watt
 }
 { +Block Id: 1655, Name: TurretBaseRocketRetract, Ref: TurretBaseRocket
   Model: @models/Blocks/Turrets/TurretMSRocketRetractPrefab
@@ -23073,6 +23078,7 @@ HullCombatSmallBlocks
   HitPoints: 21040, type: int, display: true
   Mass: 11850, type: float, display: true, formatter: Kilogram
   EnergyIn: 60, type: int, display: true, formatter: Watt
+  CPUIn: 10600, type: int, display: true
 }
 { +Block Id: 1656, Name: TurretBaseMinigunRetract, Ref: TurretBaseMinigun
   Model: @models/Blocks/Turrets/TurretMSMinigunRetractPrefab
@@ -23089,6 +23095,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 12400, type: int, display: true
   Mass: 11850, type: float, display: true, formatter: Kilogram
+  EnergyIn: 60, type: int, display: true, formatter: Watt
+  CPUIn: 2900, type: int, display: true
 }
 { +Block Id: 1657, Name: TurretBasePulseLaserRetract, Ref: TurretBasePulseLaser
   Model: @models/Blocks/Turrets/TurretMSPulseLaserRetractPrefab
@@ -23104,8 +23112,9 @@ HullCombatSmallBlocks
   Place: Free
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 17800, type: int, display: true
+  CPUIn: 15000, type: int, display: true
   Mass: 15960, type: float, display: true, formatter: Kilogram
-  EnergyIn: 40, type: int, display: true, formatter: Watt
+  EnergyIn: 200, type: int, display: true, formatter: Watt
 }
 { +Block Id: 1658, Name: TurretBaseArtilleryRetract, Ref: TurretBaseArtillery
   Model: @models/Blocks/Turrets/TurretMSArtilleryRetractPrefab
@@ -23122,7 +23131,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "5,4,5", display: true
   HitPoints: 23200, type: int, display: true
   Mass: 62800, type: float, display: true, formatter: Kilogram
-  EnergyIn: 100, type: int, display: true, formatter: Watt
+  EnergyIn: 150, type: int, display: true, formatter: Watt
+  CPUIn: 22700, type: int, display: true
 }
 
 # HV Turret Groups
@@ -23276,6 +23286,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 2700, type: int, display: true
   Mass: 800, type: float, display: true, formatter: Kilogram
+  EnergyIn: 60, type: int, display: true, formatter: Watt
+  CPUIn: 1000, type: int, display: true
 }
 { +Block Id: 1665, Name: TurretGVRocketRetract, Ref: TurretGVRocket
   Model: @models/Blocks/Turrets/TurretMSRocketRetractPrefab
@@ -23292,7 +23304,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 7020, type: int, display: true
   Mass: 820, type: float, display: true, formatter: Kilogram
-  EnergyIn: 30, type: int, display: true, formatter: Watt
+  EnergyIn: 65, type: int, display: true, formatter: Watt
+  CPUIn: 1400, type: int, display: true
 }
 { +Block Id: 1666, Name: TurretGVPlasmaRetract, Ref: TurretGVPlasma
   Model: @models/Blocks/Turrets/TurretMSPlasmaRetractPrefab
@@ -23309,7 +23322,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 6480, type: int, display: true
   Mass: 1350, type: float, display: true, formatter: Kilogram
-  EnergyIn: 90, type: int, display: true, formatter: Watt
+  EnergyIn: 100, type: int, display: true, formatter: Watt
+  CPUIn: 1600, type: int, display: true
 }
 { +Block Id: 1667, Name: TurretGVArtilleryRetract, Ref: TurretGVArtillery
   Model: @models/Blocks/Turrets/TurretMSArtilleryRetractPrefab
@@ -23327,6 +23341,7 @@ HullCombatSmallBlocks
   HitPoints: 8100, type: int, display: true
   Mass: 5300, type: float, display: true, formatter: Kilogram
   EnergyIn: 100, type: int, display: true, formatter: Watt
+  CPUIn: 5900, type: int, display: true
 }
 { +Block Id: 1668, Name: TurretGVDrillRetract, Ref: TurretGVDrill
   Model: @models/Blocks/Turrets/TurretGVDrillRetractPrefab
@@ -23341,9 +23356,10 @@ HullCombatSmallBlocks
   # Info: bkiTurretRetract, display: true
   Place: Free
   SizeInBlocks: "3,2,3", display: true
-  HitPoints: 8100, type: int, display: true
+  HitPoints: 900, type: int, display: true
   Mass: 1090, type: float, display: true, formatter: Kilogram
-  EnergyIn: 150, type: int, display: true, formatter: Watt
+  EnergyIn: 750, type: int, display: true, formatter: Watt
+  CPUIn: 3100, type: int, display: true
 }
 { +Block Id: 1669, Name: TurretGVToolRetract, Ref: TurretGVTool
   Model: @models/Blocks/Turrets/TurretGVToolRetractPrefab
@@ -23360,7 +23376,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 1200, type: int, display: true
   Mass: 1090, type: float, display: true, formatter: Kilogram
-  EnergyIn: 150, type: int, display: true, formatter: Watt
+  EnergyIn: 800, type: int, display: true, formatter: Watt
+  CPUIn: 3100, type: int, display: true
 }
 { +Block Id: 1670, Name: SentryGun03Retract, Ref: SentryGun03
   Model: @models/Blocks/Turrets/SentryGuns/SentryGunHumanRetractPrefab
