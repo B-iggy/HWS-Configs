@@ -185,9 +185,24 @@
   BlastParticleIndex: 9
   BlastRadius: 2
   BlastDamage: 5000
-  BlastDamageMultiplier_1: 0.3, param1: hull|hullarmored|hullcombat
-  BlastDamageMultiplier_2: 3, param1: metal|metalhard
-  BlastDamageMultiplier_3: 0.2, param1: shield
+  BlastDamageMultiplier_1: 1, param1: head
+  BlastDamageMultiplier_2: 1, param1: body
+  BlastDamageMultiplier_3: 1, param1: alien
+  BlastDamageMultiplier_4: 10, param1: metal
+  BlastDamageMultiplier_5: 10, param1: metallight
+  BlastDamageMultiplier_6: 10, param1: metalhard
+  BlastDamageMultiplier_7: 1, param1: hull
+  BlastDamageMultiplier_8: 1, param1: hullarmored
+  BlastDamageMultiplier_9: 1, param1: hullcombat
+  BlastDamageMultiplier_10: 1, param1: concrete
+  BlastDamageMultiplier_11: 0, param1: dirt
+  BlastDamageMultiplier_12: 1, param1: stone
+  BlastDamageMultiplier_13: 1, param1: wood
+  BlastDamageMultiplier_14: 1, param1: woodblock
+  BlastDamageMultiplier_15: 1, param1: plants
+  BlastDamageMultiplier_16: 1, param1: rock
+  BlastDamageMultiplier_17: 1, param1: shield
+  BlastDamageMultiplier_18: 0.5, param1: plastic
 
   AllowUserInstantiate: false
 }
