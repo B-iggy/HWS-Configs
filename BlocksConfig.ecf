@@ -1724,7 +1724,7 @@ HullCombatSmallBlocks
   Volume: 125, type: float, display: true, formatter: Liter
   Info: "A heavy Torpedo launcher used for launching M77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
   StackSize: 50000
-  MaxCount: 12, type: int, display: true
+  MaxCount: 1, type: int, display: true
   IsOxygenTight: false, display: true
   Category: Weapons/Items
   HitPoints: 75, type: int, display: true
@@ -2642,7 +2642,7 @@ HullCombatSmallBlocks
   IsRetractable: true
   IsOxygenTight: true, display: true
   Info: bkiTurretRetract, display: true
-  HitPoints: 5400, type: int, display: true
+  HitPoints: 12400, type: int, display: true
   Mass: 13510, type: float, display: true, formatter: Kilogram
   Volume: 6150, type: float, display: true, formatter: Liter
   # MaxCount: 4, type: int, display: true
@@ -2659,7 +2659,7 @@ HullCombatSmallBlocks
   IsRetractable: true
   IsOxygenTight: true, display: true
   Info: bkiTurretRetractSpace, display: true
-  HitPoints: 14040, type: int, display: true
+  HitPoints: 21040, type: int, display: true
   Mass: 11850, type: float, display: true, formatter: Kilogram
   Volume: 6150, type: float, display: true, formatter: Liter
   # MaxCount: 4, type: int, display: true
@@ -2726,7 +2726,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,1,3", display: true
   Mass: 6120, type: float, display: true, formatter: Kilogram
   Volume: 6150, type: float, display: true, formatter: Liter
-  HitPoints: 5000, type: int, display: true
+  HitPoints: 12000, type: int, display: true
 }
 
 { +Block Id: 288, Name: TurretMSRocket, Ref: TurretMSRocketRetract
@@ -2744,7 +2744,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,1,3", display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
   Volume: 5535, type: float, display: true, formatter: Liter
-  HitPoints: 13000, type: int, display: true
+  HitPoints: 20000, type: int, display: true
 }
 { +Block Id: 289, Name: TurretRadar
   /* Class: Turret   */
@@ -3181,7 +3181,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   SizeInBlocksLocked: "Base,MS"
   Mass: 15730, type: float, display: true, formatter: Kilogram
-  HitPoints: 3240, type: int, display: true
+  HitPoints: 10240, type: int, display: true
   Volume: 5114, type: float, display: true, formatter: Liter
   Place: Free
 }
@@ -3199,7 +3199,7 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base,MS"
   Mass: 14910, type: float, display: true, formatter: Kilogram
   Volume: 4700, type: float, display: true, formatter: Liter
-  HitPoints: 3250, type: int, display: true
+  HitPoints: 10250, type: int, display: true
   Place: Free
 
   EnergyIn: 2450, type: int, display: true, formatter: Watt
@@ -3218,7 +3218,7 @@ HullCombatSmallBlocks
   Info: bkiTurretRetractSpace, display: true
   RotSpeed: 100, type: int, display: true
   CPUIn: 15100, type: int, display: true
-  HitPoints: 10800, type: int, display: true
+  HitPoints: 17800, type: int, display: true
   Mass: 15960, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
 }
@@ -3237,7 +3237,7 @@ HullCombatSmallBlocks
   RotSpeed: 80, type: int, display: true
   CPUIn: 20700, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
-  HitPoints: 12960, type: int, display: true
+  HitPoints: 19960, type: int, display: true
   Mass: 16140, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
 }
@@ -3254,7 +3254,7 @@ HullCombatSmallBlocks
   Info: bkiTurretRetractSpace, display: true
   # MaxCount: 4, type: int, display: true
   CPUIn: 1300, type: int, display: true
-  HitPoints: 15120, type: int, display: true
+  HitPoints: 22120, type: int, display: true
   Mass: 13660, type: float, display: true, formatter: Kilogram
   Volume: 6250, type: float, display: true, formatter: Liter
 }
@@ -3273,7 +3273,7 @@ HullCombatSmallBlocks
   RotSpeed: 150, type: int, display: true
   CPUIn: 2500, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateFast
-  HitPoints: 5400, type: int, display: true
+  HitPoints: 12400, type: int, display: true
   Mass: 13840, type: float, display: true, formatter: Kilogram
   Volume: 6250, type: float, display: true, formatter: Liter
 }
@@ -3294,7 +3294,7 @@ HullCombatSmallBlocks
   Mass: 62800, type: float, display: true, formatter: Kilogram
   Volume: 7700, type: float, display: true, formatter: Liter      # max volume
   EnergyIn: 70, type: int, display: true, formatter: Watt
-  HitPoints: 16200, type: int, display: true
+  HitPoints: 23200, type: int, display: true
   RotSpeed: 60, type: int, display: true
   CPUIn: 21600, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
@@ -12165,7 +12165,7 @@ HullCombatSmallBlocks
   IsRetractable: false
   SizeInBlocks: "5,2,5", display: true
   Volume: 7700, type: float, display: true, formatter: Liter
-  HitPoints: 13500, type: int, display: true
+  HitPoints: 20500, type: int, display: true
   Mass: 19800, type: float, display: true, formatter: Kilogram
   CPUIn: 21600, type: int, display: true
   TechTreeNames: Hidden
@@ -16045,7 +16045,7 @@ HullCombatSmallBlocks
   WeaponItem: TurretMSToolWeapon
   TemplateRoot: TurretMSToolBlocks
   Info: bkiTurretTool, display: true
-  HitPoints: 2700, type: int, display: true
+  HitPoints: 9700, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 9660, type: float, display: true, formatter: Kilogram
   SizeInBlocks: "3,1,3", display: true
@@ -16821,7 +16821,7 @@ HullCombatSmallBlocks
   CPUIn: 15100, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
-  HitPoints: 9000, type: int, display: true
+  HitPoints: 16000, type: int, display: true
   RotSpeed: 125, type: int, display: true
   Zoom: 5, type: float
 }
@@ -16938,7 +16938,7 @@ HullCombatSmallBlocks
   EnergyIn: 55, type: int, display: true, formatter: Watt
   CPUIn: 2500, type: int, display: true
   Mass: 6150, type: float, display: true, formatter: Kilogram
-  HitPoints: 4500, type: int, display: true
+  HitPoints: 11500, type: int, display: true
   RotSpeed: 150, type: int, display: true
   Zoom: 5, type: float
 }
@@ -16975,7 +16975,7 @@ HullCombatSmallBlocks
   EnergyIn: 5, type: int, display: true, formatter: Watt
   CPUIn: 1300, type: int, display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
-  HitPoints: 12600, type: int, display: true
+  HitPoints: 19600, type: int, display: true
   RotSpeed: 150, type: int, display: true
   Zoom: 5, type: float
 }

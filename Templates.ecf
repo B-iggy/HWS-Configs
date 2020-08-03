@@ -2040,39 +2040,42 @@
   }
 }
 
-# { +Template Name: OxygenGenerator
-  # CraftTime: 12 #A1
-  # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  # { Child Inputs
-    # SteelPlate: 15
-    # Computer: 1
-    # Motor: 1
-    # OpticalFiber: 2
-  # }
-# }
+{ +Template Name: OxygenGenerator
+  CraftTime: 15 #A1
+   Target: "BaseC,LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 15
+    Computer: 1
+    Motor: 5
+    MechanicalComponents: 10
+    OpticalFiber: 10
+  }
+}
 
 { +Template Name: WaterGenerator
   CraftTime: 12 #A1 1
   Target: "SurvC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 15
+    MechanicalComponents: 10
     Computer: 1
     Motor: 2
     OpticalFiber: 1
   }
 }
 
-# { +Template Name: OxygenHydrogenGenerator
-  # CraftTime: 12 #B1 7
-  # Target: "LargeC,AdvC"
-  # { Child Inputs
-    # SteelPlate: 15
-    # EnergyMatrix: 1
-    # Computer: 1
-    # Motor: 1
-    # OpticalFiber: 1
-  # }
-# }
+{ +Template Name: OxygenHydrogenGenerator
+  CraftTime: 20 #B1 7
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    TitanPlates: 30
+    MechanicalComponents: 10
+    EnergyMatrix: 1
+    Computer: 1
+    Motor: 5
+    OpticalFiber: 10
+  }
+}
 
 { +Template Name: FridgeSV
   CraftTime: 15 #A2 HV SV 5
@@ -5371,6 +5374,18 @@
   }
 }
 
+{ +Template Name: PentaxidSeedCrystal
+  DeconOverride: Stop
+  CraftTime: 50
+  Target: "FoodP"
+  { Child Inputs
+    PentaxidElement: 25
+    ErestrumGel: 12
+	NutrientSolution: 5
+    XenoSubstrate: 5
+  }
+}
+
 { +Template Name: WeaponSVTorpedoLauncher
   CraftTime: 90 #D1 20  uses "M77 Torpedo"
   Target: AdvC
@@ -5386,6 +5401,71 @@
 }
 
 { +Template Name: AmmoSVTorpedo
+  OutputCount: 1 #D1 20 for "M77 Torpedo Launcher"
+  CraftTime: 30
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 10
+    MagnesiumPowder: 100
+    FusionCell: 1
+    NCPowder: 50
+  }
+}
+
+{ +Template Name: WeaponSVAntimatterCannon
+  CraftTime: 90
+  Target: AdvC
+  { Child Inputs
+    ZascosiumAlloy: 32
+    ErestrumIngot: 10
+	SteelPlateArmored: 25
+	MechanicalComponents: 40
+    Motor: 12
+	Computer: 5
+    Oscillator: 10
+    PowerCoil: 1
+    XenoSubstrate: 10
+  }
+}
+
+{ +Template Name: AmmoSVAntimatterCannon
+  OutputCount: 10
+  CraftTime: 15
+  Target: "AdvC"
+  { Child Inputs
+    PentaxidElement: 30
+    ErestrumGel: 50
+    PlasticMaterial: 10
+  }
+}
+
+{ +Template Name: WeaponCVTorpedoLauncher
+  CraftTime: 90 #D1 20  uses "L77 Torpedo"
+  Target: AdvC
+  { Child Inputs
+    ZascosiumAlloy: 70
+	SteelPlateArmored: 30
+	MechanicalComponents: 50
+    Motor: 20
+	Computer: 10
+    Oscillator: 10
+    PowerCoil: 2
+    XenoSubstrate: 10
+  }
+}
+
+{ +Template Name: AmmoCVTorpedo
+  OutputCount: 2 #D1 20 for "L77 Torpedo Launcher"
+  CraftTime: 60
+  Target: "AdvC"
+  { Child Inputs
+    ZascosiumAlloy: 10
+    FusionCell: 1
+    TurretMSPlasmaCharge: 1
+  }
+}
+
+{ +Template Name: AmmoTurretHVLaser
   OutputCount: 4 #D1 20 for "M77 Torpedo Launcher"
   CraftTime: 5
   Target: "AdvC"
@@ -5395,14 +5475,28 @@
     NCPowder: 20
   }
 }
-{ +Template Name: PentaxidSeedCrystal
-  DeconOverride: Stop
-  CraftTime: 40
-  Target: "FoodP"
+
+{ +Template Name: MedicGun
+  CraftTime: 30 #A2 uses medkits as ammo
+  Target: "LargeC,AdvC"
   { Child Inputs
-    PentaxidElement: 25
-    ErestrumGel: 12
-	NutrientSolution: 5
-    XenoSubstrate: 5
+    MechanicalComponents: 8
+    SteelPlate: 4
+    Electronics: 1
+	Nanotubes: 5
+	Medikit04: 1
+	AlienParts02: 1
+  }
+}
+
+{ +Template Name: FlameThrower
+  CraftTime: 50
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 18
+	TitanPlates: 3
+    Electronics: 6
+    CobaltAlloy: 30
+	Nanotubes: 10
   }
 }
