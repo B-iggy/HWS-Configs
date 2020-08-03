@@ -192,7 +192,7 @@
   stepsound: stone
   stability_glue: 600
   Mass: 50, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 50, type: float, display: false, formatter: Hardness
   HitPoints: 100, type: int, display: false
 }
 { Material Name: concretearmored
@@ -203,7 +203,7 @@
   stepsound: stone
   stability_glue: 6000
   Mass: 500, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 50, type: float, display: false, formatter: Hardness
   HitPoints: 2200, type: int, display: false
 }
 { Material Name: metallight
@@ -223,7 +223,7 @@
   stepsound: metal
   stability_glue: 100
   Mass: 20, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 20, type: float, display: false, formatter: Hardness
   HitPoints: 50, type: int, display: false
 }
 { Material Name: metalhard
@@ -234,7 +234,7 @@
   stepsound: metal
   stability_glue: 100
   Mass: 20, type: float, display: false, formatter: Kilogram
-  Hardness: 35, type: float, display: false, formatter: Hardness
+  Hardness: 25, type: float, display: false, formatter: Hardness
   HitPoints: 80, type: int, display: false
 }
 { Material Name: plastic
@@ -245,7 +245,7 @@
   stepsound: metal
   stability_glue: 960
   Mass: 80, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 30, type: float, display: false, formatter: Hardness
   HitPoints: 25, type: int, display: false
 }
 { Material Name: hulllight
