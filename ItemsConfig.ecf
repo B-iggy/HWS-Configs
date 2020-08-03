@@ -4255,6 +4255,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
+    AllowAt: "Space"
     Damage: 10000, display: true
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
