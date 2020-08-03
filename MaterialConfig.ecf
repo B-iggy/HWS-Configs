@@ -167,7 +167,7 @@
   stepsound: alien
   stability_glue: 200
   Mass: 10, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 30, type: float, display: false, formatter: Hardness
   HitPoints: 150, type: int, display: false
   O2Content: 30, type: int, display: false
 }
@@ -245,7 +245,7 @@
   stepsound: metal
   stability_glue: 960
   Mass: 80, type: float, display: false, formatter: Kilogram
-  Hardness: 30, type: float, display: false, formatter: Hardness
+  Hardness: 20, type: float, display: false, formatter: Hardness
   HitPoints: 25, type: int, display: false
 }
 { Material Name: hulllight
@@ -289,7 +289,7 @@
   stepsound: metal
   stability_glue: 6000
   Mass: 500, type: float, display: false, formatter: Kilogram
-  Hardness: 15, type: float, display: false, formatter: Hardness
+  Hardness: 20, type: float, display: false, formatter: Hardness
   HitPoints: 2000, type: int, display: false
 }
 
