@@ -18076,6 +18076,14 @@ HullCombatSmallBlocks
   # CanPickup: true
   Model: Entities/Decorations/DecoNPC/StandingNPC2Prefab
   ShowUser: Yes
+  #AllowPlacingAt: "GV,SS,MS,Base", display: true
+  #SizeInBlocksLocked: "MS,Base,SS,GV"
+  #SizeInBlocks: "1,1,1", display: true
+  #AllowedInBlueprint: true, display: true
+
+  #EnergyIn: -1000, type: int, display: true, formatter: Watt
+  #Torque: 1500, type: int, display: true, formatter: NewtonMeter
+  #CPUIn: -1000, type: int, display: true
 }
 { +Block Id: 1252, Name: ConsoleSmallHuman, Ref: NPCHumanTemplate
   Group: cpgCrewStationHuman
