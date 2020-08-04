@@ -3169,7 +3169,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Material: metalweapon
   HoldType: 15
   StackSize: 1
-  CustomIcon: Fillertool
+  #CustomIcon: Fillertool
   Category: Weapons/Items
   Mass: 28, type: float, display: false, formatter: Kilogram
   Volume: 40, type: float, display: true, formatter: Liter
@@ -3245,7 +3245,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Material: metalweapon
   HoldType: 15
   StackSize: 1
-  CustomIcon: StarterTool
+  #CustomIcon: StarterTool
   Category: Weapons/Items
   Info: "Some kind of plasma cannon of alien origin. It fires electro-magnetically guided balls of exotic plasma at a target.", display: true
   Mass: 45, type: float, display: true, formatter: Kilogram
@@ -9738,7 +9738,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  Category: Food
  FoodDecayTime: 150, display: true, type: int
  FoodDecayedItem: RottenFood
- ShowUser: No
+ ShowUser: Yes
 }
 
 { +Item Id: 361, Name: MeatBurger, Ref: FoodTemplate
