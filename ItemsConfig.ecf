@@ -6242,6 +6242,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 475, display: true
     SpeedSpace: 385, display: true
     RangeSpace: 950, display: true
+    HomingSpeed: 0.2
     Ballistic: false
     Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
     Buff_chance: "0.2,0.5,0.2,0.3"
@@ -6737,10 +6738,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 266
   { Child 0
     Class: Projectile
-    Damage: 5000, display: true
+    Damage: 7000, display: true
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
-    BlastDamage: 2500, display: true
+    BlastDamage: 3500, display: true
     Speed: 145, display: true
     Range: 650, display: true
     SpeedSpace: 235, display: true
@@ -6885,6 +6886,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 657, display: true
     SpeedSpace: 435, display: true
     RangeSpace: 1789, display: true
+    HomingSpeed: 0.1
     Ballistic: false
     Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
     Buff_chance: "0.2,0.4,0.1,0.2"
@@ -6946,15 +6948,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 3689, display: true
+    Damage: 4000, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 3689, display: true
+    BlastDamage: 4000, display: true
     Speed: 650, display: true
     Range: 754, display: true
     SpeedSpace: 750, display: true
     RangeSpace: 1108, display: true
-    HomingSpeed: 3.5
+    HomingSpeed: 2.7
     Ballistic: false
     Buff: "OpenWound,Mutilation,Stunned"
     Buff_chance: "0.4,0.1,0.2"
@@ -6965,8 +6967,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_4: 10, param1: metal
     DamageMultiplier_5: 10, param1: metallight
     DamageMultiplier_6: 10, param1: metalhard
-    DamageMultiplier_7: 1, param1: hull
-    DamageMultiplier_8: 1, param1: hullarmored
+    DamageMultiplier_7: 5, param1: hull
+    DamageMultiplier_8: 5, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
     DamageMultiplier_10: 1, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
@@ -6983,8 +6985,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_4: 10, param1: metal
     BlastDamageMultiplier_5: 10, param1: metallight
     BlastDamageMultiplier_6: 10, param1: metalhard
-    BlastDamageMultiplier_7: 1, param1: hull
-    BlastDamageMultiplier_8: 1, param1: hullarmored
+    BlastDamageMultiplier_7: 5, param1: hull
+    BlastDamageMultiplier_8: 5, param1: hullarmored
     BlastDamageMultiplier_9: 1, param1: hullcombat
     BlastDamageMultiplier_10: 1, param1: concrete
     BlastDamageMultiplier_11: 0, param1: dirt
@@ -7024,6 +7026,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 675, display: true
     SpeedSpace: 475, display: true
     RangeSpace: 1100, display: true
+    HomingSpeed: 0.3
     Ballistic: false
     Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
     Buff_chance: "0.3,0.5,0.2,0.3"
@@ -7255,15 +7258,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: MS, display: false
   MarketPrice: 33
   { Child 0
-    Damage: 4500, display: true
+    Damage: 3500, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 4500, display: true
+    BlastDamage: 3500, display: true
     Speed: 625, display: true
     Range: 635, display: true
     SpeedSpace: 735, display: true
     RangeSpace: 1100, display: true
-    HomingSpeed: 3
+    HomingSpeed: 2.5
     Ballistic: false
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
@@ -7272,8 +7275,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_4: 10, param1: metal
     DamageMultiplier_5: 10, param1: metallight
     DamageMultiplier_6: 10, param1: metalhard
-    DamageMultiplier_7: 1, param1: hull
-    DamageMultiplier_8: 1, param1: hullarmored
+    DamageMultiplier_7: 5, param1: hull
+    DamageMultiplier_8: 5, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
     DamageMultiplier_10: 1, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
@@ -7290,8 +7293,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_4: 10, param1: metal
     BlastDamageMultiplier_5: 10, param1: metallight
     BlastDamageMultiplier_6: 10, param1: metalhard
-    BlastDamageMultiplier_7: 1, param1: hull
-    BlastDamageMultiplier_8: 1, param1: hullarmored
+    BlastDamageMultiplier_7: 5, param1: hull
+    BlastDamageMultiplier_8: 5, param1: hullarmored
     BlastDamageMultiplier_9: 1, param1: hullcombat
     BlastDamageMultiplier_10: 1, param1: concrete
     BlastDamageMultiplier_11: 0, param1: dirt
@@ -7467,6 +7470,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 751, display: true
     SpeedSpace: 485, display: true
     RangeSpace: 1150, display: true
+    HomingSpeed: 0.4
     Ballistic: false
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
