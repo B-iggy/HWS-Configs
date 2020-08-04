@@ -2130,7 +2130,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 200, display: false
     BulletSpread: 0.25, display: false
     Recoil: 0.3, display: true
-    Damage: 70, display: true
+    Damage: 60, display: true
     AmmoCapacity: 250, display: true
     AmmoType: PulseLaserChargeRifle, display: true
     Automatic: true
@@ -2173,7 +2173,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 200, display: false
     NoiseStrength: 100, display: false
-    Recoil: 1.3, display: true
+    Recoil: 1.2, display: true
     Damage: 130, display: true
     BulletSpread: 0.7, display: false
     AmmoCapacity: 250, display: true
@@ -2296,15 +2296,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Damage: 195, display: true
-    ROF: 0.20, type: float, display: true, formatter: ROF
-    ReloadDelay: 4, display: true
+    ROF: 0.17, type: float, display: true, formatter: ROF
+    ReloadDelay: 3.7, display: true
     Buff: "RadiationBurn,DermalBurn"
     Buff_chance: "0.05,0.2"
     # CameraShake: 0
-    Recoil: 0.375, display: true
+    Recoil: 0.17, display: true
     AmmoCapacity: 30, display: true
     AmmoType: PulseLaserChargeRifle, display: true
-    Range: 168, display: false
+    Range: 200, display: false
     NoiseStrength: 80, display: false
 	SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
     # SfxBegin: Weapons/Player/Tools/WeaponLightning_start
@@ -2317,7 +2317,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     TracerPerBullet: 1
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
@@ -4434,7 +4434,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     TracerSpeed: 600
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 0.5, param1: metal
     DamageMultiplier_5: 0.5, param1: metallight
@@ -4786,7 +4786,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     TracerSpeed: 600
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 0.5, param1: metal
     DamageMultiplier_5: 0.5, param1: metallight
@@ -6561,7 +6561,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Buff_chance: "0.1,0.7,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 20, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
@@ -6702,7 +6702,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 0.5, param1: metal
     DamageMultiplier_5: 0.5, param1: metallight
@@ -7170,7 +7170,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Buff_chance: "0.3,0.15,0.1"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
@@ -7379,7 +7379,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 0.5, param1: metal
     DamageMultiplier_5: 0.5, param1: metallight
