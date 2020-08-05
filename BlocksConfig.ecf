@@ -1516,7 +1516,7 @@ HullCombatSmallBlocks
   CustomIcon: ControlStationNPC
   IndexName: Generator
   Material: human, display: true
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   StackSize: 1
   Shape: ModelEntity
@@ -1549,7 +1549,7 @@ HullCombatSmallBlocks
   CustomIcon: TacticalOfficer
   IndexName: Generator
   Material: human, display: true
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   Shape: ModelEntity
@@ -1580,7 +1580,7 @@ HullCombatSmallBlocks
   CustomIcon: ConsoleSmallNPC
   IndexName: Generator
   Material: human, display: true
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   # AllowedInBlueprint: false, display: true
@@ -1613,7 +1613,7 @@ HullCombatSmallBlocks
   IndexName: Generator
   Material: human, display: true
   Model: Entities/Decorations/DecoNPC/CommandingOfficerAlienPrefab
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   # AllowedInBlueprint: false, display: true
@@ -1625,7 +1625,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 1
 
-  Info: "Hired Crew Member for better CPU and Torque efficiency in your CV.", display: true
+  Info: "Hired Crew Member for better efficiency for CPU and Energy in your CV.", display: true
   AllowedInBlueprint: false, display: true
   # CanPickup: true
   MaxCount: 1, type: int, display: true
@@ -1645,7 +1645,7 @@ HullCombatSmallBlocks
   CustomIcon: EngineerMainStation
   IndexName: Generator
   Material: human, display: true
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   # AllowedInBlueprint: false, display: true
@@ -1658,7 +1658,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
 
-  Info: "Hired Crew Member for better efficiency for CPU and Energy in your CV.", display: true
+  Info: "Hired Crew Member for better CPU and Torque efficiency in your CV.", display: true
   AllowedInBlueprint: false, display: true
   # CanPickup: true
   MaxCount: 2, type: int, display: true
@@ -1679,7 +1679,7 @@ HullCombatSmallBlocks
   CustomIcon: SecurityGuard
   IndexName: Generator
   Material: human, display: true
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   # AllowedInBlueprint: false, display: true
@@ -1712,7 +1712,7 @@ HullCombatSmallBlocks
   CustomIcon: OperatorPilot
   IndexName: Generator
   Material: human, display: true
-  Group: "Hired Crew"
+  Group: cpgHWSCrew
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   # AllowedInBlueprint: false, display: true
