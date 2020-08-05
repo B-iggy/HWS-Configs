@@ -3944,7 +3944,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 30, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1100, type: int, display: true
   HitPoints: 550, type: int, display: true
   RotSpeed: 140, type: int, display: true
   Zoom: 5, type: float
@@ -4868,7 +4868,7 @@ HullCombatSmallBlocks
   IsIgnoreLC: true
   HitPoints: 250, type: int, display: true
   EnergyOut: 1300, type: int, display: true, formatter: Watt
-  CPUIn: 200, type: int, display: true
+  CPUIn: 100, type: int, display: true
   Category: Devices
   BlastParticleIndex: 2
   BlastRadius: 5
@@ -6512,7 +6512,7 @@ HullCombatSmallBlocks
   Volume: 62.50, type: float, display: true, formatter: Liter
   Mass: 990, type: float, display: true, formatter: Kilogram
   EnergyIn: 15, type: int, display: true, formatter: Watt
-  CPUIn: 1500, type: int, display: true
+  CPUIn: 1470, type: int, display: true
   MaxCount: 4, type: int, display: true
   HitPoints: 770, type: int, display: true
   AllowPlacingAt: SS, display: true
@@ -26679,7 +26679,7 @@ HullCombatSmallBlocks
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
   EnergyIn: 30, type: int, display: true, formatter: Watt
-  # CPUOut: 3000, type: int, display: true
+  CPUOut: 500, type: int, display: true
   CPUExtenderLevel: 4, type: int, display: true
   HitPoints: 330, type: int, display: true
 
@@ -26793,7 +26793,7 @@ HullCombatSmallBlocks
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
   EnergyIn: 40, type: int, display: true, formatter: Watt
-  # CPUOut: 6000, type: int, display: true
+  CPUOut: 1500, type: int, display: true
   CPUExtenderLevel: 4, type: int, display: true
   HitPoints: 330, type: int, display: true
 
@@ -26907,7 +26907,7 @@ HullCombatSmallBlocks
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
   EnergyIn: 100, type: int, display: true, formatter: Watt
-  # CPUOut: 200000, type: int, display: true
+  CPUOut: 5000, type: int, display: true
   CPUExtenderLevel: 4, type: int, display: true
   HitPoints: 950, type: int, display: true
 
