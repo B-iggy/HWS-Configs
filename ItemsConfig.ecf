@@ -4270,7 +4270,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 10, param1: alien
+    DamageMultiplier_3: 20, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
     DamageMultiplier_6: 1, param1: metalhard
@@ -4288,7 +4288,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 1, param1: plastic
     BlastDamageMultiplier_1: 1, param1: head
     BlastDamageMultiplier_2: 1, param1: body
-    BlastDamageMultiplier_3: 10, param1: alien
+    BlastDamageMultiplier_3: 20, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
     BlastDamageMultiplier_6: 1, param1: metalhard
@@ -6249,7 +6249,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 5, param1: alien
+    DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
     DamageMultiplier_6: 1, param1: metalhard
@@ -6267,7 +6267,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 5, param1: plastic
     BlastDamageMultiplier_1: 1, param1: head
     BlastDamageMultiplier_2: 1, param1: body
-    BlastDamageMultiplier_3: 5, param1: alien
+    BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
     BlastDamageMultiplier_6: 1, param1: metalhard
@@ -6893,7 +6893,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 5, param1: alien
+    DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
     DamageMultiplier_6: 1, param1: metalhard
@@ -6911,7 +6911,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 5, param1: plastic
     BlastDamageMultiplier_1: 1, param1: head
     BlastDamageMultiplier_2: 1, param1: body
-    BlastDamageMultiplier_3: 5, param1: alien
+    BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
     BlastDamageMultiplier_6: 1, param1: metalhard
@@ -7033,7 +7033,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 5, param1: alien
+    DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
     DamageMultiplier_6: 1, param1: metalhard
@@ -7051,7 +7051,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 5, param1: plastic
     BlastDamageMultiplier_1: 1, param1: head
     BlastDamageMultiplier_2: 1, param1: body
-    BlastDamageMultiplier_3: 5, param1: alien
+    BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
     BlastDamageMultiplier_6: 1, param1: metalhard
@@ -7475,7 +7475,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 5, param1: alien
+    DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
     DamageMultiplier_6: 1, param1: metalhard
@@ -7493,7 +7493,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 5, param1: plastic
     BlastDamageMultiplier_1: 1, param1: head
     BlastDamageMultiplier_2: 1, param1: body
-    BlastDamageMultiplier_3: 5, param1: alien
+    BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
     BlastDamageMultiplier_6: 1, param1: metalhard

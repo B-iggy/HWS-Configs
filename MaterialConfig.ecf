@@ -167,7 +167,7 @@
   stepsound: alien
   stability_glue: 200
   Mass: 10, type: float, display: false, formatter: Kilogram
-  Hardness: 30, type: float, display: false, formatter: Hardness
+  Hardness: 25, type: float, display: false, formatter: Hardness
   HitPoints: 150, type: int, display: false
   O2Content: 30, type: int, display: false
 }
