@@ -1669,8 +1669,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "2,1,1", display: true
 
   EnergyIn: 1, type: int, display: true, formatter: Watt
-  Torque: 150000, type: int, display: true, formatter: NewtonMeter
-  CPUIn: -10000, type: int, display: true
+  Torque: 300000, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -15000, type: int, display: true
   Volume: 70, type: float, display: true, formatter: Liter
   Mass: 70, type: float, display: true, formatter: Kilogram
 }
@@ -1702,7 +1702,7 @@ HullCombatSmallBlocks
   #SizeInBlocksLocked: "GV"
   SizeInBlocks: "1,1,1", display: true
 
-  Torque: 300, type: int, display: true, formatter: NewtonMeter
+  Torque: 1000, type: int, display: true, formatter: NewtonMeter
   CPUIn: -2500, type: int, display: true
   Volume: 80, type: float, display: true, formatter: Liter
   Mass: 80, type: float, display: true, formatter: Kilogram
@@ -1736,7 +1736,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
 
   Torque: 1500, type: int, display: true, formatter: NewtonMeter
-  CPUIn: -5000, type: int, display: true
+  CPUIn: -7000, type: int, display: true
   Volume: 150, type: float, display: true, formatter: Liter
   Mass: 150, type: float, display: true, formatter: Kilogram
 }
