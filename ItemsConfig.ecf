@@ -4191,9 +4191,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: LauncherSS
-    ROF: 0.6, type: float, display: true, formatter: ROF
-    Range: 748, display: true
-    RangeSpace: 1050, display: true
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    Range: 600, display: true
+    RangeSpace: 1000, display: true
     AmmoCapacity: 100, display: false   # no need to display since unlimited ammo
     # AmmoUnlimited: true
     AmmoType: AmmoTurretHVLaser, display: true
@@ -4203,7 +4203,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
-    PfxMuzzle: turretMuzzleFire
+    PfxMuzzle: PlasmaMuzzleFlashPrefab
   }
 }
 
@@ -7908,9 +7908,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 0
   #  BlastRadius: 3
   #  BlastDamage: 200
-    Speed: 600, display: true
+    Speed: 700, display: true
     Range: 600, display: true
-    SpeedSpace: 1100, display: true
+    SpeedSpace: 900, display: true
     RangeSpace: 1000, display: true
     Ballistic: false
     Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
