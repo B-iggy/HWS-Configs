@@ -1507,7 +1507,240 @@ HullCombatSmallBlocks
   }
 }
 
-/* 131 - 255 available free */
+
+/* 135 - 243 available free */
+
+# HWS Crews
+{ +Block Id: 244, Name: CrewBaseEngineerI
+  Class: Weapon
+  CustomIcon: ControlStationNPC
+  IndexName: Generator
+  Material: human, display: true
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  StackSize: 1
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  # AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  BlockColor: "170,170,170"
+  Model: Entities/Decorations/DecoNPC/ControlStationNPCPrefab
+  ShowUser: Yes
+  Place: Free
+  Category: BuildingBlocks
+
+  Info: "Hired Crew Member for better Energy efficiency in your Base.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  MaxCount: 3, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "Base", display: true
+  SizeInBlocksLocked: "Base"
+  SizeInBlocks: "1,1,1", display: true
+
+  EnergyIn: -1000, type: int, display: true, formatter: Watt
+  Volume: 110, type: float, display: true, formatter: Liter
+  Mass: 110, type: float, display: true, formatter: Kilogram
+}
+{ +Block Id: 245, Name: CrewBaseEngineerII
+  Class: Weapon
+  CustomIcon: TacticalOfficer
+  IndexName: Generator
+  Material: human, display: true
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  BlockColor: "110,110,110"
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Category: BuildingBlocks
+  StackSize: 1
+
+  Info: "Hired Crew Member for better efficiency for CPU and Energy in your Base.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  Model: Entities/Decorations/DecoNPC/TacticalOfficerPrefab
+  ShowUser: Yes
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "Base", display: true
+  SizeInBlocksLocked: "Base"
+  SizeInBlocks: "1,1,1", display: true
+
+  EnergyIn: -4000, type: int, display: true, formatter: Watt
+  CPUIn: -100000, type: int, display: true
+  Volume: 200, type: float, display: true, formatter: Liter
+  Mass: 200, type: float, display: true, formatter: Kilogram
+}
+{ +Block Id: 246, Name: CrewCVEngineerI
+  Class: Weapon
+  CustomIcon: ConsoleSmallNPC
+  IndexName: Generator
+  Material: human, display: true
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  BlockColor: "110,110,110"
+  # AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  Model: Entities/Decorations/DecoNPC/ConsoleSmallNPCPrefab
+  Category: BuildingBlocks
+  ShowUser: Yes
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  StackSize: 1
+
+  Info: "Hired Crew Member for better Energy efficiency in your CV.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  MaxCount: 3, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "MS", display: true
+  SizeInBlocksLocked: "MS"
+  SizeInBlocks: "1,1,1", display: true
+
+  EnergyIn: -1000, type: int, display: true, formatter: Watt
+  Volume: 90, type: float, display: true, formatter: Liter
+  Mass: 90, type: float, display: true, formatter: Kilogram
+}
+{ +Block Id: 247, Name: CrewCVEngineerII
+  Class: Weapon
+  CustomIcon: CommandingOfficerAlien
+  IndexName: Generator
+  Material: human, display: true
+  Model: Entities/Decorations/DecoNPC/CommandingOfficerAlienPrefab
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  BlockColor: "110,110,110"
+  # AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  Category: BuildingBlocks
+  ShowUser: Yes
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  StackSize: 1
+
+  Info: "Hired Crew Member for better CPU and Torque efficiency in your CV.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "MS", display: true
+  SizeInBlocksLocked: "MS"
+  SizeInBlocks: "1,1,1", display: true
+
+  EnergyIn: -4000, type: int, display: true, formatter: Watt
+  CPUIn: -5000, type: int, display: true
+  Volume: 100, type: float, display: true, formatter: Liter
+  Mass: 100, type: float, display: true, formatter: Kilogram
+}
+{ +Block Id: 248, Name: CrewCVCoordinatorI
+  Class: Weapon
+  CustomIcon: EngineerMainStation
+  IndexName: Generator
+  Material: human, display: true
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  BlockColor: "110,110,110"
+  # AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  Model: Entities/Decorations/DecoNPC/EngineerMainStationPrefab
+  StackSize: 1
+  Category: BuildingBlocks
+  ShowUser: Yes
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+
+  Info: "Hired Crew Member for better efficiency for CPU and Energy in your CV.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  MaxCount: 2, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "MS", display: true
+  SizeInBlocksLocked: "MS"
+  SizeInBlocks: "2,1,1", display: true
+
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  Torque: 150000, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -10000, type: int, display: true
+  Volume: 70, type: float, display: true, formatter: Liter
+  Mass: 70, type: float, display: true, formatter: Kilogram
+}
+{ +Block Id: 249, Name: CrewHVOperatorI
+  Class: Weapon
+  CustomIcon: SecurityGuard
+  IndexName: Generator
+  Material: human, display: true
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  BlockColor: "110,110,110"
+  # AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  Model: Entities/Decorations/DecoNPC/SecurityGuardPrefab
+  StackSize: 1
+  Category: BuildingBlocks
+  ShowUser: Yes
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+
+  Info: "Hired Crew Member for better CPU and Torque efficiency in your HV.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  MaxCount: 3, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "GV", display: true
+  #SizeInBlocksLocked: "GV"
+  SizeInBlocks: "1,1,1", display: true
+
+  Torque: 300, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -2500, type: int, display: true
+  Volume: 80, type: float, display: true, formatter: Liter
+  Mass: 80, type: float, display: true, formatter: Kilogram
+}
+{ +Block Id: 250, Name: CrewSVPilotI
+  Class: Weapon
+  CustomIcon: OperatorPilot
+  IndexName: Generator
+  Material: human, display: true
+  Group: "Hired Crew"
+  IsAccessible: true, type: bool
+  BlockColor: "110,110,110"
+  # AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  Model: Entities/Decorations/DecoNPC/OperatorPilotPrefab
+  StackSize: 1
+  Category: BuildingBlocks
+  ShowUser: Yes
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+
+  Info: "Hired Crew Member for better CPU and Torque efficiency in your SV.", display: true
+  AllowedInBlueprint: false, display: true
+  # CanPickup: true
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
+
+  AllowPlacingAt: "SS", display: true
+  #SizeInBlocksLocked: "SS"
+  SizeInBlocks: "1,1,1", display: true
+
+  Torque: 1500, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -5000, type: int, display: true
+  Volume: 150, type: float, display: true, formatter: Liter
+  Mass: 150, type: float, display: true, formatter: Kilogram
+}
+
 
 
 { Block Id: 251, Name: PentaxidSeedCrystal
