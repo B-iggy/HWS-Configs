@@ -5410,7 +5410,7 @@ HullCombatSmallBlocks
   BlastRadius: 2
   BlastDamage: 50
   EnergyIn: 50, type: int, display: true, formatter: Watt
-  CPUIn: 1700, type: int, display: true
+  CPUIn: 1300, type: int, display: true
   HitPoints: 770, type: int, display: true
   # Damage: 54, display: true
   # AmmoCapacity: 50, display: true
