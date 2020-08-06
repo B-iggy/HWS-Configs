@@ -572,7 +572,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BulletSpread: 0.2
     RaySpread: 1, display: true
     Recoil: 1.68, display: true
-    Damage: 115, display: true
+    Damage: 90, display: true
     AmmoCapacity: 7, display: true
     AmmoType: ShotgunShells, display: true
     ReloadDelay: 3, display: true
@@ -2130,7 +2130,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 200, display: false
     BulletSpread: 0.25, display: false
     Recoil: 0.3, display: true
-    Damage: 60, display: true
+    Damage: 50, display: true
     AmmoCapacity: 250, display: true
     AmmoType: PulseLaserChargeRifle, display: true
     Automatic: true
@@ -2236,13 +2236,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     ROF: 0.85, type: float, display: true, formatter: ROF
-    Automatic: true, display: true
+    Automatic: false, display: true
     Range: 79, display: false
     NoiseStrength: 120, display: false
     BulletSpread: 0.1
     RaySpread: 0.475, display: true
     Recoil: 1.38, display: true
-    Damage: 150, display: true
+    Damage: 100, display: true
     AmmoCapacity: 11, display: true
     ReloadDelay: 3, display: true
     Buff: "OpenWound,Mutilation"
@@ -2449,7 +2449,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BulletSpread: 0.075, display: true
     Recoil: 0.25, display: true
     Damage: 95, display: true
-    AllowRemote: false
+    AllowRemote: true
     Automatic: true, display: true
     AmmoCapacity: 24, display: true
     ReloadDelay: 3.7, display: true
@@ -3251,9 +3251,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 45, type: float, display: true, formatter: Kilogram
   Volume: 50, type: float, display: true, formatter: Liter
   #just for display - BlastRadius and BlastDamage is controlled by "SciFiCannonPlasmaCharge"
-  Damage: 1000, display: true
+  Damage: 5000, display: true
   BlastRadius: 3, display: true
-  BlastDamage: 500, display: true
+  BlastDamage: 2500, display: true
   # Explosion Radius: 3, display: true
   Durability: 350, display: false
   DegradationProb: 1, type: float, display: false
@@ -3763,10 +3763,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.5, type: float, display: true, formatter: Liter
   { Child 0
     Class: Projectile
-    Damage: 1000, display: true
+    Damage: 5000, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 500, display: true
+    BlastDamage: 2500, display: true
     Speed: 90
     Range: 450
     NoiseStrength: 80, display: false
@@ -3791,12 +3791,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.5, param1: rock
     DamageMultiplier_17: 10, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
-    BlastDamageMultiplier_1: 1, param1: head
-    BlastDamageMultiplier_2: 1, param1: body
-    BlastDamageMultiplier_3: 1, param1: alien
-    BlastDamageMultiplier_4: 1, param1: metal
-    BlastDamageMultiplier_5: 1, param1: metallight
-    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_1: 10, param1: head
+    BlastDamageMultiplier_2: 10, param1: body
+    BlastDamageMultiplier_3: 10, param1: alien
+    BlastDamageMultiplier_4: 10, param1: metal
+    BlastDamageMultiplier_5: 10, param1: metallight
+    BlastDamageMultiplier_6: 10, param1: metalhard
     BlastDamageMultiplier_7: 0.5, param1: hull
     BlastDamageMultiplier_8: 0.5, param1: hullarmored
     BlastDamageMultiplier_9: 0.5, param1: hullcombat
