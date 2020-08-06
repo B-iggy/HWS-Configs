@@ -15250,8 +15250,8 @@ HullCombatSmallBlocks
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
   HitPoints: 120, type: int, display: true
-  SoundOpen: UseActions/HangarDoor
-  SoundClose: UseActions/HangarDoor
+  SoundOpen: UseActions/DOOROpen01
+  SoundClose: UseActions/DOOROpen01
   PlayerTriggersOpen: true
 
 }
@@ -15342,8 +15342,8 @@ HullCombatSmallBlocks
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
   HitPoints: 30, type: int, display: true
-  SoundOpen: UseActions/HangarDoor
-  SoundClose: UseActions/HangarDoor
+  SoundOpen: UseActions/DOOROpen01
+  SoundClose: UseActions/DOOROpen01
   PlayerTriggersOpen: false
 }
 { +Block Id: 1018, Name: ShutterDoor2x2SV, Ref: ShutterDoor1x1SV
