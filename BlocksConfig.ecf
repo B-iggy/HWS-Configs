@@ -12866,8 +12866,8 @@ HullCombatSmallBlocks
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
   Mass: 200, type: float, display: true, formatter: Kilogram
-  SoundOpen: UseActions/HangarDoor
-  SoundClose: UseActions/HangarDoor
+  SoundOpen: UseActions/DOOROpen01
+  SoundClose: UseActions/DOOROpen01
   /* PlayerTriggersOpen: true     */
   ShowUser: No
   DoorClosesOnPower: false
@@ -20231,7 +20231,7 @@ HullCombatSmallBlocks
   Info: bkiBlockGroup, display: true
   AllowedInBlueprint: true, display: false
   HitPoints: 2750, type: int, display: false
-  Mass: 1500, type: float, display: true, formatter: Kilogram
+  Mass: 1600, type: float, display: true, formatter: Kilogram
   Volume: 80, type: float, display: true, formatter: Liter
   BlockSizeScale: 8
   ChildBlocks: "AlienFullLarge, AlienThinLarge, AlienExtendedLarge, AlienExtendedLarge2, AlienExtendedLarge3, AlienExtendedLarge4, AlienExtendedLarge5, AlienExtendedLarge6"
