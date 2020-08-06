@@ -5397,6 +5397,7 @@
 	Computer: 4
     Oscillator: 4
     PowerCoil: 1
+    XenoSubstrate: 5
   }
 }
 
@@ -5407,6 +5408,7 @@
   { Child Inputs
     SteelPlate: 10
     MagnesiumPowder: 100
+    PentaxidElement: 50
     FusionCell: 1
     NCPowder: 50
   }
@@ -5450,7 +5452,7 @@
 	Computer: 10
     Oscillator: 10
     PowerCoil: 2
-    XenoSubstrate: 10
+    XenoSubstrate: 20
   }
 }
 
@@ -5459,20 +5461,22 @@
   CraftTime: 60
   Target: "AdvC"
   { Child Inputs
-    ZascosiumAlloy: 10
+    ZascosiumAlloy: 50
     FusionCell: 1
-    TurretMSPlasmaCharge: 1
+    ErestrumGel: 2
+    PentaxidElement: 100
+    MagnesiumPowder: 40
   }
 }
 
 { +Template Name: AmmoTurretHVLaser
   OutputCount: 4 #D1 20 for "M77 Torpedo Launcher"
-  CraftTime: 5
+  CraftTime: 10
   Target: "AdvC"
   { Child Inputs
-    SteelPlate: 4
-    MagnesiumPowder: 30
-    NCPowder: 20
+    PromethiumPellets: 15
+    PentaxidElement: 20
+    PlasticMaterial: 10
   }
 }
 
@@ -5486,6 +5490,7 @@
 	Nanotubes: 5
 	Medikit04: 1
 	AlienParts02: 1
+    ErestrumGel: 4
   }
 }
 
@@ -5493,10 +5498,12 @@
   CraftTime: 50
   Target: "AdvC"
   { Child Inputs
-    MechanicalComponents: 18
-	TitanPlates: 3
-    Electronics: 6
+    ZascosiumAlloy: 10
+    MechanicalComponents: 20
+	TitanPlates: 5
+    Electronics: 10
     CobaltAlloy: 30
 	Nanotubes: 10
+	PowerCoil: 1
   }
 }
