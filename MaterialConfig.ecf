@@ -203,7 +203,7 @@
   stepsound: stone
   stability_glue: 6000
   Mass: 500, type: float, display: false, formatter: Kilogram
-  Hardness: 50, type: float, display: false, formatter: Hardness
+  Hardness: 70, type: float, display: false, formatter: Hardness
   HitPoints: 2200, type: int, display: false
 }
 { Material Name: metallight

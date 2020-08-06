@@ -4221,6 +4221,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     IsShootThroughCrosshair: false
+    AllowAt: "Space"
     ROF: 10, type: float, display: true, formatter: ROF
     Range: 748, display: true
     Speed: 10, display: true
@@ -4255,7 +4256,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    AllowAt: "Space"
     Damage: 10000, display: true
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
@@ -4591,11 +4591,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: LauncherSS
-    ROF: 2, type: float, display: true, formatter: ROF
+    ROF: 3, type: float, display: true, formatter: ROF
     Range: 550, display: true
     RangeSpace: 1100, display: true
     Automatic: true
-    AmmoCapacity: 20, display: true
+    AmmoCapacity: 10, display: true
     AmmoType: FastRocket, display: true
     NoiseStrength: 100, display: false
     AutoReload: true
@@ -6372,14 +6372,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 21
   { Child 0
     Class: Projectile
-    Damage: 6395, display: true
+    Damage: 3500, display: true
     NoiseStrength: 100, display: false
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 6395, display: true
-    Speed: 185, display: true
+    BlastDamage: 1750, display: true
+    Speed: 77, display: true
     Range: 577, display: true
-    SpeedSpace: 235, display: true
+    SpeedSpace: 107, display: true
     RangeSpace: 1155, display: true
     Ballistic: false
     Buff: "FractureOpen,OpenWound,BrokenLeg"
