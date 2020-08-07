@@ -3298,8 +3298,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: LauncherSS
     IsShootThroughCrosshair: false
     ROF: 20, type: float, display: true, formatter: ROF
-    Range: 577, display: true
-    RangeSpace: 1155, display: true
+    Range: 650, display: true
+    RangeSpace: 1200, display: true
     AmmoCapacity: 1, display: true
     AmmoType: AmmoSVTorpedo, display: true
     Automatic: false
@@ -3334,9 +3334,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastRadius: 9, display: true
     BlastDamage: 30000, display: true
     Speed: 10, display: true
-    Range: 577, display: true
+    Range: 650, display: true
     SpeedSpace: 15, display: true
-    RangeSpace: 1155, display: true
+    RangeSpace: 1200, display: true
     Ballistic: false
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
@@ -4223,10 +4223,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     IsShootThroughCrosshair: false
     AllowAt: "Space"
     ROF: 10, type: float, display: true, formatter: ROF
-    Range: 748, display: true
+    Range: 577, display: true
     Speed: 10, display: true
     SpeedSpace: 15, display: true
-    RangeSpace: 1050, display: true
+    RangeSpace: 1200, display: true
     AmmoCapacity: 10, display: false   # no need to display since unlimited ammo
     # AmmoUnlimited: true
     AmmoType: AmmoCVTorpedo, display: true
@@ -4264,7 +4264,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 10, display: true
     Range: 577, display: true
     SpeedSpace: 15, display: true
-    RangeSpace: 1155, display: true
+    RangeSpace: 1200, display: true
     Ballistic: false
     HomingSpeed: 1
 
