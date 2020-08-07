@@ -3298,8 +3298,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: LauncherSS
     IsShootThroughCrosshair: false
     ROF: 20, type: float, display: true, formatter: ROF
-    Range: 550, display: true
-    RangeSpace: 1100, display: true
+    Range: 577, display: true
+    RangeSpace: 1155, display: true
     AmmoCapacity: 1, display: true
     AmmoType: AmmoSVTorpedo, display: true
     Automatic: false
@@ -3323,7 +3323,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 500, type: float, display: true, formatter: Kilogram
-  Volume: 31.25, type: float, display: true, formatter: Liter
+  Volume: 50, type: float, display: true, formatter: Liter
   Info: "A high-impact torpedo. Designed to be launched while dive-bombing a ground target. Bombs inherit the speed of the vehicle that launched them and safely disarm if they exceed their target distance.", display: true
   Category: Weapons/Items
   { Child 0
@@ -5031,7 +5031,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: TurretMSPlasmaCharge, display: true
     NoiseStrength: 120, display: false
     CameraShake: 4
-    ReloadDelay: 8, display: true
+    ReloadDelay: 10, display: true
     SfxBegin: Weapons/SS/LaserSS/weapon_blaster_001
     /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
@@ -6228,7 +6228,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 12, type: float, display: true, formatter: Kilogram
-  Volume: 1.25, type: float, display: true, formatter: Liter
+  Volume: 0.25, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   MarketPrice: 14
@@ -6367,7 +6367,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 3, type: float, display: true, formatter: Kilogram
-  Volume: 1.8, type: float, display: true, formatter: Liter
+  Volume: 0.8, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   MarketPrice: 21
@@ -6542,7 +6542,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   ShowUser: Yes
   Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 0.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   { Child 0
@@ -6612,7 +6612,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 870, type: float, display: true, formatter: Kilogram
-  Volume: 200, type: float, display: true, formatter: Liter
+  Volume: 100, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   MarketPrice: 537
   Category: Weapons/Items
@@ -6683,13 +6683,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 15, type: float, display: true, formatter: Kilogram
-  Volume: 5, type: float, display: true, formatter: Liter
+  Volume: 3, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   MarketPrice: 100
   { Child 0
     Class: Projectile
-    Damage: 9000, display: true
+    Damage: 7000, display: true
     BlastParticleIndex: 0
     Speed: 750, display: true
     Range: 625, display: true
@@ -6731,7 +6731,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 49, type: float, display: true, formatter: Kilogram
-  Volume: 32, type: float, display: true, formatter: Liter
+  Volume: 17, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   MarketPrice: 266
@@ -6941,7 +6941,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 10.1, type: float, display: true, formatter: Kilogram
-  Volume: 6, type: float, display: true, formatter: Liter
+  Volume: 3, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   MarketPrice: 35
   Category: Weapons/Items
@@ -7011,16 +7011,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 50, type: float, display: true, formatter: Kilogram
-  Volume: 20, type: float, display: true, formatter: Liter
+  Volume: 11, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   MarketPrice: 37
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 15000, display: true
+    Damage: 13000, display: true
     BlastParticleIndex: 7
     BlastRadius: 3, display: true
-    BlastDamage: 7500, display: true
+    BlastDamage: 6500, display: true
     Speed: 400, display: true
     Range: 675, display: true
     SpeedSpace: 475, display: true
@@ -7081,7 +7081,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   Mass: 47, type: float, display: true, formatter: Kilogram
   Info: bkiAmmoExplosive, display: true
-  Volume: 16, type: float, display: true, formatter: Liter
+  Volume: 9, type: float, display: true, formatter: Liter
   Category: Weapons/Items
   MarketPrice: 140
   { Child 0
@@ -7197,7 +7197,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiAmmoHoming, display: true
   AllowPlacingAt: "SS,GV", display: false
   Mass: 10, type: float, display: true, formatter: Kilogram
-  Volume: 4.8, type: float, display: true, formatter: Liter
+  Volume: 2.8, type: float, display: true, formatter: Liter
   MarketPrice: 44
   { Child 0
     Damage: 2960, display: true
@@ -7309,7 +7309,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 { +Item Id: 167, Name: LargeRocketMS, Ref: LargeRocket
   Mass: 840, type: float, display: true, formatter: Kilogram
-  Volume: 185, type: float, display: true, formatter: Liter
+  Volume: 110, type: float, display: true, formatter: Liter
   AllowPlacingAt: MS, display: false
   MarketPrice: 511
   { Child 0
@@ -7366,7 +7366,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 168, Name: PulseLaserChargeBA, Ref: PulseLaserChargeMS
   AllowPlacingAt: Base, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram
-  Volume: 5, type: float, display: true, formatter: Liter
+  Volume: 3, type: float, display: true, formatter: Liter
   MarketPrice: 150
   { Child 0
     Damage: 20000, display: true
@@ -7402,7 +7402,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 169, Name: FastRocketBA, Ref: FastRocketMS
   AllowPlacingAt: Base, display: false
   Mass: 49, type: float, display: true, formatter: Kilogram
-  Volume: 32, type: float, display: true, formatter: Liter
+  Volume: 19, type: float, display: true, formatter: Liter
   MarketPrice: 269
   { Child 0
     Damage: 11626, display: true
@@ -7458,7 +7458,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 170, Name: TurretBAPlasmaCharge, Ref: TurretMSPlasmaCharge
   AllowPlacingAt: Base, display: false
   Mass: 50, type: float, display: true, formatter: Kilogram
-  Volume: 25, type: float, display: true, formatter: Liter
+  Volume: 13, type: float, display: true, formatter: Liter
   MarketPrice: 52
   { Child 0
     Damage: 20000, display: true
@@ -7519,7 +7519,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Canhold: false
   Mass: 10, type: float, display: true, formatter: Kilogram
-  Volume: 5, type: float, display: true, formatter: Liter
+  Volume: 2, type: float, display: true, formatter: Liter
   Info: bkiAmmo, display: true
   Category: Weapons/Items
   MarketPrice: 6
@@ -7640,7 +7640,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 174, Name: FastRocketGV, Ref: FlakRocket
   AllowPlacingAt: GV, display: false
   Mass: 2, type: float, display: true, formatter: Kilogram
-  Volume: 1.8, type: float, display: true, formatter: Liter
+  Volume: 0.8, type: float, display: true, formatter: Liter
   MarketPrice: 21
   { Child 0
     Damage: 2000, display: true
@@ -7703,7 +7703,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   ShowUser: No
   Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 0.5, type: float, display: true, formatter: Liter
   # Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   { Child 0
@@ -7796,7 +7796,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   ShowUser: No
   Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 0.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   { Child 0
@@ -7846,7 +7846,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   ShowUser: No
   Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 0.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   { Child 0
@@ -7898,7 +7898,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   ShowUser: Yes
   Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 0.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
   { Child 0
@@ -7975,7 +7975,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   HoldType: 0
   Mass: 0.5, type: float, display: true, formatter: Kilogram
-  Volume: 8, type: float, display: true, formatter: Liter
+  Volume: 7, type: float, display: true, formatter: Liter
   Info: bkiComponent, display: true
   Category: Components
   StackSize: 50000
@@ -8045,7 +8045,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 206, Name: PromethiumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/PromethiumOrePrefab
   Mass: 23.74, type: float, display: true, formatter: Kilogram
-  Volume: 4.1, type: float, display: true, formatter: Liter
+  Volume: 2.1, type: float, display: true, formatter: Liter
   Info: A radioactive crystalline mineral rich in Promethium. It can be refined in a constructor into a fine powder and pressed into pellets., display: true
   XpFactor: 30
   MarketPrice: 15
@@ -8357,7 +8357,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 245, Name: PentaxidOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/PentaxidOrePrefab
   Mass: 88.88, type: float, display: true, formatter: Kilogram
-  Volume: 16.85, type: float, display: true, formatter: Liter
+  Volume: 11.85, type: float, display: true, formatter: Liter
   Info: A highly radioactive unstable crystal that can be refined into an even more unstable form used in quantum technology., display: true
   XpFactor: 60
   MarketPrice: 600
@@ -8392,7 +8392,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 249, Name: GoldOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/GoldOrePrefab
   Mass: 8.11, type: float, display: true, formatter: Kilogram
-  Volume: 2.17, type: float, display: true, formatter: Liter
+  Volume: 1.17, type: float, display: true, formatter: Liter
   Info: A rare mix of igneous rock and native gold that can be refined into pure gold., display: true
   XpFactor: 60
   MarketPrice: 800
@@ -8514,7 +8514,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 263, Name: TitanOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/TitanOrePrefab
   Mass: 8.07, type: float, display: true, formatter: Kilogram
-  Volume: 3.5, type: float, display: true, formatter: Liter
+  Volume: 2.5, type: float, display: true, formatter: Liter
   Info: A mineral variant of Rutile. High in Titanium that can be processed in a Constructor or Furnace., display: true
   XpFactor: 20
   MarketPrice: 1200
@@ -8559,7 +8559,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 { +Item Id: 268, Name: AluminiumCoil, Ref: ComponentsTemplate
   Mass: 8.1, type: float, display: true, formatter: Kilogram
-  Volume: 3, type: float, display: true, formatter: Liter
+  Volume: 2, type: float, display: true, formatter: Liter
   MarketPrice: 1875
   Info: A conductive coil of aluminium used in electronics and heating elements., display: true
   ShowUser: Yes
@@ -8567,7 +8567,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 269, Name: PlatinOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/PlatinumOrePrefab
   Mass: 41.2, type: float, display: true, formatter: Kilogram
-  Volume: 4.5, type: float, display: true, formatter: Liter
+  Volume: 3.5, type: float, display: true, formatter: Liter
   Info: A dense metallic ore of Sperrylite. It's rich in platinum but is toxic due to high arsenic content. Must be processed in a furnace., display: true
   XpFactor: 20
   MarketPrice: 4000
@@ -8619,14 +8619,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 279, Name: ZascosiumAlloy, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 7.33, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 1, type: float, display: true, formatter: Liter
   MarketPrice: 3250
   Info: An alloy of Zascosium and Erestrum that exhibits both Zascosium's strength with Erestrum's conductivity. Used in superconductors., display: true
 }
 { +Item Id: 280, Name: XenoSubstrate, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 5.4, type: float, display: true, formatter: Kilogram
-  Volume: 1.25, type: float, display: true, formatter: Liter
+  Volume: 1, type: float, display: true, formatter: Liter
   MarketPrice: 700
   Info: Inert alien biomaterial that exhibits both organic and synthetic behaviour with extreme resilience and easy malleability., display: true
 }
@@ -8639,28 +8639,28 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 282, Name: SmallOptronicBridge, Ref: ComponentsTemplate
   Mass: 16, type: float, display: true, formatter: Kilogram
-  Volume: 1.25, type: float, display: true, formatter: Liter
+  Volume: 1, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
   MarketPrice: 77150
   ShowUser: Yes
 }
 { +Item Id: 283, Name: SmallOptronicMatrix, Ref: ComponentsTemplate
   Mass: 30, type: float, display: true, formatter: Kilogram
-  Volume: 1.5, type: float, display: true, formatter: Liter
+  Volume: 2, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
   MarketPrice: 119525
   ShowUser: Yes
 }
 { +Item Id: 284, Name: LargeOptronicBridge, Ref: ComponentsTemplate
   Mass: 200, type: float, display: true, formatter: Kilogram
-  Volume: 3.25, type: float, display: true, formatter: Liter
+  Volume: 3, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
   MarketPrice: 259087
   ShowUser: Yes
 }
 { +Item Id: 285, Name: LargeOptronicMatrix, Ref: ComponentsTemplate
   Mass: 400, type: float, display: true, formatter: Kilogram
-  Volume: 8.5, type: float, display: true, formatter: Liter
+  Volume: 5, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
   MarketPrice: 627041
   ShowUser: Yes
@@ -8673,7 +8673,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodDecayedItem: RottenFood
   Mass: 0.35, type: float, display: true, formatter: Kilogram
   Volume: 0.31, type: float, display: true, formatter: Liter
- ShowUser: NoButCSV
+ ShowUser: Yes
 { Child 0
    Class: Eat
    ROF: 1, type: float
@@ -8861,7 +8861,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiIngredient, display: true
   Category: Ingredients
   StackSize: 50000
-  ShowUser: No
+  ShowUser: Yes
 }
 { +Item Id: 313, Name: Stew, Ref: FoodTemplate
   Mass: 0.75, type: float, display: true, formatter: Kilogram
@@ -9095,7 +9095,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 # Save game break: move up to components
 { +Item Id: 325, Name: FusionCell, Ref: ComponentsTemplate
   Mass: 75, type: float, display: true, formatter: Kilogram
-  Volume: 10.5, type: float, display: true, formatter: Liter
+  Volume: 7, type: float, display: true, formatter: Liter
   FuelValue: 300, type: int, display: true, formatter: WattHour
   MarketPrice: 97.5
   ShowUser: Yes
@@ -12764,29 +12764,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Material: metalitem
   Canhold: false
   HoldType: 0
-  Mass: 1000, type: float, display: true, formatter: Kilogram
-  Volume: 1000, type: float, display: true, formatter: Liter
-  StackSize: 1
+  Mass: 10000, type: float, display: true, formatter: Kilogram
+  Volume: 100000, type: float, display: true, formatter: Liter
+  StackSize: 7
   Info: InfoNeeded, display: true
   Category: Components
   ShowUser: No
 }
 { +Item Id: 1001, Name: RawDiamond, Ref: TradingGoodsTemplate
-  Mass: 10, type: float, display: true, formatter: Kilogram
-  Volume: 10, type: float, display: true, formatter: Liter
-  StackSize: 5
   ShowUser: Yes
 }
 { +Item Id: 1002, Name: LuxuryGoods, Ref: TradingGoodsTemplate
-  Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 1, type: float, display: true, formatter: Liter
-  StackSize: 10
   ShowUser: Yes
 }
 { +Item Id: 1003, Name: Fertilizer, Ref: TradingGoodsTemplate
-  Mass: 30, type: float, display: true, formatter: Kilogram
-  Volume: 30, type: float, display: true, formatter: Liter
-  StackSize: 3
   ShowUser: Yes
 }
 { +Item Id: 1004, Name: Liquors, Ref: TradingGoodsTemplate

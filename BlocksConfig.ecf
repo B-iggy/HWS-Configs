@@ -1961,7 +1961,7 @@ HullCombatSmallBlocks
   Place: WeaponDir
   AllowPlacingAt: "SS", display: true
   SizeInBlocks: "1,2,1", display: true
-  Volume: 125, type: float, display: true, formatter: Liter
+  Volume: 1500, type: float, display: true, formatter: Liter
   Info: "A heavy Torpedo launcher used for launching M77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
   StackSize: 1
   MaxCount: 1, type: int, display: true
@@ -2474,7 +2474,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: MS, display: true
   SizeInBlocks: "1,6,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 2000, type: float, display: true, formatter: Liter
+  Volume: 3000, type: float, display: true, formatter: Liter
   Mass: 3000, type: float, display: true, formatter: Kilogram
   Info: "A heavy Laser Torpedo launcher used for launching L77 Torpedos at a target. WARNING: it is a prototype version thus very fragile.", display: true
   Category: Weapons/Items
@@ -2618,7 +2618,7 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base,MS"      # scaled small on SV, GV
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 20, type: float, display: true, formatter: Liter
-  VolumeCapacity: 2000000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 1000000, type: float, display: true, formatter: Liter
   BlockColor: "110,110,110"
   Info: bkiContainer, display: true
   # ModelOffset: "0,0.5,0"
@@ -3469,7 +3469,7 @@ HullCombatSmallBlocks
   HitPoints: 17800, type: int, display: true
   Mass: 15960, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
-  EnergyIn: 1300, type: int, display: true, formatter: Watt
+  EnergyIn: 800, type: int, display: true, formatter: Watt
 }
 { +Block Id: 324, Name: TurretMSPlasmaRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSPlasmaRetractPrefab
@@ -3489,7 +3489,7 @@ HullCombatSmallBlocks
   HitPoints: 19960, type: int, display: true
   Mass: 16140, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
-  EnergyIn: 200, type: int, display: true, formatter: Watt
+  EnergyIn: 1000, type: int, display: true, formatter: Watt
 }
 { +Block Id: 325, Name: TurretMSFlakRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSFlakRetractPrefab
@@ -3569,7 +3569,7 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   ShowUser: No
   XpFactor: 0      # no experience gain when destroyed
-  HitPoints: 700, type: int, display: true
+  HitPoints: 200, type: int, display: true
   BlastParticleIndex: 14
   BlastRadius: 1
   BlastDamage: 0
@@ -3594,7 +3594,7 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   ShowUser: No
   XpFactor: 0      # no experience gain when destroyed
-  HitPoints: 700, type: int, display: true
+  HitPoints: 100, type: int, display: true
   BlastParticleIndex: 14
   BlastRadius: 1
   BlastDamage: 0
@@ -5063,7 +5063,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
   Volume: 31.25, type: float, display: true, formatter: Liter
   Mass: 62, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 5000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 2500, type: float, display: true, formatter: Liter
   CPUIn: 30, type: int, display: true
   IsActivateable: true
   IsActivateableInCP: true
@@ -10934,7 +10934,7 @@ HullCombatSmallBlocks
   HitPoints: 17800, type: int, display: true
   RotSpeed: 100, type: int, display: true
   Zoom: 5, type: float
-  EnergyIn: 150, type: int, display: true, formatter: Watt
+  EnergyIn: 950, type: int, display: true, formatter: Watt
 
   # UnlockCost: 15, display: true
   # UnlockLevel: 15, display: true
@@ -11650,7 +11650,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true     /* we need this because it extends ammo large */
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   Volume: 20, type: float, display: true, formatter: Liter   # low value since used on SV/HV as well
   Mass: 100, type: float, display: true, formatter: Kilogram
   LootList: 69
@@ -11746,7 +11746,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   AllowPlacingAt: "MS,GV", display: true
   SizeInBlocks: "2,1,1", display: true
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 30, type: int, display: true
   EnergyIn: 5, type: int, display: true, formatter: Watt
   Volume: 40, type: float, display: true, formatter: Liter    # low value since used on HV as well
@@ -16043,7 +16043,7 @@ HullCombatSmallBlocks
   Model: Entities/Decorations/Sci-Fi_InteriorPack/ScifiContainer1Prefab
   SizeInBlocks: "2,1,1", display: true
   Mass: 130, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 30, type: int, display: true
   # IsDuplicateable: false         # problem with mirror Mantis: 03845
 }
@@ -16054,7 +16054,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "2,1,1", display: true
   Mass: 66, type: float, display: true, formatter: Kilogram
   IsOxygenTight: false, display: true
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 30, type: int, display: true
   # IsDuplicateable: false         # problem with mirror Mantis: 03845
 }
@@ -16073,7 +16073,7 @@ HullCombatSmallBlocks
   EnergyIn: 1, type: int, display: true, formatter: Watt
   IsOxygenTight: false, display: true
   ShowUser: Yes
-  VolumeCapacity: 2500, type: float, display: true, formatter: Liter       # low value for testing
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter       # low value for testing
 }
 # Container Block - Obsolete but do not delete
 { +Block Id: 1084, Name: ScifiContainerPower, Ref: ContainerMS01
@@ -17075,7 +17075,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 1250, type: int, display: true, formatter: Watt
+  EnergyIn: 750, type: int, display: true, formatter: Watt
   CPUIn: 15100, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
@@ -23748,7 +23748,7 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base,MS"
   Mass: 600, type: float, display: true, formatter: Kilogram
   Volume: 43, type: float, display: true, formatter: Liter
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   BlockColor: "110,110,110"
   Info: bkiContainer, display: true
   StackSize: 50000
@@ -23774,7 +23774,7 @@ HullCombatSmallBlocks
   Mass: 1000, type: float, display: true, formatter: Kilogram
 
   Volume: 72, type: float, display: true, formatter: Liter
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   HitPoints: 500, type: int, display: true
   IsOxygenTight: false, display: true
   CPUIn: 1920, type: int, display: true
@@ -23790,7 +23790,7 @@ HullCombatSmallBlocks
   TemplateRoot: ContainerSmallBlocks
   Mass: 45, type: float, display: true, formatter: Kilogram
   Volume: 8, type: float, display: true, formatter: Liter
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   HitPoints: 100, type: int, display: true
   StackSize: 50000
   IsOxygenTight: false, display: true
@@ -23887,8 +23887,8 @@ HullCombatSmallBlocks
   Mass: 625, type: float, display: true, formatter: Kilogram
   Volume: 52, type: float, display: true, formatter: Liter
   StackSize: 50000
-  VolumeCapacity: 1000000, type: float, display: true, formatter: Liter
-  MaxVolumeCapacity: 100000000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  MaxVolumeCapacity: 50000000, type: float, display: true, formatter: Liter
   Info: bkiContainerController, display: true                                      # adapt
   ShowBlockName: true
   IsActivateableInCP: true
@@ -23928,7 +23928,7 @@ HullCombatSmallBlocks
   Mass: 616, type: float, display: true, formatter: Kilogram
   Volume: 160, type: float, display: true, formatter: Liter
   StackSize: 50000
-  VolumeCapacity: 1000000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
   Info: bkiContainerExtension, display: true                                      # adapt
   ShowBlockName: true
   IsActivateableInCP: true
@@ -23958,9 +23958,9 @@ HullCombatSmallBlocks
   Volume: 11, type: float, display: true, formatter: Liter
   HitPoints: 100, type: int, display: true
   StackSize: 50000
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 15, type: int, display: true
-  MaxVolumeCapacity: 10000000, type: float, display: true, formatter: Liter
+  MaxVolumeCapacity: 5000000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
 
@@ -23974,7 +23974,7 @@ HullCombatSmallBlocks
   HitPoints: 100, type: int, display: true
   Volume: 11, type: float, display: true, formatter: Liter
   StackSize: 50000
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 15, type: int, display: true
   EnergyIn: 1, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
@@ -23997,9 +23997,9 @@ HullCombatSmallBlocks
   Mass: 52, type: float, display: true, formatter: Kilogram
   HitPoints: 100, type: int, display: true
   Volume: 11, type: float, display: true, formatter: Liter
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 15, type: int, display: true
-  MaxVolumeCapacity: 1000000, type: float, display: true, formatter: Liter
+  MaxVolumeCapacity: 500000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
 
@@ -24033,9 +24033,9 @@ HullCombatSmallBlocks
   Mass: 52, type: float, display: true, formatter: Kilogram
   HitPoints: 100, type: int, display: true
   Volume: 20, type: float, display: true, formatter: Liter
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 15, type: int, display: true
-  MaxVolumeCapacity: 10000000, type: float, display: true, formatter: Liter
+  MaxVolumeCapacity: 5000000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
 
@@ -24451,7 +24451,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/CargoBoxPrefab
   Mass: 250, type: float, display: true, formatter: Kilogram
   HitPoints: 150, type: int, display: true
-  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 250000, type: float, display: true, formatter: Liter
   CPUIn: 960, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
@@ -24465,7 +24465,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "2,1,1", display: true
   HitPoints: 300, type: int, display: true
   Mass: 500, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 200000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   CPUIn: 1920, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
@@ -24867,7 +24867,7 @@ HullCombatSmallBlocks
 # # Container Blocks
 { +Block Id: 1769, Name: ContainerMS01Small, Ref: ContainerMS01
   TemplateRoot: ContainerSmallBlocks
-  VolumeCapacity: 100000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 50000, type: float, display: true, formatter: Liter
   AllowPlacingAt: "SS,GV", display: true
 }
 { +Block Id: 1770, Name: ScifiContainer1Small, Ref: ContainerMS01
@@ -24982,7 +24982,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/CargoPalette01Prefab
   HitPoints: 75, type: int, display: true
   Mass: 300, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 250000, type: float, display: true, formatter: Liter
   CPUIn: 480, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
@@ -24994,7 +24994,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/CargoPalette02Prefab
   HitPoints: 75, type: int, display: true
   Mass: 300, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 250000, type: float, display: true, formatter: Liter
   CPUIn: 480, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
@@ -25006,7 +25006,7 @@ HullCombatSmallBlocks
   HitPoints: 75, type: int, display: true
   Model: @models/Blocks/Mothership/CargoPalette03Prefab
   Mass: 300, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 250000, type: float, display: true, formatter: Liter
   CPUIn: 480, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
@@ -25018,7 +25018,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/CargoPalette04Prefab
   Mass: 300, type: float, display: true, formatter: Kilogram
   HitPoints: 75, type: int, display: true
-  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 250000, type: float, display: true, formatter: Liter
   CPUIn: 480, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
@@ -25396,7 +25396,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/ContainerMS05LargePrefab
   HitPoints: 150, type: int, display: true
   Mass: 600, type: float, display: true, formatter: Kilogram
-  VolumeCapacity: 500000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 250000, type: float, display: true, formatter: Liter
   CPUIn: 960, type: int, display: true
   TemplateRoot: ContainerLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
