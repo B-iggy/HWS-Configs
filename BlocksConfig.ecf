@@ -3469,7 +3469,7 @@ HullCombatSmallBlocks
   HitPoints: 17800, type: int, display: true
   Mass: 15960, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
-  EnergyIn: 300, type: int, display: true, formatter: Watt
+  EnergyIn: 1300, type: int, display: true, formatter: Watt
 }
 { +Block Id: 324, Name: TurretMSPlasmaRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSPlasmaRetractPrefab
@@ -17075,7 +17075,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 1250, type: int, display: true, formatter: Watt
   CPUIn: 15100, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram

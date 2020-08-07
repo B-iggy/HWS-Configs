@@ -4765,7 +4765,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.6, type: float, display: true, formatter: ROF
     Range: 650, display: true
     RangeSpace: 1000, display: true
-    Damage: 15000, display: true
+    Damage: 17000, display: true
     Automatic: true
     AmmoCapacity: 150, display: true
     AmmoType: PulseLaserChargeMSWeapon, display: true
@@ -5274,6 +5274,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: PulseLaserChargeMS, display: true
     NoiseStrength: 100, display: false
     CameraShake: 2
+    Automatic: true
     AutoReload: true
     ReloadDelay: 2, display: true # adapt sound
     SfxBegin: Weapons/Turret/laser_turret_fire2
@@ -6688,10 +6689,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 100
   { Child 0
     Class: Projectile
-    Damage: 3000, display: true
+    Damage: 9000, display: true
     BlastParticleIndex: 0
-    # BlastRadius: 2, display: true
-    # BlastDamage: 400, display: true
     Speed: 750, display: true
     Range: 625, display: true
     SpeedSpace: 810, display: true
@@ -6746,7 +6745,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 650, display: true
     SpeedSpace: 235, display: true
     RangeSpace: 1200, display: true
-    HomingSpeed: 1.6
+    HomingSpeed: 2.3
     Ballistic: false
     Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
     Buff_chance: "0.1,0.6,0.3,0.2"
@@ -7018,10 +7017,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 13000, display: true
+    Damage: 15000, display: true
     BlastParticleIndex: 7
     BlastRadius: 3, display: true
-    BlastDamage: 6500, display: true
+    BlastDamage: 7500, display: true
     Speed: 400, display: true
     Range: 675, display: true
     SpeedSpace: 475, display: true
@@ -7266,7 +7265,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 635, display: true
     SpeedSpace: 735, display: true
     RangeSpace: 1100, display: true
-    HomingSpeed: 2.5
+    HomingSpeed: 3.5
     Ballistic: false
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
