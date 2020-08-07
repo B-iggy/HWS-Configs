@@ -4326,7 +4326,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Ranged
     IsShootThroughCrosshair: true
     ROF: 0.2, type: float, display: true, formatter: ROF
-    Range: 375, display: true
+    Range: 400, display: true
     RangeSpace: 750, display: true
     Automatic: true
     BulletSpread: 0.15, display: false
@@ -5329,9 +5329,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     AllowAt: Space
-    ROF: 0.7, type: float, display: true, formatter: ROF
-    Range: 635, display: true
-    RangeSpace: 1100, display: true
+    ROF: 0.65, type: float, display: true, formatter: ROF
+    Range: 700, display: true
+    RangeSpace: 1200, display: true
     AmmoCapacity: 100, display: true
     AmmoType: FlakRocketMS, display: true
     NoiseStrength: 150, display: false
@@ -6312,7 +6312,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Buff: "FractureOpen,BrokenLeg,OpenWound,Mutilation"
     Buff_chance: "0.3,0.5,0.7,0.2"
     Speed: 425, display: true
-    Range: 518, display: true
+    Range: 525, display: true
     SpeedSpace: 525, display: true
     RangeSpace: 1036, display: true
     Ballistic: false
@@ -6737,10 +6737,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 266
   { Child 0
     Class: Projectile
-    Damage: 7000, display: true
+    Damage: 9000, display: true
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
-    BlastDamage: 3500, display: true
+    BlastDamage: 4500, display: true
     Speed: 145, display: true
     Range: 650, display: true
     SpeedSpace: 235, display: true
@@ -6758,7 +6758,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 5, param1: hull
     DamageMultiplier_8: 5, param1: hullarmored
-    DamageMultiplier_9: 5, param1: hullcombat
+    DamageMultiplier_9: 1, param1: hullcombat
     DamageMultiplier_10: 1, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 1, param1: stone
@@ -6776,7 +6776,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_6: 5, param1: metalhard
     BlastDamageMultiplier_7: 5, param1: hull
     BlastDamageMultiplier_8: 5, param1: hullarmored
-    BlastDamageMultiplier_9: 5, param1: hullcombat
+    BlastDamageMultiplier_9: 1, param1: hullcombat
     BlastDamageMultiplier_10: 1, param1: concrete
     BlastDamageMultiplier_11: 0, param1: dirt
     BlastDamageMultiplier_12: 1, param1: stone
@@ -7257,14 +7257,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: MS, display: false
   MarketPrice: 33
   { Child 0
-    Damage: 3500, display: true
+    Damage: 4000, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 3500, display: true
+    BlastDamage: 4000, display: true
     Speed: 625, display: true
-    Range: 635, display: true
+    Range: 700, display: true
     SpeedSpace: 735, display: true
-    RangeSpace: 1100, display: true
+    RangeSpace: 1200, display: true
     HomingSpeed: 3.5
     Ballistic: false
 
@@ -7316,8 +7316,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 20000, display: true
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
-    BlastDamage: 10000, display: true
-    HomingSpeed: 0.9
+    BlastDamage: 20000, display: true
+    HomingSpeed: 1.0
     Speed: 165, display: true
     Range: 700, display: true
     SpeedSpace: 210, display: true
