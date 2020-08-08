@@ -20281,6 +20281,7 @@ HullCombatSmallBlocks
 { +Block Id: 1401, Name: CoreNPCcpu, Ref: CoreNPC
   #Model: @models/Blocks/Misc/CoreBlockNPCPrefab
   IsUsingCPUSystem: true
+  Faction: Player
   BlockColor: "220,212,0"
 
 }
