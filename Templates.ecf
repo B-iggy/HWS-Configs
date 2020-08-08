@@ -17,6 +17,39 @@
 
 ## Adding T1 devices as Input to T2 devices only works for single devices (eg Constructor T1/T2) - does not work for block groups (eg Cockpits T1/T2). For latter do not use T1 as Input 
 
+# Special trick for finding Admin Cores
+# { +Template Name: MutatedSubstance
+#   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     CrushedStone: 77777
+#   }
+# }
+# { +Template Name: AlphaVirus
+#   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     CrushedStone: 77777
+#   }
+# }
+#
+# { +Template Name: CoreNPCAdmin
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     MutatedSubstance: 66666666
+#   }
+# }
+# { +Template Name: CorePlayerAdmin
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     AlphaVirus: 88888888
+#   }
+# }
+
  # =======================
  #  Reprocessed Ores  
  # =======================
