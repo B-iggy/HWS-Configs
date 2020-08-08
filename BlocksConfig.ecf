@@ -25320,7 +25320,7 @@ HullCombatSmallBlocks
   CPUIn: 16300, type: int, display: true
   EnergyInIdle: 400, type: int, display: true, formatter: Watt
   ShieldCapacity: 3000000, type: int, display: true
-  ShieldRecharge: 25000, type: int, display: true # full in 50 sec
+  ShieldRecharge: 25000, type: int, display: true # full in 40 sec
   ShieldCooldown: 50, type: int, display: true
   ShieldPerCrystal: 15000, type: int, display: true # 200 Pentaxid in total
   UpgradeTo: null
