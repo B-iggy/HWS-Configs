@@ -1640,7 +1640,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
 
   EnergyIn: -4000, type: int, display: true, formatter: Watt
-  CPUIn: -5000, type: int, display: true
+  CPUIn: -10000, type: int, display: true
   Volume: 100, type: float, display: true, formatter: Liter
   Mass: 100, type: float, display: true, formatter: Kilogram
 }
@@ -1674,8 +1674,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "2,1,1", display: true
 
   EnergyIn: 1, type: int, display: true, formatter: Watt
-  Torque: 300000, type: int, display: true, formatter: NewtonMeter
-  CPUIn: -15000, type: int, display: true
+  Torque: 500000, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -30000, type: int, display: true
   Volume: 70, type: float, display: true, formatter: Liter
   Mass: 70, type: float, display: true, formatter: Kilogram
 }
@@ -1708,8 +1708,8 @@ HullCombatSmallBlocks
   #SizeInBlocksLocked: "GV"
   SizeInBlocks: "1,1,1", display: true
 
-  Torque: 1000, type: int, display: true, formatter: NewtonMeter
-  CPUIn: -2500, type: int, display: true
+  Torque: 1500, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -3000, type: int, display: true
   Volume: 80, type: float, display: true, formatter: Liter
   Mass: 80, type: float, display: true, formatter: Kilogram
 }
@@ -1742,8 +1742,8 @@ HullCombatSmallBlocks
   #SizeInBlocksLocked: "SS"
   SizeInBlocks: "1,1,1", display: true
 
-  Torque: 1500, type: int, display: true, formatter: NewtonMeter
-  CPUIn: -7000, type: int, display: true
+  Torque: 1700, type: int, display: true, formatter: NewtonMeter
+  CPUIn: -7500, type: int, display: true
   Volume: 150, type: float, display: true, formatter: Liter
   Mass: 150, type: float, display: true, formatter: Kilogram
 }
@@ -7917,6 +7917,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
+  Faction: Alien
   BlockColor: "102,0,0"
   AllowPlacingAt: "Base,MS,SS,GV", display: true
   IsActivateable: true
@@ -19605,6 +19606,9 @@ HullCombatSmallBlocks
 # NPCAdminCore
 { +Block Id: 1360, Name: CoreNPCAdmin, Ref: CoreNPC
   Model: @models/Blocks/Misc/CoreBlockNPCAdminPrefab
+  # Special trick
+  # TemplateRoot: CoreNPCAdmin
+  # PickupTarget: CoreNPCAdmin
   IsDestructible: false
   BlockColor: "171,32,161"
 }
@@ -25290,7 +25294,7 @@ HullCombatSmallBlocks
   CPUIn: 18100, type: int, display: true
   EnergyInIdle: 800, type: int, display: true, formatter: Watt
   ShieldCapacity: 20000000, type: int, display: true
-  ShieldRecharge: 120, type: int, display: true      # full in 40 sec
+  ShieldRecharge: 222222, type: int, display: true      # full in 30 sec
   ShieldCooldown: 40, type: int, display: true
   ShieldPerCrystal: 41666, type: int, display: true # 600 Pentaxid in total
   UpgradeTo: ShieldGeneratorCVT2, display: true
@@ -25316,7 +25320,7 @@ HullCombatSmallBlocks
   CPUIn: 16300, type: int, display: true
   EnergyInIdle: 400, type: int, display: true, formatter: Watt
   ShieldCapacity: 3000000, type: int, display: true
-  ShieldRecharge: 20000, type: int, display: true # full in 50 sec
+  ShieldRecharge: 25000, type: int, display: true # full in 50 sec
   ShieldCooldown: 50, type: int, display: true
   ShieldPerCrystal: 15000, type: int, display: true # 200 Pentaxid in total
   UpgradeTo: null
@@ -25341,7 +25345,7 @@ HullCombatSmallBlocks
   CPUIn: 33100, type: int, display: true
   EnergyInIdle: 1600, type: int, display: true, formatter: Watt
   ShieldCapacity: 40000000, type: int, display: true
-  ShieldRecharge: 444444, type: int, display: true # full in 30 sec
+  ShieldRecharge: 666666, type: int, display: true # full in 20 sec
   ShieldCooldown: 30, type: int, display: true
   ShieldPerCrystal: 57143, type: int, display: true # 700 Pentaxid in total
   PickupTarget: ShieldGeneratorCV    # Avoid getting back T2 and then be able to place T1 and T2
@@ -25799,7 +25803,7 @@ HullCombatSmallBlocks
   EnergyInIdle: 500, type: int, display: true, formatter: Watt
   CPUIn: 15400, type: int, display: true
   ShieldCapacity: 4000000, type: int, display: true
-  ShieldRecharge: 26666, type: int, display: true # full in 50 sec
+  ShieldRecharge: 33333, type: int, display: true # full in 40 sec
   ShieldCooldown: 50, type: int, display: true
   ShieldPerCrystal: 13333, type: int, display: true # 300 Pentaxid in total
   UpgradeTo: null

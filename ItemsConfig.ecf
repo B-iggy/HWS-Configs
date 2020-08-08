@@ -6737,10 +6737,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 266
   { Child 0
     Class: Projectile
-    Damage: 9000, display: true
+    Damage: 11000, display: true
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
-    BlastDamage: 4500, display: true
+    BlastDamage: 5500, display: true
     Speed: 145, display: true
     Range: 650, display: true
     SpeedSpace: 235, display: true
@@ -7851,15 +7851,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 2000, display: true   # new: because we removed explosion
+    Damage: 5000, display: true   # new: because we removed explosion
     BlastParticleIndex: 0
-  #  BlastRadius: 3
-  #  BlastDamage: 200
+    BlastRadius: 3
+    BlastDamage: 1000
     Speed: 750
     Range: 650
     SpeedSpace: 810
     RangeSpace: 1300
     Ballistic: false
+    HomingSpeed: 1.7
     Buff: "InfectedWound,DermalBurn,RadiationBurn,IncreaseRadiation"
     Buff_chance: "0.25,1,0.5,0.75"
 
@@ -7881,6 +7882,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 20, param1: shield
     DamageMultiplier_18: 1, param1: plastic
+    BlastDamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
+    BlastDamageMultiplier_2: 10, param1: body
+    BlastDamageMultiplier_3: 1, param1: alien
+    BlastDamageMultiplier_4: 1, param1: metal
+    BlastDamageMultiplier_5: 1, param1: metallight
+    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_7: 10, param1: hull
+    BlastDamageMultiplier_8: 10, param1: hullarmored
+    BlastDamageMultiplier_9: 10, param1: hullcombat
+    BlastDamageMultiplier_10: 1, param1: concrete
+    BlastDamageMultiplier_11: 0, param1: dirt
+    BlastDamageMultiplier_12: 1, param1: stone
+    BlastDamageMultiplier_13: 1, param1: wood
+    BlastDamageMultiplier_14: 1, param1: woodblock
+    BlastDamageMultiplier_15: 1, param1: plants
+    BlastDamageMultiplier_16: 1, param1: rock
+    BlastDamageMultiplier_17: 20, param1: shield
+    BlastDamageMultiplier_18: 1, param1: plastic
   }
 
   UnlockLevel: 1
