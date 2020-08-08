@@ -1267,8 +1267,10 @@
   Faction: Zirax
   /* Mesh: Enemies/Drones/DroneV2Prefab      */
   /* MeshDead: Enemies/Drones/DroneV2DestroyedPrefab   */
-  Mesh: Enemies/Drones/EnemyDroneRedPrefab
-  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+#  Mesh: Enemies/Drones/EnemyDroneRedPrefab
+#  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+  Mesh: Enemies/Drones/DroneLarge01LODPrefab
+  MeshDead: Enemies/Drones/DroneLargeDmgPrefab
   PoolCount: 10
 
   SurfaceCategory: metal
@@ -1290,17 +1292,24 @@
   /* AITask-5: DronePathPatrol */
   /* AITask-6: DroneSentryPatrol */
 
-  #AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+  AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
 
   /* General properties */
   HandItem: rocketlauncherDroneSmall
   ItemsOnEnterGame: rocketlauncherDroneSmall
   IsEnemy: true
-  MaxHealth: 2000
+  MaxHealth: 5000
   # XpFactor: 1.5
   XpFactor: 5.0
 
-  SpawnYAdd: 15     /* drones shall always spawn 15meters above ground */
+  WanderSpeed: 10.0
+  ApproachSpeed: 40.0
+  NightWanderSpeed: 10.0
+  NightApproachSpeed: 40.0
+  PanicSpeed: 20.0
+  Speed: 50.0
+
+  SpawnYAdd: 30     /* drones shall always spawn 15meters above ground */
 
   ParticleOnDeath: drone_explosion02
   # TimeStayAfterDeath: 150
@@ -1308,27 +1317,38 @@
   LootListOnDeath: 151
 
   /* Sound Setting */
-  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
-  SfxRandom: Enemies/Drone/DroneSmall_SfxRandom
-  # SfxRandom: Enemies/Drone/ROBOTICMechMovement01
+  SfxRandomTime: 80.0   /* It will play the roam every [X/2, X] seconds */
+  # SfxRandom: Enemies/Drone/DroneSmall_SfxRandom #Old
+  SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
+  # SfxRandom: Enemies/Drone/ROBOTICMechMovement01 #Old
 
-  SfxAlertTime: 25.0   /* It will play the roam every [X/2, X] seconds*/
-  SfxAlert: Enemies/Drone/DroneSmall_SfxRandom
+  SfxAlertTime: 50.0   /* It will play the roam every [X/2, X] seconds*/
+  # SfxAlert: Enemies/Drone/DroneSmall_SfxRandom #REPLACE ME. THIS IS HORRIBLE.
+  SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
   SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
   SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
   # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho  
   # SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
   # SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
 
-  MapIcon: map_EnemyEntityDot
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_GV
 
   AllowUserInstantiate: true
   HudInfo: false
+
+  { Child VariableOverride
+    SpeedCalm: 10.0
+    SpeedAlerted: 20.0
+	SpeedAttack: 30.0
+  }
 }
 
 { +Entity Name: DroneSmallFast01Minigun, Ref: DroneSmallFast01Rocket
-  Mesh: Enemies/Drones/EnemyDroneBluePrefab
-  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+#  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+#  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+  Mesh: Enemies/Drones/DroneLarge01LODPrefab
+  MeshDead: Enemies/Drones/DroneLargeDmgPrefab
 
   HandItem: minigunDroneSmall
   ItemsOnEnterGame: minigunDroneSmall
@@ -1342,7 +1362,7 @@
   Mesh: Enemies/Drones/EnemyDronePrefab
   MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
 
-  MaxHealth: 2200
+  MaxHealth: 7000
   # XpFactor: 1.6
   XpFactor: 5.0
 
@@ -1384,7 +1404,7 @@
   Mesh: Enemies/Drones/DroneSmall02LODPrefab
   MeshDead: Enemies/Drones/DroneSmallDmgPrefab
 
-  MaxHealth: 2400
+  MaxHealth: 7500
   # XpFactor: 1.6
   XpFactor: 7.5
 
@@ -1398,11 +1418,13 @@
 
 { +Entity Name: DroneLargeSlow01Minigun, Ref: DroneSmallFast01Rocket
 
-  Mesh: Enemies/Drones/DroneLarge01LODPrefab
-  MeshDead: Enemies/Drones/DroneLargeDmgPrefab
+#  Mesh: Enemies/Drones/DroneLarge01LODPrefab
+#  MeshDead: Enemies/Drones/DroneLargeDmgPrefab
+  Mesh: Enemies/Drones/EnemyDroneV2Prefab
+  MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
 
   DroneType: SlowDrone
-  MaxHealth: 2700
+  MaxHealth: 10000
   # XpFactor: 1.6
   XpFactor: 10.0
 
@@ -1416,6 +1438,8 @@
 }
 
 { +Entity Name: DroneLargeSlow01Plasma, Ref: DroneLargeSlow01Minigun
+  Mesh: Enemies/Drones/EnemyDroneV2Prefab
+  MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
 
   HandItem: plasmaDroneLarge
 
@@ -1430,7 +1454,7 @@
 
   LootListOnDeath: 156
 
-  MaxHealth: 2700
+  MaxHealth: 10000
   # XpFactor: 1.7
   XpFactor: 10.0
 
@@ -1547,7 +1571,7 @@
 { +Entity Name: EnemyDroneV2Minigun, Ref: DroneSmallFast01Rocket
   Mesh: Enemies/Drones/EnemyDroneV2Prefab
   MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
-  MaxHealth: 14500
+  MaxHealth: 17500
   # XpFactor: 0.3
   XpFactor: 7.5
 
@@ -1584,7 +1608,7 @@
   # HandItem: minigunDroneAttackBase
   # ItemsOnEnterGame: minigunDroneAttackBase
 
-  MaxHealth: 4000
+  MaxHealth: 4500
   # XpFactor: 1
   XpFactor: 7.5
 
@@ -1600,7 +1624,7 @@
   HandItem: BaseAttackDroneWeapon
   ItemsOnEnterGame: BaseAttackDroneWeapon
 
-  MaxHealth: 10000
+  MaxHealth: 17500
   # XpFactor: 0.3
   XpFactor: 10.0
 
@@ -1621,7 +1645,7 @@
   HandItem: DroneBaseAttackRocketWeapon
   ItemsOnEnterGame: DroneBaseAttackRocketWeapon
 
-  MaxHealth: 5000
+  MaxHealth: 6000
   XpFactor: 7.5
   RpFactor: 0    # no reputation change for base attack entities
 
@@ -1653,7 +1677,7 @@
   HandItem: DroneBaseAttackRocketWeapon
   ItemsOnEnterGame: DroneBaseAttackRocketWeapon
 
-  MaxHealth: 7500
+  MaxHealth: 15000
   XpFactor: 10
   RpFactor: 0    # no reputation change for base attack entities
 
@@ -1668,7 +1692,7 @@
   HandItem: DroneBaseAttackMinigunWeapon
   ItemsOnEnterGame: DroneBaseAttackMinigunWeapon
 
-  MaxHealth: 8000
+  MaxHealth: 15000
   XpFactor: 10
   RpFactor: 0    # no reputation change for base attack entities
 
@@ -1678,12 +1702,16 @@
 # troop transport
 # ======================================================================
 { +Entity Name: DroneTroopsTransportBaseAttack, Ref: DroneTroopsTransport
-  MaxHealth: 25000
-  XpFactor: 10
+  MaxHealth: 20000
+  XpFactor: 20
   RpFactor: 0    # no reputation change for base attack entities
   AllowUserInstantiate: false
 }
 { +Entity Name: DroneTroopsTransportBaseAttackSmall, Ref: DroneTroopsTransportBaseAttack
+  MaxHealth: 10000
+  XpFactor: 10
+  RpFactor: 0    # no reputation change for base attack entities
+  AllowUserInstantiate: false
 }
 # ======================================================================
 
@@ -1706,17 +1734,17 @@
   ViewRange: 1000
 
   /* AI properties */
-  #AITarget-1: DroneDetection, param1: "BA", param2: EntityShipSV
+  AITarget-1: DroneDetection, param1: "BA", param2: EntityShipSV
 
   /* General properties */
   HandItem: BombLauncherWeapon
   ItemsOnEnterGame: BombLauncherWeapon
   IsEnemy: true
-  MaxHealth: 15000
+  MaxHealth: 21000
   # XpFactor: 1.5
   XpFactor: 15.0
 
-  SpawnYAdd: 15     /* drones shall always spawn 15meters above ground */
+  SpawnYAdd: 25     /* drones shall always spawn 15meters above ground */
 
   ParticleOnDeath: drone_explosion02
   # TimeStayAfterDeath: 150
@@ -1750,8 +1778,10 @@
 { +Entity Name: SpaceDronePlasma
   EntityType: EnemyDrone
   Faction: Zirax
-  Mesh: Enemies/Drones/SpaceDroneLODPrefab
-  MeshDead: Enemies/Drones/SpaceDroneDmgPrefab
+  # Mesh: Enemies/Drones/SpaceDroneLODPrefab
+  # MeshDead: Enemies/Drones/SpaceDroneDmgPrefab
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
   PoolCount: 10
 
   /* General properties */
@@ -1809,9 +1839,11 @@
 }
 
 { +Entity Name: SpaceDroneLaser, Ref: SpaceDronePlasma
-  Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+  # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
 
-  MaxHealth: 4500
+  MaxHealth: 15000
   # XpFactor: 2
   XpFactor: 12.5
 
@@ -1827,7 +1859,7 @@
   MeshDead: Enemies/Drones/KrielDroneDmgPrefab
   Faction: Kriel
 
-  MaxHealth: 2000
+  MaxHealth: 17500
   # XpFactor: 2
   XpFactor: 18
 
@@ -1857,7 +1889,7 @@
   MeshDead: Enemies/Drones/PolarisDrone04DestroyedPrefab
   Faction: Trader
 
-  MaxHealth: 2000
+  MaxHealth: 14500
   # XpFactor: 2
   XpFactor: 18
 
@@ -1869,10 +1901,10 @@
 }
 { +Entity Name: SpaceDroneLegacyLaser, Ref: SpaceDronePlasma
   Mesh: Enemies/Drones/LegacyDroneCrabPrefab
-  MeshDead: Enemies/Drones/SpaceDroneDmgPrefab
+  MeshDead: Enemies/Drones/LegacyDroneCrabDmgPrefab
   Faction: Alien
 
-  MaxHealth: 4000
+  MaxHealth: 25000
   # XpFactor: 2
   XpFactor: 18
 
@@ -1887,7 +1919,7 @@
   MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
   Faction: Civilian
 
-  MaxHealth: 1000
+  MaxHealth: 10000
   # XpFactor: 2
   XpFactor: 10
 
@@ -1902,7 +1934,7 @@
   MeshDead: Enemies/Drones/PolarisDrone04DestroyedPrefab
   Faction: Civilian
 
-  MaxHealth: 1000
+  MaxHealth: 10000
   # XpFactor: 2
   XpFactor: 10
 
@@ -2006,7 +2038,7 @@
 
 { +Entity Name: TraderTemplate
   /* Class properties */
-  Faction: Polaris
+  Faction: Trader
   ModelType: NoRagdoll
   Prefab: AlienTrader
   Class: Enemy  
@@ -2386,7 +2418,7 @@
   
   Prefab: AlienHumanoid
   
-  Faction: Alien
+  Faction: Kriel
   
   ViewAngle: 180
   MaxHealth: 750
@@ -2395,11 +2427,11 @@
   HandItem: MeleeHexapod
   RotateToGround: false
 
-  WanderSpeed: 0.4
-  ApproachSpeed: 1.2
-  NightWanderSpeed: 0.4
-  NightApproachSpeed: 1.2
-  PanicSpeed: 1.2
+  WanderSpeed: 0.9
+  ApproachSpeed: 1.4
+  NightWanderSpeed: 0.9
+  NightApproachSpeed: 1.4
+  PanicSpeed: 1.4
 
   /* Determines particle effect  */
   SurfaceCategory: human
@@ -2477,6 +2509,15 @@
   XpFactor: 5.0
   HandItem: MeleeTotalHorror
   RotateToGround: false
+
+  { Child VariableOverride
+    SpeedCalm: 0.3
+    SpeedAlerted: 0.3
+    SpeedAttack: 0.3
+    SpeedFlee: 0.3
+    MeleeAttackDistance: 1.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
+    MinimalDistanceToTarget: 2.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
+  }
   
   WanderSpeed: 0.2
   ApproachSpeed: 0.9
@@ -3228,7 +3269,7 @@
   
   SurfaceCategory: alien
     
-  Faction: Polaris
+  Faction: Trader
   
   /* General entity properties */  
   ViewAngle: 180
@@ -3307,7 +3348,7 @@
 { +Entity Name: TraderZirax, Ref: Trader1
   Mesh: Enemies/Zirax/ZiraxTraderPrefab
   MeshDead: Enemies/Zirax/ZiraxTraderDeadPrefab
-  Faction: Faction
+  Faction: Zirax
   # RightHandJointName: GameObject
   RpFactor: 5
 }
@@ -3395,7 +3436,7 @@
   StepHeight: 0.5
   
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
   {	Child GroupDirectionSensor
 	TickIfLead: true
@@ -3439,7 +3480,8 @@
   LootListOnDeath: 10
 
   AllowUserInstantiate: true
-  
+  AllowInSpawners: true
+
  
   /* AI Properties */ 
   { Child MainBehavior
@@ -3552,7 +3594,8 @@
 
   LootListOnDeath: 31
   AllowUserInstantiate: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
+  AllowInSpawners: true
+  FadingEnabled: false     # otherwise problems when switching to dead model
   
   /* AI Properties */
   { Child MainBehavior
@@ -3979,7 +4022,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   UpdateClusterInfo: true   
   AllowUserInstantiate: true
-  AllowInSpawners: false
+  AllowInSpawners: true
   FadingEnabled: false     # otherwise problems when switching to dead model 
   
   /* AI Properties */ 
@@ -4226,7 +4269,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }    
   
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 }
 
@@ -4614,11 +4657,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   {	Child VisionSensor
 	VisibleDistance: 75
 	ViewAngle: 180
-	VisibleTypes: "Player,HV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone"
   }  
   
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone"
   }
   
   {	Child AlertSensor
@@ -4843,11 +4886,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   {	Child VisionSensor
 	VisibleDistance: 150
-	ViewAngle: 180
+	ViewAngle: 320
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone"
   }  
   
   {	Child TargetSensor
-    AttackableTypes: "Player,SV,HV,PlayerBike"
+    AttackableTypes: "Player,SV,CV,BA,HV,PlayerDrone"
   }
   
   {	Child AlertSensor
@@ -4934,7 +4978,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   {	Child VisionSensor
 	VisibleDistance: 50
-	ViewAngle: 180
+	ViewAngle: 240
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone"
   }  
   
   {	Child TargetSensor
@@ -7065,7 +7110,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }  
   
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone"
   }
   
   { Child StuckSensor
