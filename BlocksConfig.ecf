@@ -3449,9 +3449,10 @@ HullCombatSmallBlocks
   HitPoints: 10250, type: int, display: true
   CPUIn: 3100, type: int, display: true
   Place: Free
+  ReturnFactor: 0.5, display: true
 
-  EnergyIn: 2450, type: int, display: true, formatter: Watt
-  EnergyInIdle: 26, type: int, display: true, formatter: Watt
+  EnergyIn: 5000, type: int, display: true, formatter: Watt
+  EnergyInIdle: 200, type: int, display: true, formatter: Watt
 }
 { +Block Id: 323, Name: TurretMSPulseLaserRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSPulseLaserRetractPrefab
@@ -10556,8 +10557,8 @@ HullCombatSmallBlocks
   Mass: 790, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   CPUIn: 3000, type: int, display: true
-  EnergyIn: 700, type: int, display: true, formatter: Watt
-  EnergyInIdle: 14, type: int, display: true, formatter: Watt
+  EnergyIn: 1500, type: int, display: true, formatter: Watt
+  EnergyInIdle: 25, type: int, display: true, formatter: Watt
   HitPoints: 850, type: int, display: true
 }
 
@@ -16287,9 +16288,10 @@ HullCombatSmallBlocks
   AllowPlacingAt: GV, display: true
   SizeInBlocks: "3,1,3", display: true
   Info: bkiTurretTool, display: true
+  ReturnFactor: 0.5, display: true
   HitPoints: 1350, type: int, display: true
-  EnergyIn: 750, type: int, display: true, formatter: Watt
-  EnergyInIdle: 8, type: int, display: true, formatter: Watt
+  EnergyIn: 3000, type: int, display: true, formatter: Watt
+  EnergyInIdle: 100, type: int, display: true, formatter: Watt
   Volume: 281.25, type: float, display: true, formatter: Liter
   Mass: 420, type: float, display: true, formatter: Kilogram
   CPUIn: 3000, type: int, display: true
@@ -16308,9 +16310,10 @@ HullCombatSmallBlocks
   Mass: 9660, type: float, display: true, formatter: Kilogram
   SizeInBlocks: "3,1,3", display: true
   CPUIn: 3000, type: int, display: true
+  ReturnFactor: 0.5, display: true
 
-  EnergyIn: 2400, type: int, display: true, formatter: Watt
-  EnergyInIdle: 19, type: int, display: true, formatter: Watt
+  EnergyIn: 5000, type: int, display: true, formatter: Watt
+  EnergyInIdle: 200, type: int, display: true, formatter: Watt
   TechTreeNames: Hidden
 
   ShowUser: No
@@ -23625,8 +23628,11 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,2,3", display: true
   HitPoints: 1200, type: int, display: true
   Mass: 1090, type: float, display: true, formatter: Kilogram
-  EnergyIn: 800, type: int, display: true, formatter: Watt
   CPUIn: 3100, type: int, display: true
+  ReturnFactor: 0.5, display: true
+
+  EnergyIn: 3000, type: int, display: true, formatter: Watt
+  EnergyInIdle: 100, type: int, display: true, formatter: Watt
 }
 { +Block Id: 1670, Name: SentryGun03Retract, Ref: SentryGun03
   Model: @models/Blocks/Turrets/SentryGuns/SentryGunHumanRetractPrefab

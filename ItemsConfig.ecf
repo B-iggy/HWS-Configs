@@ -699,22 +699,22 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 20, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 250, param1: alien
+    DamageMultiplier_4: 250, param1: metal
+    DamageMultiplier_5: 250, param1: metallight
+    DamageMultiplier_6: 250, param1: metalhard
+    DamageMultiplier_7: 250, param1: hull
+    DamageMultiplier_8: 250, param1: hullarmored
+    DamageMultiplier_9: 250, param1: hullcombat
+    DamageMultiplier_10: 250, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 250, param1: wood
+    DamageMultiplier_14: 250, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
-    DamageMultiplier_17: 400, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 250, param1: plastic
 
     RadialText: rdlDisassemble 
     RadialDesc: rdlDisassembleTxt
@@ -940,22 +940,22 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 	
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 20, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 250, param1: alien
+    DamageMultiplier_4: 250, param1: metal
+    DamageMultiplier_5: 250, param1: metallight
+    DamageMultiplier_6: 250, param1: metalhard
+    DamageMultiplier_7: 250, param1: hull
+    DamageMultiplier_8: 250, param1: hullarmored
+    DamageMultiplier_9: 250, param1: hullcombat
+    DamageMultiplier_10: 250, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 250, param1: wood
+    DamageMultiplier_14: 250, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
-    DamageMultiplier_17: 400, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 250, param1: plastic
 	
     RadialText: rdlDeconstruct
     RadialDesc: rdlDeconstructTxt 
@@ -2499,24 +2499,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 8
 	  ReturnFactor: 0.667, display: true
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 20, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 500, param1: alien
+    DamageMultiplier_4: 500, param1: metal
+    DamageMultiplier_5: 500, param1: metallight
+    DamageMultiplier_6: 500, param1: metalhard
+    DamageMultiplier_7: 500, param1: hull
+    DamageMultiplier_8: 500, param1: hullarmored
+    DamageMultiplier_9: 500, param1: hullcombat
+    DamageMultiplier_10: 500, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 500, param1: wood
+    DamageMultiplier_14: 500, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 1, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
+    DamageMultiplier_18: 500, param1: plastic
   }
   { Child 1 # "Repair"
     Range: 8
@@ -2525,24 +2525,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 2 # "Exchange and Rotate"
     Damage: 110
     Range: 8
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 20, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
-    DamageMultiplier_11: 0, param1: dirt
-    DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
-    DamageMultiplier_15: 1, param1: plants
-    DamageMultiplier_16: 1, param1: rock
-    DamageMultiplier_17: 1, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
   }
   { Child 3 # "Downgrade"
     Range: 8
@@ -2555,24 +2537,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 	  ReturnFactor: 0.667
     Range: 8
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 20, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 500, param1: alien
+    DamageMultiplier_4: 500, param1: metal
+    DamageMultiplier_5: 500, param1: metallight
+    DamageMultiplier_6: 500, param1: metalhard
+    DamageMultiplier_7: 500, param1: hull
+    DamageMultiplier_8: 500, param1: hullarmored
+    DamageMultiplier_9: 500, param1: hullcombat
+    DamageMultiplier_10: 500, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 500, param1: wood
+    DamageMultiplier_14: 500, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 1, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
+    DamageMultiplier_18: 500, param1: plastic
   }
 
   UnlockCost: 14, display: true
@@ -3074,14 +3056,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # ParticleTransform: ""     /* do NOT show a particle effect */
 
-    DamageMultiplier_1: 0, param1: dirt|stone|wood|shield
-    DamageMultiplier_2: 10, param1: metalhard    # 20/3 damage
-    DamageMultiplier_3: 5, param1: metal         # 10/3 damage
-    DamageMultiplier_4: 10, param1: hull         # 20/3 damage
-    DamageMultiplier_5: 25, param1: hullarmored  # 50/3 damage
-    DamageMultiplier_6: 50, param1: hullcombat   # 100/3 damage
-    DamageMultiplier_7: 25, param1: concrete     # 50 damage
-    DamageMultiplier_8: 10, param1: woodblock    # 20 damage
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_3: 125, param1: alien
+    DamageMultiplier_4: 125, param1: metal
+    DamageMultiplier_5: 125, param1: metallight
+    DamageMultiplier_6: 125, param1: metalhard
+    DamageMultiplier_7: 125, param1: hull
+    DamageMultiplier_8: 125, param1: hullarmored
+    DamageMultiplier_9: 125, param1: hullcombat
+    DamageMultiplier_10: 125, param1: concrete
+    DamageMultiplier_11: 0, param1: dirt
+    DamageMultiplier_12: 0.1, param1: stone
+    DamageMultiplier_13: 125, param1: wood
+    DamageMultiplier_14: 125, param1: woodblock
+    DamageMultiplier_15: 1, param1: plants
+    DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 125, param1: plastic
 
     RadialText: rdlDeconstruct
     RadialDesc: rdlDeconstructTxt
@@ -5774,12 +5766,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 70
     IgnoreAtmo: true
     Automatic: true
-    Damage: 275
+    Damage: 100, display: true
     Radius: 3
-    ReturnFactor: 0.7, display: true
+	ReturnFactor: 0.5, display: true
     AmmoCapacity: 0, display: false        # no need to display since unlimited ammo
     AmmoType: AmmoInfinite, display: true
     AmmoUnlimited: true
+    BulletsPerShot: 3
+    BulletSpread: 1
+    RaySpread: 1, display: true
     NoiseStrength: 30, display: false
     CameraShake: 0
     ReloadDelay: 3.0, display: false        # no need to display since unlimited ammo
@@ -5789,22 +5784,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 150, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 500, param1: alien
+    DamageMultiplier_4: 500, param1: metal
+    DamageMultiplier_5: 500, param1: metallight
+    DamageMultiplier_6: 500, param1: metalhard
+    DamageMultiplier_7: 500, param1: hull
+    DamageMultiplier_8: 500, param1: hullarmored
+    DamageMultiplier_9: 500, param1: hullcombat
+    DamageMultiplier_10: 500, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 500, param1: wood
+    DamageMultiplier_14: 500, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 500, param1: plastic
 
     RadialText: rdlDisassemble
     RadialDesc: rdlDisassembleTxt
@@ -5815,9 +5812,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowAt: "Planet"
     Range: 50
     IgnoreAtmo: true
-    ROF: 0.3, type: float
+    ROF: 0.5, type: float
     RepairPoints: 150
     Automatic: true
+    BulletsPerShot: 3
+    BulletSpread: 1
+    RaySpread: 1, display: true
     AmmoCapacity: 0, display: false        # no need to display since unlimited ammo
     AmmoType: AmmoInfinite, display: true
     AmmoUnlimited: true
@@ -5844,10 +5844,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     IgnoreAtmo: true
     ROF: 0.5, type: float, display: false, formatter: ROF
     Automatic: true
-    Damage: 250
+    Damage: 100, display: true
     Radius: 3
+    BulletsPerShot: 3
+    BulletSpread: 1
+    RaySpread: 1, display: true
     Demolish: True
-	ReturnFactor: 0.7
+	ReturnFactor: 0.5, display: true
     AmmoCapacity: 0, display: false        # no need to display since unlimited ammo
     AmmoType: AmmoInfinite, display: true
     AmmoUnlimited: true
@@ -5859,22 +5862,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 150, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 500, param1: alien
+    DamageMultiplier_4: 500, param1: metal
+    DamageMultiplier_5: 500, param1: metallight
+    DamageMultiplier_6: 500, param1: metalhard
+    DamageMultiplier_7: 500, param1: hull
+    DamageMultiplier_8: 500, param1: hullarmored
+    DamageMultiplier_9: 500, param1: hullcombat
+    DamageMultiplier_10: 500, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 500, param1: wood
+    DamageMultiplier_14: 500, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 500, param1: plastic
 
     RadialText: rdlDeconstruct
     RadialDesc: rdlDeconstructTxt
@@ -5899,12 +5904,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 120
     IgnoreAtmo: true
     Automatic: true
-    Damage: 600
+    Damage: 200, display: true
     Radius: 3
-	ReturnFactor: 0.7, display: true
+	ReturnFactor: 0.5, display: true
     AmmoCapacity: 0, display: false        # no need to display since unlimited ammo
     AmmoType: AmmoInfinite, display: true
     AmmoUnlimited: true
+    BulletsPerShot: 3
+    BulletSpread: 0.5
+    RaySpread: 1, display: true
     NoiseStrength: 30, display: false
     CameraShake: 0
     ReloadDelay: 3.0, display: false       # no need to display since unlimited ammo
@@ -5914,22 +5922,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 200, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 500, param1: alien
+    DamageMultiplier_4: 500, param1: metal
+    DamageMultiplier_5: 500, param1: metallight
+    DamageMultiplier_6: 500, param1: metalhard
+    DamageMultiplier_7: 500, param1: hull
+    DamageMultiplier_8: 500, param1: hullarmored
+    DamageMultiplier_9: 500, param1: hullcombat
+    DamageMultiplier_10: 500, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 500, param1: wood
+    DamageMultiplier_14: 500, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 500, param1: plastic
 
     RadialText: rdlDisassemble
     RadialDesc: rdlDisassembleTxt
@@ -5940,7 +5950,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowAt: "Space"
     Range: 120, display: true
     IgnoreAtmo: true
-    ROF: 0.3, type: float
+    ROF: 0.5, type: float
     RepairPoints: 500
     Automatic: true
     AmmoCapacity: 0, display: false       # no need to display since unlimited ammo
@@ -5969,10 +5979,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     IgnoreAtmo: true
     ROF: 0.5, type: float, display: false, formatter: ROF
     Automatic: true
-    Damage: 600
+    Damage: 600, display: true
+    BulletsPerShot: 3
+    BulletSpread: 1
+    RaySpread: 1, display: true
     Radius: 3
     Demolish: True
-	ReturnFactor: 0.8
+	ReturnFactor: 0.5, display: true
     AmmoCapacity: 0, display: false       # no need to display since unlimited ammo
     AmmoType: AmmoInfinite, display: true
     AmmoUnlimited: true
@@ -5984,22 +5997,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
 
-    DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 20, param1: alien
-    DamageMultiplier_4: 20, param1: metal
-    DamageMultiplier_5: 20, param1: metallight
-    DamageMultiplier_6: 200, param1: metalhard
-    DamageMultiplier_7: 20, param1: hull
-    DamageMultiplier_8: 200, param1: hullarmored
-    DamageMultiplier_9: 300, param1: hullcombat
-    DamageMultiplier_10: 400, param1: concrete
+    DamageMultiplier_3: 500, param1: alien
+    DamageMultiplier_4: 500, param1: metal
+    DamageMultiplier_5: 500, param1: metallight
+    DamageMultiplier_6: 500, param1: metalhard
+    DamageMultiplier_7: 500, param1: hull
+    DamageMultiplier_8: 500, param1: hullarmored
+    DamageMultiplier_9: 500, param1: hullcombat
+    DamageMultiplier_10: 500, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_13: 500, param1: wood
+    DamageMultiplier_14: 500, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 500, param1: plastic
 
     RadialText: rdlDeconstruct
     RadialDesc: rdlDeconstructTxt
