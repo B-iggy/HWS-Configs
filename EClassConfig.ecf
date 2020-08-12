@@ -2677,7 +2677,9 @@
   RotateToGround: false
   RotateSpeed: 15
 
-  WanderSpeed: 0.8
+  /* General entity properties */
+  ViewAngle: 120
+  WanderSpeed: 0.2
   ApproachSpeed: 0.5
   NightWanderSpeed: 0.6
   NightApproachSpeed: 0.8
@@ -3354,12 +3356,14 @@
 }
 { +Entity Name: TraderHuman, Ref: Trader1
   Mesh: Enemies/Traders/HumanTrader1Prefab
+  MeshDead: Enemies/Traders/HumanTrader1DeadPrefab
   # RightHandJointName: GameObject
   #RpFactor: 5
   Faction: Civilian
 }
 { +Entity Name: TraderKriel, Ref: Trader1
   Mesh: Enemies/Traders/KrielTrader1Prefab
+  MeshDead: Enemies/Traders/KrielTrader1DeadPrefab
   # RightHandJointName: GameObject
   #RpFactor: 5
   Faction: Kriel
