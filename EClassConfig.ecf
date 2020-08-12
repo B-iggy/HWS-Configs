@@ -2678,7 +2678,6 @@
   RotateSpeed: 15
 
   /* General entity properties */
-  ViewAngle: 120
   WanderSpeed: 0.2
   ApproachSpeed: 0.5
   NightWanderSpeed: 0.6
