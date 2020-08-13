@@ -11481,7 +11481,7 @@ HullCombatSmallBlocks
   UnlockLevel: 10, display: true
   # TechTreeParent: PentaxidTank
   TechTreeNames: Capital Vessel
-  UpgradeTo: WarpDriveT2, display: true
+  UpgradeTo: null
 }
 { +Block Id: 721, Name: OxygenStationSV
   Class: O2Station
@@ -18207,11 +18207,10 @@ HullCombatSmallBlocks
 { +Block Id: 1240, Name: ScifiTableNPC2, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
-  Class: PassengerSeat
+  Class: NPCDialogue
+  NPCModelRotation: false
   Group: cpgEquipment
   IsAccessible: true, type: bool
-  IsLockable: true
-  NPCModelRotation: false
 
   Model: Entities/Decorations/DecoNPC/ScifiTableNPC2Prefab
   EnergyIn: 0, type: int, display: true, formatter: Watt
@@ -25270,7 +25269,7 @@ HullCombatSmallBlocks
   ShieldRecharge: 250000, type: int, display: true # full in 20 sec
   ShieldCooldown: 20, type: int, display: true
   ShieldPerCrystal: 37500, type: int, display: true # 400 Pentaxid in total
-  UpgradeTo: ShieldGeneratorBAT2, display: true
+  UpgradeTo: null
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
@@ -25295,7 +25294,7 @@ HullCombatSmallBlocks
   ShieldRecharge: 222222, type: int, display: true      # full in 30 sec
   ShieldCooldown: 40, type: int, display: true
   ShieldPerCrystal: 41666, type: int, display: true # 600 Pentaxid in total
-  UpgradeTo: ShieldGeneratorCVT2, display: true
+  UpgradeTo: null
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true

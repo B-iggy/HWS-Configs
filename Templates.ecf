@@ -2334,11 +2334,14 @@
   CraftTime: 90 #C2 CV 10
   Target: "AdvC"
   { Child Inputs
-    EnergyMatrix: 2
-    Oscillator: 16
-    SteelPlateArmored: 100
-    FluxCoil: 20
+    EnergyMatrix: 15
+    Oscillator: 10
+    Computer: 15
+    Electronics: 25
+    SteelPlateArmored: 65
+    PowerCoil: 7
     CapacitorComponent: 10
+    PentaxidElement: 5
   }
 }
 
