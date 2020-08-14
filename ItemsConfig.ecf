@@ -147,8 +147,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Automatic: false
     BulletsPerShot: 8
     BulletSpread: 0.3
-    Buff: "OpenWound,Mutilation"
-    Buff_chance: "0.1,0.03"
+    # Buff: "OpenWound,Mutilation"
+    # Buff_chance: "0.1,0.03"
     RaySpread: 1.25, display: true
     Recoil: 2.5, display: true
     Damage: 100, display: true
@@ -219,8 +219,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 300, display: true
     AmmoType: 8.3mmBullet, display: true
     ReloadDelay: 6.5, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.07
+    # Buff: "OpenWound"
+    # Buff_chance: 0.07
     SfxBegin: Weapons/Player/Minigun/minigun_start
     SfxLoop: Weapons/Player/Minigun/minigun_loop
     SfxStop: Weapons/Player/Minigun/minigun_end
@@ -267,8 +267,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: 8.3mmBullet, display: true
     ReloadDelay: 6.5, display: true
     Automatic: true, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.06
+    # Buff: "OpenWound"
+    # Buff_chance: 0.06
     SfxBegin: Weapons/Player/Minigun/minigun_start
     SfxLoop: Weapons/Player/Minigun/minigun_loop
     SfxStop: Weapons/Player/Minigun/minigun_end
@@ -336,8 +336,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 25, display: true
     AmmoType: 5.8mmBullet, display: true
     ReloadDelay: 3.1, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.05
+    # Buff: "OpenWound"
+    # Buff_chance: 0.05
     SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
     SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
     SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end
@@ -415,8 +415,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: 12.7mmBullet, display: true
     # ReloadDelay: 3.7, display: true
     ReloadDelay: 4.1, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.2
+    # Buff: "OpenWound"
+    # Buff_chance: 0.2
     # SfxBegin: Weapons/Player/Sniper/desert_eagle
     SfxBegin: Weapons/Player/Rifle/M24
     SfxNoAmmo: Weapons/Misc/AK47DryFire01
@@ -576,8 +576,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 7, display: true
     AmmoType: ShotgunShells, display: true
     ReloadDelay: 3, display: true
-    Buff: "OpenWound,Mutilation"
-    Buff_chance: "0.1,0.03"
+    # Buff: "OpenWound,Mutilation"
+    # Buff_chance: "0.1,0.03"
     SfxBegin: Weapons/Player/Shotgun/w1200_fire
     # SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-03
     SfxNoAmmo: Weapons/Misc/PumpgunDryFire02
@@ -1206,8 +1206,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 30, display: true
     AmmoType: 5.8mmBullet, display: true
     ReloadDelay: 3.75, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.08
+    # Buff: "OpenWound"
+    # Buff_chance: 0.08
     # SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Modern_start
     # SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_loop
     # SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_end
@@ -1283,8 +1283,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: PulseLaserChargeRifle, display: true
     ReloadDelay: 3.0, display: true
     # ParticleTransform: Muzzle/Particle1
-    Buff: "DermalBurn"
-    Buff_chance: 0.08
+    # Buff: "DermalBurn"
+    # Buff_chance: 0.08
     UseSingleMagazine: true
 	SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
     # SfxBegin: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_start
@@ -1376,8 +1376,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 5, display: true
     AmmoType: SciFiCannonPlasmaCharge, display: true
     ReloadDelay: 5.0, display: true
-    # Buff: "DermalBurn,Mutilation"
-    # Buff_chance: "0.75,0.1"
+    # # Buff: "DermalBurn,Mutilation"
+    # # Buff_chance: "0.75,0.1"
     SfxBegin: Weapons/Player/Cannon/BLASTERComplexFireSciFiChargePowerfulDeepRelease
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
     SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
@@ -1402,8 +1402,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 5, display: true
     AmmoType: SciFiCannonPlasmaCharge, display: true
     ReloadDelay: 5.0, display: true
-    Buff: "DermalBurn,IncreaseRadiation"
-    Buff_chance: "0.75,0.1"
+    # Buff: "DermalBurn,IncreaseRadiation"
+    # Buff_chance: "0.75,0.1"
     SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
     SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
@@ -1469,8 +1469,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 8, display: true
     AmmoType: 12.7mmBullet, display: true
     ReloadDelay: 4.25, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.6
+    # Buff: "OpenWound"
+    # Buff_chance: 0.6
 	SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
     # SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-02-Single_Shot-01
     SfxNoAmmo: Weapons/Misc/AK47DryFire01
@@ -1802,8 +1802,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowRemote: true
     AmmoCapacity: 15, display: true
     ReloadDelay: 2.375, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.25
+    # Buff: "OpenWound"
+    # Buff_chance: 0.25
     SfxBegin: Weapons/Player/Sniper/desert_eagle
     # SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
 
@@ -1951,8 +1951,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 125, display: true
     AmmoType: BioFuel, display: true
     ReloadDelay: 5.5, display: true
-    Buff: "OpenWound,Mutilation"
-    Buff_chance: "0.4,0.2"
+    # Buff: "OpenWound,Mutilation"
+    # Buff_chance: "0.4,0.2"
     UseSingleMagazine: true
     /* SfxBegin: Weapons/Player/Tools/Chainsaw_start   */
     SfxLoop: Weapons/Player/Tools/Chainsaw_loop
@@ -2068,8 +2068,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 450, display: true
     AmmoCapacity: 10, display: true
     ReloadDelay: 5, display: true
-    Buff: "OpenWound,FractureOpen"
-    Buff_chance: "0.6,0.3"
+    # Buff: "OpenWound,FractureOpen"
+    # Buff_chance: "0.6,0.3"
     # AmmoType: PulseLaserChargeRifle, display: true
     SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
     #SfxBegin: Weapons/Player/Sniper/Resistance-SniperRifle-01-Single_Shot-03
@@ -2135,8 +2135,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: PulseLaserChargeRifle, display: true
     Automatic: true
     ReloadDelay: 3.149, display: true
-    Buff: "RadiationBurn,DermalBurn"
-    Buff_chance: "0.08,0.08"
+    # Buff: "RadiationBurn,DermalBurn"
+    # Buff_chance: "0.08,0.08"
     UseSingleMagazine: true
     SfxBegin: Weapons/Player/Minigun/minigun2_start
     SfxLoop: Weapons/Player/Minigun/minigun2_loop
@@ -2181,8 +2181,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Automatic: true
     ReloadDelay: 3.149, display: true
     Bullet_use_per_shot: 2
-    Buff: "RadiationBurn,DermalBurn,Stunned"
-    Buff_chance: "0.08,0.08,0.08"
+    # Buff: "RadiationBurn,DermalBurn,Stunned"
+    # Buff_chance: "0.08,0.08,0.08"
     UseSingleMagazine: true
     SfxBegin: Weapons/Player/Minigun/minigun2_start
     SfxLoop: Weapons/Player/Minigun/minigun2_loop
@@ -2245,8 +2245,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 100, display: true
     AmmoCapacity: 11, display: true
     ReloadDelay: 3, display: true
-    Buff: "OpenWound,Mutilation"
-    Buff_chance: "0.2,0.1"
+    # Buff: "OpenWound,Mutilation"
+    # Buff_chance: "0.2,0.1"
     SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-05
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
@@ -2298,8 +2298,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 195, display: true
     ROF: 0.17, type: float, display: true, formatter: ROF
     ReloadDelay: 3.7, display: true
-    Buff: "RadiationBurn,DermalBurn"
-    Buff_chance: "0.05,0.2"
+    # Buff: "RadiationBurn,DermalBurn"
+    # Buff_chance: "0.05,0.2"
     # CameraShake: 0
     Recoil: 0.17, display: true
     AmmoCapacity: 30, display: true
@@ -2388,8 +2388,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 7, display: true
     AmmoType: SciFiCannonPlasmaCharge, display: true
     ReloadDelay: 7, display: true
-    Buff: "DermalBurn,IncreaseRadiation"
-    Buff_chance: "0.75,0.1"
+    # Buff: "DermalBurn,IncreaseRadiation"
+    # Buff_chance: "0.75,0.1"
     SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
     SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
@@ -2453,8 +2453,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Automatic: true, display: true
     AmmoCapacity: 24, display: true
     ReloadDelay: 3.7, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.2
+    # Buff: "OpenWound"
+    # Buff_chance: 0.2
     SfxBegin: Weapons/Player/Pistol/AWDS_AR_ HK53_Heavy_Single
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
@@ -2849,8 +2849,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 120, display: false
     AmmoCapacity: 50, display: true
     AmmoType: PulseLaserChargeRifle, display: true
-    Buff: "RadiationBurn,DermalBurn"
-    Buff_chance: "0.3,0.1"
+    # Buff: "RadiationBurn,DermalBurn"
+    # Buff_chance: "0.3,0.1"
 
     PfxMuzzle: SniperMuzzleLaserGreen
     Tracer: Weapons/Projectiles/TracerLaserShotGreen
@@ -3184,8 +3184,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 40, display: false
     CameraShake: 0
     IgnoreAtmo: true
-    Buff: "Fire,DermalBurn"
-    Buff_chance: "1,1"
+    # Buff: "Fire,DermalBurn"
+    # Buff_chance: "1,1"
     Automatic: true
     Damage: 10, display: true
     Radius: 3
@@ -5079,8 +5079,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 160, display: false
     CameraShake: 8
     ReloadDelay: 10, display: true
-    Buff: "DermalBurn,IncreaseRadiation,RadiationBurn"
-    Buff_chance: "1,0.75,0.5"
+    # Buff: "DermalBurn,IncreaseRadiation,RadiationBurn"
+    # Buff_chance: "1,0.75,0.5"
     SfxBegin: Weapons/SS/LaserSS/weapon_blaster_003
     /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
@@ -6260,8 +6260,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 950, display: true
     HomingSpeed: 0.2
     Ballistic: false
-    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.2,0.5,0.2,0.3"
+    # Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.2,0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6324,8 +6324,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastRadius: 2, display: true
     BlastDamage: 1025, display: true
     NoiseStrength: 100, display: false
-    Buff: "FractureOpen,BrokenLeg,OpenWound,Mutilation"
-    Buff_chance: "0.3,0.5,0.7,0.2"
+    # Buff: "FractureOpen,BrokenLeg,OpenWound,Mutilation"
+    # Buff_chance: "0.3,0.5,0.7,0.2"
     Speed: 425, display: true
     Range: 525, display: true
     SpeedSpace: 525, display: true
@@ -6398,8 +6398,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 107, display: true
     RangeSpace: 1155, display: true
     Ballistic: false
-    Buff: "FractureOpen,OpenWound,BrokenLeg"
-    Buff_chance: "0.2,0.7,0.4"
+    # Buff: "FractureOpen,OpenWound,BrokenLeg"
+    # Buff_chance: "0.2,0.7,0.4"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6572,8 +6572,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1000
     HomingSpeed: 4
     Ballistic: false
-    Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.1,0.7,0.2,0.3"
+    # Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.1,0.7,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
@@ -6643,8 +6643,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 215, display: true
     RangeSpace: 1250, display: true
     Ballistic: false
-    Buff: "FractureOpen,BrokenLeg,Mutilation,Stunned"
-    Buff_chance: "0.3,0.3,0.3,0.5"
+    # Buff: "FractureOpen,BrokenLeg,Mutilation,Stunned"
+    # Buff_chance: "0.3,0.3,0.3,0.5"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6711,8 +6711,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 810, display: true
     RangeSpace: 1000, display: true
     Ballistic: false
-    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.5,0.2,0.3"
+    # Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
@@ -6762,8 +6762,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1200, display: true
     HomingSpeed: 2.3
     Ballistic: false
-    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
-    Buff_chance: "0.1,0.6,0.3,0.2"
+    # Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
+    # Buff_chance: "0.1,0.6,0.3,0.2"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6832,8 +6832,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1100, display: true
     HomingSpeed: 1
     Ballistic: false
-    Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.2,0.7,0.3,0.5"
+    # Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.2,0.7,0.3,0.5"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6902,8 +6902,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1789, display: true
     HomingSpeed: 0.1
     Ballistic: false
-    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.2,0.4,0.1,0.2"
+    # Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.2,0.4,0.1,0.2"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -6972,8 +6972,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1108, display: true
     HomingSpeed: 2.7
     Ballistic: false
-    Buff: "OpenWound,Mutilation,Stunned"
-    Buff_chance: "0.4,0.1,0.2"
+    # Buff: "OpenWound,Mutilation,Stunned"
+    # Buff_chance: "0.4,0.1,0.2"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7042,8 +7042,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1100, display: true
     HomingSpeed: 0.3
     Ballistic: false
-    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.3,0.5,0.2,0.3"
+    # Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.3,0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7111,8 +7111,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 970, display: true
     HomingSpeed: 0.30
     Ballistic: false
-    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation,Stunned"
-    Buff_chance: "0.4,0.7,0.4,0.15,0.25"
+    # Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation,Stunned"
+    # Buff_chance: "0.4,0.7,0.4,0.15,0.25"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7181,8 +7181,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 810, display: true
     RangeSpace: 1000, display: true
     Ballistic: false
-    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.3,0.15,0.1"
+    # Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.3,0.15,0.1"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
@@ -7390,8 +7390,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 750, display: true
     SpeedSpace: 810, display: true
     Ballistic: false
-    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.5,0.2,0.3"
+    # Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
@@ -7557,8 +7557,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1200, display: true
     HomingSpeed: 2.5
     Ballistic: false
-    Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
-    Buff_chance: "0.2,0.7,0.3,0.1"
+    # Buff: "FractureOpen,OpenWound,BrokenLeg,Mutilation"
+    # Buff_chance: "0.2,0.7,0.3,0.1"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7611,8 +7611,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 215, display: true
     RangeSpace: 1250, display: true
     Ballistic: false
-    Buff: "BrokenLeg,Stunned,Mutilation"
-    Buff_chance: "0.4,0.5,0.15"
+    # Buff: "BrokenLeg,Stunned,Mutilation"
+    # Buff_chance: "0.4,0.5,0.15"
 
     DamageMultiplier_1: 5, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7667,8 +7667,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 954, display: true
     HomingSpeed: 2.3
     Ballistic: false
-    Buff: "Stunned,OpenWound,BrokenLeg,Mutilation"
-    Buff_chance: "0.4,0.6,0.3,0.1"
+    # Buff: "Stunned,OpenWound,BrokenLeg,Mutilation"
+    # Buff_chance: "0.4,0.6,0.3,0.1"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -7732,8 +7732,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # BlastRadius: 2, display: true
     # BlastDamage: 400, display: true
     Ballistic: False
-    Buff: "FractureOpen,OpenWound,PoisonBit,BrokenLeg"
-    Buff_chance: "0.2,0.7,0.4,0.4"
+    # Buff: "FractureOpen,OpenWound,PoisonBit,BrokenLeg"
+    # Buff_chance: "0.2,0.7,0.4,0.4"
 
     DamageMultiplier_1: 20, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -7825,8 +7825,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 810
     RangeSpace: 875
     Ballistic: false
-    Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.7,0.7,0.3,0.5"
+    # Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.7,0.7,0.3,0.5"
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -7876,8 +7876,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RangeSpace: 1300
     Ballistic: false
     HomingSpeed: 1.7
-    Buff: "InfectedWound,DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.25,1,0.5,0.75"
+    # Buff: "InfectedWound,DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.25,1,0.5,0.75"
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
@@ -7946,8 +7946,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 900, display: true
     RangeSpace: 1000, display: true
     Ballistic: false
-    Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
-    Buff_chance: "0.5,0.2,0.3"
+    # Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
+    # Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -12913,8 +12913,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 40, display: false
     CameraShake: 0
     IgnoreAtmo: true
-    Buff: "Fire"
-    Buff_chance: 1
+    # Buff: "Fire"
+    # Buff_chance: 1
     Automatic: true
     Damage: 50
     Radius: 3
