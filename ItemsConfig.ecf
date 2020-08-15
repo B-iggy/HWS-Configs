@@ -1285,7 +1285,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # ParticleTransform: Muzzle/Particle1
     # Buff: "DermalBurn"
     # Buff_chance: 0.08
-    UseSingleMagazine: true
 	SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
     # SfxBegin: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_start
     # SfxLoop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_loop
@@ -2137,7 +2136,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 3.149, display: true
     # Buff: "RadiationBurn,DermalBurn"
     # Buff_chance: "0.08,0.08"
-    UseSingleMagazine: true
     SfxBegin: Weapons/Player/Minigun/minigun2_start
     SfxLoop: Weapons/Player/Minigun/minigun2_loop
     SfxStop: Weapons/Player/Minigun/minigun2_end
@@ -2183,7 +2181,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Bullet_use_per_shot: 2
     # Buff: "RadiationBurn,DermalBurn,Stunned"
     # Buff_chance: "0.08,0.08,0.08"
-    UseSingleMagazine: true
     SfxBegin: Weapons/Player/Minigun/minigun2_start
     SfxLoop: Weapons/Player/Minigun/minigun2_loop
     SfxStop: Weapons/Player/Minigun/minigun2_end
