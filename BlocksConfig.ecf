@@ -3855,9 +3855,9 @@ HullCombatSmallBlocks
   ShowUser: No
 }
 
-/*   { Block Id: 341, Name: RockFormationL, Ref: RockFormationO
-  Model: Environment/Rocks/Misc/RockFormationLPrefab
-} */
+# { Block Id: 341, Name: RockFormationL, Ref: RockFormationO
+#   Model: Environment/Rocks/Misc/RockFormationLPrefab
+# }
 
 { Block Id: 342, Name: RockFormationN, Ref: RockFormationO
   Model: Environment/Rocks/Misc/RockFormationNPrefab
