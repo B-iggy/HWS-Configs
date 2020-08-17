@@ -4931,7 +4931,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.7, type: float, display: true, formatter: ROF
     Automatic: true
     Range: 657, display: true
-    RangeSpace: 1789, display: true
+    RangeSpace: 1000, display: true
     AmmoCapacity: 50, display: true
     AutoReload: true
     AmmoType: TurretGVPlasmaCharge, display: true
@@ -6896,7 +6896,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Speed: 385, display: true
     Range: 657, display: true
     SpeedSpace: 435, display: true
-    RangeSpace: 1789, display: true
+    RangeSpace: 1000, display: true
     HomingSpeed: 0.1
     Ballistic: false
     # Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
