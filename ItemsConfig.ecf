@@ -4403,7 +4403,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.35, type: float, display: true, formatter: ROF
     Range: 525, display: true
     RangeSpace: 1050, display: true
-    Damage: 825, display: true
+    Damage: 950, display: true
     Automatic: true
     AmmoCapacity: 200, display: true
     AmmoType: PulseLaserChargeSS, display: true
@@ -6559,14 +6559,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 770
+    Damage: 1001, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
     BlastDamage: 500, display: true
     Speed: 200, display: true
     Range: 500
     SpeedSpace: 400, display: true
-    RangeSpace: 1000
+    RangeSpace: 1050
     HomingSpeed: 4
     Ballistic: false
     # Buff: "FractureOpen,DermalBurn,RadiationBurn,IncreaseRadiation"
@@ -9253,8 +9253,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     ROF: 0.7, type: float, display: true, formatter: ROF
-    Range: 435, display: false
-    RangeSpace: 725, display: false
+    Range: 500, display: false
+    RangeSpace: 1050, display: false
     AmmoCapacity: 10, display: true
     AmmoType: AmmoSVAntimatterCannon, display: true
     Automatic: true
