@@ -5318,7 +5318,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: LauncherSS
     AllowAt: Space
-    ROF: 0.65, type: float, display: true, formatter: ROF
+    ROF: 0.7, type: float, display: true, formatter: ROF
     Range: 700, display: true
     RangeSpace: 1200, display: true
     AmmoCapacity: 100, display: true
@@ -5326,7 +5326,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 150, display: false
     CameraShake: 2
     AutoReload: true
-    ReloadDelay: 5, display: true
+    ReloadDelay: 10, display: true
     SfxBegin: Weapons/Player/Misc/Single/cannon
     /* SfxBegin: Weapons/Player/Misc/Single/AWDSDracoHeavySingle       */
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_001
@@ -6559,10 +6559,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 1001, display: true
+    Damage: 450, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 500, display: true
+    BlastDamage: 225, display: true
     Speed: 200, display: true
     Range: 500
     SpeedSpace: 400, display: true
@@ -6588,7 +6588,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_14: 1, param1: woodblock
     DamageMultiplier_15: 1, param1: plants
     DamageMultiplier_16: 1, param1: rock
-    DamageMultiplier_17: 5, param1: shield
+    DamageMultiplier_17: 20, param1: shield
     DamageMultiplier_18: 1, param1: plastic
     BlastDamageMultiplier_1: 1, param1: head
     BlastDamageMultiplier_2: 1, param1: body
@@ -6606,7 +6606,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_14: 1, param1: woodblock
     BlastDamageMultiplier_15: 1, param1: plants
     BlastDamageMultiplier_16: 1, param1: rock
-    BlastDamageMultiplier_17: 5, param1: shield
+    BlastDamageMultiplier_17: 20, param1: shield
     BlastDamageMultiplier_18: 1, param1: plastic
   }
 
@@ -6753,9 +6753,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
     BlastDamage: 5500, display: true
-    Speed: 145, display: true
+    Speed: 170, display: true
     Range: 650, display: true
-    SpeedSpace: 235, display: true
+    SpeedSpace: 300, display: true
     RangeSpace: 1200, display: true
     HomingSpeed: 2.3
     Ballistic: false
@@ -6770,7 +6770,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 5, param1: hull
     DamageMultiplier_8: 5, param1: hullarmored
-    DamageMultiplier_9: 1, param1: hullcombat
+    DamageMultiplier_9: 5, param1: hullcombat
     DamageMultiplier_10: 1, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
     DamageMultiplier_12: 1, param1: stone
@@ -6788,7 +6788,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_6: 5, param1: metalhard
     BlastDamageMultiplier_7: 5, param1: hull
     BlastDamageMultiplier_8: 5, param1: hullarmored
-    BlastDamageMultiplier_9: 1, param1: hullcombat
+    BlastDamageMultiplier_9: 5, param1: hullcombat
     BlastDamageMultiplier_10: 1, param1: concrete
     BlastDamageMultiplier_11: 0, param1: dirt
     BlastDamageMultiplier_12: 1, param1: stone
@@ -7269,10 +7269,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: MS, display: false
   MarketPrice: 33
   { Child 0
-    Damage: 4000, display: true
+    Damage: 3000, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 4000, display: true
+    BlastDamage: 3000, display: true
     Speed: 625, display: true
     Range: 700, display: true
     SpeedSpace: 735, display: true
@@ -9252,7 +9252,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: LauncherSS
-    ROF: 0.7, type: float, display: true, formatter: ROF
+    ROF: 0.57, type: float, display: true, formatter: ROF
     Range: 500, display: false
     RangeSpace: 1050, display: false
     AmmoCapacity: 10, display: true
@@ -9261,7 +9261,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 100, display: false
     AutoReload: true
     CheckObstructed: true
-    ReloadDelay: 3, display: true
+    ReloadDelay: 3.5, display: true
     # SfxBegin: Enemies/Spiders/Spiders_SfxAttack
     # SfxBegin: Weapons/Enemies/Zirax/EMP_StartWave_02
     SfxBegin: Enemies/RockGolem/MONSTERGrowlDeep08aShort
