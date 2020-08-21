@@ -19986,10 +19986,10 @@ HullCombatSmallBlocks
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Spaceship/ArmorLockerSVPrefab
-  Mesh-Damage-1: Mesh/D0
-  Mesh-Damage-2: Mesh/D1
-  Mesh-Damage-3: Mesh/D2
-  Mesh-Damage-4: Mesh/D3
+ # Mesh-Damage-1: Mesh/D0
+ # Mesh-Damage-2: Mesh/D1
+ # Mesh-Damage-3: Mesh/D2
+ # Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   DropInventoryEntity: DropContainer
   Place: Free
