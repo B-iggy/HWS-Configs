@@ -8532,7 +8532,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { +Item Id: 262, Name: IceBlocks, Ref: OreTemplate
-  Meshfile: Entities/Items/Ores/IceBlocksPrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   Mass: 4.6, type: float, display: true, formatter: Kilogram
   Volume: 5, type: float, display: true, formatter: Liter
   Info: Frozen water that can be used as coolant or melted into drinkable water., display: true
@@ -8543,7 +8544,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { +Item Id: 263, Name: TitanOre, Ref: OreTemplate
-  Meshfile: Entities/Items/Ores/TitanOrePrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   Mass: 8.07, type: float, display: true, formatter: Kilogram
   Volume: 2.5, type: float, display: true, formatter: Liter
   Info: A mineral variant of Rutile. High in Titanium that can be processed in a Constructor or Furnace., display: true
@@ -8570,7 +8572,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { +Item Id: 266, Name: AluminiumOre, Ref: OreTemplate
-  Meshfile: Entities/Items/Ores/AluminiumOrePrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   Mass: 4.48, type: float, display: true, formatter: Kilogram
   Volume: 3.5, type: float, display: true, formatter: Liter
   Info: A sedimentary variant of Bauxite. A source of Aluminium when refined., display: true
@@ -8596,7 +8599,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 269, Name: PlatinOre, Ref: OreTemplate
-  Meshfile: Entities/Items/Ores/PlatinumOrePrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   Mass: 41.2, type: float, display: true, formatter: Kilogram
   Volume: 3.5, type: float, display: true, formatter: Liter
   Info: A dense metallic ore of Sperrylite. It's rich in platinum but is toxic due to high arsenic content. Must be processed in a furnace., display: true
