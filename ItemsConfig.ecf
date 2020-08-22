@@ -3153,7 +3153,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { Item Id: 42, Name: FlameThrower
-  Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
   HoldType: 15
@@ -3229,7 +3230,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { Item Id: 43, Name: PlasmaCannonAlien
-  Meshfile: Entities/Items/Weapons/Flamethrower/AlienFlamethrowerPrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
   HoldType: 15
@@ -12888,7 +12890,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 # ========================================= STATUS EFFECT TEST ==========================
 { Item Id: 1200, Name: FlameThrowerDEBUG
-  Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
   HoldType: 16
