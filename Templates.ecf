@@ -3878,6 +3878,15 @@
   }
 }
 
+{ +Template Name: FlameThrowerCanister
+  OutputCount: 1 #A1
+  CraftTime: 28
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    BioFuel: 10
+  }
+}
+
 { +Template Name: 50Caliber
   OutputCount: 25 #A1 Pistol
   CraftTime: 5

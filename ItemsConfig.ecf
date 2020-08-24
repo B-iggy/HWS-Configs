@@ -3153,17 +3153,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { Item Id: 42, Name: FlameThrower
-  Meshfile: Entities/Misc/DummyPrefab
+  Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
   HoldType: 15
   StackSize: 1
-  #CustomIcon: Fillertool
   Category: Weapons/Items
   Mass: 28, type: float, display: false, formatter: Kilogram
   Volume: 40, type: float, display: true, formatter: Liter
-  Info: A short-medium ranged weapon that fires and ignites a stream of biofuel to set targets on fire. Inflicts fire and dermal burns., display: true
+  Info: bkiFlameThrower, display: true
   Durability: 500, display: false
   DegradationProb: 0.77, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
@@ -3171,14 +3170,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 
   { Child 0
-    Class: Ranged
+    Class: LauncherSS
     ROF: 0.17, type: float
     Range: 10, display: false
     BulletsPerShot: 15
     BulletSpread: 1
     AllowRemote: false
     RaySpread: 2, display: true
-    Recoil: 0.2, display: false
+    Recoil: 0.2, display: true
     NoiseStrength: 40, display: false
     CameraShake: 0
     IgnoreAtmo: true
@@ -3188,7 +3187,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 10, display: true
     Radius: 3
     AmmoCapacity: 30, display: true
-    AmmoType: BioFuel, display: true
+    AmmoType: FlameThrowerCanister, display: true
     UseSingleMagazine: true
     ReloadDelay: 3.3, display: true
     # Bullet_use_per_shot: 0.25
@@ -3202,35 +3201,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxStop: Weapons/Player/Drill/Mute
     SfxReload: UseActions/oxygen_tank_release_air
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
-
-    DamageMultiplier_1: 20, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 20, param1: body
-    DamageMultiplier_3: 0.5, param1: alien
-    DamageMultiplier_4: 0.1, param1: metal
-    DamageMultiplier_5: 0.1, param1: metallight
-    DamageMultiplier_6: 0.1, param1: metalhard
-    DamageMultiplier_7: 0.1, param1: hull
-    DamageMultiplier_8: 0.1, param1: hullarmored
-    DamageMultiplier_9: 0.1, param1: hullcombat
-    DamageMultiplier_10: 0.1, param1: concrete
-    DamageMultiplier_11: 0, param1: dirt
-    DamageMultiplier_12: 0.1, param1: stone
-    DamageMultiplier_13: 20, param1: wood
-    DamageMultiplier_14: 20, param1: woodblock
-    DamageMultiplier_15: 20, param1: plants
-    DamageMultiplier_16: 0.1, param1: rock
-    DamageMultiplier_17: 0.1, param1: shield
-    DamageMultiplier_18: 0.5, param1: plastic
-    DamageMultiplier_19: 20, param1: human
   }
 
   UnlockCost: 4500, display: true
   UnlockLevel: 25, display: true
+  TechTreeParent: FlameThrowerCanister
   TechTreeNames: AlienTechnology
 }
 
 { Item Id: 43, Name: PlasmaCannonAlien
-  Meshfile: Entities/Misc/DummyPrefab
+  Meshfile: Entities/Items/Weapons/Flamethrower/AlienFlamethrowerPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
@@ -3806,7 +3786,57 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Hidden
 }
 
-# free
+{ +Item Id: 67, Name: FlameThrowerCanister
+  Meshfile: Entities/Items/Weapons/Projectiles/FlameThrowerProjectilePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: BioFuel
+  Material: metalweapon
+  HoldType: 0
+  Canhold: false
+  Info: bkiFlameThrowerCanister, display: true
+  Category: Weapons/Items
+  StackSize: 2000
+  Mass: 4, type: float, display: true, formatter: Kilogram
+  Volume: 0.5, type: float, display: true, formatter: Liter
+  { Child 0
+    Class: Projectile
+    Damage: 10, display: true
+    BlastParticleIndex: 15
+    BlastRadius: 1, display: true
+    BlastDamage: 10, display: true
+    Speed: 150
+    Range: 10
+    BulletsPerShot: 8
+    BulletSpread: 5
+    NoiseStrength: 80, display: false
+    Ballistic: true
+    # HomingSpeed: 2, display: true
+
+    DamageMultiplier_1: 20, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 20, param1: body
+    DamageMultiplier_3: 0.5, param1: alien
+    DamageMultiplier_4: 0.1, param1: metal
+    DamageMultiplier_5: 0.1, param1: metallight
+    DamageMultiplier_6: 0.1, param1: metalhard
+    DamageMultiplier_7: 0.1, param1: hull
+    DamageMultiplier_8: 0.1, param1: hullarmored
+    DamageMultiplier_9: 0.1, param1: hullcombat
+    DamageMultiplier_10: 0.1, param1: concrete
+    DamageMultiplier_11: 0, param1: dirt
+    DamageMultiplier_12: 0.1, param1: stone
+    DamageMultiplier_13: 20, param1: wood
+    DamageMultiplier_14: 20, param1: woodblock
+    DamageMultiplier_15: 20, param1: plants
+    DamageMultiplier_16: 0.1, param1: rock
+    DamageMultiplier_17: 0.1, param1: shield
+    DamageMultiplier_18: 0.5, param1: plastic
+    DamageMultiplier_19: 20, param1: human
+  }
+
+  UnlockCost: 4500, display: true
+  UnlockLevel: 17, display: true
+  TechTreeNames: AlienTechnology
+}
 
 { Item Id: 78, Name: AmmoInfinite       # Dummy ammo needed for weapons that have unlimited ammo (eg DrillAttachmentWeapon)
   Meshfile: Entities/Misc/DummyPrefab
@@ -12677,115 +12707,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 /* CATEGORIE: New Weapon Items id 800 - 1000 */
 
-{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer
+{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer , Ref: AssaultRifleT2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPlyPrefab
   ShowUser: No
-  Durability: 150, display: false
-  DegradationProb: 0.65, type: float, display: false
-  RepairDisabled: true, display: true
-  PickupToToolbar: true
-  Material: metalweapon
-  HoldType: 15
-  StackSize: 1
-  CustomIcon: AssaultRifleDebug
-  Category: Weapons/Items
-  Info: "A zirax heavy assault rifle. It appears to be compatible with standard rifle rounds but it's not going to be possible to repair it.", display: true
-  Mass: 6.2, type: float, display: true, formatter: Kilogram
-  Volume: 4.75, type: float, display: true, formatter: Liter
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
-  { Child 0
-    Class: Ranged
-    AllowRemote: false
-    ROF: 0.2, type: float, display: true, formatter: ROF
-    Range: 174, display: false
-    NoiseStrength: 120, display: false
-    CameraShake: 2
-    Automatic: true, display: true
-    BulletSpread: 0.12, display: true
-    Recoil: 0.75, display: true
-    Damage: 88, display: true
-    AmmoCapacity: 30, display: true
-    AmmoType: 8.3mmBullet, display: true
-    ReloadDelay: 3.75, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.08
-    # SfxBegin: Weapons/Player/Misc/Single/ak47_fire
-    SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
-    SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
-    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
-    SfxNoAmmo: Weapons/Misc/AK47DryFire01
-    SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    PfxMuzzle: MuzzleFlash1
-    Tracer: Weapons/Projectiles/TracerOrange1
-    TracerPerBullet: 1
-
-    DamageMultiplier_1: 2.5, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat
-    DamageMultiplier_3: 0, param1: shield
-  }
-  { Child 1
-    Class: Zoom
-	ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew03
-    ZoomOut: 40
-    ZoomIn: 40
-  }
 
   UnlockCost: 0
   UnlockLevel: 25
   TechTreeParent: ""
   TechTreeNames: Hidden
 }
-{ +Item Id: 801, Name: ZiraxShotgunPlayer
+{ +Item Id: 801, Name: ZiraxShotgunPlayer , Ref: Shotgun2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   ShowUser: No
-  PickupToToolbar: true
-  Material: metalweapon
-  HoldType: 15
-  StackSize: 1
-  CustomIcon: RocketLauncherDebug
-  Category: Weapons/Items
-  Info: A standard-issue zirax shotgun. It seems to be compatible with regular shotgun ammunition but won't be repairable., display: true
-  Mass: 11.2, type: float, display: true, formatter: Kilogram
-  Volume: 5.1, type: float, display: true, formatter: Liter
-  Durability: 50, display: false
-  DegradationProb: 0.9, type: float, display: false
-  RepairDisabled: true, display: true
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
-  { Child 0
-    Class: Ranged
-    AllowRemote: false
-    ROF: 1, type: float, display: true, formatter: ROF
-    Range: 70, display: false
-    NoiseStrength: 190, display: false
-    CameraShake: 4
-    Automatic: false
-    BulletsPerShot: 7
-    BulletSpread: 0.4
-    RaySpread: 1, display: true
-    Recoil: 1.68, display: true
-    Damage: 120, display: true
-    AmmoCapacity: 6, display: true
-    AmmoType: ShotgunShells, display: true
-    ReloadDelay: 4.5, display: true
-    Buff: "OpenWound,Mutilation"
-    Buff_chance: "0.1,0.03"
-    SfxBegin: Weapons/Player/Shotgun/w1200_fire
-    SfxNoAmmo: Weapons/Misc/PumpgunDryFire02
-    SfxReload: Weapons/Player/Reload/RifleReloadSlow
-    PfxMuzzle: MuzzleFlash4
-
-    DamageMultiplier_1: 2.0, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 0.015, param1: wood       # able to destroy trees
-    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
-    DamageMultiplier_4: 0.4, param1: metal       # able to destroy door
-    DamageMultiplier_6: 0, param1: shield
-  }
-  { Child 1
-    Class: Zoom
-    ZoomOut: 40
-    ZoomIn: 40
-    RedDot: true
-  }
 
   UnlockCost: 0
   UnlockLevel: 25
