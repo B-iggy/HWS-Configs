@@ -1925,6 +1925,7 @@ HullCombatSmallBlocks
   Info: bkiWarpDrive, display: true
   EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 50000, type: int, display: true
+  AttackTimeout: 25
 
   BlastParticleIndex: 4
   BlastRadius: 5
@@ -11463,6 +11464,7 @@ HullCombatSmallBlocks
   HitPoints: 225, type: int, display: true
   EnergyIn: 200, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
+  AttackTimeout: 35
 
   BlastParticleIndex: 4
   BlastRadius: 5
@@ -19169,6 +19171,7 @@ HullCombatSmallBlocks
   BlastRadius: 4
   BlastDamage: 100
   RangeLY: 0 # a value of 0 allows to teleport only within the current sector
+  AttackTimeout: 35
 
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
@@ -19949,6 +19952,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 4
   BlastRadius: 3
   BlastDamage: 80
+  AttackTimeout: 40
 
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
