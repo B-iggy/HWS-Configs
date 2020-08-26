@@ -16395,7 +16395,7 @@ HullCombatSmallBlocks
   UnlockCost: 15, display: true
   UnlockLevel: 12, display: true
   TechTreeNames: Hidden
-  UpgradeTo: AutoMiningDeviceT2, display: true
+  UpgradeTo: null
 
   MapIcon: map_Drill
   MapName: AutoMiningDeviceT1
@@ -16415,7 +16415,7 @@ HullCombatSmallBlocks
   UnlockLevel: 15, display: true
   TechTreeParent: AutoMiningDeviceT1
   TechTreeNames: Hidden
-  UpgradeTo: AutoMiningDeviceT3, display: true
+  UpgradeTo: null
 
   MapName: AutoMiningDeviceT2
 
