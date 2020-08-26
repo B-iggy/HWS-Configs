@@ -25270,7 +25270,7 @@ HullCombatSmallBlocks
   CPUIn: 24700, type: int, display: true
   EnergyInIdle: 1000, type: int, display: true, formatter: Watt
   ShieldCapacity: 15000000, type: int, display: true
-  ShieldRecharge: 250000, type: int, display: true # full in 20 sec
+  ShieldRecharge: 250000, type: int, display: true # full in 60 sec
   ShieldCooldown: 20, type: int, display: true
   ShieldPerCrystal: 37500, type: int, display: true # 400 Pentaxid in total
   UpgradeTo: null
@@ -25295,7 +25295,7 @@ HullCombatSmallBlocks
   CPUIn: 18100, type: int, display: true
   EnergyInIdle: 800, type: int, display: true, formatter: Watt
   ShieldCapacity: 20000000, type: int, display: true
-  ShieldRecharge: 222222, type: int, display: true      # full in 30 sec
+  ShieldRecharge: 222222, type: int, display: true      # full in 90 sec
   ShieldCooldown: 40, type: int, display: true
   ShieldPerCrystal: 41666, type: int, display: true # 600 Pentaxid in total
   UpgradeTo: null
@@ -25321,7 +25321,7 @@ HullCombatSmallBlocks
   CPUIn: 16300, type: int, display: true
   EnergyInIdle: 400, type: int, display: true, formatter: Watt
   ShieldCapacity: 3000000, type: int, display: true
-  ShieldRecharge: 25000, type: int, display: true # full in 40 sec
+  ShieldRecharge: 25000, type: int, display: true # full in 120 sec
   ShieldCooldown: 50, type: int, display: true
   ShieldPerCrystal: 15000, type: int, display: true # 200 Pentaxid in total
   UpgradeTo: null
@@ -25346,7 +25346,7 @@ HullCombatSmallBlocks
   CPUIn: 33100, type: int, display: true
   EnergyInIdle: 1600, type: int, display: true, formatter: Watt
   ShieldCapacity: 40000000, type: int, display: true
-  ShieldRecharge: 666666, type: int, display: true # full in 20 sec
+  ShieldRecharge: 666666, type: int, display: true # full in 60 sec
   ShieldCooldown: 30, type: int, display: true
   ShieldPerCrystal: 57143, type: int, display: true # 700 Pentaxid in total
   PickupTarget: ShieldGeneratorCV    # Avoid getting back T2 and then be able to place T1 and T2
@@ -25373,8 +25373,8 @@ HullCombatSmallBlocks
   CPUIn: 45500, type: int, display: true
   EnergyInIdle: 1500, type: int, display: true, formatter: Watt
   ShieldCapacity: 30000000, type: int, display: true
-  ShieldRecharge: 1000000, type: int, display: true # full in 10 sec
-  ShieldCooldown: 10, type: int, display: true
+  ShieldRecharge: 1000000, type: int, display: true # full in 30 sec
+  ShieldCooldown: 15, type: int, display: true
   ShieldPerCrystal: 60000, type: int, display: true # 500 Pentaxid in total
   PickupTarget: ShieldGeneratorBA   # Avoid getting back T2 and then be able to place T1 and T2
   UpgradeTo: null
@@ -25804,7 +25804,7 @@ HullCombatSmallBlocks
   EnergyInIdle: 500, type: int, display: true, formatter: Watt
   CPUIn: 15400, type: int, display: true
   ShieldCapacity: 4000000, type: int, display: true
-  ShieldRecharge: 33333, type: int, display: true # full in 40 sec
+  ShieldRecharge: 33333, type: int, display: true # full in 120 sec
   ShieldCooldown: 50, type: int, display: true
   ShieldPerCrystal: 13333, type: int, display: true # 300 Pentaxid in total
   UpgradeTo: null
