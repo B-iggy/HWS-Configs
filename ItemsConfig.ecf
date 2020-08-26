@@ -2396,24 +2396,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     TracerPerBullet: 1
     TracerSpeed: 250
 
-    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 10, param1: alien
-    DamageMultiplier_4: 1, param1: metal
-    DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
-    DamageMultiplier_7: 1, param1: hull
-    DamageMultiplier_8: 1, param1: hullarmored
-    DamageMultiplier_9: 1, param1: hullcombat
-    DamageMultiplier_10: 1, param1: concrete
+    DamageMultiplier_1: 0, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, param1: body
+    DamageMultiplier_3: 0, param1: alien
+    DamageMultiplier_4: 0, param1: metal
+    DamageMultiplier_5: 0, param1: metallight
+    DamageMultiplier_6: 0, param1: metalhard
+    DamageMultiplier_7: 0, param1: hull
+    DamageMultiplier_8: 0, param1: hullarmored
+    DamageMultiplier_9: 0, param1: hullcombat
+    DamageMultiplier_10: 0, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
-    DamageMultiplier_12: 1, param1: stone
-    DamageMultiplier_13: 1, param1: wood
-    DamageMultiplier_14: 1, param1: woodblock
-    DamageMultiplier_15: 1, param1: plants
-    DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_12: 0, param1: stone
+    DamageMultiplier_13: 0, param1: wood
+    DamageMultiplier_14: 0, param1: woodblock
+    DamageMultiplier_15: 0, param1: plants
+    DamageMultiplier_16: 0, param1: rock
     DamageMultiplier_17: 500, param1: shield
-    DamageMultiplier_18: 5, param1: plastic
+    DamageMultiplier_18: 0, param1: plastic
 
 	RadialText: Anti Shield Mode # add text
     RadialDesc: At the cost of Rate of Fire your plasma shots become Ultra Effective against Shields in a single Beam
@@ -3399,7 +3399,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowAt: "UnderWater, Planet, Space"
     ROF: 0.15, type: float, display: true, formatter: ROF
     Range: 1000, display: false
-    Damage: 11000, display: true
+    Damage: 10000, display: true
     AmmoCapacity: 50, display: true
     Recoil: 0, display: true
     ReloadDelay: 3.2, display: false
@@ -3409,24 +3409,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_loop
     SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_end
 
-    DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 10, param1: body
-    DamageMultiplier_3: 10, param1: alien
-    DamageMultiplier_4: 10, param1: metal
-    DamageMultiplier_5: 10, param1: metallight
-    DamageMultiplier_6: 10, param1: metalhard
-    DamageMultiplier_7: 10, param1: hull
-    DamageMultiplier_8: 10, param1: hullarmored
-    DamageMultiplier_9: 10, param1: hullcombat
-    DamageMultiplier_10: 10, param1: concrete
-    DamageMultiplier_11: 10, param1: dirt
-    DamageMultiplier_12: 10, param1: stone
-    DamageMultiplier_13: 10, param1: wood
-    DamageMultiplier_14: 10, param1: woodblock
-    DamageMultiplier_15: 10, param1: plants
-    DamageMultiplier_16: 10, param1: rock
-    DamageMultiplier_17: 10, param1: shield
-    DamageMultiplier_18: 10, param1: plastic
+    DamageMultiplier_1: 100, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 100, param1: body
+    DamageMultiplier_3: 100, param1: alien
+    DamageMultiplier_4: 100, param1: metal
+    DamageMultiplier_5: 100, param1: metallight
+    DamageMultiplier_6: 100, param1: metalhard
+    DamageMultiplier_7: 100, param1: hull
+    DamageMultiplier_8: 100, param1: hullarmored
+    DamageMultiplier_9: 100, param1: hullcombat
+    DamageMultiplier_10: 100, param1: concrete
+    DamageMultiplier_11: 100, param1: dirt
+    DamageMultiplier_12: 100, param1: stone
+    DamageMultiplier_13: 100, param1: wood
+    DamageMultiplier_14: 100, param1: woodblock
+    DamageMultiplier_15: 100, param1: plants
+    DamageMultiplier_16: 100, param1: rock
+    DamageMultiplier_17: 100, param1: shield
+    DamageMultiplier_18: 100, param1: plastic
   }
   { Child 1
     Class: Zoom
@@ -4958,9 +4958,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 1050, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  RadialMenu: true
   { Child 0
     Class: LauncherSS
-    ROF: 0.7, type: float, display: true, formatter: ROF
+    ROF: 0.75, type: float, display: true, formatter: ROF
     Automatic: true
     Range: 657, display: true
     RangeSpace: 1000, display: true
@@ -4969,12 +4970,65 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: TurretGVPlasmaCharge, display: true
     NoiseStrength: 120, display: false
     CameraShake: 2
-    ReloadDelay: 4.3, display: true
+    ReloadDelay: 4.5, display: true
     SfxBegin: Weapons/SS/LaserSS/weapon_blaster_004
     /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: PlasmaMuzzleFlashMediumPrefab
+
+	RadialText: Plasma Shot  # add text
+    RadialDesc: Launches magnetically-confined plasma hurtling towards the target to deal widespread thermal and radiological damage to the target area
+    RadialIcon: Radial_Defence
+  }
+  { Child 1
+    Class: Ranged
+    AllowAt: "Space,Planet"
+    ROF: 10, type: float, display: true, formatter: ROF
+    Range: 657, display: false
+    RangeSpace: 1000, display: false
+    Damage: 25000, display: true
+    AmmoCapacity: 50, display: true
+    AutoReload: true
+    Automatic: true
+    AmmoType: TurretGVPlasmaCharge, display: true
+    NoiseStrength: 160, display: false
+    CameraShake: 8
+    ReloadDelay: 10, display: true
+    # Buff: "DermalBurn,IncreaseRadiation,RadiationBurn"
+    # Buff_chance: "1,0.75,0.5"
+    SfxBegin: Weapons/SS/LaserSS/weapon_blaster_003
+    /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
+    # SfxNoAmmo: Weapons/Misc/weapon_outofammo_006
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: SniperMuzzleLaserGreen
+
+    Tracer: Weapons/Projectiles/TracerLaserShotBlueCV
+    TracerPerBullet: 1
+    TracerSpeed: 325
+
+    DamageMultiplier_1: 0, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, param1: body
+    DamageMultiplier_3: 0, param1: alien
+    DamageMultiplier_4: 0, param1: metal
+    DamageMultiplier_5: 0, param1: metallight
+    DamageMultiplier_6: 0, param1: metalhard
+    DamageMultiplier_7: 0, param1: hull
+    DamageMultiplier_8: 0, param1: hullarmored
+    DamageMultiplier_9: 0, param1: hullcombat
+    DamageMultiplier_10: 0, param1: concrete
+    DamageMultiplier_11: 0, param1: dirt
+    DamageMultiplier_12: 0, param1: stone
+    DamageMultiplier_13: 0, param1: wood
+    DamageMultiplier_14: 0, param1: woodblock
+    DamageMultiplier_15: 0, param1: plants
+    DamageMultiplier_16: 0, param1: rock
+    DamageMultiplier_17: 500, param1: shield
+    DamageMultiplier_18: 0, param1: plastic
+
+	RadialText: Anti Shield Mode  # add text
+    RadialDesc: Fires a beam of plasma at supersonic speeds dealing catastrophic damage to Shields
+    RadialIcon: Radial_Defence
   }
 }
 { +Item Id: 117, Name: TurretBaseCannonWeapon
@@ -5120,24 +5174,24 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     TracerPerBullet: 1
     TracerSpeed: 325
 
-    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
-    DamageMultiplier_3: 1, param1: alien
-    DamageMultiplier_4: 1, param1: metal
-    DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
-    DamageMultiplier_7: 1, param1: hull
-    DamageMultiplier_8: 1, param1: hullarmored
-    DamageMultiplier_9: 1, param1: hullcombat
-    DamageMultiplier_10: 1, param1: concrete
+    DamageMultiplier_1: 0, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, param1: body
+    DamageMultiplier_3: 0, param1: alien
+    DamageMultiplier_4: 0, param1: metal
+    DamageMultiplier_5: 0, param1: metallight
+    DamageMultiplier_6: 0, param1: metalhard
+    DamageMultiplier_7: 0, param1: hull
+    DamageMultiplier_8: 0, param1: hullarmored
+    DamageMultiplier_9: 0, param1: hullcombat
+    DamageMultiplier_10: 0, param1: concrete
     DamageMultiplier_11: 0, param1: dirt
-    DamageMultiplier_12: 1, param1: stone
-    DamageMultiplier_13: 1, param1: wood
-    DamageMultiplier_14: 1, param1: woodblock
-    DamageMultiplier_15: 1, param1: plants
-    DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_12: 0, param1: stone
+    DamageMultiplier_13: 0, param1: wood
+    DamageMultiplier_14: 0, param1: woodblock
+    DamageMultiplier_15: 0, param1: plants
+    DamageMultiplier_16: 0, param1: rock
     DamageMultiplier_17: 500, param1: shield
-    DamageMultiplier_18: 1, param1: plastic
+    DamageMultiplier_18: 0, param1: plastic
 
 	RadialText: Anti Shield Mode  # add text
     RadialDesc: Fires a beam of plasma at supersonic speeds dealing catastrophic damage to Shields
@@ -6921,10 +6975,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 14
   { Child 0
     Class: Projectile
-    Damage: 1900, display: true
+    Damage: 2090, display: true
     BlastParticleIndex: 7
     BlastRadius: 3, display: true
-    BlastDamage: 1450, display: true
+    BlastDamage: 1045, display: true
     Speed: 385, display: true
     Range: 657, display: true
     SpeedSpace: 435, display: true
