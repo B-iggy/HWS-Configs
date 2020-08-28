@@ -3652,7 +3652,7 @@ HullCombatSmallBlocks
   Place: Free
   BlockColor: "110,110,110"
   SymType: 2
-  TemplateRoot: WalkwayBlocks
+  TemplateRoot: WalkwayLargeBlocks
   IsAccessible: false, type: bool
   IsOxygenTight: false, display: true
   AllowPlacingAt: "Base,MS,SS,GV", display: true
@@ -11510,6 +11510,7 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   StackSize: 50000
   BlockColor: "110,110,110"
+  HitPoints: 150, type: int, display: true
   Category: Devices
 
   EnergyIn: 2, type: int, display: true, formatter: Watt
@@ -13544,7 +13545,7 @@ HullCombatSmallBlocks
   Place: Free
   Mesh: cutout
   Model: Walkway
-  TemplateRoot: WalkwayBlocks
+  TemplateRoot: WalkwayLargeBlocks
   Texture: 61
   BlockColor: "110,110,110"
   StackSize: 50000
@@ -17831,7 +17832,7 @@ HullCombatSmallBlocks
   Mesh-Damage-3: Mesh/D2
   Mesh-Damage-4: Mesh/D3
   Place: Free
-  TemplateRoot: WalkwayBlocks
+  TemplateRoot: WalkwayLargeBlocks
   StackSize: 50000
   BlockColor: "110,110,110"
   IsAccessible: false, type: bool
@@ -20341,6 +20342,8 @@ HullCombatSmallBlocks
   Group: cpgO2Ventilator
   Material: hull, display: true
   Shape: ModelEntity
+  TemplateRoot: VentilatorBlocks
+  PickupTarget: VentilatorBlocks
   Model: @models/Blocks/Mothership/VentilatorCubePrefab
   Mesh-Damage-1: Mesh/LOD0/D0
   Mesh-Damage-2: Mesh/LOD0/D1
@@ -24116,7 +24119,7 @@ HullCombatSmallBlocks
   ChildBlocks: "WalkwayVertNew, WalkwaySlopeNew, WalkwaySlope, RailingVert, RailingDiagonal, RailingSlopeLeft, RailingSlopeRight, RailingL, RailingRound, RailingVertGlass, RailingDiagonalGlass, RailingSlopeGlassLeft, RailingSlopeGlassRight, RailingLGlass, RailingRoundGlass, RailingVertMetal, RailingDiagonalMetal, RailingLMetal, RailingRoundMetal, RailingSlopeMetalLeft, RailingSlopeMetalRight, RailingVertGlassModular, RailingDiagonalGlassModular, RailingLGlassModular, RailingRoundGlassModular, RailingSlopeGlassLeftModular, RailingSlopeGlassRightModular, RailingDoubleVert, RailingDoubleVertGlass, RailingDoubleVertMetal, RailingDoubleVertGlassModular"
 
   # Parent properties
-  TemplateRoot: WalkwayLargeBlocks
+  # TemplateRoot: WalkwayLargeBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
