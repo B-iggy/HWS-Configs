@@ -5173,7 +5173,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: true
   RotateSpeed: 10
 
-  RotateSpeedMovement: 180
+  RotateSpeedMovement: 200
   AttackWidthAngle:45
   MotionAnimationSpeedMultiplier: 0.7
 
@@ -5205,18 +5205,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   { Child Hints
 	AttackWaitAfterAttack: 0
-	AttackRoarBeforeAttack: 35
+	AttackRoarBeforeAttack: 10
 	IsHunting:100
 	AttackMaxCount:4
 	AttackRandomDirection:10
   }  
   
   { Child VariableOverride
-	MinimalDistanceToTarget: 4.0
-	MeleeAttackDistance: 5.0
+	MinimalDistanceToTarget: 3.0
+	MeleeAttackDistance: 4.5
     SpeedCalm: 0.5
     SpeedAlerted: 1.2
-    SpeedAttack: 1.9
+    SpeedAttack: 2.3
 	SpeedFlee: 1.0
   }  
   
@@ -5467,9 +5467,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/LandPredator/LandPredatorDeadPrefab
   # HeadTransform: Tail_bone7_end_effector
   HeadTransform: Head
+  RightHandJointName: "WeaponNode"
 
   Faction: Predator
-  
+  ItemsOnEnterGame: "MeleeOtyugh,OtyughFireBallRangedWeapon,OtyughFlameThrowerWeapon"
   /* General entity properties */
   MaxHealth: 2000
   # XpFactor: 1.3
@@ -5506,7 +5507,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
 	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
 	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalOtyughAttack"
   }
 
   { Child VariableOverride
@@ -5522,6 +5523,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AttackWaitAfterAttack: 0
 	AttackRoarBeforeAttack: 35
 	IsHunting:100
+	MeleeWeaponIndex:0
+	RangedWeaponIndex:1
   }
   
   {	Child VisionSensor

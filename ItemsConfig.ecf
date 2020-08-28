@@ -3354,6 +3354,63 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: AlienTechnology
 }
 
+
+{ Item Id: 46, Name: OtyughFlameThrowerWeapon
+  Meshfile: Entities/Items/Weapons/Enemies/RangedAttackPrefab
+  Material: human
+  HoldType: 20
+  StackSize: 1
+  Category: Weapons/Items
+  #SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+
+  ShowUser: No
+
+  { Child 0
+    Class: Ranged
+    ROF: 0.0, type: float
+    Range: 8, display: false
+    BulletsPerShot: 1
+    BulletSpread: 0
+    RaySpread: 1, display: true
+    Recoil: 0, display: true
+    NoiseStrength: 40, display: false
+    CameraShake: 0
+    IgnoreAtmo: true
+    Buff: "Fire"
+    Buff_chance: 1
+    Automatic: true
+    Damage: 70
+    Radius: 3
+    AmmoCapacity: 750, display: true
+    AmmoType: BioFuel, display: true
+    UseSingleMagazine: true
+    ReloadDelay: 0.0, display: true
+    Bullet_use_per_shot: 0.25
+    ForceMuzzleAiming: false
+    # Particles: diggerplasma              # particle effect shown at impact
+    PfxMuzzle: land_predator_fire_breath
+    /*ParticleTransform: Muzzle/Flamethrower_v1  # particle effect shown at muzzle  */
+    /*             SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
+    SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop    */
+    SfxBegin: Weapons/Player/Drill/weapon_flame_005_start
+    SfxLoop: Weapons/Player/Drill/weapon_flame_005_loop
+    SfxStop: Weapons/Player/Drill/Mute
+    SfxReload: UseActions/oxygen_tank_release_air
+    # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
+    DamageMultiplier_1: 0.1, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.1, param1: wood
+    DamageMultiplier_3: 0.001, param1: stone
+    DamageMultiplier_4: 0.1, param1: rock
+    DamageMultiplier_5: 0.001, param1: dirt
+    DamageMultiplier_6: 0.001, param1: hullarmored
+    DamageMultiplier_7: 0.001, param1: hullcombat
+  }
+
+  UnlockCost: 0
+  UnlockLevel: 0
+  TechTreeNames: Hidden
+}
+
 # Debug weapons
 { +Item Id: 48, Name: RocketLauncherDebug, Ref: RocketLauncher
   Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/ScifiGrenadeLauncherDebugPrefab
@@ -3836,6 +3893,31 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   UnlockCost: 4500, display: true
   UnlockLevel: 17, display: true
   TechTreeNames: AlienTechnology
+}
+
+{ +Item Id: 68, Name: OtyughFireBall
+  Meshfile: Entities/Items/Weapons/Projectiles/OtyughFireBallPrefab
+  Material: human
+  HoldType: 0
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 120
+    BlastParticleIndex: 11
+    BlastRadius: 2
+    BlastDamage: 60
+    Speed: 30
+    HomingSpeed: 0.0
+    Range: 100
+    Ballistic: true
+    Buff: "DermalBurn,Stunned,IncreaseRadiation"
+    Buff_chance: "0.8,0.015,0.005"
+
+    DamageMultiplier_1: 0, param1: dirt|stone
+    BlastDamageMultiplier_1: 0.05, param1: dirt|stone
+  }
 }
 
 { Item Id: 78, Name: AmmoInfinite       # Dummy ammo needed for weapons that have unlimited ammo (eg DrillAttachmentWeapon)
@@ -8055,6 +8137,29 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   UnlockCost: 4500, display: true
   UnlockLevel: 17, display: true
   TechTreeNames: AlienTechnology
+}
+
+{ +Item Id: 180, Name: OtyughFireBallRangedWeapon
+  Meshfile: Entities/Items/Weapons/Enemies/RangedAttackPrefab
+  Material: human
+  HoldType: 20
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  Mass: 12, type: float, display: false, formatter: Kilogram
+  { Child 0
+    Class: LauncherSS
+    ROF: 0, type: float
+    Range: 30, display: true
+    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
+    Damage: 35, display: true
+    AmmoCapacity: 250, display: true
+    AmmoUnlimited: true
+    AmmoType: OtyughFireBall, display: true
+    ReloadDelay: 6.3, display: true
+    SfxBegin: Enemies/Otyugh/Otyugh_SfxAttack_a2
+	# MaxFireAngle: 15 #we need bigger angle, as the bug firing angle is not perfectly aligned with look angle
+  }
 }
 
 
