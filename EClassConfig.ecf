@@ -5507,7 +5507,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
 	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
 	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalOtyughAttack"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
 
   { Child VariableOverride
