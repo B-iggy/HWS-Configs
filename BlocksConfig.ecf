@@ -16810,7 +16810,7 @@ HullCombatSmallBlocks
   EnergyIn: 20000, type: int, display: true, formatter: Watt
   HitPoints: 500, type: int, display: true
   Repairs: "SS,GV", display: true
-  RepairPerSecond: 200, display: true
+  RepairPerSecond: 400, display: true
   UpgradeTo: RepairBayCVT2, display: true
   Mass: 9225, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
@@ -18108,6 +18108,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Misc/RepairBayT2Prefab
 
   IsRepairToBlueprint: true
+  RepairPerSecond: 1000, display: true
   Mass: 14556, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
 
@@ -21238,6 +21239,7 @@ HullCombatSmallBlocks
   Mass: 11770, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
   IsRepairToBlueprint: true
+  RepairPerSecond: 800, display: true
   Info: bkiRepairBayT2, display: true
   UnlockCost: 25, display: true
   UnlockLevel: 20, display: true
