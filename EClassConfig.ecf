@@ -5467,10 +5467,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/LandPredator/LandPredatorDeadPrefab
   # HeadTransform: Tail_bone7_end_effector
   HeadTransform: Head
-  RightHandJointName: "WeaponNode"
 
   Faction: Predator
-  ItemsOnEnterGame: "MeleeOtyugh,OtyughFireBallRangedWeapon,OtyughFlameThrowerWeapon"
+
   /* General entity properties */
   MaxHealth: 2000
   # XpFactor: 1.3
