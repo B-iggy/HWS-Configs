@@ -5067,8 +5067,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Ranged
     AllowAt: "Space,Planet"
     ROF: 10, type: float, display: true, formatter: ROF
-    Range: 657, display: false
-    RangeSpace: 1000, display: false
+    Range: 490, display: false
+    RangeSpace: 770, display: false
     Damage: 25000, display: true
     AmmoCapacity: 50, display: true
     AutoReload: true
