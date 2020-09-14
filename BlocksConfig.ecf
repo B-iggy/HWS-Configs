@@ -25354,7 +25354,7 @@ HullCombatSmallBlocks
   ShieldRecharge: 666666, type: int, display: true # full in 60 sec
   ShieldCooldown: 30, type: int, display: true
   ShieldPerCrystal: 57143, type: int, display: true # 700 Pentaxid in total
-  PickupTarget: ShieldGeneratorCV    # Avoid getting back T2 and then be able to place T1 and T2
+  # PickupTarget: ShieldGeneratorCV    # Avoid getting back T2 and then be able to place T1 and T2
   UpgradeTo: null
 
   UnlockCost: 20, display: true
@@ -25381,7 +25381,7 @@ HullCombatSmallBlocks
   ShieldRecharge: 1000000, type: int, display: true # full in 30 sec
   ShieldCooldown: 15, type: int, display: true
   ShieldPerCrystal: 60000, type: int, display: true # 500 Pentaxid in total
-  PickupTarget: ShieldGeneratorBA   # Avoid getting back T2 and then be able to place T1 and T2
+  # PickupTarget: ShieldGeneratorBA   # Avoid getting back T2 and then be able to place T1 and T2
   UpgradeTo: null
 
   UnlockCost: 20, display: true

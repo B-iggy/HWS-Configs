@@ -2412,7 +2412,7 @@
 }
 { +Template Name: ShieldGeneratorBAT2
   CraftTime: 135 #C2 CV 10
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
     EnergyMatrix: 20
     Oscillator: 24
@@ -2436,7 +2436,7 @@
 }
 { +Template Name: ShieldGeneratorCVT2
   CraftTime: 135 #C2 CV 10
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
     EnergyMatrix: 25
     Oscillator: 16
