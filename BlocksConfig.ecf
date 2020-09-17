@@ -1541,7 +1541,8 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base"
   SizeInBlocks: "1,1,1", display: true
 
-  EnergyIn: -1000, type: int, display: true, formatter: Watt
+  EnergyIn: -4500, type: int, display: true, formatter: Watt
+  CPUIn: -250000, type: int, display: true
   Volume: 110, type: float, display: true, formatter: Liter
   Mass: 110, type: float, display: true, formatter: Kilogram
 }
@@ -1572,8 +1573,8 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base"
   SizeInBlocks: "1,1,1", display: true
 
-  EnergyIn: -4000, type: int, display: true, formatter: Watt
-  CPUIn: -100000, type: int, display: true
+  EnergyIn: -5000, type: int, display: true, formatter: Watt
+  CPUIn: -1000000, type: int, display: true
   Volume: 200, type: float, display: true, formatter: Liter
   Mass: 200, type: float, display: true, formatter: Kilogram
 }
@@ -18223,6 +18224,8 @@ HullCombatSmallBlocks
 { +Block Id: 1241, Name: ScifiTableNPC3, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
+  Class: NPCDialogue
+  NPCModelRotation: false
   Model: Entities/Decorations/DecoNPC/ScifiTableNPC3Prefab
   EnergyIn: 0, type: int, display: true, formatter: Watt
   ShowUser: Yes
@@ -18261,7 +18264,8 @@ HullCombatSmallBlocks
 { +Block Id: 1245, Name: SofaNPC, Ref: NPCAlienTemplate
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
-  Class: PassengerSeat
+  Class: NPCDialogue
+  NPCModelRotation: false
   Group: cpgEquipment
   Model: Entities/Decorations/DecoNPC/SofaNPCPrefab
   IsAccessible: true, type: bool
@@ -18326,6 +18330,8 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1252, Name: ConsoleSmallHuman, Ref: NPCHumanTemplate
   Group: cpgCrewStationHuman
+  Class: NPCDialogue
+  NPCModelRotation: false
   IsAccessible: true, type: bool
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
