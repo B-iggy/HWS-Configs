@@ -1201,11 +1201,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     CameraShake: 1
     Automatic: true, display: true
     BulletSpread: 0.16, display: true
-    Recoil: 0.6, display: true
-    Damage: 70, display: true
+    Recoil: 1.0, display: true
+    Damage: 100, display: true
     AmmoCapacity: 30, display: true
     AmmoType: 5.8mmBullet, display: true
-    ReloadDelay: 3.75, display: true
+    ReloadDelay: 3.1, display: true
     # Buff: "OpenWound"
     # Buff_chance: 0.08
     # SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Modern_start
@@ -12343,7 +12343,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodFac: 1.44, type: float, display: true /*calculations are based on 70 minutes*/
   StaminaFac: 1.21, type: float, display: true /*calculations are based on 20 stamina per second while running*/
   NrSlots: 2, type: int, display: true
-  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, OxygenBoostEpic, MobilityBoostEpic"
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic,  MobilityBoostEpic, RadiationBoostEpic"
 
   UnlockCost: 2, display: true
   UnlockLevel: 5, display: true
@@ -12380,7 +12380,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodFac: 1.73, type: float, display: true
   StaminaFac: 1.33, type: float, display: true
   NrSlots: 3, type: int, display: true
-  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, OxygenBoostEpic, MobilityBoostEpic"
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic,  MobilityBoostEpic, RadiationBoostEpic"
 }
 ## Please do not rename - referenced in code
 { +Item Id: 602, Name: ArmorHeavy
@@ -12413,7 +12413,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodFac: 2.5, type: float, display: true
   StaminaFac: 1.46, type: float, display: true
   NrSlots: 4, type: int, display: true
-  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, OxygenBoostEpic, MobilityBoostEpic"
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic,  MobilityBoostEpic, RadiationBoostEpic"
 }
 
 # Not yet used in game
@@ -12623,7 +12623,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 19.4, type: float, display: true, formatter: Liter
   SpeedFac: -0.2, type: float, display: true
   JetpackFac: -0.1, type: float, display: true
-  CustomIcon: EVABoostEpic
+  CustomIcon: TransportationBoost
 
   ShowUser: Yes
 }
@@ -12680,10 +12680,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   VolumeCapacity: 1000000, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
-{ Item Id: 656, Name: RadiationBoostEpic , Ref: RadiationBoost
+{ Item Id: 656, Name: RadiationBoostEpic, Ref: ArmorBoostTemplate
+  MarketPrice: 250000
   Radiation: 15, type: int, display: true
+  PowerFac: -0.02, type: float, display: true
+  SpeedFac: -0.05, type: float, display: true
 
-  ShowUser: No
+  Volume: 7.5, type: float, display: true, formatter: Liter
+  Mass: 9.5, type: float, display: true, formatter: Kilogram
+  ShowUser: Yes
 }
 { Item Id: 657, Name: EVABoostEpic , Ref: EVABoost
   Armor: -40, type: int, display: true

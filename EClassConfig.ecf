@@ -956,7 +956,7 @@
 }
 
 
-/* Asteroid rings */
+/* Asteroid rings. Please don't use this around planets any more...  */
 { Entity Name: AsteroidFieldRing, Ref: AsteroidField
   Mesh: Asteroids/Large/AsteroidFieldRingPrefab_dynamic
   Mesh2: Asteroids/Large/AsteroidFieldRingPrefab_dynamic
@@ -969,6 +969,13 @@
   # Mesh4: Asteroids/Large/AsteroidFieldRingClass4Prefab
   # Mesh5: Asteroids/Large/AsteroidFieldRingClass5Prefab
 }
+
+/* Asteroid rings around planets: ...please use this instead if you need a ring around a planet. */
+{ Entity Name: AsteroidRingPlanet, Ref: AsteroidField
+  Class: AsteroidRingPlanet
+  EntityType: AstRingPlanet
+}
+
 /* Asteroid rings */
 { Entity Name: AsteroidFieldRingOld, Ref: AsteroidField
   Mesh: Asteroids/Large/AsteroidFieldRingPrefab
@@ -2835,6 +2842,7 @@
 { +Entity Name: TalonSentinelRed, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonGuardianRedPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
+  AllowInSpawners: true
   AITask-1: ApproachAttack
   AITask-2: ApproachSpot
   AITask-3: ReturnHome
@@ -2846,7 +2854,8 @@
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
   ItemsOnEnterGame: TalonCrossbowWeapon
   RightHandJointName: Bip01_R_Hand
-  
+  AllowInSpawners: true
+
   AITask-1: ApproachAttack
   AITask-2: ApproachSpot
   AITask-3: ReturnHome
@@ -2873,6 +2882,7 @@
 { +Entity Name: TalonChief, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonChiefPrefab
   MeshDead: Enemies/TalonGuardian/TalonChiefDeadPrefab
+  AllowInSpawners: true
   AITask-1: ApproachAttack
   AITask-2: ApproachSpot
   AITask-3: ReturnHome
@@ -3257,6 +3267,7 @@
   AITask-2: ApproachSpot
   AITask-3: ReturnHome
   AllowUserInstantiate: true  
+  AllowInSpawners: true
 }
 
 ## ========================= Traders ========================= 
@@ -3366,6 +3377,15 @@
   # RightHandJointName: GameObject
   #RpFactor: 5
   Faction: Kriel
+}
+{ +Entity Name: TraderCyborg, Ref: Trader1
+  Mesh: Enemies/Traders/CyborgTraderPrefab
+  # MeshDead: Enemies/Traders/KrielTrader1DeadPrefab
+  # RightHandJointName: GameObject
+  # RpFactor: 5
+  Faction: Civilian
+  AllowUserInstantiate: true
+  AllowInSpawners: true
 }
 
 
@@ -5467,9 +5487,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/LandPredator/LandPredatorDeadPrefab
   # HeadTransform: Tail_bone7_end_effector
   HeadTransform: Head
+  RightHandJointName: "WeaponNode"
 
   Faction: Predator
-
+  ItemsOnEnterGame: "MeleeOtyugh,OtyughFireBallRangedWeapon,OtyughFlameThrowerWeapon"
   /* General entity properties */
   MaxHealth: 2000
   # XpFactor: 1.3
@@ -5506,7 +5527,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
 	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
 	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalOtyughAttack"
   }
 
   { Child VariableOverride
@@ -7516,4 +7537,272 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Traders/HumanCivilianWalking7Prefab
   HeadTransform: Head
   RightHandJointName: R Weapon
+}
+
+#Infected NPCs
+
+#{ +Entity Name: HexapodInfected, Ref: Hexapod
+#  Mesh: Enemies/HexapodInfectedPrefab
+#  MeshDead: Enemies/HexapodInfectedDeadPrefab
+#  HeadTransform: Head
+#}
+#{ +Entity Name: AlienAssassinInfected, Ref: AlienAssassinGrey
+#  Mesh: Enemies/AlienAssassin/AlienAssassinInfectedPrefab
+#  MeshDead: Enemies/AlienAssassin/AlienAssassinInfectedDeadPrefab
+#  HeadTransform: Head
+#}
+#{ +Entity Name: SoldierAlienInfected, Ref: SoldierAlienAssaultRifle
+#  MaxHealth: 700
+#  XpFactor: 11.4
+#  LootListOnDeath: 101
+#  Mesh: Enemies/SecurityGuards/SecurityGuardAlienMovingInfectedPrefab
+#  MeshDead: Enemies/SecurityGuards/SecurityGuardAlienMovingInfectedDeadPrefab
+#  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+#  HeadTransform: AlienHead
+#  RightHandJointName: RightHand
+#}
+#{ +Entity Name: SoldierHumanMaleInfected, Ref: ZiraxMinigun
+#  MaxHealth: 700
+#  XpFactor: 11.4
+#  LootListOnDeath: 101
+#  Mesh: Enemies/SecurityGuards/SecurityGuardMovingInfectedPrefab
+#  MeshDead: Enemies/SecurityGuards/SecurityGuardMovingInfectedDeadPrefab
+#  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+#  HeadTransform: Head
+#  RightHandJointName: R Weapon
+#  SurfaceCategory: human
+#
+#  SfxRandom:
+#  SfxAlertTime: 25.0
+#  SfxAlert:
+#  SfxHurt:
+#  SfxDeath:
+#}
+#{ +Entity Name: SoldierHumanMale2Infected, Ref: ZiraxMinigun
+#  MaxHealth: 700
+#  XpFactor: 11.4
+#  LootListOnDeath: 101
+#  Mesh: Enemies/SecurityGuards/SecurityGuard2MovingInfectedPrefab
+#  MeshDead: Enemies/SecurityGuards/SecurityGuard2MovingDeadInfectedPrefab
+#  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+#  HeadTransform: Head
+#  RightHandJointName: R Weapon
+#
+#  SfxRandom:
+#  SfxAlertTime: 25.0
+#  SfxAlert:
+#  SfxHurt:
+#  SfxDeath:
+#}
+{ +Entity Name: TalonGuardianInfectedCrossbow, Ref: TalonGuardian
+  Mesh: Enemies/TalonGuardian/TalonGuardianCrossbowInfectedPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianCrossbowInfectedDeadPrefab
+
+  ItemsOnEnterGame: TalonCrossbowWeapon
+
+  { Child Hints
+	UseMeleeAttack: 0
+  }
+}
+#{ +Entity Name: TalonGuardianInfectedGreen, Ref: TalonGuardian
+#  Mesh: Enemies/TalonGuardian/TalonGuardianGreenInfectedPrefab
+#  MeshDead: Enemies/TalonGuardian/TalonGuardianGreenInfectedDeadPrefab
+#}
+#{ +Entity Name: TalonGuardianInfectedBlue, Ref: TalonGuardian
+#  Mesh: Enemies/TalonGuardian/TalonGuardianBlueInfectedPrefab
+#  MeshDead: Enemies/TalonGuardian/TalonGuardianBlueInfectedDeadPrefab
+#}
+#{ +Entity Name: TalonGuardianInfectedRed, Ref: TalonGuardian
+#  Mesh: Enemies/TalonGuardian/TalonGuardianRedInfectedPrefab
+#  MeshDead: Enemies/TalonGuardian/TalonGuardianRedInfectedDeadPrefab
+#}
+#{ +Entity Name: ZiraxInfectedBlue, Ref: ZiraxMinigun
+#  Mesh: Enemies/Zirax/ZiraxBlueInfectedPrefab
+#  MeshDead: Enemies/Zirax/ZiraxBlueInfectedDeadPrefab
+#  HeadTransform: Bip01_Head
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+#{ +Entity Name: ZiraxInfectedGreen, Ref: ZiraxMinigun
+#  Mesh: Enemies/Zirax/ZiraxGreenInfectedPrefab
+#  MeshDead: Enemies/Zirax/ZiraxGreenInfectedDeadPrefab
+#  HeadTransform: Bip01_Head
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+#{ +Entity Name: ZiraxInfectedRed, Ref: ZiraxMinigun
+#  Mesh: Enemies/Zirax/ZiraxRedInfectedPrefab
+#  MeshDead: Enemies/Zirax/ZiraxRedInfectedDeadPrefab
+#  HeadTransform: Bip01_Head
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+#{ +Entity Name: ZiraxInfectedYellow, Ref: ZiraxMinigun
+#  Mesh: Enemies/Zirax/ZiraxYellowInfectedPrefab
+#  MeshDead: Enemies/Zirax/ZiraxYellowInfectedDeadPrefab
+#  HeadTransform: Bip01_Head
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+#{ +Entity Name: ZiraxInfectedPurple, Ref: ZiraxMinigun
+#  Mesh: Enemies/Zirax/ZiraxPurpleInfectedPrefab
+#  MeshDead: Enemies/Zirax/ZiraxPurpleInfectedDeadPrefab
+#  HeadTransform: Bip01_Head
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+#{ +Entity Name: ZiraxInfectedCommander, Ref: ZiraxCommander
+#  Mesh: Enemies/Zirax/ZiraxCommanderInfectedPrefab
+#  MeshDead: Enemies/Zirax/ZiraxCommanderInfectedDeadPrefab
+#  HeadTransform: Bip01_Head
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+#{ +Entity Name: ZiraxCivilianMaleBlue, Ref: ZiraxCommander
+#  Mesh: Enemies/Zirax/ZiraxCivilianMaleBluePrefab
+#  MeshDead: Enemies/Zirax/ZiraxCivilianMaleBlueDeadPrefab
+#  HeadTransform: Bip01_Head
+#  RightHandJointName: R Weapon
+#  ItemsOnEnterGame: ZiraxMinigunWeapon
+#}
+
+
+{ +Entity Name: AlienBug02Group, Ref: AlienBug02
+  HeadTransform: Head
+  Mesh: Enemies/AlienBugs/AlienBug02Prefab
+  MeshDead: Enemies/AlienBugs/AlienBug02DeadPrefab
+
+  MaxHealth: 400
+  XpFactor: 6.96
+  RotateToGround: true
+  RotateSpeedMovement: 360
+  MotionAnimationSpeedMultiplier: 1.0
+  AllowUserInstantiate: true
+  AllowInSpawners: false
+
+  /* AI Properties */
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
+	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
+	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AttackAlienBug02"
+  }
+
+  { Child Hints
+	AttackRandomDirection: 100
+	AttackMaxCount: 4
+	IsAttackJumping: 100
+  }
+
+
+  { Child VariableOverride
+    SpeedCalm: 0.3
+    SpeedAlerted: 1.5
+    SpeedAttack: 2.0
+	SpeedFlee: 1.5
+	SpeedCircle: 1.5
+	# the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
+	MeleeAttackDistance: 2.0
+	# if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
+	MinimalDistanceToTarget: 1.2
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 50
+	ViewAngle: 180
+	VisibleTypes: "Player,HV,PlayerBike"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,PlayerBike"
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 15, param1: 0
+	AlertLevel2: 50, param1: 2
+	AlertLevel3: 80, param1: 20
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:200 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:30
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
+}
+
+{ +Entity Name: AlienBug02SpawnedGroup, Ref: AlienBug02Group
+  Mesh: Enemies/AlienBugs/AlienBug02SpawnedPrefab
+  MeshDead: Enemies/AlienBugs/AlienBug02SpawnedDeadPrefab
+  XpFactor: 0.5
+  AllowUserInstantiate: true
+  AllowInSpawners: false
+  LootListOnDeath: 77
+}
+
+{ +Entity Name: AlienBug03Group, Ref: AlienBug03
+
+  MaxHealth: 2500
+  XpFactor: 8.4
+  RightHandJointName: WeaponNode
+  ItemsOnEnterGame: "AlienBugRangedWeapon, AlienBugBigRangedWeapon"
+  RotateToGround: true
+  RotateSpeed: 10
+  RotateSpeedMovement: 180
+  AllowUserInstantiate: true
+  AllowInSpawners: false
+
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
+	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
+	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AttackAlienBug03"
+  }
+
+  { Child Hints
+    IsRanged: 100
+	/*AttackApproachTarget: 0   */
+	/*AttackOptimalDistance: 40 */
+	SearchAdvanceTime: 1.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 0.5
+  }
+
+  {	Child EventAgentSpawner
+	EntityClass:   "AlienBug02SpawnedGroup"
+	SpawnParticle: "alien_bug03_spawn"
+    SpawnSfx:      "Enemies/AlienBugs/AlienBug03/AlienBug03_SfxSpawn"
+	MaxCountInGroup: 4
+
+	SpawnParticleNodeName: "SpawnParticleNode"
+	SpawnNodeName:         "SpawnNode"
+  }
+
+  { Child VariableOverride
+    SpeedCalm: 0.2
+    SpeedAlerted: 0.5
+	SpeedAttack: 1.0
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 50
+	ViewAngle: 360
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 15, param1: 0
+	AlertLevel2: 20, param1: 10
+	AlertLevel3: 40, param1: 20
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:200 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:30
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
 }
