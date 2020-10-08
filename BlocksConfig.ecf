@@ -1927,6 +1927,7 @@ HullCombatSmallBlocks
   EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 50000, type: int, display: true
   AttackTimeout: 25
+  DowngradeTo: WarpDrive
 
   BlastParticleIndex: 4
   BlastRadius: 5
@@ -11467,6 +11468,8 @@ HullCombatSmallBlocks
   CPUIn: 40000, type: int, display: true
   AttackTimeout: 35
 
+  UpgradeTo: WarpDriveT2, display: true
+
   BlastParticleIndex: 4
   BlastRadius: 5
   BlastDamage: 200
@@ -11484,7 +11487,6 @@ HullCombatSmallBlocks
   UnlockLevel: 10, display: true
   # TechTreeParent: PentaxidTank
   TechTreeNames: Capital Vessel
-  UpgradeTo: null
 }
 { +Block Id: 721, Name: OxygenStationSV
   Class: O2Station
@@ -25284,7 +25286,7 @@ HullCombatSmallBlocks
   ShieldRecharge: 250000, type: int, display: true # full in 60 sec
   ShieldCooldown: 20, type: int, display: true
   ShieldPerCrystal: 37500, type: int, display: true # 400 Pentaxid in total
-  UpgradeTo: null
+  UpgradeTo: ShieldGeneratorBAT2, display: true
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
@@ -25309,7 +25311,7 @@ HullCombatSmallBlocks
   ShieldRecharge: 222222, type: int, display: true      # full in 90 sec
   ShieldCooldown: 40, type: int, display: true
   ShieldPerCrystal: 41666, type: int, display: true # 600 Pentaxid in total
-  UpgradeTo: null
+  UpgradeTo: ShieldGeneratorCVT2, display: true
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
