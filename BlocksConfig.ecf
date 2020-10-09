@@ -22323,7 +22323,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
-  AllowPlacingAt: "GV", display: true
+  AllowPlacingAt: "GV,SS", display: true
   IsLockable: true
   IsOxygenTight: false, display: true
   Info: bkiCloneChamber, display: true
@@ -22342,13 +22342,13 @@ HullCombatSmallBlocks
   UnlockCost: 7, display: true
   UnlockLevel: 5, display: true
   TechTreeParent: OxygenStationSV
-  TechTreeNames: Hover Vessel
+  TechTreeNames: "Small Vessel,Hover Vessel"
 }
 # Do not change name of block since it is referenced in code (WdwVesselStatistics.cs)
 { +Block Id: 1584, Name: MedicStationHV
   # Class: MedicStation
   # BuffName: MedicStation
-  # IndexName: SpawnPoint   # no spawning in medic station HV
+  IndexName: SpawnPoint
   Group: cpgMedic
   Material: metal, display: true
   Shape: ModelEntity
@@ -22357,7 +22357,7 @@ HullCombatSmallBlocks
   Place: Free
   IsLockable: true
   IsOxygenTight: false, display: true
-  AllowPlacingAt: "GV", display: true
+  AllowPlacingAt: "GV,SS", display: true
   Info: bkiMedicStationHV, display: true
   # ModelOffset: "0,0.5,0"
   SizeInBlocks: "2,2,1", display: true
@@ -22378,7 +22378,7 @@ HullCombatSmallBlocks
   UnlockCost: 7, display: true
   UnlockLevel: 7, display: true
   TechTreeParent: CloneChamberHV
-  TechTreeNames: Hover Vessel
+  TechTreeNames: "Small Vessel,Hover Vessel"
 }
 
 { +Block Id: 1585, Name: ThrusterJetRound2x5x2V2, Ref: ThrusterJetRound2x5x2
