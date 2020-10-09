@@ -20308,18 +20308,20 @@ HullCombatSmallBlocks
 
 }
 
-
 { Block Id: 1403, Name: LavaBlock
   CanPlayersSpawnOn: false
   /*Class: LiquidStatic /*/
   Material: lava, display: true
   Shape: LiquidBlock
+  Category: BuildingBlocks
   Model: Cube
   Mesh: lava
   Texture: 121
   Temperature: 900
+  StackSize: 50000
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   AllowPlacingAt: "Base,MS", display: true
-  ShowUser: No
+  ShowUser: Yes
   { Child Map
     Color: "255,220,70"
     Color2: "255,0,0"
@@ -20333,11 +20335,14 @@ HullCombatSmallBlocks
   /*Class: LiquidStatic /*/
   Material: water, display: true
   Shape: LiquidBlock
+  Category: BuildingBlocks
   Model: Cube
   Mesh: water
   Texture: 107
+  StackSize: 50000
   AllowPlacingAt: "Base,MS", display: true
-  ShowUser: No
+  ShowUser: Yes
+  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   BlockColor: "27,44,65,255"
   { Child Map
     Color: "27,44,65,255"
@@ -23878,6 +23883,7 @@ HullCombatSmallBlocks
 
 { Block Id: 1681, Name: FillerBlock
   Material: dirt, display: true
+  Category: BuildingBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 85
   BlockColor: "26,50,89"
@@ -23888,7 +23894,7 @@ HullCombatSmallBlocks
   Mass: 150, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   IsTextureable: false
-  # ShowUser: No
+  ShowUser: Yes
 }
 { +Block Id: 1682, Name: ContainerControllerLarge
   Class: ContainerController
