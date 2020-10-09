@@ -22358,7 +22358,7 @@ HullCombatSmallBlocks
   IsLockable: true
   IsOxygenTight: false, display: true
   AllowPlacingAt: "GV,SS", display: true
-  Info: bkiMedicStationHV, display: true
+  Info: bkiMedicinelabMS, display: true
   # ModelOffset: "0,0.5,0"
   SizeInBlocks: "2,2,1", display: true
   StackSize: 50000
