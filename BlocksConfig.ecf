@@ -1937,7 +1937,7 @@ HullCombatSmallBlocks
   CostPerAU: 1, display: true
   CostPerLY: 2, display: true
   RangeAU: 50, display: true
-  RangeLY: 70, display: true
+  RangeLY: 77, display: true
 
   Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 90, display: true
