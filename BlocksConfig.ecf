@@ -20327,7 +20327,6 @@ HullCombatSmallBlocks
   Texture: 121
   Place: Free
   Mass: 1, type: float, display: true, formatter: Kilogram
-  StackSize: 1000
   Temperature: 900
   StackSize: 50000
   ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
