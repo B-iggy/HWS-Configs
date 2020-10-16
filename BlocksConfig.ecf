@@ -7907,6 +7907,7 @@ HullCombatSmallBlocks
 /* Alien Core */
 { +Block Id: 560, Name: CoreNPC
   AllowedInBlueprint: false, display: true
+  IsKeepContainers: true
   Class: Core
   Group: cpgCore
   EssentialCategory: cpgCore
@@ -19617,12 +19618,14 @@ HullCombatSmallBlocks
   # TemplateRoot: CoreNPCAdmin
   # PickupTarget: CoreNPCAdmin
   IsDestructible: false
+  IsKeepContainers: true
   BlockColor: "171,32,161"
 }
 { +Block Id: 1361, Name: CorePlayerAdmin, Ref: Core
   Model: @models/Blocks/Misc/CoreBlockPlayerAdminPrefab
   Faction: Admin
   IsDestructible: false
+  IsKeepContainers: true
   IsUsingCPUSystem: false
   AllowedInBlueprint: false, display: true
   BlockColor: "0,15,100"
@@ -20301,6 +20304,7 @@ HullCombatSmallBlocks
 { +Block Id: 1402, Name: CoreNoCPU, Ref: Core
   #Model: @models/Blocks/Misc/CoreBlockPlayerPrefab
   IsUsingCPUSystem: false
+  IsKeepContainers: true
   Info: bkiCoreNoCPU, display: true
   AllowedInBlueprint: false, display: true
   BlockColor: "0,220,220"
@@ -20308,15 +20312,22 @@ HullCombatSmallBlocks
 
 }
 
+
 { Block Id: 1403, Name: LavaBlock
+  AllowedInBlueprint: false, display: true
+  IsOxygenTight: true, display: true
+  Category: BuildingBlocks
   CanPlayersSpawnOn: false
+  Info: bkiLavaBlock, display: true
   /*Class: LiquidStatic /*/
   Material: lava, display: true
   Shape: LiquidBlock
-  Category: BuildingBlocks
   Model: Cube
   Mesh: lava
   Texture: 121
+  Place: Free
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  StackSize: 1000
   Temperature: 900
   StackSize: 50000
   ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cube, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
@@ -20331,14 +20342,19 @@ HullCombatSmallBlocks
   }
 }
 { Block Id: 1404, Name: WaterBlock
+  AllowedInBlueprint: false, display: true
+  IsOxygenTight: true, display: true
+  Category: BuildingBlocks
   CanPlayersSpawnOn: false
+  Info: bkiWaterBlock, display: true
   /*Class: LiquidStatic /*/
   Material: water, display: true
   Shape: LiquidBlock
-  Category: BuildingBlocks
   Model: Cube
   Mesh: water
   Texture: 107
+  Place: Free
+  Mass: 1, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   AllowPlacingAt: "Base,MS", display: true
   ShowUser: Yes
