@@ -1510,6 +1510,61 @@ HullCombatSmallBlocks
 
 /* 135 - 243 available free */
 
+
+{ +Block Id: 243, Name: WarpDriveT3
+  Class: WarpDrive
+  Group: cpgWarp
+  IndexName: WarpDrive
+  Material: metal, display: true
+  Shape: ModelEntity
+  ShowBlockName: true
+  Model: @models/Blocks/Mothership/WarpDriveT2Prefab
+  Mesh-Damage-1: Mesh/D0
+  Mesh-Damage-2: Mesh/D1
+  Mesh-Damage-3: Mesh/D2
+  Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Place: Free
+  CustomIcon: WarpDrive
+  AllowPlacingAt: MS, display: true
+  SizeInBlocks: "3,2,5", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 1000, type: float, display: true, formatter: Liter
+  Mass: 10000, type: float, display: true, formatter: Kilogram
+  HitPoints: 500, type: int, display: true
+  IsDuplicateable: false
+  MaxCount: 1, type: int, display: true
+  ForceMaxCount: true
+  IsOxygenTight: false, display: true
+  # ModelOffset: "0,0.5,0"
+  # BlockColor: "26,50,89"
+  StackSize: 50000
+  BlockColor: "255,255,255"
+  Category: Devices
+  Info: bkiWarpDriveT3, display: true
+  EnergyIn: 1000, type: int, display: true, formatter: Watt
+  CPUIn: 100000, type: int, display: true
+  AttackTimeout: 25
+  DowngradeTo: WarpDriveT2
+
+  BlastParticleIndex: 4
+  BlastRadius: 5
+  BlastDamage: 500
+
+  ItemPerAU: PentaxidCrystal, display: true
+  CostPerAU: 1, display: true
+  CostPerLY: 1, display: true
+  RangeAU: 100, display: true
+  RangeLY: 100, display: true
+
+  Radiation: 100, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
+  Temperature: 150, display: true
+
+  UnlockCost: 0
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
+
 # HWS Crews
 { +Block Id: 244, Name: CrewBaseEngineerI
   Class: Weapon
@@ -1546,6 +1601,7 @@ HullCombatSmallBlocks
   Volume: 110, type: float, display: true, formatter: Liter
   Mass: 110, type: float, display: true, formatter: Kilogram
 }
+
 { +Block Id: 245, Name: CrewBaseEngineerII
   Class: Weapon
   CustomIcon: TacticalOfficer
@@ -1578,6 +1634,7 @@ HullCombatSmallBlocks
   Volume: 200, type: float, display: true, formatter: Liter
   Mass: 200, type: float, display: true, formatter: Kilogram
 }
+
 { +Block Id: 246, Name: CrewCVEngineerI
   Class: Weapon
   CustomIcon: ConsoleSmallNPC
@@ -1611,6 +1668,7 @@ HullCombatSmallBlocks
   Volume: 90, type: float, display: true, formatter: Liter
   Mass: 90, type: float, display: true, formatter: Kilogram
 }
+
 { +Block Id: 247, Name: CrewCVEngineerII
   Class: Weapon
   CustomIcon: CommandingOfficerAlien
@@ -1645,6 +1703,7 @@ HullCombatSmallBlocks
   Volume: 100, type: float, display: true, formatter: Liter
   Mass: 100, type: float, display: true, formatter: Kilogram
 }
+
 { +Block Id: 248, Name: CrewCVCoordinatorI
   Class: Weapon
   CustomIcon: EngineerMainStation
@@ -1680,6 +1739,7 @@ HullCombatSmallBlocks
   Volume: 70, type: float, display: true, formatter: Liter
   Mass: 70, type: float, display: true, formatter: Kilogram
 }
+
 { +Block Id: 249, Name: CrewHVOperatorI
   Class: Weapon
   CustomIcon: SecurityGuard
@@ -1714,6 +1774,7 @@ HullCombatSmallBlocks
   Volume: 80, type: float, display: true, formatter: Liter
   Mass: 80, type: float, display: true, formatter: Kilogram
 }
+
 { +Block Id: 250, Name: CrewSVPilotI
   Class: Weapon
   CustomIcon: OperatorPilot
@@ -1748,8 +1809,6 @@ HullCombatSmallBlocks
   Volume: 150, type: float, display: true, formatter: Liter
   Mass: 150, type: float, display: true, formatter: Kilogram
 }
-
-
 
 { Block Id: 251, Name: PentaxidSeedCrystal
   Class: PlantGrowing
@@ -20298,13 +20357,12 @@ HullCombatSmallBlocks
   IsUsingCPUSystem: true
   Faction: Player
   BlockColor: "220,212,0"
-
+  IsKeepContainers: false
 }
 
 { +Block Id: 1402, Name: CoreNoCPU, Ref: Core
   #Model: @models/Blocks/Misc/CoreBlockPlayerPrefab
   IsUsingCPUSystem: false
-  IsKeepContainers: true
   Info: bkiCoreNoCPU, display: true
   AllowedInBlueprint: false, display: true
   BlockColor: "0,220,220"
