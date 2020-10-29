@@ -3105,7 +3105,7 @@
 }
 { +Template Name: RadarSuitT1
   CraftTime: 12 #A1 3
-  Target: "SuitC,SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
   }
 }
@@ -3152,14 +3152,14 @@
 }
 
 { +Template Name: SurvivalTent
-  CraftTime: 30  
-  Target: ""
+  CraftTime: 17
+  Target: "SuitC,SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     Fiber: 10
   }
 }
 { +Template Name: SurvivalTool
-  CraftTime: 15  
+  CraftTime: 5
   Target: SuitC
   { Child Inputs
   }
