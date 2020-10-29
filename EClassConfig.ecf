@@ -1003,8 +1003,11 @@
   Mesh5: Asteroids/Large/AsteroidFieldFewBoxExcludeClass5Prefab
 }
 
-/* Voxel Asteroid Prefabs */
+# ==============================================================
+# Voxel Asteroid Prefabs
 # Voxel01 contains 4637 resource blocks => on average 4637 *0.2 *3 = 2782 ores
+# ==============================================================
+
 { Entity Name: AsteroidVoxel01
   EntityType: AstVoxel
   ModelType: ChunkClusterBase, param1: AsteroidVoxel01, param2: 2
@@ -1264,8 +1267,9 @@
   AllowUserInstantiate: false
 }
 
-
-/* PLANETARY DRONES */
+# ===============================
+# PLANETARY DRONES
+# ===============================
 
 /* Classification: Drone[Size][Speed][NrOfWeapons][TypeOfWeapon] */
 
@@ -1909,7 +1913,7 @@
 { +Entity Name: SpaceDroneLegacyLaser, Ref: SpaceDronePlasma
   Mesh: Enemies/Drones/LegacyDroneCrabPrefab
   MeshDead: Enemies/Drones/LegacyDroneCrabDmgPrefab
-  Faction: Alien
+  Faction: TheLegacy
 
   MaxHealth: 25000
   # XpFactor: 2
@@ -1974,9 +1978,42 @@
   HudInfo: false
 }
 
-## ========================= CREATURES =========================
+## ==================================================
+##             TEMPLATES
+## ==================================================
 
-## ========================= Templates =========================
+{ +Entity Name: CivilianTemplate
+  /* Class properties */
+  EntityType: Civilian
+  Faction: Polaris
+  ModelType: NoRagdoll
+  Prefab: AlienHumanoid
+  Class: Enemy
+  Parent: Traders    # hierarchy in scene unity -> Traders
+  IsEnemy: false
+  AvatarController: Enemy
+  RotateSpeedMovement: 180
+
+  /* Determines particle effect  */
+  SurfaceCategory: alien
+
+  /* General entity properties */
+  ViewAngle: 180
+  Weight: 100
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  AllowUserInstantiate: false
+  PoolCount: 10
+
+  /* AI properties */
+  AITask-1: FleeOnHurt
+  AITask-2: Wander, param1: true  /* param1: if set to true use indoor pathing */
+
+
+  WanderSpeed: 0.2
+}
 
 { +Entity Name: PredatorTemplate
   /* Class properties */
@@ -2501,60 +2538,7 @@
 # }
 ## ========================= Alien Faction - Primitive =========================
 
-{ +Entity Name: TotalHorror, Ref: PredatorTemplate
-  Mesh: Enemies/TotalHorror/TotalHorrorPrefab
-  # HeadTransform: Biped_Skeleton_Chest1
-  HeadTransform: Head
-  
-  Faction: Alien
-  Prefab: AlienHumanoid
 
-  /* General entity properties */  
-  ViewAngle: 180
-  MaxHealth: 700
-  # XpFactor: 2
-  XpFactor: 5.0
-  HandItem: MeleeTotalHorror
-  RotateToGround: false
-
-  { Child VariableOverride
-    SpeedCalm: 0.3
-    SpeedAlerted: 0.3
-    SpeedAttack: 0.3
-    SpeedFlee: 0.3
-    MeleeAttackDistance: 1.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
-    MinimalDistanceToTarget: 2.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }
-  
-  WanderSpeed: 0.2
-  ApproachSpeed: 0.9
-  NightWanderSpeed: 0.2
-  NightApproachSpeed: 0.9
-  PanicSpeed: 0.55
-  
-  SurfaceCategory: human
-  
-  SfxRandomTime: 50.0
-  # SfxRandom: Enemies/TotalHorror/MONSTERInsectSqueel01Bright
-  SfxRandom: Enemies/TotalHorror/TotalHorror_SfxRandom
-
-  SfxAlertTime: 25.0
-  # SfxAlert: Enemies/TotalHorror/LizardCreature01_cry
-  SfxAlert: Enemies/TotalHorror/TotalHorror_SfxRandom
-  # SfxSense: Enemies/TotalHorror/LizardCreature01_cry
-
-  # SfxHurt: Enemies/TotalHorror/MONSTERDeepHurtSubtle
-  SfxHurt: Enemies/TotalHorror/TotalHorror_SfxHurt
-  # SfxDeath: Enemies/TotalHorror/MONSTERHurt
-  SfxDeath: Enemies/TotalHorror/TotalHorror_SfxDeath
-
-  LootListOnDeath: 28
-  
-  UpdateClusterInfo: true       
-  AllowUserInstantiate: true
-  AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-}
 
 ## ========================= Alien Faction - Advanced =========================
 
@@ -4615,8 +4599,129 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 
 ## ================================================== 
+{ +Entity Name: Overseer, Ref: PredatorBAITemplate
+  Mesh: Enemies/Overseer/OverseerPrefab
+  MeshDead: Enemies/Overseer/OverseerDeadPrefab
+  # HeadTransform: head
+  HeadTransform: Head
 
-# Internal name: CaveCrawler 
+  Faction: Alien
+
+  /* General entity properties */
+  MaxHealth: 1100
+  # XpFactor: 1.3
+  XpFactor: 7.02
+  HandItem: MeleeOverseer
+  RotateToGround: true
+  RotateSpeedMovement: 180
+  MotionAnimationSpeedMultiplier: 1.5
+
+
+  SurfaceCategory: alien
+
+  /* Sound settings */
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/Overseer/Overseer_SfxRandom
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/Overseer/Overseer_SfxRandom
+  SfxHurt:  Enemies/Overseer/Overseer_SfxHurt
+  SfxDeath: Enemies/Overseer/Overseer_SfxDeath
+
+  LootListOnDeath: 19
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+  FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
+
+  /* AI Properties */
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
+	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
+  }
+
+  { Child VariableOverride
+    SpeedCalm: 0.8
+    SpeedAlerted: 1.5
+    SpeedAttack: 2.0
+	SpeedFlee: 1.5
+	MeleeAttackDistance: 4.0
+	MinimalDistanceToTarget: 3.0
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 50
+	ViewAngle: 180
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,PlayerBike"
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 15, param1: 0
+	AlertLevel2: 50, param1: 2
+	AlertLevel3: 80, param1: 20
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:0 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
+}
+{ +Entity Name: TotalHorror, Ref: PredatorTemplate
+  Mesh: Enemies/TotalHorror/TotalHorrorPrefab
+  # HeadTransform: Biped_Skeleton_Chest1
+  HeadTransform: Head
+
+  Faction: Alien
+  Prefab: AlienHumanoid
+
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 700
+  # XpFactor: 2
+  XpFactor: 7.6
+  HandItem: MeleeTotalHorror
+  RotateToGround: false
+
+  WanderSpeed: 0.2
+  ApproachSpeed: 0.9
+  NightWanderSpeed: 0.2
+  NightApproachSpeed: 0.9
+  PanicSpeed: 0.55
+
+  SurfaceCategory: human
+
+  SfxRandomTime: 50.0
+  # SfxRandom: Enemies/TotalHorror/MONSTERInsectSqueel01Bright
+  SfxRandom: Enemies/TotalHorror/TotalHorror_SfxRandom
+
+  SfxAlertTime: 25.0
+  # SfxAlert: Enemies/TotalHorror/LizardCreature01_cry
+  SfxAlert: Enemies/TotalHorror/TotalHorror_SfxRandom
+  # SfxSense: Enemies/TotalHorror/LizardCreature01_cry
+
+  # SfxHurt: Enemies/TotalHorror/MONSTERDeepHurtSubtle
+  SfxHurt: Enemies/TotalHorror/TotalHorror_SfxHurt
+  # SfxDeath: Enemies/TotalHorror/MONSTERHurt
+  SfxDeath: Enemies/TotalHorror/TotalHorror_SfxDeath
+
+  LootListOnDeath: 28
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+  FadingEnabled: false     # otherwise problems when switching to dead model
+}
+# Internal name: CaveCrawler
 { +Entity Name: CaveWormGrey, Ref: PredatorBAITemplate
   Faction: Predator
   # Mesh: Enemies/CaveWorm/CaveWormGreyPrefab
@@ -4852,86 +4957,6 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AllowInSpawners: false
 }
 
-
-{ +Entity Name: Overseer, Ref: PredatorBAITemplate
-  Mesh: Enemies/Overseer/OverseerPrefab
-  MeshDead: Enemies/Overseer/OverseerDeadPrefab
-  # HeadTransform: head
-  HeadTransform: Head
-
-  Faction: Alien
-  
-  /* General entity properties */
-  MaxHealth: 1100
-  # XpFactor: 1.3
-  XpFactor: 12.0
-  HandItem: MeleeOverseer
-  RotateToGround: true
-  RotateSpeedMovement: 180
-  MotionAnimationSpeedMultiplier: 1.5
-
-  
-  SurfaceCategory: alien
-
-  /* Sound settings */
-  SfxRandomTime: 50.0
-  SfxRandom: Enemies/Overseer/Overseer_SfxRandom
-  SfxAlertTime: 25.0
-  SfxAlert: Enemies/Overseer/Overseer_SfxRandom
-  SfxHurt:  Enemies/Overseer/Overseer_SfxHurt
-  SfxDeath: Enemies/Overseer/Overseer_SfxDeath
-
-  LootListOnDeath: 19
-  
-  UpdateClusterInfo: true       
-  AllowUserInstantiate: true
-  AllowInSpawners: true
-  FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
-  /* AI Properties */
-  { Child MainBehavior
-	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
-	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
-  }
-  
-  { Child VariableOverride
-    SpeedCalm: 0.8
-    SpeedAlerted: 1.5
-    SpeedAttack: 2.5
-	SpeedFlee: 1.7
-	MeleeAttackDistance: 4.0
-	MinimalDistanceToTarget: 3.0
-  }   
-  
-  {	Child VisionSensor
-	VisibleDistance: 150
-	ViewAngle: 320
-	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone"
-  }  
-  
-  {	Child TargetSensor
-    AttackableTypes: "Player,SV,CV,BA,HV,PlayerDrone"
-  }
-  
-  {	Child AlertSensor
-	AlertLevel1: 15, param1: 0
-	AlertLevel2: 50, param1: 2
-	AlertLevel3: 80, param1: 20
-	AlertLevelDrop:10 /* slow alert drop */
-	AlertAddFromVisionMinNoMovement:0 /* no alert when not moving */
-	AlertAddFromVisionMovement:200
-	AlertVisionMaxSpeed:2
-	AlertAddFromAutoAlert:30
-	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
-  }    
-}
-
 # Obsolete. needed only for old entity spawners / playfields
 { Entity Name: OverseerGroup, Ref: Overseer
  
@@ -4946,7 +4971,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # HeadTransform: Base HumanHead
   HeadTransform: Head
   
-  Faction: Alien
+  Faction: Kriel
   Prefab: AlienHumanoid
 
   ViewAngle: 180
@@ -5033,7 +5058,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # HeadTransform: Base HumanHead
   HeadTransform: Head
   
-  Faction: Alien
+  Faction: Kriel
   Prefab: AlienHumanoid
   /*
   WanderSpeed: 0.4
@@ -6074,7 +6099,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   Prefab: Alien
   
-  Faction: Alien
+  # Faction: Predator
   
   /* Determines particle effect  */
   SurfaceCategory: alien
@@ -6569,45 +6594,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
 }
 
-## ========================= Civilians ========================= 
-{ +Entity Name: CivilianTemplate
-  /* Class properties */
-  EntityType: Civilian
-  Faction: Polaris
-  ModelType: NoRagdoll
-  Prefab: AlienHumanoid
-  Class: Enemy
-  Parent: Traders    # hierarchy in scene unity -> Traders
-  IsEnemy: false
-  AvatarController: BAIAnimalBase
-  RotateSpeedMovement: 180
+## ========================= Civilians =========================
 
-  /* Determines particle effect  */
-  SurfaceCategory: alien
-
-  /* General entity properties */
-  ViewAngle: 180
-  Weight: 100
-
-  TimeStayAfterDeath: 120            /* sec */
-  FadingEnabled: true
-
-  AllowUserInstantiate: false
-  PoolCount: 10
-  
-  /* AI properties */
-  AITask-1: FleeOnHurt
-  AITask-2: Wander, param1: true  /* param1: if set to true use indoor pathing */
-
-  WanderSpeed: 0.35
-}
 
 { +Entity Name: AlienCivilian1, Ref: CivilianTemplate
   Mesh: Enemies/Traders/AlienCivilian1Prefab
 
   EntityType: Civilian
-  Faction: Polaris
-
+  Faction: Civilian
 
   HeadTransform: AlienHead
 
@@ -7539,127 +7533,157 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RightHandJointName: R Weapon
 }
 
-#Infected NPCs
+{ +Entity Name: ZiraxCivilianMaleBlue, Ref: AlienCivilian1
+  Mesh: Enemies/Zirax/ZiraxCivilianMaleBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxCivilianMaleBlueDeadPrefab
+  HeadTransform: Bip01_Head
+ # RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+{ +Entity Name: ZiraxCivilianFemaleBlue, Ref: AlienCivilian1
+  Mesh: Enemies/Zirax/ZiraxCivilianFemaleBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxCivilianFemaleDeadBluePrefab
+  HeadTransform: Bip001 Head
+ # RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
 
-#{ +Entity Name: HexapodInfected, Ref: Hexapod
-#  Mesh: Enemies/HexapodInfectedPrefab
-#  MeshDead: Enemies/HexapodInfectedDeadPrefab
-#  HeadTransform: Head
-#}
-#{ +Entity Name: AlienAssassinInfected, Ref: AlienAssassinGrey
-#  Mesh: Enemies/AlienAssassin/AlienAssassinInfectedPrefab
-#  MeshDead: Enemies/AlienAssassin/AlienAssassinInfectedDeadPrefab
-#  HeadTransform: Head
-#}
-#{ +Entity Name: SoldierAlienInfected, Ref: SoldierAlienAssaultRifle
-#  MaxHealth: 700
-#  XpFactor: 11.4
-#  LootListOnDeath: 101
-#  Mesh: Enemies/SecurityGuards/SecurityGuardAlienMovingInfectedPrefab
-#  MeshDead: Enemies/SecurityGuards/SecurityGuardAlienMovingInfectedDeadPrefab
-#  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
-#  HeadTransform: AlienHead
-#  RightHandJointName: RightHand
-#}
-#{ +Entity Name: SoldierHumanMaleInfected, Ref: ZiraxMinigun
-#  MaxHealth: 700
-#  XpFactor: 11.4
-#  LootListOnDeath: 101
-#  Mesh: Enemies/SecurityGuards/SecurityGuardMovingInfectedPrefab
-#  MeshDead: Enemies/SecurityGuards/SecurityGuardMovingInfectedDeadPrefab
-#  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
-#  HeadTransform: Head
-#  RightHandJointName: R Weapon
-#  SurfaceCategory: human
-#
-#  SfxRandom:
-#  SfxAlertTime: 25.0
-#  SfxAlert:
-#  SfxHurt:
-#  SfxDeath:
-#}
-#{ +Entity Name: SoldierHumanMale2Infected, Ref: ZiraxMinigun
-#  MaxHealth: 700
-#  XpFactor: 11.4
-#  LootListOnDeath: 101
-#  Mesh: Enemies/SecurityGuards/SecurityGuard2MovingInfectedPrefab
-#  MeshDead: Enemies/SecurityGuards/SecurityGuard2MovingDeadInfectedPrefab
-#  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
-#  HeadTransform: Head
-#  RightHandJointName: R Weapon
-#
-#  SfxRandom:
-#  SfxAlertTime: 25.0
-#  SfxAlert:
-#  SfxHurt:
-#  SfxDeath:
-#}
+# ===============================
+# NPCS exclusively used by THE LEGACY (Infected NPCs and others)
+# ================================
+
+{ +Entity Name: HexapodInfected, Ref: Hexapod
+  Mesh: Enemies/HexapodInfectedPrefab
+  Faction: TheLegacy
+  MeshDead: Enemies/HexapodInfectedDeadPrefab
+  HeadTransform: Head
+}
+{ +Entity Name: AlienAssassinInfected, Ref: AlienAssassinGrey
+  Mesh: Enemies/AlienAssassin/AlienAssassinInfectedPrefab
+  MeshDead: Enemies/AlienAssassin/AlienAssassinInfectedDeadPrefab
+  HeadTransform: Head
+  Faction: TheLegacy
+}
+{ +Entity Name: SoldierAlienInfected, Ref: SoldierAlienAssaultRifle
+  MaxHealth: 700
+  XpFactor: 11.4
+  LootListOnDeath: 101
+  Mesh: Enemies/SecurityGuards/SecurityGuardAlienMovingInfectedPrefab
+  MeshDead: Enemies/SecurityGuards/SecurityGuardAlienMovingInfectedDeadPrefab
+  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+  HeadTransform: AlienHead
+  RightHandJointName: RightHand
+  Faction: TheLegacy
+}
+{ +Entity Name: SoldierHumanMaleInfected, Ref: ZiraxMinigun
+  MaxHealth: 700
+  XpFactor: 11.4
+  LootListOnDeath: 101
+  Faction: TheLegacy
+  Mesh: Enemies/SecurityGuards/SecurityGuardMovingInfectedPrefab
+  MeshDead: Enemies/SecurityGuards/SecurityGuardMovingInfectedDeadPrefab
+  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+  SurfaceCategory: human
+
+  SfxRandom:
+  SfxAlertTime: 25.0
+  SfxAlert:
+  SfxHurt:
+  SfxDeath:
+}
+{ +Entity Name: SoldierHumanMale2Infected, Ref: ZiraxMinigun
+  MaxHealth: 700
+  XpFactor: 11.4
+  LootListOnDeath: 101
+  Faction: TheLegacy
+  Mesh: Enemies/SecurityGuards/SecurityGuard2MovingInfectedPrefab
+  MeshDead: Enemies/SecurityGuards/SecurityGuard2MovingDeadInfectedPrefab
+  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+
+  SfxRandom:
+  SfxAlertTime: 25.0
+  SfxAlert:
+  SfxHurt:
+  SfxDeath:
+}
 { +Entity Name: TalonGuardianInfectedCrossbow, Ref: TalonGuardian
   Mesh: Enemies/TalonGuardian/TalonGuardianCrossbowInfectedPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianCrossbowInfectedDeadPrefab
 
+  Faction: TheLegacy
   ItemsOnEnterGame: TalonCrossbowWeapon
 
   { Child Hints
 	UseMeleeAttack: 0
   }
 }
-#{ +Entity Name: TalonGuardianInfectedGreen, Ref: TalonGuardian
-#  Mesh: Enemies/TalonGuardian/TalonGuardianGreenInfectedPrefab
-#  MeshDead: Enemies/TalonGuardian/TalonGuardianGreenInfectedDeadPrefab
-#}
-#{ +Entity Name: TalonGuardianInfectedBlue, Ref: TalonGuardian
-#  Mesh: Enemies/TalonGuardian/TalonGuardianBlueInfectedPrefab
-#  MeshDead: Enemies/TalonGuardian/TalonGuardianBlueInfectedDeadPrefab
-#}
-#{ +Entity Name: TalonGuardianInfectedRed, Ref: TalonGuardian
-#  Mesh: Enemies/TalonGuardian/TalonGuardianRedInfectedPrefab
-#  MeshDead: Enemies/TalonGuardian/TalonGuardianRedInfectedDeadPrefab
-#}
-#{ +Entity Name: ZiraxInfectedBlue, Ref: ZiraxMinigun
-#  Mesh: Enemies/Zirax/ZiraxBlueInfectedPrefab
-#  MeshDead: Enemies/Zirax/ZiraxBlueInfectedDeadPrefab
-#  HeadTransform: Bip01_Head
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
-#{ +Entity Name: ZiraxInfectedGreen, Ref: ZiraxMinigun
-#  Mesh: Enemies/Zirax/ZiraxGreenInfectedPrefab
-#  MeshDead: Enemies/Zirax/ZiraxGreenInfectedDeadPrefab
-#  HeadTransform: Bip01_Head
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
-#{ +Entity Name: ZiraxInfectedRed, Ref: ZiraxMinigun
-#  Mesh: Enemies/Zirax/ZiraxRedInfectedPrefab
-#  MeshDead: Enemies/Zirax/ZiraxRedInfectedDeadPrefab
-#  HeadTransform: Bip01_Head
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
-#{ +Entity Name: ZiraxInfectedYellow, Ref: ZiraxMinigun
-#  Mesh: Enemies/Zirax/ZiraxYellowInfectedPrefab
-#  MeshDead: Enemies/Zirax/ZiraxYellowInfectedDeadPrefab
-#  HeadTransform: Bip01_Head
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
-#{ +Entity Name: ZiraxInfectedPurple, Ref: ZiraxMinigun
-#  Mesh: Enemies/Zirax/ZiraxPurpleInfectedPrefab
-#  MeshDead: Enemies/Zirax/ZiraxPurpleInfectedDeadPrefab
-#  HeadTransform: Bip01_Head
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
-#{ +Entity Name: ZiraxInfectedCommander, Ref: ZiraxCommander
-#  Mesh: Enemies/Zirax/ZiraxCommanderInfectedPrefab
-#  MeshDead: Enemies/Zirax/ZiraxCommanderInfectedDeadPrefab
-#  HeadTransform: Bip01_Head
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
-#{ +Entity Name: ZiraxCivilianMaleBlue, Ref: ZiraxCommander
-#  Mesh: Enemies/Zirax/ZiraxCivilianMaleBluePrefab
-#  MeshDead: Enemies/Zirax/ZiraxCivilianMaleBlueDeadPrefab
-#  HeadTransform: Bip01_Head
-#  RightHandJointName: R Weapon
-#  ItemsOnEnterGame: ZiraxMinigunWeapon
-#}
+{ +Entity Name: TalonGuardianInfectedGreen, Ref: TalonGuardian
+  Mesh: Enemies/TalonGuardian/TalonGuardianGreenInfectedPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianGreenInfectedDeadPrefab
+  Faction: TheLegacy
+}
+{ +Entity Name: TalonGuardianInfectedBlue, Ref: TalonGuardian
+  Mesh: Enemies/TalonGuardian/TalonGuardianBlueInfectedPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianBlueInfectedDeadPrefab
+  Faction: TheLegacy
+}
+{ +Entity Name: TalonGuardianInfectedRed, Ref: TalonGuardian
+  Mesh: Enemies/TalonGuardian/TalonGuardianRedInfectedPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianRedInfectedDeadPrefab
+  Faction: TheLegacy
+}
+{ +Entity Name: ZiraxInfectedBlue, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxBlueInfectedPrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueInfectedDeadPrefab
+  HeadTransform: Bip01_Head
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  Faction: TheLegacy
+}
+{ +Entity Name: ZiraxInfectedGreen, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxGreenInfectedPrefab
+  MeshDead: Enemies/Zirax/ZiraxGreenInfectedDeadPrefab
+  HeadTransform: Bip01_Head
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  Faction: TheLegacy
+}
+{ +Entity Name: ZiraxInfectedRed, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxRedInfectedPrefab
+  MeshDead: Enemies/Zirax/ZiraxRedInfectedDeadPrefab
+  HeadTransform: Bip01_Head
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  Faction: TheLegacy
+}
+{ +Entity Name: ZiraxInfectedYellow, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxYellowInfectedPrefab
+  MeshDead: Enemies/Zirax/ZiraxYellowInfectedDeadPrefab
+  HeadTransform: Bip01_Head
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  Faction: TheLegacy
+}
+{ +Entity Name: ZiraxInfectedPurple, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxPurpleInfectedPrefab
+  MeshDead: Enemies/Zirax/ZiraxPurpleInfectedDeadPrefab
+  HeadTransform: Bip01_Head
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  Faction: TheLegacy
+}
+{ +Entity Name: ZiraxInfectedCommander, Ref: ZiraxCommander
+  Mesh: Enemies/Zirax/ZiraxCommanderInfectedPrefab
+  MeshDead: Enemies/Zirax/ZiraxCommanderInfectedDeadPrefab
+  HeadTransform: Bip01_Head
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  Faction: TheLegacy
+}
 
+
+# ==================================
+#  Creatures for TERRAIN SPAWN Only
+# (Do NOT use in POIs!)
+# ==================================
 
 { +Entity Name: AlienBug02Group, Ref: AlienBug02
   HeadTransform: Head
