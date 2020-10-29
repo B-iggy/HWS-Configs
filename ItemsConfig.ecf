@@ -11571,7 +11571,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Class: Ranged
     ROF: 0.8, type: float, display: true, formatter: ROF
-    Range: 130, display: false
+    Range: 120, display: false
     Damage: 100, display: true
     IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
     Automatic: true
@@ -12079,7 +12079,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxSniperPrefab
   { Child 0
     ROF: 2, type: float
-    Range: 220, display: false
+    Range: 120, display: false
     Damage: 150, display: true
     Automatic: false
     Buff: "OpenWound"
