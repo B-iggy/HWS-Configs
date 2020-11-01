@@ -12869,6 +12869,60 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
+# HWS Event items. From 799 downwards
+
+{ +Item Id: 798, Name: HWSEventHalloweenPumpkinShell
+  CustomIcon: FriedVegetables
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metalitem
+
+  Canhold: false
+  HoldType: 0
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Volume: 1, type: float, display: true, formatter: Liter
+  Info: bkiHWSEventHalloweenPumpkinShell, display: true
+  Category: Components
+  StackSize: 100
+  ShowUser: Yes
+}
+
+{ +Item Id: 799, Name: HWSEventHalloweenArmor
+  CustomIcon: ArmorHeavyEpic
+  Class: Armor
+  RecipeName: HeavyArmorEpic
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metal
+  HoldType: 0
+  StackSize: 1
+  Canhold: false
+  Category: Weapons/Items
+
+  Mass: 100, type: float, display: false, formatter: Kilogram
+  Volume: 100, type: float, display: true, formatter: Liter
+
+  VolumeCapacity: 4999500, type: float, display: true, formatter: Liter
+  Info: bkiHWSEventHalloweenArmor, display: true
+
+  Durability: 1000, display: true
+  Oxygen: 1000, type: int, display: true
+  Armor: 1000, type: int, display: true
+  Heat: 500, type: int, display: true
+  Cold: 500, type: int, display: true
+  Radiation: 100, type: int, display: true
+  FallDamageFac: 0.7, type: float, display: true
+  PowerFac: 0.7, type: float, display: true  # better: 0.085
+  SpeedFac: 0.9, type: float, display: true  # better: 0.085
+  JumpFac: 0.7, type: float, display: true
+  JetpackFac: 1.1, type: float, display: true
+  FoodFac: 0.9, type: float, display: true
+  StaminaFac: 1.1, type: float, display: true
+
+  NrSlots: 4, type: int, display: true
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, RadiationBoostEpic, MobilityBoostEpic"
+}
+
 /* CATEGORIE: New Weapon Items id 800 - 1000 */
 
 { +Item Id: 800, Name: ZiraxAssaultRiflePlayer , Ref: AssaultRifleT2

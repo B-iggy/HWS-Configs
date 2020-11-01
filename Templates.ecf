@@ -5552,3 +5552,13 @@
 	PowerCoil: 1
   }
 }
+
+# HWS Halloween Event Armor
+{ +Template Name: HWSEventHalloweenArmor
+  CraftTime: 600
+  Target: "AdvC"
+  { Child Inputs
+    HWSEventHalloweenPumpkinShell: 100
+  }
+}
+

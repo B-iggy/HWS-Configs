@@ -19800,7 +19800,7 @@ HullCombatSmallBlocks
   Info: bkiArmorLocker, display: true
   Mass: 405, type: float, display: false, formatter: Kilogram
   Volume: 200, type: float, display: true, formatter: Liter
-  VolumeCapacity: 100, type: float, display: true, formatter: Liter
+  VolumeCapacity: 1000, type: float, display: true, formatter: Liter
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
@@ -20080,7 +20080,7 @@ HullCombatSmallBlocks
   IsLockable: true
   Mass: 120, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
-  VolumeCapacity: 150, type: float, display: true, formatter: Liter
+  VolumeCapacity: 500, type: float, display: true, formatter: Liter
   EnergyIn: 5, type: int, display: true, formatter: Watt
   SoundOpen: UseActions/BarrelOpen
   SoundClose: UseActions/BarrelClose
