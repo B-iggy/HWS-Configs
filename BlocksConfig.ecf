@@ -6769,6 +6769,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 100
+  Voxelize: false
 
   Radiation: 15, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 1080, display: true
