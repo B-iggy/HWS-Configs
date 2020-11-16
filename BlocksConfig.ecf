@@ -1512,7 +1512,6 @@ HullCombatSmallBlocks
 
 /* 135 - 243 available free */
 
-
 { +Block Id: 243, Name: WarpDriveT3
   Class: WarpDrive
   Group: cpgWarp
@@ -4849,8 +4848,6 @@ HullCombatSmallBlocks
 { +Block Id: 413, Name: HullCombatThinLarge, Ref: HullCombatFullLarge
   ChildShapes: "Wall, WallLShape, WallSloped, WallSloped3Corner, WallSlopedC, WallSlopedCMediumright, WallSlopedAright, WallSlopedCMediumleft, WallSlopedAleft, WallCornerRoundB, WallSlopedRound, WallEdgeRound, WallEdgeRound3Way, WallCornerRoundA, WallCornerRoundC, WallSloped3CornerLow, WallCorner, WallLow, CubeHalf, RampADouble, RampCLow, RampBMedium, RampD, CutCornerEMedium, Beam, CylinderThin, CylinderThinTJoint, CylinderL, PipesFence, FenceTop, RampCHalf, CornerHalfA3Medium"
 }
-
-# 414 415 available free BUILDING MATERIALS
 
 /* { Block Id: 414, Name: WeaponSV06      #Bomb Unguided SV
   Class: Weapon
@@ -13326,7 +13323,6 @@ HullCombatSmallBlocks
   Model: @models2/Entities/Misc/DummyPrefab
 }
 
-# available 852
 { +Block Id: 852, Name: DrillAttachmentSVT2
   LootList: 37   /* still used? */
   IndexName: WeaponShip
