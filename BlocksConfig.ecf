@@ -4893,8 +4893,7 @@ HullCombatSmallBlocks
  # UnlockLevel: 7, display: true
  # TechTreeParent: WeaponSV04
  # TechTreeNames: Small Vessel
-}
- */
+} */
  
 /* { +Block Id: 415, Name: CommodityConsole
   AllowedInBlueprint: false, display: true
@@ -4913,8 +4912,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: Base, display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-}
- */
+} */
 { +Block Id: 416, Name: TrussCube
   Material: hullarmored, display: true
   Shape: New

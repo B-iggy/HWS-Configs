@@ -3945,40 +3945,38 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-/* { Item Id: 69, Name: BombUnguided
-  Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
-  Material: metalweapon
-  HoldType: 0
-  StackSize: 25
-  Marketprice: 250, display: true
-  Canhold: false
-  Category: Weapons/Items
-  Mass: 250, type: float, display: true, formatter: Kilogram
-  Volume: 25, type: float, display: true, formatter: Liter
-  ShowUser: No
-  { Child 0
-    Class: Projectile
-    Damage: 800, display: true
-    BlastParticleIndex: 3
-    BlastRadius: 4, display: true
-    BlastDamage: 1800, display: true
-    Speed: 1
-    Range: 360
-    Ballistic: true
-
-    DamageMultiplier_1: 10, param1: metal
-    DamageMultiplier_2: 25, param1: metalhard|concrete|woodblock|hull
-    DamageMultiplier_3: 60, param1: hullarmored|hullcombat
-    DamageMultiplier_4: 30, param1: dirt|stone
-    DamageMultiplier_5: 0, param1: shield
-    BlastDamageMultiplier_1: 0.05, param1: dirt|stone
-  }
-
-  UnlockLevel: 1
-  TechTreeNames: Hidden
-}
- */
-
+# { Item Id: 69, Name: BombUnguided
+#  Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
+#  Material: metalweapon
+#  HoldType: 0
+#  StackSize: 25
+#  Marketprice: 250, display: true
+#  Canhold: false
+#  Category: Weapons/Items
+#  Mass: 250, type: float, display: true, formatter: Kilogram
+#  Volume: 25, type: float, display: true, formatter: Liter
+#  ShowUser: No
+#  { Child 0
+#    Class: Projectile
+#    Damage: 800, display: true
+#    BlastParticleIndex: 3
+#    BlastRadius: 4, display: true
+#    BlastDamage: 1800, display: true
+#    Speed: 1
+#    Range: 360
+#    Ballistic: true
+#
+#    DamageMultiplier_1: 10, param1: metal
+#    DamageMultiplier_2: 25, param1: metalhard|concrete|woodblock|hull
+#    DamageMultiplier_3: 60, param1: hullarmored|hullcombat
+#    DamageMultiplier_4: 30, param1: dirt|stone
+#    DamageMultiplier_5: 0, param1: shield
+#    BlastDamageMultiplier_1: 0.05, param1: dirt|stone
+#  }
+#
+#  UnlockLevel: 1
+#  TechTreeNames: Hidden
+#}
 # free
 
 { Item Id: 78, Name: AmmoInfinite       # Dummy ammo needed for weapons that have unlimited ammo (eg DrillAttachmentWeapon)
@@ -6485,30 +6483,30 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-/* { Item Id: 144, Name: BombLauncherSSWeapon
-  Meshfile: Entities/Enemies/Drones/Weapons/BombLauncherDronePrefab
-  Material: metalweapon
-  HoldType: 0
-  StackSize: 1
-  Category: Weapons/Items
-  ShowUser: No
-  { Child 0
-    Class: BombLauncher
-    ROF: 3.5, type: float
-    Range: 300
-    AmmoCapacity: 25
-    AmmoUnlimited: true
-    AmmoType: BombUnguided, display: true
-    BulletsPerShot: 3
-    BulletSpread: 5
-    ReloadDelay: 3
-   # SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
-    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
-    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
-   # PfxMuzzle: rocketlauncherMSMuzzleFire
-  }
-}
- */
+# { Item Id: 144, Name: BombLauncherSSWeapon
+#   Meshfile: Entities/Enemies/Drones/Weapons/BombLauncherDronePrefab
+#   Material: metalweapon
+#   HoldType: 0
+#   StackSize: 1
+#   Category: Weapons/Items
+#   ShowUser: No
+#   { Child 0
+#     Class: BombLauncher
+#     ROF: 3.5, type: float
+#     Range: 300
+#     AmmoCapacity: 25
+#     AmmoUnlimited: true
+#     AmmoType: BombUnguided, display: true
+#     BulletsPerShot: 3
+#     BulletSpread: 5
+#     ReloadDelay: 3
+#    # SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+#     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+#     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+#    # PfxMuzzle: rocketlauncherMSMuzzleFire
+#   }
+# }
+
 
 /* Ammo id 150-199 */
 
