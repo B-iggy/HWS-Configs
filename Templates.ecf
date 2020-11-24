@@ -1988,7 +1988,7 @@
 
 { +Template Name: MedicalStationBlocks
   CraftTime: 12 #A2 Ba CV 10
-  Target: "LargeC,AdvC"
+  Target: "BaseC,LargeC,AdvC"
   { Child Inputs
     MechanicalComponents: 6
     Nanotubes: 2
@@ -3159,7 +3159,7 @@
   }
 }
 { +Template Name: SurvivalTool
-  CraftTime: 5
+  CraftTime: 3
   Target: SuitC
   { Child Inputs
   }
@@ -4581,7 +4581,7 @@
  # ======================= 
 { +Template Name: PowerBar
   DeconOverride: Stop
-  CraftTime: 12
+  CraftTime: 8
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC,SuitC"
   { Child Inputs
     PlantProtein: 2
