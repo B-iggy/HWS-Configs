@@ -3830,9 +3830,8 @@ HullCombatSmallBlocks
   BlastRadius: 5
   BlastDamage: 300
 
-  UnlockCost: 13, display: true
-  UnlockLevel: 10, display: true
-  TechTreeParent: GravityGeneratorMS
+  UnlockCost: 40, display: true
+  UnlockLevel: 7, display: true
   TechTreeNames: "Base,Capital Vessel"
 
   WarpAccept: PentaxidCrystal
@@ -11640,7 +11639,7 @@ HullCombatSmallBlocks
 
   UnlockCost: 15, display: true
   UnlockLevel: 10, display: true
-  # TechTreeParent: PentaxidTank
+  TechTreeParent: PentaxidTank
   TechTreeNames: Capital Vessel
 }
 { +Block Id: 721, Name: OxygenStationSV
