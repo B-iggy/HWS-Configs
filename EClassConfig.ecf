@@ -54,21 +54,21 @@
 { Entity Name: PlyFemale
   /* This one decides for scoring */
   EntityType: Player
-  
+
   # ModelType: Player
   # Mesh: Player/SciFiFemaleNoHelmet/SciFiFemaleNoHelmetPrefab
-  # AvatarController: Player  
-  
+  # AvatarController: Player
+
   ModelType: PlayerUMA
   Mesh: Player/UMAAvatarPrefabFemale
   AvatarController: PlayerUMA
-  
+
   Class: Player
   Prefab: Player
-  
+
   MeshHelmet: Player/SciFiFemale/SciFiFemalePrefab
   MeshFP: Player/SciFiFemale/SciFiFemaleFPVPrefab
-  
+
   Parent: Players
   RightHandJointName: RightHand
   PlayerBikeHandPos: 2
@@ -78,7 +78,7 @@
 
   PushFactor: 5
   Weight: 70
-  
+
   VolumeCapacity: 500
 
   MaxHealth: 500
@@ -469,16 +469,16 @@
   UseProxy: true
   Parent: CV
   Faction: Zirax
-  
+
   IsEnemy: true
-  
+
   DroneType: ClusterDrone
 
   MaxHealth: 20000
   ViewAngle: 360
   ViewRange: 1500
   Weight: 70
-  
+
 
   /* Explosion on death */
   BlastParticleIndex: 0
@@ -491,10 +491,10 @@
 
   /*AITarget-1: EntitiesAround, param1: "Player,BA,SV,HV,CV"*/
   /*AITarget-1: PlanetVesselDetection, param1: "Player,BA,SV,HV,CV"*/
-  
+
   # MapIcon: map_EnemyEntityDot
   MapIcon: map_MS
-  
+
   AllowUserInstantiate: false
 }
 { Entity Name: Freighter_ClassI, Ref: CV_ClusterDrone
@@ -561,7 +561,7 @@
 }
 
 /* ADMIN FACTION */
-# Used for fixed POIs in orbit 
+# Used for fixed POIs in orbit
 { Entity Name: BA_Admin
   EntityType: BA
   ModelType: ChunkClusterBase, param1: BA_Player, param2: 2
@@ -856,7 +856,7 @@
   TimeStayAfterDeath: 0.1
 
   AsteroidBlockValueType: IronResource
-  
+
   AllowUserInstantiate: false
 }
 { Entity Name: CopperResource, Ref: IronResource
@@ -1338,7 +1338,7 @@
   SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
   SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
   SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
-  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho  
+  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
   # SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
   # SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
 
@@ -1347,19 +1347,24 @@
 
   AllowUserInstantiate: true
   HudInfo: false
-
-  { Child VariableOverride
-    SpeedCalm: 10.0
-    SpeedAlerted: 20.0
-	SpeedAttack: 30.0
-  }
 }
+{ +Entity Name: DroneSmallFast01Stun, Ref: DroneSmallFast01Rocket
+  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
 
+  HandItem: stunDroneSmall
+  ItemsOnEnterGame: stunDroneSmall
+
+  MaxHealth: 300
+  XpFactor: 0.6
+
+  LootListOnDeath: 150
+
+  AllowUserInstantiate: true
+}
 { +Entity Name: DroneSmallFast01Minigun, Ref: DroneSmallFast01Rocket
-#  Mesh: Enemies/Drones/EnemyDroneBluePrefab
-#  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
-  Mesh: Enemies/Drones/DroneLarge01LODPrefab
-  MeshDead: Enemies/Drones/DroneLargeDmgPrefab
+  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
 
   HandItem: minigunDroneSmall
   ItemsOnEnterGame: minigunDroneSmall
@@ -1531,7 +1536,7 @@
   Class: MeshDrone
   Parent: Drones
   AvatarController: MeshDroneAI
-  
+
   DroneType: TroopsTransportDrone
   ViewAngle: 360
   ViewRange: 1000
@@ -1550,15 +1555,15 @@
   SpawnYAdd: 15     /* drones shall always spawn 15meters above ground */
 
   ParticleOnDeath: drone_explosion04
-  TimeStayAfterDeath: 300      
+  TimeStayAfterDeath: 300
   # TimeStayAfterDeath: 150
   LootListOnDeath: 16
-  
+
   /* Sound Setting */
-  SfxRandomTime: 50.0   
+  SfxRandomTime: 50.0
   SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
 
-  SfxAlertTime: 25.0  
+  SfxAlertTime: 25.0
   SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
   SfxHurt:  Enemies/Drone/DroneLarge_SfxHurt
   SfxDeath: Enemies/Drone/DroneLarge_SfxDeath
@@ -1592,12 +1597,12 @@
   ItemsOnEnterGame: minigunDroneLarge
 
   LootListOnDeath: 158
-  
+
   /* Sound Setting */
-  SfxRandomTime: 50.0   
+  SfxRandomTime: 50.0
   SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
 
-  SfxAlertTime: 25.0  
+  SfxAlertTime: 25.0
   SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
   SfxHurt:  Enemies/Drone/DroneLarge_SfxHurt
   SfxDeath: Enemies/Drone/DroneLarge_SfxDeath
@@ -1613,7 +1618,7 @@
   ItemsOnEnterGame: plasmaDroneLarge
 }
 
-# remove and ignore in code if not defined anymore 
+# remove and ignore in code if not defined anymore
 { Entity Name: DroneSmallAttackBase, Ref: DroneSmallFast01Rocket
 
   # HandItem: minigunDroneAttackBase
@@ -1626,9 +1631,9 @@
   LootListOnDeath: 150
   AllowUserInstantiate: false
 }
-# remove and ignore in code if not defined anymore 
+# remove and ignore in code if not defined anymore
 { Entity Name: DroneLargeAttackBase, Ref: EnemyDroneV2Minigun
-  
+
   Mesh: Enemies/Drones/EnemyDroneV2Prefab
   MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
 
@@ -1644,7 +1649,7 @@
 }
 
 # ======================================================================
-# used for new base attack 
+# used for new base attack
 # ======================================================================
 
 # light drones
@@ -1662,7 +1667,7 @@
 
   AllowUserInstantiate: true
 }
-  
+
 { +Entity Name: DroneBaseAttackMinigun, Ref: DroneSmallFast01Minigun
 
   DroneType: FastDrone
@@ -1771,7 +1776,7 @@
   SfxAlert: Enemies/Drone/DroneSmall_SfxRandom
   SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
   SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
-  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho  
+  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
   # SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
   # SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
 
@@ -1830,10 +1835,10 @@
   /*AITarget-1: DroneDetection, param1: "Player,Turret,SV,CV", param2: EntityShip*/
 
   /* Sound Setting */
-  SfxRandomTime: 50.0   
+  SfxRandomTime: 50.0
   SfxRandom: Enemies/Drone/SwellsRushesAssortment_start
 
-  SfxAlertTime: 25.0   
+  SfxAlertTime: 25.0
   SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
   # SfxSense: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
 
@@ -1928,7 +1933,7 @@
 { +Entity Name: SpaceDroneBattered01, Ref: SpaceDronePlasma
   Mesh: Enemies/Drones/PolarisDrone02BatteredPrefab
   MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
-  Faction: Civilian
+  Faction: Pirates
 
   MaxHealth: 10000
   # XpFactor: 2
@@ -1943,7 +1948,7 @@
 { +Entity Name: SpaceDroneBattered02, Ref: SpaceDronePlasma
   Mesh: Enemies/Drones/PolarisDrone04BatteredPrefab
   MeshDead: Enemies/Drones/PolarisDrone04DestroyedPrefab
-  Faction: Civilian
+  Faction: Pirates
 
   MaxHealth: 10000
   # XpFactor: 2
@@ -2014,7 +2019,38 @@
 
   WanderSpeed: 0.2
 }
+{ +Entity Name: CivilianTemplateStatic
+  /* Class properties */
+  EntityType: Civilian
+  Faction: Polaris
+  ModelType: NoRagdoll
+  Prefab: AlienHumanoid
+  Class: Enemy
+  Parent: Traders    # hierarchy in scene unity -> Traders
+  IsEnemy: false
+  AvatarController: Enemy
+  RotateSpeedMovement: 180
 
+  /* Determines particle effect  */
+  SurfaceCategory: alien
+
+  /* General entity properties */
+  ViewAngle: 180
+  Weight: 100
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  AllowUserInstantiate: false
+  PoolCount: 10
+
+  /* AI properties */
+  AITask-1: FleeOnHurt
+  #AITask-2: Wander, param1: true  /* param1: if set to true use indoor pathing */
+
+
+  #WanderSpeed: 0.2
+}
 { +Entity Name: PredatorTemplate
   /* Class properties */
   Faction: Predator
@@ -2024,7 +2060,7 @@
   Parent: Enemies
   IsEnemy: true
   AvatarController: Enemy
-  
+
   /* Determines particle effect  */
   SurfaceCategory: human
 
@@ -2047,7 +2083,7 @@
   AllowUserInstantiate: false
 }
 
-# All "intelligent" NPCs that have a ranged attack 
+# All "intelligent" NPCs that have a ranged attack
 { +Entity Name: AlienTemplate
   /* Class properties */
   Faction: Zirax
@@ -2057,7 +2093,7 @@
   Parent: Enemies
   IsEnemy: true
   AvatarController: Enemy
-  
+
   /* Determines particle effect  */
   SurfaceCategory: human
 
@@ -2085,11 +2121,11 @@
   Faction: Trader
   ModelType: NoRagdoll
   Prefab: AlienTrader
-  Class: Enemy  
+  Class: Enemy
   Parent: Traders    # hierarchy in scene unity -> Traders
   IsEnemy: false
   AvatarController: Enemy
-  
+
   /* Determines particle effect  */
   SurfaceCategory: alien
 
@@ -2113,7 +2149,7 @@
   Parent: Traders    # hierarchy in scene unity -> Traders
   IsEnemy: false
   AvatarController: Enemy
-  
+
   /* Determines particle effect  */
   SurfaceCategory: metal
 
@@ -2134,10 +2170,10 @@
   Prefab: Alien
   EntityType: Animal
   Class: Animal
-  Parent: Enemies    
+  Parent: Enemies
   IsEnemy: false
   AvatarController: Enemy
-  
+
   /* Determines particle effect  */
   SurfaceCategory: human
 
@@ -2170,8 +2206,8 @@
   Parent: Enemies
   IsEnemy: false
   AvatarController: Enemy
-  
-  
+
+
   /* Determines particle effect  */
   SurfaceCategory: human
 
@@ -2191,10 +2227,139 @@
   AllowUserInstantiate: false
 }
 
-/* Templates finished  */
+
+## ============================================
+## ============ TEMPLATES AI NEW  =============
+## ============================================
+
+{ +Entity Name: PreyBAITemplate
+  /* Class properties */
+  Faction: Prey
+  ModelType: NoRagdoll
+  Prefab: Alien
+  EntityType: Animal
+  Class: BehaviorAI
+  Parent: Enemies
+  IsEnemy: false
+  AvatarController: BAIAnimalBase
+
+  /* Determines particle effect  */
+  SurfaceCategory: human
+
+  /* General entity properties */
+  ViewAngle: 270
+  Weight: 100
+  MaxHealth: 60
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: false
+
+  {	Child TargetSensor
+    AttackableTypes: "Player"
+  }
+  {	Child GroupDirectionSensor
+	TickIfLead: true
+	TimeBetweeenTicks: 0.2
+	ScanElevation:true
+	ScanWater:true
+  }
+  PoolCount: 10
+}
+
+{ +Entity Name: PredatorBAITemplate
+  /* Class properties */
+  Faction: Predator
+  ModelType: NoRagdoll
+  Prefab: Alien
+  Parent: Enemies
+  IsEnemy: true
+  EntityType: Animal
+
+  Class: BehaviorAI
+  AvatarController: BAIAnimalBase
+
+  /* Determines particle effect  */
+  SurfaceCategory: human
+
+  /* General entity properties */
+  Weight: 100
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: false
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,PlayerBike"
+  }
+  {	Child GroupDirectionSensor
+	TickIfLead: true
+	TimeBetweeenTicks: 0.2
+	ScanElevation:true
+	ScanWater:true
+  }
+  PoolCount: 10
+}
+{ +Entity Name: AlienTemplateBAI
+  /* Class properties */
+  Faction: Zirax
+  ModelType: NoRagdoll
+  Prefab: Alien
+  Class: BehaviorAI
+  AvatarController: BAIAnimalBase
+  Parent: Enemies
+  IsEnemy: true
+  RotateSpeedMovement: 180
+
+  /* Determines particle effect  */
+  SurfaceCategory: human
+
+  /* General entity properties */
+  ViewAngle: 270
+  Weight: 100
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  AllowUserInstantiate: false
+  PoolCount: 10
+}
+
+{ +Entity Name: AssaultCyborgTemplateBAI
+  /* Class properties */
+  EntityType: Cyborg
+  Faction: Polaris
+  ModelType: NoRagdoll
+  Prefab: AlienHumanoid
+  Class: BehaviorAI
+  Parent: Traders    # hierarchy in scene unity -> Traders
+  IsEnemy: false
+  AvatarController: BAIAnimalBase
+
+  /* Determines particle effect  */
+  SurfaceCategory: metal
+
+  /* General entity properties */
+  ViewAngle: 180
+  Weight: 100
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  AllowUserInstantiate: false
+  PoolCount: 10
+}
+
+## ==================================================
+## ============= Templates - END  ===================
+## ==================================================
 
 
-## ========================= Predators - Aggressive Creatures =========================  
+## ========================= Predators - Aggressive Creatures =========================
 
 { +Entity Name: Spinosaurus, Ref: PredatorTemplate
   Mesh: Enemies/Spinosaurus/SpinosaurusPrefab
@@ -2234,19 +2399,19 @@
 
 
 
-## ================================================== 
+## ==================================================
 # { +Entity Name: GolemDesert, Ref: PredatorTemplate
   # Mesh: Enemies/Golem2/Golem2Prefab
   # # HeadTransform: Spine_bone3
   # HeadTransform: Head
-  
+
   # Prefab: AlienLarge
-  
+
   # Faction: Alien
-  
+
   # /* General entity properties */
   # MaxHealth: 1500
-  # # XpFactor: 1.5  
+  # # XpFactor: 1.5
   # XpFactor: 10.5
   # # RightHandJointName: R_Hand_bone1
   # # ItemsOnEnterGame: SpiderRangedWeapon
@@ -2278,21 +2443,21 @@
   # SfxDeath: Enemies/GolemDesert/GolemDesert_SfxDeath
 
   # LootListOnDeath: 27
-  
-  # UpdateClusterInfo: true     
+
+  # UpdateClusterInfo: true
   # AllowUserInstantiate: true
   # AllowInSpawners: true
-  # FadingEnabled: false     # otherwise problems when switching to dead model 
+  # FadingEnabled: false     # otherwise problems when switching to dead model
 # }
 
 # { +Entity Name: GolemIce, Ref: GolemDesert
   # Mesh: Enemies/Golem2/Golem2IcePrefab
-  
+
   # Prefab: AlienLarge
 
   # MaxHealth: 1700
   # XpFactor: 11.7
-  
+
   # /* Sound settings */
   # SfxRandomTime: 50.0
   # SfxRandom: Enemies/GolemIce/GolemIce_SfxRandom
@@ -2301,23 +2466,23 @@
   # SfxHurt:  Enemies/GolemIce/GolemIce_SfxHurt
   # SfxDeath: Enemies/GolemIce/GolemIce_SfxDeath
 
-  # # HandItem: MeleeGolem2   # add own attack 
+  # # HandItem: MeleeGolem2   # add own attack
   # LootListOnDeath: 6
 # }
 
 # { +Entity Name: GolemSwamp, Ref: GolemDesert
   # Mesh: Enemies/Golem2/Golem2SwampPrefab
   # MeshDead: Enemies/Golem2/Golem2SwampDeadPrefab
-  
+
   # Prefab: AlienLarge
-  
+
   # /* Determines particle effect  */
   # SurfaceCategory: human
 
   # MaxHealth: 2500
   # XpFactor: 16.5
-  
-  # # HandItem: MeleeGolem2   # add own attack 
+
+  # # HandItem: MeleeGolem2   # add own attack
 
   # LootListOnDeath: 5
 # }
@@ -2326,12 +2491,12 @@
   Mesh: Enemies/PlantMonster/PlantMonsterPrefab
   MeshDead: Enemies/PlantMonster/PlantMonsterDeadPrefab
   HeadTransform: Neck_bone26
-  
+
   Prefab: AlienHumanoid
-  
+
   # Faction: Alien
   Faction: Predator
-  
+
   /* General entity properties */
   MaxHealth: 1200
   # XpFactor: 1.2
@@ -2355,13 +2520,13 @@
   SfxAlertTime: 25.0
   # SfxAlert: Enemies/PlantMonster/CritterSFX-Long_5
   SfxAlert: Enemies/PlantMonster/PlantMonster_SfxRandom
-  # SfxSense: Enemies/PlantMonster/CritterSFX-Long_5  
+  # SfxSense: Enemies/PlantMonster/CritterSFX-Long_5
   SfxHurt:  Enemies/PlantMonster/PlantMonster_SfxHurt
-  SfxDeath: Enemies/PlantMonster/PlantMonster_SfxDeath  
+  SfxDeath: Enemies/PlantMonster/PlantMonster_SfxDeath
 
   LootListOnDeath: 30
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: false
   AllowInSpawners: false
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
@@ -2402,22 +2567,22 @@
   SfxDeath: Enemies/CaveWorm/CritterSFX-Long
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: false
   AllowInSpawners: false
-  FadingEnabled: false     # otherwise problems when switching to dead model 
+  FadingEnabled: false     # otherwise problems when switching to dead model
 }
 
-## ================================================== 
+## ==================================================
 
 { +Entity Name: WoodWalker, Ref: PredatorTemplate
   Mesh: Enemies/WoodWalker/WoodWalkerPrefab
   # HeadTransform: Spine_bone3
   HeadTransform: Head
-  
+
   Faction: Alien
-  
+
   Prefab: AlienLarge
 
   MaxHealth: 2000
@@ -2446,24 +2611,24 @@
   SfxHurt: Enemies/GolemDesert/GolemDesert_SfxHurt
   # SfxDeath: Enemies/Golem2/RoarScream07
   SfxDeath: Enemies/GolemDesert/GolemDesert_SfxDeath
-  
+
   LootListOnDeath: 7
 
   AllowUserInstantiate: true
   AllowInSpawners: false
 }
 
-## ================================================== 
+## ==================================================
 
 { +Entity Name: Hexapod, Ref: PredatorTemplate
   Mesh: Enemies/HexapodPrefab
   MeshDead: Enemies/HexapodDeadPrefab
   HeadTransform: Head
-  
+
   Prefab: AlienHumanoid
-  
+
   Faction: Kriel
-  
+
   ViewAngle: 180
   MaxHealth: 750
   # XpFactor: 1.2
@@ -2479,7 +2644,7 @@
 
   /* Determines particle effect  */
   SurfaceCategory: human
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/Hexapod/Hexapod_SfxRandom
@@ -2487,10 +2652,10 @@
   SfxAlert: Enemies/Hexapod/Hexapod_SfxRandom
   SfxHurt:  Enemies/Hexapod/Hexapod_SfxHurt
   SfxDeath: Enemies/Hexapod/Hexapod_SfxDeath
-  
+
   LootListOnDeath: 29
 
-  UpdateClusterInfo: true       
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
@@ -2531,8 +2696,8 @@
 
   # LootListOnDeath: 20
   # FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
-  # UpdateClusterInfo: true   
+
+  # UpdateClusterInfo: true
   # AllowUserInstantiate: true
   # AllowInSpawners: true
 # }
@@ -2546,7 +2711,7 @@
   Mesh: Enemies/Robots/TurretRobotNewPrefab
   MeshDead: Enemies/Robots/TurretRobotNewDmgPrefab
   HeadTransform: Head
-  
+
   Faction: Zirax
 
   /* General entity properties */
@@ -2578,11 +2743,11 @@
 
   LootListOnDeath: 15
   FadingEnabled: false
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
+
   JumpHeight: 0
   StepHeight: 0.25
 }
@@ -2592,7 +2757,7 @@
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
-## ================================================== 
+## ==================================================
 
 # delete
 { Entity Name: ArmoredGolemOld, Ref: PredatorTemplate
@@ -2600,12 +2765,12 @@
   MeshDead: Enemies/ArmoredGolem/ArmoredGolemDeadPrefab
   # HeadTransform: ArmoredGolemHead
   HeadTransform: Head
-  
-  Prefab: AlienLarge
-    
-  Faction: Zirax  
 
-  /* General entity properties */  
+  Prefab: AlienLarge
+
+  Faction: Zirax
+
+  /* General entity properties */
   ViewAngle: 120
   MaxHealth: 5000
   # XpFactor: 1
@@ -2641,13 +2806,13 @@
 
   LootListOnDeath: 46
   FadingEnabled: false
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
 
-## ================================================== 
+## ==================================================
 
 { Entity Name: AssaultMech, Ref: ArmoredGolemOld
   Mesh: Enemies/AssaultMechPrefab
@@ -2690,8 +2855,8 @@
 
   LootListOnDeath: 154
   FadingEnabled: false
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
 
@@ -2741,8 +2906,8 @@
   }
 }
 
-## ========================= TALON ========================= 
-# ==============  Normal Wander Behavior  ==============  
+## ========================= TALON =========================
+# ==============  Normal Wander Behavior  ==============
 
 { +Entity Name: TalonGuardianOld
   /* Class properties */
@@ -2751,10 +2916,10 @@
   Prefab: AlienHumanoid
   EntityType: Animal
   Class: Enemy
-  Parent: Enemies    
+  Parent: Enemies
   IsEnemy: false
   AvatarController: Enemy
-  
+
   /* Determines particle effect  */
   SurfaceCategory: human
 
@@ -2766,8 +2931,8 @@
 
   # AITarget-1: OnHurt, param1: Player
   AITarget-1: Entity, param1: Player
-   
-  
+
+
   Mesh: Enemies/TalonGuardian/TalonGuardianGreenPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianGreenDeadPrefab
   HeadTransform: Bip01_Head
@@ -2799,8 +2964,8 @@
   LootListOnDeath: 8
 
   TimeStayAfterDeath: 120            /* sec */
-  
-  FadingEnabled: false     # otherwise problems when switching to dead model 
+
+  FadingEnabled: false     # otherwise problems when switching to dead model
   UpdateClusterInfo: true       /* If this entity can move on cluster other than terrain */
   AllowUserInstantiate: true
   AllowInSpawners: true
@@ -2821,8 +2986,8 @@
   RightHandJointName: Bip01_R_Hand
 }
 
-# ==============  Sentinels  ==============  
-# Normal Sentinel 
+# ==============  Sentinels  ==============
+# Normal Sentinel
 { +Entity Name: TalonSentinelRed, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonGuardianRedPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
@@ -2832,7 +2997,7 @@
   AITask-3: ReturnHome
   AITask-4: ""
 }
-# Sentinel with Crossbow 
+# Sentinel with Crossbow
 { +Entity Name: TalonSentinelCrossbow, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonGuardianCrossbowPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
@@ -2845,24 +3010,24 @@
   AITask-3: ReturnHome
   AITask-4: ""
 }
-# Sentinel with Crossbow 
+# Sentinel with Crossbow
 # Obsolete (used in old POIs)
 { Entity Name: TalonSentinel, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonGuardianCrossbowPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
   ItemsOnEnterGame: TalonCrossbowWeapon
   RightHandJointName: Bip01_R_Hand
-  
+
   AITask-1: ApproachAttack
   AITask-2: ApproachSpot
   AITask-3: ReturnHome
   AITask-4: ""
-  
+
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
 
-# ==============  Special Talon ==============  
+# ==============  Special Talon ==============
 { +Entity Name: TalonChief, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonChiefPrefab
   MeshDead: Enemies/TalonGuardian/TalonChiefDeadPrefab
@@ -2874,7 +3039,7 @@
   RpFactor: 2
 }
 
-# ==============  Groups  ==============  
+# ==============  Groups  ==============
 { +Entity Name: TalonGuardianLeaderOld, Ref: TalonGuardianOld
   Mesh: Enemies/TalonGuardian/TalonGuardianCrossbowPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
@@ -2925,7 +3090,7 @@
 
 
 
-## ================================================== 
+## ==================================================
 /*
 { +Entity Name: Triceratops, Ref: PreyTemplateAttack
   /* Mesh and class properties */
@@ -2961,7 +3126,7 @@
 
   LootListOnDeath: 31
   AllowUserInstantiate: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
+  FadingEnabled: false     # otherwise problems when switching to dead model
 }*/
 /*
 { +Entity Name: TriceratopsBaby, Ref: Triceratops
@@ -2982,7 +3147,7 @@
   LootListOnDeath: 21
 }*/
 
-## ================================================== 
+## ==================================================
 
 /* Small */
 { +Entity Name: MegalonopsGrey, Ref: PreyTemplateFlee
@@ -3022,7 +3187,7 @@
 
   LootListOnDeath: 10
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
+
   AllowUserInstantiate: true
 }
 
@@ -3073,17 +3238,17 @@
   HandItem: MeleeMegalonopsBrown
 }
 
-## ================================================== 
+## ==================================================
 
 # delete
 { Entity Name: OviraptorOld, Ref: MegalonopsGrey
   Mesh: Enemies/OviraptorPrefab
   MeshDead: Enemies/OviraptorDeadPrefab
-  HeadTransform: head  
+  HeadTransform: head
   HandItem: MeleeOviraptor
-  
+
   Faction: Prey
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/Oviraptor/Oviraptor_SfxRandom
@@ -3091,7 +3256,7 @@
   SfxAlert: Enemies/Oviraptor/Oviraptor_SfxRandom
   SfxHurt:  Enemies/Oviraptor/Oviraptor_SfxHurt
   SfxDeath: Enemies/Oviraptor/Oviraptor_SfxDeath
-  
+
   LootListOnDeath: 9
 
   FadingEnabled: false          /* Standard shader cutout not working with fading */
@@ -3100,15 +3265,15 @@
   AllowInSpawners: false
 }
 
-## ================================================== 
+## ==================================================
 
 
-## ================================================== 
+## ==================================================
 { +Entity Name: Slime, Ref: PreyTemplateAttack
   Mesh: Enemies/Slime/SlimePrefab
   MeshDead: Enemies/Slime/SlimeDeadPrefab
   HeadTransform: Spine_root1
-  
+
   Prefab: AlienSmall
 
   MaxHealth: 1200
@@ -3136,8 +3301,8 @@
 
   LootListOnDeath: 20
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
 }
@@ -3147,12 +3312,12 @@
   MeshDead: Enemies/Slime/SlimeWhiteDeadPrefab
 }
 
-## ================================================== 
+## ==================================================
 
 # { +Entity Name: AlienBug01, Ref: PreyTemplateFlee
   # Mesh: Enemies/AlienBugs/AlienBug01Prefab
   # HeadTransform: Head
-  
+
   # Prefab: AlienSmall
 
   # /* General entity properties */
@@ -3187,25 +3352,25 @@
   # SfxDeath: Enemies/AlienBugs/AlienBug01/AlienBug01_SfxDeath
 
   # LootListOnDeath: 33
-  
-  # UpdateClusterInfo: true   
+
+  # UpdateClusterInfo: true
   # AllowUserInstantiate: false
   # AllowInSpawners: false
 # }
 
-## ========================= Special Creatures ========================= 
+## ========================= Special Creatures =========================
 
-{ +Entity Name: AssaultCyborgOld, Ref: AssaultCyborgTemplate
+{ +Entity Name: AssaultCyborgOld, Ref: AssaultCyborgTemplateBAI
   # Mesh: Enemies/AssaultCyborg/AssaultCyborgHumanoidPrefab
   Mesh: Enemies/AssaultCyborg/AssaultCyborgPrefab
-  HeadTransform: Bip001 Head  
-  
+  HeadTransform: Bip001 Head
+
   /* Determines particle effect  */
   SurfaceCategory: metal
-    
+
   Faction: Polaris
-  
-  /* General entity properties */  
+
+  /* General entity properties */
   ViewAngle: 120
   MaxHealth: 750
   # XpFactor: 1
@@ -3229,7 +3394,7 @@
 
   AITarget-1: Entity, param1: Player
   # AITarget-2: OnHurt, param1: Player
-  
+
   /* Sound settings */
   SfxRandomTime: 100.0     # less frequent than other NPCs
   SfxRandom: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
@@ -3239,22 +3404,16 @@
   SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
 
   LootListOnDeath: 74
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: false
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
+  FadingEnabled: false     # otherwise problems when switching to dead model
 }
 
-{ +Entity Name: AssaultCyborgSentinel, Ref: AssaultCyborgOld
-  AITask-1: ApproachAttack
-  AITask-2: ApproachSpot
-  AITask-3: ReturnHome
-  AllowUserInstantiate: true  
-  AllowInSpawners: true
-}
-
-## ========================= Traders ========================= 
+## =======================================
+##         NPC TRADERS (model variants)
+## =======================================
 
 { +Entity Name: Trader1, Ref: TraderTemplate
   Class: TraderNPC
@@ -3262,12 +3421,12 @@
   Mesh: Enemies/Traders/AlienTrader1Prefab
   MeshDead: Enemies/Traders/AlienTrader1DeadPrefab
   HeadTransform: AlienHead
-  
+
   SurfaceCategory: alien
-    
+
   Faction: Trader
-  
-  /* General entity properties */  
+
+  /* General entity properties */
   ViewAngle: 180
   MaxHealth: 10
   # XpFactor: 1
@@ -3284,13 +3443,13 @@
   # AITask-3: Wander
 
   # AITarget-1: Entity, param1: Player
-  
+
   WanderSpeed: 0.18
   ApproachSpeed: 0.4
   NightWanderSpeed: 0.18
   NightApproachSpeed: 0.4
   PanicSpeed: 0.9
-  
+
   /* Sound settings */
   SfxRandomTime: 150.0       # less frequent than other NPCs
   SfxRandom: Enemies/Trader/Trader_SfxRandom
@@ -3300,11 +3459,11 @@
   SfxDeath: Enemies/Trader/Trader_SfxDeath
 
   LootListOnDeath: 73
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
+  FadingEnabled: false     # otherwise problems when switching to dead model
 }
 { +Entity Name: Trader2, Ref: Trader1
   Mesh: Enemies/Traders/AlienTrader2Prefab
@@ -3362,107 +3521,88 @@
   #RpFactor: 5
   Faction: Kriel
 }
-{ +Entity Name: TraderCyborg, Ref: Trader1
-  Mesh: Enemies/Traders/CyborgTraderPrefab
-  # MeshDead: Enemies/Traders/KrielTrader1DeadPrefab
-  # RightHandJointName: GameObject
-  # RpFactor: 5
+{ +Entity Name: TraderCyborgDamaged, Ref: TraderTemplate
+  Mesh: Enemies/AssaultCyborg/DamagedCyborgPrefab
+
+  HeadTransform: Bip001 Head
+  Class: TraderNPC
+  SurfaceCategory: metal
+  EntityType: Trader
   Faction: Civilian
   AllowUserInstantiate: true
-  AllowInSpawners: true
-}
-
-
-
-## ========================= New Behavioral AI =========================
-
-## ========================= BAI TEMPLATES =========================
-
-{ +Entity Name: PreyBAITemplate
-  /* Class properties */
-  Faction: Prey
-  ModelType: NoRagdoll
-  Prefab: Alien
-  EntityType: Animal
-  Class: BehaviorAI
-  Parent: Enemies
-  IsEnemy: false
-  AvatarController: BAIAnimalBase
-  
-  /* Determines particle effect  */
-  SurfaceCategory: human
+  AllowInSpawners: false
 
   /* General entity properties */
-  ViewAngle: 270
-  Weight: 100
-  MaxHealth: 60
+  ViewAngle: 180
+  MaxHealth: 10
+  # XpFactor: 1
+  XpFactor: 7
+  RightHandJointName: AlienRPalm
+  ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
+  HandItem: MeleeTalonGuardian
+  RotateToGround: false
+  RotateSpeed: 6
 
-  TimeStayAfterDeath: 120            /* sec */
-  FadingEnabled: true
+  /* AI properties */
+  # AITask-1: ApproachAttack
+  AITask-1: TraderTalksTo
+  # AITask-3: Wander
 
-  UpdateClusterInfo: true       
-  AllowUserInstantiate: false 
-  
-  {	Child TargetSensor
-    AttackableTypes: "Player"
-  }
-  {	Child GroupDirectionSensor
-	TickIfLead: true
-	TimeBetweeenTicks: 0.2
-	ScanElevation:true
-	ScanWater:true
-  }  
-  PoolCount: 10
+  # AITarget-1: Entity, param1: Player
+
+  WanderSpeed: 0.18
+  ApproachSpeed: 0.4
+  NightWanderSpeed: 0.18
+  NightApproachSpeed: 0.4
+  PanicSpeed: 0.9
+
+  /* Sound settings */
+  SfxRandomTime: 100.0     # less frequent than other NPCs
+  SfxRandom: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxAlertTime: 50.0       # less frequent than other NPCs
+  SfxAlert: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxHurt: Enemies/AssaultCyborg/AssaultCyborg_SfxHurt
+  SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
+
+  LootListOnDeath: 73
+
+  UpdateClusterInfo: true
+  FadingEnabled: false     # otherwise problems when switching to dead model
 }
-
-{ +Entity Name: PredatorBAITemplate
-  /* Class properties */
-  Faction: Predator
-  ModelType: NoRagdoll
-  Prefab: Alien
-  Parent: Enemies
-  IsEnemy: true
-  EntityType: Animal
-  
-  Class: BehaviorAI
-  AvatarController: BAIAnimalBase
-  
-  /* Determines particle effect  */
-  SurfaceCategory: human
-
-  /* General entity properties */
-  Weight: 100
- 
-  TimeStayAfterDeath: 120            /* sec */
-  FadingEnabled: true
-
-  UpdateClusterInfo: true       
-  AllowUserInstantiate: false
-  
-  JumpHeight: 0.75
-  StepHeight: 0.5
-  
-  {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
-  }
-  {	Child GroupDirectionSensor
-	TickIfLead: true
-	TimeBetweeenTicks: 0.2
-	ScanElevation:true
-	ScanWater:true
-  }  
-  PoolCount: 10  
+{ +Entity Name: TraderCyborgEngineer, Ref: TraderCyborgDamaged
+  Mesh: Enemies/AssaultCyborg/EngineerCyborgPrefab
+  Faction: Civilian
+  AllowUserInstantiate: true
+  AllowInSpawners: false
+}
+{ +Entity Name: TraderCyborgMedical, Ref: TraderCyborgDamaged
+  Mesh: Enemies/AssaultCyborg/MedicCyborgPrefab
+  Faction: Civilian
+  AllowUserInstantiate: true
+  AllowInSpawners: false
+}
+{ +Entity Name: TraderCyborgServant, Ref: TraderCyborgDamaged
+  Mesh: Enemies/AssaultCyborg/ServantCyborgPrefab
+  Faction: Civilian
+  AllowUserInstantiate: true
+  AllowInSpawners: false
+}
+{ +Entity Name: TraderCyborg, Ref: TraderCyborgDamaged
+  Mesh: Enemies/Traders/CyborgTraderPrefab
+  Faction: Civilian
+  AllowUserInstantiate: true
+  AllowInSpawners: false
 }
 
 ## ========================= BAI Prey =========================
 
 { +Entity Name: Parasaur, Ref: PreyBAITemplate
-  
+
   /* General entity properties */
   Mesh: Enemies/Parasaur/ParasaurBAIPrefab
   MeshDead: Enemies/Parasaur/ParasaurBAIDeadPrefab
   HeadTransform: head
-  
+
   /* General entity properties */
   MaxHealth: 1200
   XpFactor: 2.0
@@ -3481,49 +3621,49 @@
   SfxHurt:  Enemies/Parasaur/Parasaur_SfxHurt
   SfxDeath: Enemies/Parasaur/Parasaur_SfxDeath
   SfxAnimationEvent0: Enemies/Oviraptor/Oviraptor_SfxHurt_a1 /* low alert squawk sound*/
-  
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
+
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
   LootListOnDeath: 10
 
   AllowUserInstantiate: true
   AllowInSpawners: true
 
- 
-  /* AI Properties */ 
+
+  /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/HerbivoreLowAlert"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/HerbivoreFlee"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/HerbivoreFlee"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/HerbivoreFlee"	
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/HerbivoreFlee"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/HerbivoreFlee"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/HerbivoreFlee"
   }
-  
+
 /*
   { Child Hints
 	AttackApproachTarget: 50
   }*/
-  
+
   { Child VariableOverride
     SpeedCalm: 0.12
     SpeedAlerted: 0.3
     SpeedAttack: 2.7
     SpeedFlee: 2.7
-  }  
-  
+  }
+
   {	Child VisionSensor  /* vision sensor parameters, if absent, vision sensor if off*/
 	VisibleDistance: 90 /* how far can the animal see*/
 	ViewAngle: 200      /* view angle of the animal (vision cone from the head) */
   }
-  
+
   {	Child AlertSensor   /* alert sensor parameters, used by behavior selectors*/
     /* !! distance based alerts will add 0 alert at max distance, max alert at 0 distance - linear (50% alert at 50% distance))!!*/
 	AlertLevel1: 20, param1: 0          /* Alert level, max alert value, alert drop wait */
-	AlertLevel2: 80, param1: 5			/*  - max alert value for alert level - this level will be from last alert 
+	AlertLevel2: 80, param1: 5			/*  - max alert value for alert level - this level will be from last alert
 	level max value to this alert level max value (0-20, 21-80...*/
 	AlertLevel3: 100, param1: 15        /*  - alert drop wait - when alert level is higher as the min value for the current
-	level (80-100) (example - alert 85) and the alert drops to the min value(80), it will not drop to lower 
+	level (80-100) (example - alert 85) and the alert drops to the min value(80), it will not drop to lower
 	alert level for "alert drop wait" seconds*/
 	AlertLevelDrop:10					/* how fast does the alert drop per second. If any alert was added this frame
 	the alert will not drop at all*/
@@ -3536,7 +3676,7 @@
 	NoiseAlertMultiplier:1			    /* noise strength conversion to alert */
 	DamageAlertMultiplier:60            /* damage to alert conversion */
 	AlertFromFriendDeath:60             /* alert if group member is killed */
-  }  
+  }
 }
 
 { +Entity Name: ParasaurBaby, Ref: Parasaur
@@ -3549,9 +3689,9 @@
   RotateSpeed: 300 /*at speed 8 they get stuck.. need new steering for hi speed animals */
   RotateSpeedMovement: 300
   LootListOnDeath: 32
-  
+
   AllowUserInstantiate: false
-  
+
 
   { Child VariableOverride
     SpeedCalm: 0.12
@@ -3562,7 +3702,7 @@
 
   {	Child VisionSensor
 	VisibleDistance: 100
-  }  
+  }
 }
 
 
@@ -3603,25 +3743,25 @@
   AllowUserInstantiate: true
   AllowInSpawners: true
   FadingEnabled: false     # otherwise problems when switching to dead model
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
 	AttackWaitAfterAttack: 0
 	AttackRoarBeforeAttack: 35
 	IsHunting:0
 	AttackMaxCount:4
 	AttackRandomDirection:10
-  }  
-  
+  }
+
   { Child VariableOverride
 	MinimalDistanceToTarget: 4.0
 	MeleeAttackDistance: 5.0
@@ -3630,16 +3770,16 @@
     SpeedAttack: 1.5
 	SpeedFlee: 1.0
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -3662,7 +3802,7 @@
   Mesh: Enemies/Spiders/Spider01Prefab
   MeshDead: Enemies/Spiders/Spider01DeadPrefab
   HeadTransform: Head
-  
+
   Prefab: AnimalSmall
 
   MaxHealth: 800
@@ -3685,42 +3825,42 @@
 
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
   FadingEnabled: false
-  
+
   JumpHeight: 2.0
   StepHeight: 1.5
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.12
     SpeedAlerted: 0.3
     SpeedAttack: 1.5
 	SpeedFlee: 1.2
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -3733,16 +3873,16 @@
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
-  
+  }
+
   {	Child FearSensor /* fear sensor params */
     MaxFear: 60 /* maximal fear of the animal*/
-	
+
 	FearDrop: 20 /* how much fear will drop per frame */
 	FearDropPerFriend: 10 /* fear drop per frame for each group member around */
 	FearDropMaxFromFriends: 50
 	MaxFriendDistance: 10 /* if the group member is further, it will not help in decreasing fear */
-	
+
 	MinDistanceToFearAnEnemy: 0 /* if closer, the agent will get feat from beign near to enemy, at max
 distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per second (linear) */
 	FearFromEnemy: 0
@@ -3751,8 +3891,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FearFromNoiseMaxDistance: 30  /* max distance to convert noise to fear */
 	FearFromNoiseMultiplier: 0.2  /* noise to fear conversion multiplier */
 	FearPropagationDamageMultiplier: 0.5 /* fear from damage propagation to group members */
-  }   
-  
+  }
+
 }
 { +Entity Name: Spider01Small, Ref: PredatorBAITemplate       #Use In POIS instead of Spider01 (less issues with size/corridors et)
   Mesh: Enemies/Spiders/Spider01SmallPrefab
@@ -3945,11 +4085,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Spider02, Ref: Spider01
   Mesh: Enemies/Spiders/Spider02Prefab
   MeshDead: Enemies/Spiders/Spider02DeadPrefab
-  
+
   MaxHealth: 1600
   XpFactor: 4.0
   HandItem: MeleeSpider02
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   # SfxRandom: Enemies/Spiders/CritterSFX-Long_11
@@ -3962,22 +4102,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxHurt:  Enemies/Spiders/Spiders_SfxHurt
   SfxDeath: Enemies/Spiders/Spiders_SfxDeath
   LootListOnDeath: 20
-	
+
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.6
     SpeedAttack: 2.0
 	SpeedFlee: 2.0
-  }    
-  
+  }
+
   {	Child FearSensor /* fear sensor params */
     MaxFear: 60 /* maximal fear of the animal*/
-	
+
 	FearDrop: 20 /* how much fear will drop per frame */
 	FearDropPerFriend: 10 /* fear drop per frame for each group member around */
 	FearDropMaxFromFriends: 50
 	MaxFriendDistance: 10 /* if the group member is further, it will not help in decreasing fear */
-	
+
 	MinDistanceToFearAnEnemy: 0 /* if closer, the agent will get feat from beign near to enemy, at max
 distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per second (linear) */
 	FearFromEnemy: 0
@@ -3986,7 +4126,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FearFromNoiseMaxDistance: 15  /* max distance to convert noise to fear */
 	FearFromNoiseMultiplier: 0.1  /* noise to fear conversion multiplier */
 	FearPropagationDamageMultiplier: 0.3 /* fear from damage propagation to group members */
-  }     
+  }
 }
 { +Entity Name: Spider02Small, Ref: Spider01Small
   Mesh: Enemies/Spiders/Spider02SmallPrefab
@@ -4086,27 +4226,27 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Spider03, Ref: Spider01
   Mesh: Enemies/Spiders/Spider03Prefab
   MeshDead: Enemies/Spiders/Spider03DeadPrefab
-  
+
   MaxHealth: 2000
   XpFactor: 6
   RightHandJointName: WeaponPin
   ItemsOnEnterGame: SpiderRangedWeapon
-  
-  /* AI Properties */ 
+
+  /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
 	ReturnHome: 100
 	IsRanged: 100
-  }  
-	
+  }
+
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.6
@@ -4135,7 +4275,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/AlienBugs/AlienBug01Prefab
   MeshDead: Enemies/AlienBugs/AlienBug01DeadPrefab
   HeadTransform: Head
-  
+
   Faction: Prey
   Prefab: AnimalSmall
   IsEnemy: false
@@ -4166,30 +4306,30 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 
   LootListOnDeath: 33
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
-  AllowInSpawners: true 
+  AllowInSpawners: true
   FadingEnabled: false
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/AlienBug01
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 30
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child FearSensor /* fear sensor params */
     MaxFear: 60 /* maximal fear of the animal*/
-	
+
 	FearDrop: 3 /* how much fear will drop per frame */
 	FearDropPerFriend: 2 /* fear drop per frame for each group member around */
 	FearDropMaxFromFriends: 50
 	MaxFriendDistance: 10 /* if the group member is further, it will not help in decreasing fear */
-	
+
 	MinDistanceToFearAnEnemy: 0 /* if closer, the agent will get feat from beign near to enemy, at max
 distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per second (linear) */
 	FearFromEnemy: 0
@@ -4198,12 +4338,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FearFromNoiseMaxDistance: 20  /* max distance to convert noise to fear */
 	FearFromNoiseMultiplier: 0.2  /* noise to fear conversion multiplier */
 	FearPropagationDamageMultiplier: 1.0 /* fear from damage propagation to group members */
-  }   
-  
+  }
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
-  }       
-  
+  }
+
 }
 
 
@@ -4212,10 +4352,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/AlienBugs/AlienBug03DeadPrefab
   HeadTransform: Head
   Faction: Predator
-  
+
   Prefab: AlienFat
   IsEnemy: true
-  
+
   /* Determines particle effect  */
   SurfaceCategory: alien
 
@@ -4237,25 +4377,25 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxDeath
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
 
-  /* AI Properties */ 
+  /* AI Properties */
   /*{ Child MainBehavior
 	BehaviorName: Behaviors/PlanetLife/BehaviorAlienBug03
   }*/
-  
+
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
 	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
-  }  
-  
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
+  }
+
   { Child Hints
     IsRanged: 100
 	/*AttackApproachTarget: 0   */
@@ -4264,22 +4404,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SearchWaitTime: 3
 	SearchRandomDistanceMult: 0.5
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.5
 	SpeedAttack: 1.0
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 70
 	ViewAngle: 360
   }
-    
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 20, param1: 10
@@ -4292,14 +4432,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }     
+  }
 }
 
 { +Entity Name: AlienBug04, Ref: PredatorBAITemplate
   Mesh: Enemies/AlienBugs/AlienBug04Prefab
   MeshDead: Enemies/AlienBugs/AlienBug04DeadPrefab
   HeadTransform: Head
-  
+
   Prefab: AlienFat
   Faction: Prey
 
@@ -4313,7 +4453,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: true
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.4
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/AlienBugs/AlienBug04/AlienBug04_SfxRandom
@@ -4323,19 +4463,19 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/AlienBugs/AlienBug04/AlienBug04_SfxDeath
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
-  /* AI Properties */ 
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
+  /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
 
@@ -4344,7 +4484,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedAlerted: 0.5
 	SpeedAttack: 1.0
   }
-  
+
   { Child Hints
     IsRanged: 100
 	/*AttackApproachTarget: 0
@@ -4353,16 +4493,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SearchWaitTime: 3
 	SearchRandomDistanceMult: 0.5*/
   }
-	
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 110
-  }    
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 30, param1: 2
@@ -4376,39 +4516,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }         
-}
-
-{ +Entity Name: AlienTemplateBAI
-  /* Class properties */
-  Faction: Zirax
-  ModelType: NoRagdoll
-  Prefab: Alien
-  Class: BehaviorAI
-  AvatarController: BAIAnimalBase
-  Parent: Enemies
-  IsEnemy: true
-  RotateSpeedMovement: 180
-
-  /* Determines particle effect  */
-  SurfaceCategory: human
-
-  /* General entity properties */
-  ViewAngle: 270
-  Weight: 100
-
-  TimeStayAfterDeath: 120            /* sec */
-  FadingEnabled: true
-
-  AllowUserInstantiate: false
-  PoolCount: 10
+  }
 }
 
 { +Entity Name: ZiraxMinigun, Ref: AlienTemplateBAI
   Mesh: Enemies/Zirax/ZiraxBluePrefab
   MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
   HeadTransform: Bip01_Head
-  
+
   Prefab: AlienHumanoid
 
   /* Determines particle effect  */
@@ -4437,22 +4552,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   JumpHeight: 0.75
   StepHeight: 0.25
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
+
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
   }
-  
+
 
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.3
 	SpeedAttack: 1.0
   }
-  
+
   { Child Hints
 	AttackApproachTarget: 40
 	AttackOptimalDistance: 40
@@ -4462,21 +4577,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FireWeaponBlendInTime: 0.5
 	FireWeaponDurationMultiplier: 1.0
   }
-	
+
   {	Child VisionSensor
 	VisibleDistance: 100
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike"
-  }    
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 0
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 40, param1: 2
@@ -4489,7 +4604,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.8
-  }       
+  }
 }
 
 { +Entity Name: ZiraxLaser, Ref: ZiraxMinigun
@@ -4518,17 +4633,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedAlerted: 1.75
-  }  
+  }
   { Child Hints
 	AttackApproachTarget: 90
 	AttackOptimalDistance: 10
 	SearchAdvanceTime: 3.0
 	SearchWaitTime: 0.5
 	SearchRandomDistanceMult: 0.8
-	FireWeaponDurationMultiplier: 0.1	
+	FireWeaponDurationMultiplier: 0.1
   }
-  
-  
+
+
 }
 
 { +Entity Name: ZiraxRocket, Ref: ZiraxMinigun
@@ -4538,13 +4653,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Zirax/ZiraxRedPrefab
   MeshDead: Enemies/Zirax/ZiraxRedDeadPrefab
   ItemsOnEnterGame: ZiraxRocketWeapon
-  
+
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 1.25
 	SpeedAttack: 0.7
   }
-  
+
   { Child Hints
   	FireWeaponDurationMultiplier: 0.3
 	FireWeaponBlendInTime: 0.7
@@ -4570,8 +4685,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   {	Child VisionSensor
 	VisibleDistance: 160
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike,PlayerDrone"
-  }    
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
@@ -4585,12 +4700,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   LootListOnDeath: 103
   Mesh: Enemies/Zirax/ZiraxYellowPrefab
   MeshDead: Enemies/Zirax/ZiraxYellowDeadPrefab
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/ZiraxTest
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 0.3
@@ -4598,18 +4713,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 0.3
 	MeleeAttackDistance: 1.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 2.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 90
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     SensorType: "Debug"
     AttackableTypes: "Player"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevelDrop:0 /* slow alert drop */
@@ -4620,7 +4735,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
+  }
 }
 
 { Entity Name: ZiraxTestFire, Ref: ZiraxTest
@@ -4632,7 +4747,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 { Entity Name: ZiraxTestNetwork, Ref: ZiraxTest
   RotateSpeedMovement: 600
-  
+
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/ZiraxTestNetwork
   }
@@ -4642,13 +4757,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ItemsOnEnterGame: MeleeAlienBug01
 }
 
-# OLD AI - SPECIAL CASE: ZiraxCommander > Sentinel Behavior 
+# OLD AI - SPECIAL CASE: ZiraxCommander > Sentinel Behavior
 
 { +Entity Name: ZiraxCommander, Ref: AlienTemplate
   Mesh: Enemies/Zirax/ZiraxCommanderPrefab
   MeshDead: Enemies/Zirax/ZiraxCommanderDeadPrefab
   HeadTransform: Head
-  
+
   Prefab: AlienHumanoid
 
   /* Determines particle effect  */
@@ -4671,12 +4786,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   NightApproachSpeed: 0.7
   PanicSpeed: 1
 
-  
+
   AITask-1: ApproachAttack
   AITask-2: ApproachSpot
   AITask-3: ReturnHome
   AITask-4: ""
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/Zirax/Zirax_SfxRandom
@@ -4688,18 +4803,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   LootListOnDeath: 104
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
 
-  UpdateClusterInfo: true       
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
 }
 
 # { Entity Name: ZiraxBaseAttackTest, Ref: ZiraxMinigun
-#   
+#
   /* AI Properties */
 #   { Child MainBehavior
 # 	BehaviorName: Behaviors/HiLevelTrees/ZiraxBaseAttackTest
  #  }
-  
+
 #   {	Child TargetSensor
  #    SensorType: "Debug"
  #    AttackableTypes: "BA"
@@ -4708,7 +4823,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 # }
 
 # { Entity Name: ZiraxMinigunDebug, Ref: ZiraxMinigun
-  
+
   # /* AI Properties */
   # { Child MainBehavior
 	# BehaviorName: Behaviors/HiLevelTrees/ZiraxBaseAttackTest
@@ -4717,8 +4832,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # {	Child TargetSensor
     # SensorType: "Debug"
     # AttackableTypes: "BA"
-  # }  
-  
+  # }
+
   # { Child VariableOverride
     # SpeedCalm: 0.3
     # SpeedAlerted: 0.3
@@ -4727,12 +4842,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	# MeleeAttackDistance: 4.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	# MinimalDistanceToTarget: 3.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
     # FireDuration: 1.0
-  # }  
-  
+  # }
+
   # {	Child VisionSensor
 	# VisibleDistance: 200
 	# ViewAngle: 360
-  # } 
+  # }
 # }
 
 # { Entity Name: ZiraxCommandTest, Ref: ZiraxMinigun
@@ -4742,12 +4857,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # Mesh: Enemies/Zirax/ZiraxYellowPrefab
   # MeshDead: Enemies/Zirax/ZiraxYellowDeadPrefab
   # ItemsOnEnterGame: "ZiraxMinigunBaseAttackWeapon"
-  
+
   # /* AI Properties */
   # { Child MainBehavior
 	# BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
   # }
-  
+
   # { Child VariableOverride
     # SpeedCalm: 0.3
     # SpeedAlerted: 0.3
@@ -4756,13 +4871,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	# MeleeAttackDistance: 4.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	# MinimalDistanceToTarget: 3.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
     # FireDuration: 1.0
-  # }  
-  
+  # }
+
   # /*TODO remove sensors*/
   # {	Child VisionSensor
 	# VisibleDistance: 200
 	# ViewAngle: 360
-  # }  
+  # }
   # /*
   # {	Child TargetSensor
     # SensorType: "Debug"
@@ -4771,7 +4886,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 # }
 
 ###########################
-# Obsolete - remove when save game break 
+# Obsolete - remove when save game break
 { Entity Name: ZiraxMale, Ref: ZiraxMinigun
   AllowUserInstantiate: false
   AllowInSpawners: false
@@ -4802,17 +4917,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 }
 ###########################
 
-{ +Entity Name: Mechanoid, Ref: AlienTemplateBAI 
+{ +Entity Name: Mechanoid, Ref: AlienTemplateBAI
   Mesh: Enemies/Mechanoid/MechanoidPrefab
   MeshDead: Enemies/Mechanoid/MechanoidDamagedPrefab
   HeadTransform: Head
   # HeadTransform: Bip001 head
-  
+
   Prefab: AlienFat
-  
+
   Faction: Zirax
 
-  /* General entity properties */  
+  /* General entity properties */
   ViewAngle: 120
   MaxHealth: 800
   # XpFactor: 2
@@ -4820,32 +4935,32 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ItemsOnEnterGame: MechanoidWeapon
   RightHandJointName: Bip001 L Hand
   RotateToGround: false
-  RotateSpeed: 15 
-    
+  RotateSpeed: 15
+
   /* Determines particle effect  */
   SurfaceCategory: metal
   ParticleOnDeath: drone_explosion
-    
+
   /* Sound settings */
-  SfxRandomTime: 50.0   
+  SfxRandomTime: 50.0
   SfxRandom: Enemies/Drone/DroneSmall_SfxRandom
-  SfxAlertTime: 25.0   
+  SfxAlertTime: 25.0
   SfxAlert: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
   SfxHurt: Enemies/AssaultCyborg/AssaultCyborg_SfxHurt
-  SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath  
+  SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
 
   LootListOnDeath: 15
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
+
   MotionAnimationSpeedMultiplier: 1.3
 
-  /* AI Properties */ 
+  /* AI Properties */
   { Child MainBehavior
-	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands  
+	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
   }
 
   { Child VariableOverride
@@ -4853,21 +4968,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedAlerted: 0.75
 	SpeedAttack: 0.8
   }
-  
+
   { Child Hints
 	AttackApproachTarget: 50
 	AttackOptimalDistance: 20
 	IdleMaxWaitTime: 3
   }
-  	
+
   {	Child VisionSensor
 	VisibleDistance: 90
 	ViewAngle: 110
-  }    
-  
+  }
+
   {	Child StuckSensor
 	Use: 0
-  }      
+  }
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 40, param1: 10
@@ -4880,10 +4995,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
+  }
 }
 
-{ Entity Name: MechanoidGroup, Ref: Mechanoid 
+{ Entity Name: MechanoidGroup, Ref: Mechanoid
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
@@ -4895,7 +5010,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 }
 
 
-## ================================================== 
+## ==================================================
 { +Entity Name: Overseer, Ref: PredatorBAITemplate
   Mesh: Enemies/Overseer/OverseerPrefab
   MeshDead: Enemies/Overseer/OverseerDeadPrefab
@@ -5024,11 +5139,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # Mesh: Enemies/CaveWorm/CaveWormGreyPrefab
   # MeshDead: Enemies/CaveWorm/CaveWormGreyDeadPrefab
   Mesh: Enemies/CaveCrawler/CaveCrawlerPrefab
-  MeshDead: Enemies/CaveCrawler/CaveCrawlerDeadPrefab 
+  MeshDead: Enemies/CaveCrawler/CaveCrawlerDeadPrefab
   HeadTransform: CAVECRAWLER_HEAD
 
   SfxAnimationEvent0: Enemies/CaveWorm/CritterSFX-Long /* roar */
-  
+
   /* General entity properties */
   MaxHealth: 600
   # XpFactor: 1.5
@@ -5049,27 +5164,27 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/CaveWorm/CritterSFX-Long
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
     AttackUseRetreatRoar: 100
 	AttackMaxCount: 3
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 1.1
@@ -5077,18 +5192,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.7
 	MeleeAttackDistance: 3.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 2.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 75
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -5101,14 +5216,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
+  }
 }
 
 { +Entity Name: CaveWormGreen, Ref: CaveWormGrey
   # Mesh: Enemies/CaveWorm/CaveWormGreenPrefab
   # MeshDead: Enemies/CaveWorm/CaveWormGreenDeadPrefab
   Mesh: Enemies/CaveCrawler/CaveCrawlerGreenPrefab
-  MeshDead: Enemies/CaveCrawler/CaveCrawlerGreenDeadPrefab 
+  MeshDead: Enemies/CaveCrawler/CaveCrawlerGreenDeadPrefab
 
   MaxHealth: 600
   XpFactor: 3.5
@@ -5118,13 +5233,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # Mesh: Enemies/CaveWorm/CaveWormWhitePrefab
   # MeshDead: Enemies/CaveWorm/CaveWormWhiteDeadPrefab
   Mesh: Enemies/CaveCrawler/CaveCrawlerWhitePrefab
-  MeshDead: Enemies/CaveCrawler/CaveCrawlerWhiteDeadPrefab 
+  MeshDead: Enemies/CaveCrawler/CaveCrawlerWhiteDeadPrefab
 
   HandItem: MeleeCaveWormWhite
   MaxHealth: 800
   XpFactor: 5.0
   MotionAnimationSpeedMultiplier: 0.5
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 0.8
@@ -5135,12 +5250,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 }
 
-# Remove after save game break 
+# Remove after save game break
 { +Entity Name: CaveWormGreyGroup, Ref: CaveWormGrey
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
-# Remove after save game break 
+# Remove after save game break
 { +Entity Name: CaveWormGreyLeader, Ref: CaveWormGrey
   AllowUserInstantiate: false
   AllowInSpawners: false
@@ -5148,30 +5263,30 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 # { +Entity Name: CaveCrawler, Ref: CaveWormGrey
   # Mesh: Enemies/CaveCrawler/CaveCrawlerPrefab
-  # MeshDead: Enemies/CaveCrawler/CaveCrawlerDeadPrefab 
+  # MeshDead: Enemies/CaveCrawler/CaveCrawlerDeadPrefab
   # HeadTransform: CAVECRAWLER_HEAD
-  
+
   # SfxAnimationEvent0: Enemies/CaveWorm/CritterSFX-Long /* roar */
 
-  
+
   # { Child SlotAttackTarget
     # BehaviorName: Behaviors/HiLevelTrees/AnimalAttackWithRetreat
   # }
-  
+
   # { Child VariableOverride
 	# MeleeAttackDistance: 3.0
 	# MinimalDistanceToTarget: 2.0
-  # }     
-  
+  # }
+
 # }
 
 # { +Entity Name: CaveCrawlerWhite, Ref: CaveCrawler
   # Mesh: Enemies/CaveCrawler/CaveCrawlerWhitePrefab
-  # MeshDead: Enemies/CaveCrawler/CaveCrawlerWhiteDeadPrefab 
+  # MeshDead: Enemies/CaveCrawler/CaveCrawlerWhiteDeadPrefab
 # }
 # { +Entity Name: CaveCrawlerGreen, Ref: CaveCrawler
   # Mesh: Enemies/CaveCrawler/CaveCrawlerGreenPrefab
-  # MeshDead: Enemies/CaveCrawler/CaveCrawlerGreenDeadPrefab 
+  # MeshDead: Enemies/CaveCrawler/CaveCrawlerGreenDeadPrefab
 # }
 
 { +Entity Name: Crawler, Ref: PredatorBAITemplate
@@ -5179,10 +5294,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/Crawler/CrawlerDeadPrefab
   # HeadTransform: VAMPIRE_ Head
   HeadTransform: Head
-  
+
   Faction: Talon
   Prefab: AnimalSmall
-  
+
   ViewAngle: 180
   MaxHealth: 550
   XpFactor: 4
@@ -5203,11 +5318,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   LootListOnDeath: 20
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
@@ -5217,23 +5332,23 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 1.1
     SpeedAttack: 1.9
 	SpeedFlee: 1.5
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -5246,17 +5361,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }     
+  }
 }
-  
-{ +Entity Name: CrawlerGroup, Ref: Crawler 
+
+{ +Entity Name: CrawlerGroup, Ref: Crawler
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
 
 # Obsolete. needed only for old entity spawners / playfields
 { Entity Name: OverseerGroup, Ref: Overseer
- 
+
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
@@ -5267,7 +5382,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/AlienAssassin/AlienAssassinDeadPrefab
   # HeadTransform: Base HumanHead
   HeadTransform: Head
-  
+
   Faction: Kriel
   Prefab: AlienHumanoid
 
@@ -5278,14 +5393,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.35
   HandItem: MeleeAssassin
-  
+
   /*ViewAngle: 180
   WanderSpeed: 0.4
   ApproachSpeed: 1
   NightWanderSpeed: 0.4
   NightApproachSpeed: 1
   PanicSpeed: 1.0*/
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/AlienAssassin/AlienAssassin_SfxRandom
@@ -5293,21 +5408,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlert: Enemies/AlienAssassin/AlienAssassin_SfxRandom
   SfxHurt:  Enemies/AlienAssassin/AlienAssassin_SfxHurt
   SfxDeath: Enemies/AlienAssassin/AlienAssassin_SfxDeath
-  
+
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
   LootListOnDeath: 29
   JumpHeight: 3.5
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 1.0
@@ -5315,22 +5430,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.0
 	MeleeAttackDistance: 2.0
 	MinimalDistanceToTarget: 1.5
-  }   
-  
+  }
+
   { Child Hints
 	BasicAttackStances: 1.0
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 240
 	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -5343,7 +5458,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }     
+  }
   AllowUserInstantiate: true
   AllowInSpawners: true
 
@@ -5354,7 +5469,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/AlienAssassin/AlienAssassinDeadPrefab
   # HeadTransform: Base HumanHead
   HeadTransform: Head
-  
+
   Faction: Kriel
   Prefab: AlienHumanoid
   /*
@@ -5363,20 +5478,20 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   NightWanderSpeed: 0.4
   NightApproachSpeed: 1
   PanicSpeed: 1.0*/
-  
+
   /* Sound settings */
-  SfxRandomTime: 50.0     
+  SfxRandomTime: 50.0
   SfxRandom: Enemies/AlienAssassin/AlienAssassin_SfxRandom
-  SfxAlertTime: 25.0      
+  SfxAlertTime: 25.0
   SfxAlert: Enemies/AlienAssassin/AlienAssassin_SfxRandom
   SfxHurt:  Enemies/AlienAssassin/AlienAssassin_SfxHurt
   SfxDeath: Enemies/AlienAssassin/AlienAssassin_SfxDeath
-  
+
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
 }
 
 { Entity Name: Proxy
-  Class: Proxy 
+  Class: Proxy
   EntityType: Proxy
   AllowUserInstantiate: false
 }
@@ -5395,7 +5510,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.7
-   
+
   SurfaceCategory: human
 
   /* Sound settings */
@@ -5410,38 +5525,38 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   LootListOnDeath: 10
   AllowUserInstantiate: true
-  
+
     /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/CirclingMeleeAttack"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/CirclingMeleeAttack"
   }
-  
+
   { Child Hints
 	IsHunting: 100
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 1.5
     SpeedAttack: 2.0
 	SpeedFlee: 1.5
-	MeleeAttackDistance: 2.0	
-  }  
-  
+	MeleeAttackDistance: 2.0
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 75
 	ViewAngle: 240
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -5454,8 +5569,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }     
-  
+  }
+
 }
 { +Entity Name: RaptorGroup, Ref: Raptor
   AllowUserInstantiate: false
@@ -5464,8 +5579,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AllowUserInstantiate: false
 }
 
-## ================================================== 
-# exception - aggressive creature, derived from Raptor 
+## ==================================================
+# exception - aggressive creature, derived from Raptor
 { +Entity Name: RaptorNight, Ref: Raptor
   Faction: Predator
   /* Mesh and class properties */
@@ -5487,7 +5602,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedAttack: 2.7
 	SpeedFlee: 1.7
   }
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/Raptor/Raptor_SfxRandom
@@ -5495,10 +5610,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlert: Enemies/Raptor/Raptor_SfxRandom
   SfxHurt:  Enemies/Raptor/Raptor_SfxHurt
   SfxDeath: Enemies/Raptor/Raptor_SfxDeath
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
-  AllowInSpawners: true  
+  AllowInSpawners: true
 }
 
 { +Entity Name: Pangolin, Ref: PreyBAITemplate
@@ -5533,26 +5648,26 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   LootListOnDeath: 31
   AllowUserInstantiate: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
 	AttackWaitAfterAttack: 0
 	AttackRoarBeforeAttack: 10
 	IsHunting:100
 	AttackMaxCount:4
 	AttackRandomDirection:10
-  }  
-  
+  }
+
   { Child VariableOverride
 	MinimalDistanceToTarget: 3.0
 	MeleeAttackDistance: 4.5
@@ -5560,18 +5675,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedAlerted: 1.2
     SpeedAttack: 2.3
 	SpeedFlee: 1.0
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,PlayerBike,BA"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -5585,17 +5700,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:10
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }    
+  }
   AllowInSpawners: true
 }
 
-## ================================================== 
+## ==================================================
 
 { +Entity Name: WormDesert, Ref: PreyBAITemplate
   Mesh: Enemies/WormNew/WormNewPrefab
   MeshDead: Enemies/WormNew/WormNewDeadPrefab
   HeadTransform: WHead005
-  
+
   Prefab: AlienSmall
 
   /* General entity properties */
@@ -5606,7 +5721,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateSpeed: 10
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.2
-  
+
 /*
   WanderSpeed: 0.4
   ApproachSpeed: 1
@@ -5626,40 +5741,40 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/Worm/Worm_SfxDeath
 
   LootListOnDeath: 20
-  
+
   AllowUserInstantiate: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
     /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 1.0
     SpeedAttack: 1.0
 	SpeedFlee: 1.0
-  }  
-  
+  }
+
   { Child Hints
 	AttackOnFriendDamage: 100
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 30, param1: 2
@@ -5673,10 +5788,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }       
+  }
 }
 
-## ================================================== 
+## ==================================================
 
 { +Entity Name: WormDesertLarge, Ref: WormDesert
   Mesh: Enemies/WormNew/WormNewLargePrefab
@@ -5688,7 +5803,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   RotateSpeedMovement: 90
   MotionAnimationSpeedMultiplier: 0.7
-  
+
   { Child VariableOverride
     SpeedCalm: 0.5
     SpeedAlerted: 1.2
@@ -5696,14 +5811,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.2
 	MinimalDistanceToTarget: 1.5
 	MeleeAttackDistance: 2.5
-  }    
+  }
 }
 
 # { +Entity Name: WormDesert, Ref: PreyTemplateAttack
   # Mesh: Enemies/Worm/WormPrefab
   # MeshDead: Enemies/Worm/WormDeadPrefab
   # HeadTransform: Head_bone5
-  
+
   # Prefab: AlienSmall
 
   # /* General entity properties */
@@ -5738,12 +5853,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # SfxDeath: Enemies/Worm/Worm_SfxDeath
 
   # LootListOnDeath: 20
-  
+
   # AllowUserInstantiate: true
-  # FadingEnabled: false     # otherwise problems when switching to dead model 
+  # FadingEnabled: false     # otherwise problems when switching to dead model
 # }
 
-# Remove after save game break 
+# Remove after save game break
 { +Entity Name: WormDesertGroup, Ref: WormDesert
 
   AITask-1: ApproachAttack
@@ -5752,7 +5867,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   AllowUserInstantiate: false
 }
-# Remove after save game break 
+# Remove after save game break
 { +Entity Name: WormDesertLeader, Ref: WormDesert
 
   AITask-1: ApproachAttack
@@ -5766,7 +5881,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # Mesh: Enemies/Worm/WormLargePrefab
   # MeshDead: Enemies/Worm/WormLargeDeadPrefab
   # HeadTransform: Head
-  
+
   # Prefab: Alien
 
   # MaxHealth: 1200
@@ -5774,11 +5889,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   # XpFactor: 8.7
   # HandItem: MeleeWormLarge
   # RotateSpeed: 15
-  
+
   # AllowUserInstantiate: true
 # }
 
-# Remove after save game break 
+# Remove after save game break
 { +Entity Name: WormDesertLargeGroup, Ref: WormDesertLarge
 
   AITask-1: ApproachAttack
@@ -5787,7 +5902,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   AllowUserInstantiate: false
 }
-# Remove after save game break 
+# Remove after save game break
 { +Entity Name: WormDesertLargeLeader, Ref: WormDesertLarge
 
   AITask-1: ApproachAttack
@@ -5795,15 +5910,15 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AITask-3: ""
 
   AllowUserInstantiate: false
-  
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
-  }  
+  }
 }
 
-## ================================================== 
+## ==================================================
 
-# Internal name: LandPredator 
+# Internal name: LandPredator
 { +Entity Name: Otyugh, Ref: PreyBAITemplate
   Mesh: Enemies/LandPredator/LandPredatorPrefab
   MeshDead: Enemies/LandPredator/LandPredatorDeadPrefab
@@ -5831,24 +5946,24 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlert: Enemies/Otyugh/Otyugh_SfxRandom
   SfxHurt: Enemies/Otyugh/Otyugh_SfxHurt
   SfxDeath: Enemies/Otyugh/Otyugh_SfxDeath
-  SfxAnimationEvent0: Enemies/Otyugh/MonsterScreams05 
-  SfxAnimationEvent1: Enemies/Otyugh/RoarScream06 
-  
-  
+  SfxAnimationEvent0: Enemies/Otyugh/MonsterScreams05
+  SfxAnimationEvent1: Enemies/Otyugh/RoarScream06
+
+
   LootListOnDeath: 20
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
+
     /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/BasicLifeCycle"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/BasicLifeCycle"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalOtyughAttack"
   }
 
@@ -5859,8 +5974,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.5
 	MeleeAttackDistance: 4.0
 	MinimalDistanceToTarget: 3.0
-  }  
-  
+  }
+
   { Child Hints
 	AttackWaitAfterAttack: 0
 	AttackRoarBeforeAttack: 35
@@ -5868,16 +5983,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MeleeWeaponIndex:0
 	RangedWeaponIndex:1
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 80
 	ViewAngle: 180
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 30, param1: 2
@@ -5890,7 +6005,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }     
+  }
 }
 
 { +Entity Name: LizardMule, Ref: PreyBAITemplate
@@ -5899,7 +6014,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: head
 
   Faction: Prey
-  
+
   /* General entity properties */
   MaxHealth: 1800
   XpFactor: 7.5
@@ -5922,31 +6037,31 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlert: Enemies/LizardMule/LizardMule_SfxRandom
   SfxHurt: Enemies/LizardMule/LizardMule_SfxHurt
   SfxDeath: Enemies/LizardMule/LizardMule_SfxDeath
-  
+
   LootListOnDeath: 18
 
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
   AllowUserInstantiate: true
-  
-  /* AI Properties */ 
+
+  /* AI Properties */
   GroupLeaderPriority: 1
 
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/HerbivoreLowAlert"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/HerbivoreFlee"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/HerbivoreFlee"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/HerbivoreFlee"			
+	Slot2: "SlotLowAlert,        Behaviors/Activities/HerbivoreLowAlert"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/HerbivoreFlee"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/HerbivoreFlee"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/HerbivoreFlee"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.36
     SpeedAlerted: 1.75
     SpeedAttack: 1.7
     SpeedFlee: 1.7
   }
-  
+
   {	Child GroupDirectionSensor
 	TickIfLead: true
 	TimeBetweeenTicks: 0.2
@@ -5954,12 +6069,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	ScanWater:true
 	#ScanBiome ?? how?
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 90
 	ViewAngle: 200
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 20, param1: 0
 	AlertLevel2: 80, param1: 5
@@ -5974,7 +6089,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	NoiseAlertMultiplier:1
 	DamageAlertMultiplier:60
 	AlertFromFriendDeath:60
-  }   
+  }
   AllowInSpawners: true
 }
 
@@ -5987,17 +6102,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   XpFactor: 1.75
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.5
-  
+
 
   LootListOnDeath: 18
-  
-  /* AI Properties */ 
+
+  /* AI Properties */
   GroupLeaderPriority: 0
-  
+
   { Child MainBehavior
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/AnimalBabyPlay"
-  }  
-  
+  }
+
   { Child VariableOverride
     SpeedCalm: 1.0
     SpeedAlerted: 1.6
@@ -6006,13 +6121,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 }
 
-# Remove after save game break 
+# Remove after save game break
 /* kept for backward compatibility */
 { +Entity Name: LizardMuleLeader, Ref: LizardMule
   AllowUserInstantiate: false
 }
 
-# Remove after save game break 
+# Remove after save game break
 /* kept for backward compatibility */
 { +Entity Name: LizardMuleGroup, Ref: LizardMule
   AllowUserInstantiate: false
@@ -6044,13 +6159,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlert: Enemies/Telluropod/Telluropod_SfxRandom
   SfxHurt: Enemies/LizardMule/LizardMule_SfxHurt
   SfxDeath: Enemies/LizardMule/LizardMule_SfxDeath
-  
+
   LootListOnDeath: 9
 
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
   AllowUserInstantiate: true
-  
-  /* AI Properties */ 
+
+  /* AI Properties */
   GroupLeaderPriority: 1
   NavigateInWater: true
 
@@ -6060,33 +6175,33 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	Slot2: "SlotAlerted,      Behaviors/Activities/SearchTarget"
 	Slot3: "SlotAttackTarget, Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
 	HintReturnHome: 100
 	IsAmphibian: 100
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.35
     SpeedAlerted: 1.2
     SpeedAttack: 1.9
     SpeedFlee: 1.5
-	MeleeAttackDistance: 2.3       
-	MinimalDistanceToTarget: 1.5  
+	MeleeAttackDistance: 2.3
+	MinimalDistanceToTarget: 1.5
   }
-  
+
   {	Child GroupDirectionSensor
 	TickIfLead: true
 	TimeBetweeenTicks: 0.2
 	ScanElevation:true
 	ScanWater:true
   }
-	
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 20, param1: 5
@@ -6109,7 +6224,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/AlienAssassin/AlienAssassinDeadPrefab
   # HeadTransform: Base HumanHead
   HeadTransform: Head
-  
+
   Faction: Zirax
   Prefab: AlienHumanoid
 
@@ -6120,14 +6235,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.15
   HandItem: MeleeAssassin
-  
+
   /*ViewAngle: 180
   WanderSpeed: 0.4
   ApproachSpeed: 1
   NightWanderSpeed: 0.4
   NightApproachSpeed: 1
   PanicSpeed: 1.0*/
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/AlienAssassin/AlienAssassin_SfxRandom
@@ -6135,22 +6250,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlert: Enemies/AlienAssassin/AlienAssassin_SfxRandom
   SfxHurt:  Enemies/AlienAssassin/AlienAssassin_SfxHurt
   SfxDeath: Enemies/AlienAssassin/AlienAssassin_SfxDeath
-  
+
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
   LootListOnDeath: 29
-  
+
   AffectedByBuffs: "Fire,BrokenLeg,OpenWound"
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 1.5
@@ -6158,21 +6273,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.5
 	MeleeAttackDistance: 2.0
 	MinimalDistanceToTarget: 1.5
-  }   
-  
+  }
+
   { Child Hints
 	BasicAttackStances: 1.0
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -6185,8 +6300,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  } 
-  
+  }
+
   AllowUserInstantiate: false
   AllowInSpawners: false
 
@@ -6196,7 +6311,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Spiders/Spider01Prefab
   MeshDead: Enemies/Spiders/Spider01DeadPrefab
   HeadTransform: Head
-  
+
   Prefab: AnimalSmall
 
   MaxHealth: 400
@@ -6220,39 +6335,39 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AffectedByBuffs: "BrokenLeg,OpenWound,Fire"
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true   
-  
+
+  UpdateClusterInfo: true
+
   AllowUserInstantiate: false
   AllowInSpawners: false
   FadingEnabled: false
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.12
     SpeedAlerted: 0.3
     SpeedAttack: 1.5
 	SpeedFlee: 1.2
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -6265,16 +6380,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
-  
+  }
+
   {	Child FearSensor /* fear sensor params */
     MaxFear: 60 /* maximal fear of the animal*/
-	
+
 	FearDrop: 20 /* how much fear will drop per frame */
 	FearDropPerFriend: 10 /* fear drop per frame for each group member around */
 	FearDropMaxFromFriends: 50
 	MaxFriendDistance: 10 /* if the group member is further, it will not help in decreasing fear */
-	
+
 	MinDistanceToFearAnEnemy: 0 /* if closer, the agent will get feat from beign near to enemy, at max
 distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per second (linear) */
 	FearFromEnemy: 0
@@ -6283,16 +6398,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FearFromNoiseMaxDistance: 30  /* max distance to convert noise to fear */
 	FearFromNoiseMultiplier: 0.2  /* noise to fear conversion multiplier */
 	FearPropagationDamageMultiplier: 0.5 /* fear from damage propagation to group members */
-  }   
+  }
 }
 
 { +Entity Name: RipperDog, Ref: PredatorBAITemplate
   Mesh: Enemies/RipperDog/RipperDogPrefab
   MeshDead: Enemies/RipperDog/RipperDogDeadPrefab
   HeadTransform: Head
-  
+
   Faction: Zirax
-  
+
   Prefab: AnimalSmall
 
   MaxHealth: 400
@@ -6316,27 +6431,27 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MotionAnimationSpeedMultiplier: 1.8
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
   FadingEnabled: false
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"		
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
 	AttackMaxCount: 3
 	AttackRandomDirection: 100
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.12
     SpeedAlerted: 0.4
@@ -6344,17 +6459,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 2.1
 	MeleeAttackDistance: 2.2       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.3   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }  
-    
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 125
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,BA,PlayerBike,PlayerDrone"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -6367,16 +6482,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:80
 	NoiseAlertMultiplier:0.3
-  }   
-  
+  }
+
   {	Child FearSensor /* fear sensor params */
     MaxFear: 60 /* maximal fear of the animal*/
-	
+
 	FearDrop: 20 /* how much fear will drop per frame */
 	FearDropPerFriend: 10 /* fear drop per frame for each group member around */
 	FearDropMaxFromFriends: 50
 	MaxFriendDistance: 10 /* if the group member is further, it will not help in decreasing fear */
-	
+
 	MinDistanceToFearAnEnemy: 0 /* if closer, the agent will get feat from beign near to enemy, at max
 distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per second (linear) */
 	FearFromEnemy: 0
@@ -6385,19 +6500,20 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FearFromNoiseMaxDistance: 30  /* max distance to convert noise to fear */
 	FearFromNoiseMultiplier: 0.2  /* noise to fear conversion multiplier */
 	FearPropagationDamageMultiplier: 0.5 /* fear from damage propagation to group members */
-  }   
-  
+  }
+
 }
 
 { +Entity Name: AlienBug02, Ref: PredatorBAITemplate
   Mesh: Enemies/AlienBugs/AlienBug02Prefab
   MeshDead: Enemies/AlienBugs/AlienBug02DeadPrefab
   HeadTransform: Head
-  
+
   Prefab: Alien
-  
+  Faction: Alien
+
   # Faction: Predator
-  
+
   /* Determines particle effect  */
   SurfaceCategory: alien
 
@@ -6408,7 +6524,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: true
   RotateSpeedMovement: 360
   MotionAnimationSpeedMultiplier: 1.0
- 
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/AlienBugs/AlienBug02/AlienBug02_SfxRandom
@@ -6418,51 +6534,51 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/AlienBugs/AlienBug02/AlienBug02_SfxDeath
 
   LootListOnDeath: 20
-  
-  UpdateClusterInfo: true   
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
-  
-  
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
+
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child Hints
 	AttackRandomDirection: 100
 	AttackMaxCount: 4
   }
-  
-  
+
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 1.5
     SpeedAttack: 2.0
 	SpeedFlee: 1.5
 	# the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
-	MeleeAttackDistance: 2.0       
+	MeleeAttackDistance: 2.0
 	# if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-	MinimalDistanceToTarget: 1.2   
-  }  
-  
+	MinimalDistanceToTarget: 1.2
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
@@ -6475,7 +6591,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  } 
+  }
 }
 
 { +Entity Name: AlienBug02Small, Ref: PredatorBAITemplate
@@ -6658,8 +6774,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: Oviraptor, Ref: PreyBAITemplate
   Mesh: Enemies/Oviraptor/OviraptorPrefab
   MeshDead: Enemies/Oviraptor/OviraptorDeadPrefab
-  HeadTransform: head  
-  
+  HeadTransform: head
+
   /* General entity properties */
   MaxHealth: 350
   # XpFactor: 0.6
@@ -6680,34 +6796,34 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   LootListOnDeath: 9
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
-  
+
   AllowUserInstantiate: true
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/BasicLifeCycle"
 	Slot2: "SlotLowAlert,        Behaviors/Activities/HerbivoreLowAlert"
 	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/SearchTarget"
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"	
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
   /*
   { Child Hints
 	AttackOnFriendDamage: 100
-  } */ 
-  
-  
+  } */
+
+
   { Child VariableOverride
     SpeedCalm: 0.45
     SpeedAlerted: 1.5
     SpeedAttack: 2.0
 	SpeedFlee: 1.6
 	# the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
-	MeleeAttackDistance: 3.3       
+	MeleeAttackDistance: 3.3
 	# if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-	MinimalDistanceToTarget: 2.0   
-  }  
+	MinimalDistanceToTarget: 2.0
+  }
 
   {	Child GroupDirectionSensor
 	TickIfLead: true
@@ -6715,17 +6831,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	ScanElevation:true
 	ScanWater:true
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 16, param1: 0
@@ -6734,7 +6850,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertLevel2SwithToOnDmgIncludeGroup:true
 	AlertLevel3SwithToOnDmg: true
 	AlertLevel3SwithToOnDmgIncludeGroup:true
-	
+
 	AlertLevelDrop:10 /* slow alert drop */
 	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
 	AlertAddFromVisionMovement:200
@@ -6744,14 +6860,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
 	AlertFromFriendDeath: 100
-  }   
+  }
 }
 
 { +Entity Name: OviraptorBaby, Ref: Oviraptor
   Mesh: Enemies/Oviraptor/OviraptorBabyPrefab
   MeshDead: Enemies/Oviraptor/OviraptorBabyDeadPrefab
-  HeadTransform: head  
-  
+  HeadTransform: head
+
   /* General entity properties */
   MaxHealth: 150
   # XpFactor: 0.6
@@ -6759,42 +6875,41 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: false
   RotateSpeedMovement: 360
   MotionAnimationSpeedMultiplier: 2.5
-  
+
   { Child MainBehavior
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/AnimalBabyPlay"
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/HerbivoreBabyHideOrRun"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/HerbivoreBabyHideOrRun"	
-	Slot5: "SlotAttackTarget,    Behaviors/Activities/HerbivoreBabyHideOrRun"		
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/HerbivoreBabyHideOrRun"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/HerbivoreBabyHideOrRun"
+	Slot5: "SlotAttackTarget,    Behaviors/Activities/HerbivoreBabyHideOrRun"
   }
-  
+
   { Child Hints
 	LCBabyExplorePlayer: 100
-  }  
-  
+  }
+
   { Child VariableOverride
     SpeedCalm: 0.75
     SpeedAlerted: 1.5
     SpeedAttack: 2.0
 	SpeedFlee: 1.6
-	MeleeAttackDistance: 1.5       
-	MinimalDistanceToTarget: 1.0   
+	MeleeAttackDistance: 1.5
+	MinimalDistanceToTarget: 1.0
   }
-  
+
   {	Child AlertSensor
 	AlertLevel3: 50, param1: 120
-  }  
+  }
 }
 
 # Sound from PlantMonster
 { +Entity Name: Creepy, Ref: PredatorBAITemplate
-  # Faction: Alien
-  Faction: Predator
+  Faction: Alien
   Mesh: Enemies/Creepy/CreepyPrefab
   MeshDead: Enemies/Creepy/CreepyDeadPrefab
   HeadTransform: Head_M
 
   SfxAnimationEvent0: Enemies/CaveWorm/CritterSFX-Long /* roar */
-  
+
   /* General entity properties */
   MaxHealth: 320
   # XpFactor: 1.5
@@ -6812,25 +6927,25 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxAlertTime: 25.0
   SfxAlert: Enemies/PlantMonster/PlantMonster_SfxRandom
   SfxHurt:  Enemies/PlantMonster/PlantMonster_SfxHurt
-  SfxDeath: Enemies/PlantMonster/PlantMonster_SfxDeath  
+  SfxDeath: Enemies/PlantMonster/PlantMonster_SfxDeath
 
   LootListOnDeath: 30
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttackCreepy"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 0.8
@@ -6838,18 +6953,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.0
 	MeleeAttackDistance: 2.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.2   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 60
 	ViewAngle: 270
 	VisibleTypes: "Player,HV,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 30, param1: 2
@@ -6862,7 +6977,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
+  }
 }
 
 { +Entity Name: GolemDesert, Ref: PredatorBAITemplate
@@ -6874,17 +6989,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: Head_M
 
   SfxAnimationEvent0: Enemies/GolemDesert/GolemDesert_SfxRandom /* roar */
-  
+
   /* General entity properties */
-  MaxHealth: 1500 
+  MaxHealth: 1500
   XpFactor: 10
   HandItem: MeleeShell
   RotateToGround: false
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.5
-  
+
   /* Determines particle effect  */
-  SurfaceCategory: stone  
+  SurfaceCategory: stone
 
   /* Sound settings */
   SfxRandomTime: 50.0
@@ -6895,22 +7010,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/GolemDesert/GolemDesert_SfxDeath
 
   LootListOnDeath: 27
-  
-  UpdateClusterInfo: true    
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 0.8
@@ -6918,22 +7033,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.0
 	MeleeAttackDistance: 2.8       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.2   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }  
-  
+  }
+
   { Child Hints
 	AttackRoarBeforeAttack: 10
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 70
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 30, param1: 2
@@ -6946,18 +7061,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:15
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }   
+  }
 }
-{ +Entity Name: GolemIce, Ref: GolemDesert  
+{ +Entity Name: GolemIce, Ref: GolemDesert
   Mesh: Enemies/Shell/ShellIcePrefab
   MeshDead: Enemies/Shell/ShellIceDeadPrefab
   MaxHealth: 3400
   XpFactor: 10
   LootListOnDeath: 6
-  
+
   /* Determines particle effect  */
   SurfaceCategory: stone
-  
+
   /* Sound settings */
   SfxRandomTime: 50.0
   SfxRandom: Enemies/GolemIce/GolemIce_SfxRandom
@@ -6966,15 +7081,15 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxHurt:  Enemies/GolemIce/GolemIce_SfxHurt
   SfxDeath: Enemies/GolemIce/GolemIce_SfxDeath
 }
-{ +Entity Name: GolemSwamp, Ref: GolemDesert 
+{ +Entity Name: GolemSwamp, Ref: GolemDesert
   Mesh: Enemies/Shell/ShellSwampPrefab
   MeshDead: Enemies/Shell/ShellSwampDeadPrefab
 
   SurfaceCategory: human
-  
+
   MaxHealth: 2500
   XpFactor: 12.5
-  LootListOnDeath: 5 
+  LootListOnDeath: 5
 }
 
 
@@ -6983,12 +7098,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/ArmoredGolem/ArmoredGolemDeadPrefab
   # HeadTransform: ArmoredGolemHead
   HeadTransform: Head
-  
-  Prefab: AlienLarge
-    
-  Faction: Zirax  
 
-  /* General entity properties */  
+  Prefab: AlienLarge
+
+  Faction: Zirax
+
+  /* General entity properties */
   MaxHealth: 10000
   XpFactor: 20
   HandItem: MeleeArmoredGolem
@@ -7013,21 +7128,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   LootListOnDeath: 46
   FadingEnabled: false
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/MainAnimal
 	Slot1: "SlotLifeCycle,       Behaviors/Activities/RandomWalk"
-	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"	
-	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"	
-	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"	
+	Slot2: "SlotLowAlert,        Behaviors/Activities/RandomWalk"
+	Slot3: "SlotAlertedNoTarget, Behaviors/Activities/RandomWalk"
+	Slot4: "SlotSearchTarget,    Behaviors/Activities/SearchTarget"
 	Slot5: "SlotAttackTarget,    Behaviors/Activities/AnimalAttack"
   }
-  
+
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 0.75
@@ -7035,22 +7150,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	SpeedFlee: 1.0
 	MeleeAttackDistance: 3.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.2   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-  }  
-  
+  }
+
   { Child Hints
 	AttackRoarBeforeAttack: 0
-  }  
-  
+  }
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,PlayerBike"
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 30, param1: 2
@@ -7063,8 +7178,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:15
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }     
-  
+  }
+
 }
 
 ## ========================= Civilians =========================
@@ -7079,8 +7194,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: AlienHead
 
   SurfaceCategory: alien
-  
-  /* General entity properties */  
+
+  /* General entity properties */
   ViewAngle: 180
   MaxHealth: 300
   XpFactor: 0
@@ -7088,7 +7203,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
   RotateToGround: false
   RotateSpeed: 6
- 
+
   /* Sound settings */
   SfxRandomTime: 150.0     # less frequent than other NPCs
   SfxRandom: Enemies/AlienCivilian/AlienCivilian_SfxRandom
@@ -7100,12 +7215,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   LootListOnDeath: 75
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.0
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
-  /* AI Properties */ 
+
+  /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
   }
@@ -7122,7 +7237,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedAlerted: 0.6
 	SpeedAttack: 0.6
   }
-  
+
   { Child Hints
 	AttackApproachTarget: 0
 	AttackOptimalDistance: 40
@@ -7134,21 +7249,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	UseMeleeAttack: 0
 	WeaponAtAlert: 100
   }
-	
+
   {	Child VisionSensor
 	VisibleDistance: 80
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
-  }    
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 0
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 40, param1: 2
@@ -7161,8 +7276,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }    
-  
+  }
+
   JumpHeight: 0
   StepHeight: 0.1   #To prevent the stupid NPCs from walking over the traders and counters
 }
@@ -7198,41 +7313,18 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Traders/AlienCivilian5Prefab
 }
 
-{ +Entity Name: AssaultCyborgTemplateBAI
-  /* Class properties */
-  EntityType: Cyborg
-  Faction: Polaris
-  ModelType: NoRagdoll
-  Prefab: AlienHumanoid
-  Class: BehaviorAI
-  Parent: Traders    # hierarchy in scene unity -> Traders
-  IsEnemy: false
-  AvatarController: BAIAnimalBase
-  
-  /* Determines particle effect  */
-  SurfaceCategory: metal
-
-  /* General entity properties */
-  ViewAngle: 180
-  Weight: 100
-
-  TimeStayAfterDeath: 120            /* sec */
-  FadingEnabled: true
-
-  AllowUserInstantiate: false
-  PoolCount: 10  
-}
+#Assault Cyborgs
 
 { +Entity Name: AssaultCyborg, Ref: AssaultCyborgOld
   Mesh: Enemies/AssaultCyborg/AssaultCyborgPrefab
-  HeadTransform: Bip001 Head  
-  
+  HeadTransform: Bip001 Head
+
   /* Determines particle effect  */
   SurfaceCategory: metal
-    
+
   Faction: Polaris
-  
-  /* General entity properties */  
+
+  /* General entity properties */
   ViewAngle: 120
   MaxHealth: 1500
   # XpFactor: 1
@@ -7315,6 +7407,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	NoiseAlertMultiplier:0.3
   }
 }
+{ +Entity Name: AssaultCyborgSentinel, Ref: AssaultCyborgOld
+  AITask-1: ApproachAttack
+  AITask-2: ApproachSpot
+  AITask-3: ReturnHome
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+}
 
 { +Entity Name: AssaultCyborgCommando, Ref: AssaultCyborg
   Mesh: Enemies/AssaultCyborg/CommandoCyborgPrefab
@@ -7335,7 +7434,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: false
   RotateSpeed: 6
   RotateSpeedMovement: 180
-  
+
   /* Sound settings */
   SfxRandomTime: 100.0     # less frequent than other NPCs
   SfxRandom: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
@@ -7345,30 +7444,30 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
 
   LootListOnDeath: 74
-  
-  UpdateClusterInfo: true       
+
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  FadingEnabled: false     # otherwise problems when switching to dead model 
-  
-  /* AI Properties */ 
+  FadingEnabled: false     # otherwise problems when switching to dead model
+
+  /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
   }
-  
+
   {	Child GroupDirectionSensor
 	TickIfLead: true
 	TimeBetweeenTicks: 0.2
 	ScanElevation:false
 	ScanWater:false
-  } 
+  }
 
   { Child VariableOverride
     SpeedCalm: 0.25
     SpeedAlerted: 1.5
 	SpeedAttack: 1.5
   }
-  
+
   { Child Hints
 	AttackApproachTarget: 0
 	AttackOptimalDistance: 90
@@ -7379,21 +7478,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FireWeaponBlendInTime: 0.5
 	UseMeleeAttack: 0
   }
-	
+
   {	Child VisionSensor
 	VisibleDistance: 150
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
-  }    
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 0
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 40, param1: 2
@@ -7406,23 +7505,35 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }  
+  }
 }
-
-
+{ +Entity Name: AssaultCyborgDamaged, Ref: AssaultCyborg
+  Mesh: Enemies/AssaultCyborg/DamagedAssaultCyborgPrefab
+  Faction: Pirates
+ /* General entity properties */
+  ViewAngle: 120
+  MaxHealth: 1000
+  # XpFactor: 1
+  XpFactor: 6
+  RightHandJointName: Bip001 R Hand
+  ItemsOnEnterGame: CyborgSniperWeapon
+  RotateToGround: false
+  RotateSpeed: 6
+  RotateSpeedMovement: 180
+}
 { +Entity Name: TalonGuardian, Ref: AlienTemplateBAI
   Mesh: Enemies/TalonGuardian/BAI/TalonGuardianGreenPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianGreenDeadPrefab
   HeadTransform: Bip01_Head
   RightHandJointName: Bip01_R_Hand
-  
+
   Faction: Talon
   ModelType: NoRagdoll
   Prefab: AlienHumanoid
   EntityType: Animal
-  Parent: Enemies    
+  Parent: Enemies
   IsEnemy: false
-  
+
   Class: BehaviorAI
   AvatarController: BAIAnimalBase
 
@@ -7440,7 +7551,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 1.0
   HandItem: MeleeTalonGuardianBAI
-  
+
   /*ItemsOnEnterGame: TalonCrossbowWeapon*/
 
   /* Sound settings */
@@ -7452,31 +7563,31 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath: Enemies/TalonGuardian/TalonGuardian_SfxDeath
 
   LootListOnDeath: 8
-  TimeStayAfterDeath: 120     
+  TimeStayAfterDeath: 120
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
 
-  UpdateClusterInfo: true       
+  UpdateClusterInfo: true
   AllowUserInstantiate: true
   AllowInSpawners: true
-  
-  /* AI Properties */ 
+
+  /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
   }
-  
+
   {	Child GroupDirectionSensor
 	TickIfLead: true
 	TimeBetweeenTicks: 0.2
 	ScanElevation:false
 	ScanWater:false
-  } 
+  }
 
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.7
 	SpeedAttack: 1.5
   }
-  
+
   { Child Hints
 	AttackApproachTarget: 0
 	AttackOptimalDistance: 40
@@ -7487,21 +7598,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	FireWeaponBlendInTime: 0.5
 	UseMeleeAttack: 100
   }
-	
+
   {	Child VisionSensor
 	VisibleDistance: 100
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
-  }    
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 0
   }
-  
+
   {	Child AlertSensor
 	AlertLevel1: 10, param1: 0
 	AlertLevel2: 40, param1: 2
@@ -7514,7 +7625,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
-  }       
+  }
 }
 
 { +Entity Name: TalonGuardianBlue, Ref: TalonGuardian
@@ -7530,9 +7641,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: TalonGuardianCrossbow, Ref: TalonGuardian
   Mesh: Enemies/TalonGuardian/BAI/TalonGuardianCrossbowPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
-  
+
   ItemsOnEnterGame: TalonCrossbowWeapon
-  
+
   { Child Hints
 	AttackApproachTarget: 0
 	AttackOptimalDistance: 40
@@ -7542,19 +7653,32 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   	FireWeaponDurationMultiplier: 0.3
 	FireWeaponBlendInTime: 0.5
 	UseMeleeAttack: 0
-  }  
+  }
   {	Child VisionSensor
 	VisibleDistance: 150
   }
 }
-
-# ==============  Groups  ==============  
+{ +Entity Name: TalonAdvancedGreen, Ref: TalonGuardian
+  Mesh: Enemies/TalonAdvanced/TalonAdvancedGreenPrefab
+  MeshDead: Enemies/TalonAdvanced/TalonAdvancedGreenDeadPrefab
+  HeadTransform: Bip001 Head
+  RightHandJointName: R Weapon
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+{ +Entity Name: TalonAdvancedRed, Ref: TalonGuardian
+  Mesh: Enemies/TalonAdvanced/TalonAdvancedRedPrefab
+  MeshDead: Enemies/TalonAdvanced/TalonAdvancedRedDeadPrefab
+  HeadTransform: Bip001 Head
+  RightHandJointName: R Weapon
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+# ==============  Groups  ==============
 { +Entity Name: TalonGuardianGroup, Ref: TalonGuardianBlue
 
   { Child Hints
     LifeCycleWandering: 100
   }
-  
+
   AllowUserInstantiate: false
   AllowInSpawners: false
 }
@@ -7576,7 +7700,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RpFactor: 0    # no reputation change for base attack entities
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
-  }  
+  }
 }
 
 { +Entity Name: TalonGuardianShamanBaseAttack, Ref: TalonGuardianBaseAttack
@@ -7584,40 +7708,40 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/TalonGuardian/TalonChiefDeadPrefab
   ItemsOnEnterGame: TalonShamaneDrainPower
   HandItem: TalonShamaneDrainPower
-  
+
   RotateSpeed: 10
   RotateSpeedMovement: 180
 
   MapIcon: map_flag
-  
+
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonShamanCommands
   }
-  
+
 }
 
 { +Entity Name: TalonSpider01, Ref: Spider01
   RotateSpeedMovement: 180
   RpFactor: 0    # no reputation change for base attack entities
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonBaseAttackMeleeAnimal
   }
-  
+
   { Child Hints
     IsHunting: 100
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 100
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 1
   }
@@ -7626,25 +7750,25 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: TalonCrawler, Ref: Crawler
   RotateSpeedMovement: 180
   RpFactor: 0    # no reputation change for base attack entities
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonBaseAttackMeleeAnimal
   }
-    
+
   { Child Hints
     IsHunting: 100
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 1
   }
@@ -7653,25 +7777,25 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: TalonCaveWormGrey, Ref: CaveWormGrey
   RotateSpeedMovement: 180
   RpFactor: 0    # no reputation change for base attack entities
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonBaseAttackMeleeAnimal
   }
-  
+
   { Child Hints
     IsHunting: 100
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 1
   }
@@ -7680,57 +7804,57 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: TalonPangolin, Ref: Pangolin
   RotateSpeedMovement: 180
   RpFactor: 0    # no reputation change for base attack entities
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonBaseAttackMeleeAnimal
   }
-  
+
   { Child Hints
     IsHunting: 100
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 80
 	ViewAngle: 360
-  }  
-  
+  }
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 1
   }
 }
 
- 
+
 
 { +Entity Name: TalonSpider03, Ref: Spider03
   RpFactor: 0    # no reputation change for base attack entities
 
   LootListOnDeath: 20
   RotateSpeedMovement: 180
-  
+
   /* AI Properties */
   { Child MainBehavior
 	BehaviorName: Behaviors/HiLevelTrees/TalonBaseAttackRangedAnimal
   }
-  
-  { Child Hints 
+
+  { Child Hints
     IsHunting: 100
   }
-  
+
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-  }  
-  
-  
+  }
+
+
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,PlayerBike"
   }
-  
+
   { Child StuckSensor
 	Use: 1
   }
@@ -7745,10 +7869,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Prefab: AlienHumanoid
   EntityType: Animal
   Class: Enemy
-  Parent: Enemies    
+  Parent: Enemies
   IsEnemy: false
   AvatarController: Enemy
-  
+
   SurfaceCategory: human
 
 
@@ -7757,7 +7881,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 { +Entity Name: ZiraxMinigunBaseAttack, Ref: ZiraxMinigun
   MaxHealth: 1500
   ItemsOnEnterGame: "ZiraxMinigunWeapon,DestroyBlocksWeapon,EMPAttackBlocksWeapon"
-  NavigateBreakDoors: true 
+  NavigateBreakDoors: true
   AllowUserInstantiate: false
   AllowInSpawners: false
   NavigateInWater: true
@@ -7766,37 +7890,37 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   {	Child VisionSensor
 	VisibleSubTypes: "BA"
-	VisibleDistance: 150	
-  }    
-  
+	VisibleDistance: 150
+  }
+
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 0.6
 	SpeedAttack: 1.0
-  }  
+  }
 }
 
 { +Entity Name: ZiraxShotgunBaseAttack, Ref: ZiraxShotgun
   MaxHealth: 1500
   ItemsOnEnterGame: "ZiraxShotgunWeapon,DestroyBlocksWeapon,EMPAttackBlocksWeapon"
-  NavigateBreakDoors: true 
+  NavigateBreakDoors: true
   AllowUserInstantiate: false
   AllowInSpawners: false
   NavigateInWater: true
   AttackWidthAngle: 190
-  
+
   RpFactor: 0    # no reputation change for base attack entities
-  
+
   {	Child VisionSensor
 	VisibleSubTypes: "BA"
-	VisibleDistance: 150	
+	VisibleDistance: 150
   }
 
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 0.7
 	SpeedAttack: 1.0
-  }  
+  }
 }
 
 { Entity Name: SurvivalConstructor
@@ -8145,17 +8269,458 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SurfaceCategory: metal
   HeadTransform: Bip01_Head
 }
-{ +Entity Name: HWSCyborgServant, Ref: DamagedCyborg
+# Talon
+{ +Entity Name: TalonCivilianAdvancedGreen, Ref: AlienCivilian1
+  Mesh: Enemies/TalonAdvanced/TalonAdvancedGreenCivilianPrefab
+  MeshDead: Enemies/TalonAdvanced/TalonAdvancedGreenDeadPrefab
+  HeadTransform: Bip001 Head
+ # RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+{ +Entity Name: TalonCivilianAdvancedRed, Ref: AlienCivilian1
+  Mesh: Enemies/TalonAdvanced/TalonAdvancedRedCivilianPrefab
+  MeshDead: Enemies/TalonAdvanced/TalonAdvancedRedDeadPrefab
+  HeadTransform: Bip001 Head
+#  RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+# ===============================
+# Static NPCs without Attackpattern
+# ================================
+
+# Aliens
+
+{ +Entity Name: AlienCivilian1Static, Ref: CivilianTemplateStatic
+  Mesh: Enemies/Traders/AlienCivilian1Prefab
+
+  EntityType: Civilian
+  Faction: Civilian
+
+  HeadTransform: AlienHead
+
+  SurfaceCategory: alien
+
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 500
+  XpFactor: 0
+  RightHandJointName: AlienRPalm
+  ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
+  RotateToGround: false
+  RotateSpeed: 6
+
+  /* Sound settings */
+  SfxRandomTime: 150.0     # less frequent than other NPCs
+  SfxRandom: Enemies/AlienCivilian/AlienCivilian_SfxRandom
+  SfxAlertTime: 100.0       # less frequent than other NPCs
+  SfxAlert: Enemies/AlienCivilian/AlienCivilian_SfxRandom
+  SfxHurt:  Enemies/AlienCivilian/AlienCivilian_SfxHurt
+  SfxDeath: Enemies/AlienCivilian/AlienCivilian_SfxDeath
+
+  LootListOnDeath: 75
+  RotateSpeedMovement: 180
+  MotionAnimationSpeedMultiplier: 1.0
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  /* AI Properties */
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
+  }
+  /*
+  {	Child GroupDirectionSensor
+	TickIfLead: true
+	TimeBetweeenTicks: 0.2
+	ScanElevation:false
+	ScanWater:false
+  } */
+
+  { Child VariableOverride
+    SpeedCalm: 0.2
+    SpeedAlerted: 0.3
+	SpeedAttack: 0.6
+  }
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 1.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 0.5
+  	FireWeaponDurationMultiplier: 0.3
+	FireWeaponBlendInTime: 0.5
+	UseMeleeAttack: 0
+	WeaponAtAlert: 100
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 80
+	ViewAngle: 110
+	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  { Child StuckSensor
+	Use: 0
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
+}
+
+{ +Entity Name: AlienCivilian1FatStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian1FatPrefab
+}
+{ +Entity Name: AlienCivilian1SmallStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian1SmallPrefab
+}
+{ +Entity Name: AlienCivilian2Static, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian2Prefab
+}
+{ +Entity Name: AlienCivilian2FatStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian2FatPrefab
+}
+{ +Entity Name: AlienCivilian2ThinStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian2ThinPrefab
+}
+{ +Entity Name: AlienCivilian3Static, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian3Prefab
+}
+{ +Entity Name: AlienCivilian3FatStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian3FatPrefab
+}
+{ +Entity Name: AlienCivilian4Static, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian4Prefab
+}
+{ +Entity Name: AlienCivilian4FatStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian4FatPrefab
+}
+{ +Entity Name: AlienCivilian5Static, Ref: AlienCivilian1Static
+  Mesh: Enemies/Traders/AlienCivilian5Prefab
+}
+
+# Humanoids
+
+{ +Entity Name: HumanCivilianMale1Static, Ref: CivilianTemplateStatic
+  Mesh: Enemies/Traders/HumanCivilianWalking1Prefab
+
+  EntityType: Civilian
+  Faction: Civilian
+
+  HeadTransform: Head1_M
+
+
+  SurfaceCategory: human
+
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 500
+  XpFactor: 0
+  RightHandJointName: Wrist_R
+  ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
+  RotateToGround: false
+  RotateSpeed: 6
+
+  /* Sound settings */
+  SfxRandomTime: 150.0     # less frequent than other NPCs
+  SfxAlertTime: 100.0       # less frequent than other NPCs
+
+  SfxRandom:
+  SfxHurt: Player_Male/MaleHurt
+  SfxDeath: Player_Male/MaleDeath
+
+  LootListOnDeath: 75
+  RotateSpeedMovement: 180
+  MotionAnimationSpeedMultiplier: 1.0
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  /* AI Properties */
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
+  }
+  /*
+  {	Child GroupDirectionSensor
+	TickIfLead: true
+	TimeBetweeenTicks: 0.2
+	ScanElevation:false
+	ScanWater:false
+  } */
+
+  { Child VariableOverride
+    SpeedCalm: 0.2
+    SpeedAlerted: 0.3
+	SpeedAttack: 0.6
+  }
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 1.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 0.5
+  	FireWeaponDurationMultiplier: 0.3
+	FireWeaponBlendInTime: 0.5
+	UseMeleeAttack: 0
+	WeaponAtAlert: 100
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 80
+	ViewAngle: 110
+	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  { Child StuckSensor
+	Use: 0
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
+}
+{ +Entity Name: HumanCivilianMale2Static, Ref: HumanCivilianMale1Static  #Male
+  Mesh: Enemies/Traders/HumanCivilianWalking2Prefab
+  HeadTransform: Head1_M
+  RightHandJointName: Wrist_R
+}
+{ +Entity Name: HumanCivilianMale3Static, Ref: HumanCivilianMale1Static
+  Mesh: Enemies/Traders/HumanCivilianWalking3Prefab
+  HeadTransform: Head1_M
+  RightHandJointName: Wrist_R
+}
+{ +Entity Name: HumanCivilianMale4Static, Ref: HumanCivilianMale1Static
+  Mesh: Enemies/Traders/HumanCivilianWalking4Prefab
+  HeadTransform: Head1_M
+  RightHandJointName: Wrist_R
+}
+{ +Entity Name: HumanCivilianFemale1Static, Ref: HumanCivilianMale1Static  #Female
+  Mesh: Enemies/Traders/HumanCivilianWalking5Prefab
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+
+  SfxRandom:
+  SfxHurt: PlyFemale/FemaleHurt
+  SfxDeath: PlyFemale/FemaleDeath
+}
+{ +Entity Name: HumanCivilianFemale2Static, Ref: HumanCivilianMale1Static #Female
+  Mesh: Enemies/Traders/HumanCivilianWalking6Prefab
+  HeadTransform: Head
+
+  RightHandJointName: R Weapon
+  SfxRandom:
+  SfxHurt: PlyFemale/FemaleHurt
+  SfxDeath: PlyFemale/FemaleDeath
+}
+{ +Entity Name: PilotMaleStatic, Ref: HumanCivilianMale1Static
+  Mesh: Enemies/Traders/OperatorPilotWalkingPrefab
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+}
+{ +Entity Name: OfficerFemale1Static, Ref: HumanCivilianMale1Static #Female
+  Mesh: Enemies/Traders/CommandingOfficerWalkingPrefab
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+
+  SfxRandom:
+  SfxHurt: PlyFemale/FemaleHurt
+  SfxDeath: PlyFemale/FemaleDeath
+}
+{ +Entity Name: OfficerFemale2Static, Ref: HumanCivilianMale1Static   #Female
+  Mesh: Enemies/Traders/TacticalOfficerWalkingPrefab
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+
+  SfxRandom:
+  SfxHurt: PlyFemale/FemaleHurt
+  SfxDeath: PlyFemale/FemaleDeath
+}
+{ +Entity Name: OfficerMale1Static, Ref: HumanCivilianMale1Static #Male
+  Mesh: Enemies/Traders/CommandingOfficer2WalkingPrefab
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+}
+{ +Entity Name: OfficerMale2Static, Ref: HumanCivilianMale1Static
+  Mesh: Enemies/Traders/HumanCivilianWalking7Prefab
+  HeadTransform: Head
+  RightHandJointName: R Weapon
+}
+
+# Zirax
+
+{ +Entity Name: ZiraxCivilianMaleBlueStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Zirax/ZiraxCivilianMaleBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxCivilianMaleBlueDeadPrefab
+  HeadTransform: Bip01_Head
+ # RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+{ +Entity Name: ZiraxCivilianFemaleBlueStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/Zirax/ZiraxCivilianFemaleBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxCivilianFemaleDeadBluePrefab
+  HeadTransform: Bip001 Head
+ # RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+
+# Talon
+{ +Entity Name: TalonCivilianAdvancedGreenStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/TalonAdvanced/TalonAdvancedGreenCivilianPrefab
+  MeshDead: Enemies/TalonAdvanced/TalonAdvancedGreenDeadPrefab
+  HeadTransform: Bip001 Head
+ # RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+{ +Entity Name: TalonCivilianAdvancedRedStatic, Ref: AlienCivilian1Static
+  Mesh: Enemies/TalonAdvanced/TalonAdvancedRedCivilianPrefab
+  MeshDead: Enemies/TalonAdvanced/TalonAdvancedRedDeadPrefab
+  HeadTransform: Bip001 Head
+#  RightHandJointName: R Weapon
+ # ItemsOnEnterGame: ZiraxMinigunWeapon
+}
+
+# Cyborgs / Mechanoids
+
+{ +Entity Name: DamagedCyborgStatic, Ref: CivilianTemplateStatic
+  Mesh: Enemies/AssaultCyborg/DamagedCyborgPrefab
+  EntityType: Cyborg
+  HeadTransform: Bip001 Head
+  SurfaceCategory: metal
+
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 500
+  XpFactor: 0
+  RightHandJointName: AlienRPalm
+  ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
+  RotateToGround: false
+  RotateSpeed: 6
+
+  /* Sound settings */
+  SfxRandomTime: 100.0     # less frequent than other NPCs
+  SfxRandom: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxAlertTime: 50.0       # less frequent than other NPCs
+  SfxAlert: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxHurt: Enemies/AssaultCyborg/AssaultCyborg_SfxHurt
+  SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
+
+  LootListOnDeath: 74
+  RotateSpeedMovement: 180
+  MotionAnimationSpeedMultiplier: 1.0
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  /* AI Properties */
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/TalonGuardianCommands
+  }
+  /*
+  {	Child GroupDirectionSensor
+	TickIfLead: true
+	TimeBetweeenTicks: 0.2
+	ScanElevation:false
+	ScanWater:false
+  } */
+
+  { Child VariableOverride
+    SpeedCalm: 0.2
+    SpeedAlerted: 0.3
+	SpeedAttack: 0.6
+  }
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 1.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 0.5
+  	FireWeaponDurationMultiplier: 0.3
+	FireWeaponBlendInTime: 0.5
+	UseMeleeAttack: 0
+	WeaponAtAlert: 100
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 80
+	ViewAngle: 110
+	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  { Child StuckSensor
+	Use: 0
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
+}
+{ +Entity Name: EngineerCyborgStatic, Ref: DamagedCyborgStatic
+  Mesh: Enemies/AssaultCyborg/EngineerCyborgPrefab
+  SurfaceCategory: metal
+  HeadTransform: Bip01_Head
+}
+{ +Entity Name: MedicCyborgStatic, Ref: DamagedCyborgStatic
+  Mesh: Enemies/AssaultCyborg/MedicCyborgPrefab
+  SurfaceCategory: metal
+  HeadTransform: Bip01_Head
+}
+{ +Entity Name: ServantCyborgStatic, Ref: DamagedCyborgStatic
   Mesh: Enemies/AssaultCyborg/ServantCyborgPrefab
   SurfaceCategory: metal
   HeadTransform: Bip01_Head
-
-  Faction: Cyborgs
-
-  /* AI properties */
-  AITask-1: TraderTalksTo
-
 }
+# ===============================
+# GUARDS = Semi-Static NPCs with Attackpattern
+# ================================
+
 # ===============================
 # NPCS exclusively used by THE LEGACY (Infected NPCs and others)
 # ================================
@@ -8437,4 +9002,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	NoiseMaxDistance:50
 	NoiseAlertMultiplier:0.3
   }
+}
+
+####Talon Advanced
+
+
+# HWS Content
+
+{ +Entity Name: HWSCyborgServant, Ref: DamagedCyborg
+  Mesh: Enemies/AssaultCyborg/ServantCyborgPrefab
+  SurfaceCategory: metal
+  HeadTransform: Bip01_Head
+
+  Faction: Cyborgs
+
+  /* AI properties */
+  AITask-1: TraderTalksTo
+
 }

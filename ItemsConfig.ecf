@@ -3262,8 +3262,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Hidden
 }
 
-# available free 44-47 (+4)
-
 { +Item Id: 44, Name: WeaponSVTorpedoLauncherWeapon
   Meshfile: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -3419,6 +3417,84 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   UnlockCost: 0
   UnlockLevel: 0
   TechTreeNames: Hidden
+}
+
+{ +Item Id: 47, Name: MedicGun
+  Meshfile: Entities/Items/Weapons/MultiToolT1Prefab
+  CustomIcon: ChangeTool
+  PickupToToolbar: true
+  Material: metalweapon
+  HoldType: 16
+  StackSize: 1
+  Category: Weapons/Items
+  Info: A specialized injector gun for administering medical aid to an ally in the field., display: true
+  Mass: 4.1, type: float, display: true, formatter: Kilogram
+  Volume: 5.5, type: float, display: true, formatter: Liter
+  Durability: 250, display: false
+  DegradationProb: 1.0, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  RadialMenu: true
+  { Child 0
+    Class: Ranged
+    AllowRemote: true
+    AllowAt: "UnderWater,Space,Planet"
+    ROF: 0.25, type: float, display: true, formatter: ROF
+    Range: 2, display: false
+    NoiseStrength: 5, display: false
+    CameraShake: 1
+    IgnoreAtmo: true
+    Automatic: true
+    BulletSpread: 0
+    Recoil: 0.1
+    Damage: 1
+    UseSingleMagazine: true
+    AmmoCapacity: 6, display: true
+    AmmoType: Medikit04, display: true
+    ReloadDelay: 2.5, display: true
+    Buff: "Injector01"
+    Buff_chance: 1
+    SfxBegin: UseActions/oxygen_tank_open
+    SfxNoAmmo: Weapons/Misc/MagnumDryFire
+    SfxReload: Weapons/Player/Reload/PistolReloadNormal
+    ParticleTransform: Muzzle/Particle2
+
+    RadialText: Heal Ally
+    RadialDesc: Provides a small heal for another player
+    RadialIcon: TmpEff_Health
+  }
+  { Child 1
+    Class: Ranged
+    AllowRemote: true
+    AllowAt: "UnderWater,Space,Planet"
+    ROF: 0.25, type: float, display: true, formatter: ROF
+    Range: 2, display: false
+    NoiseStrength: 5, display: false
+    CameraShake: 1
+    IgnoreAtmo: true
+    Automatic: false
+    BulletSpread: 0
+    Recoil: 0.1
+    Damage: 1
+    UseSingleMagazine: true
+    AmmoCapacity: 6, display: true
+    AmmoType: Medikit04, display: true
+    ReloadDelay: 2.5, display: true
+    Buff: "Injector02"
+    Buff_chance: 1
+    SfxBegin: UseActions/oxygen_tank_open
+    SfxNoAmmo: Weapons/Misc/MagnumDryFire
+    SfxReload: Weapons/Player/Reload/PistolReloadNormal
+    ParticleTransform: Muzzle/Particle3
+
+    RadialText: Treat Ally
+    RadialDesc: Treats a wide variety of status effects for another player
+    RadialIcon: TmpEff_BadTrip
+  }
+
+  UnlockCost: 4500, display: true
+  UnlockLevel: 7, display: true
+  #TechTreeParent: SurvivalTool
+  TechTreeNames: AlienTechnology
 }
 
 # Debug weapons
@@ -3955,7 +4031,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
-# { Item Id: 69, Name: BombUnguided
+# { Item Id: 70, Name: BombUnguided
 #  Meshfile: Entities/Items/Weapons/Projectiles/BombDronePrefab
 #  Material: metalweapon
 #  HoldType: 0
@@ -3987,7 +4063,57 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 #  UnlockLevel: 1
 #  TechTreeNames: Hidden
 #}
-# free
+
+{ +Item Id: 71, Name: OtyughFireBallRangedWeapon
+  Meshfile: Entities/Items/Weapons/Enemies/RangedAttackPrefab
+  Material: human
+  HoldType: 20
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  Mass: 12, type: float, display: false, formatter: Kilogram
+  { Child 0
+    Class: LauncherSS
+    ROF: 0, type: float
+    Range: 30, display: true
+    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
+    Damage: 35, display: true
+    AmmoCapacity: 250, display: true
+    AmmoUnlimited: true
+    AmmoType: OtyughFireBall, display: true
+    ReloadDelay: 6.3, display: true
+    SfxBegin: Enemies/Otyugh/Otyugh_SfxAttack_a2
+	# MaxFireAngle: 15 #we need bigger angle, as the bug firing angle is not perfectly aligned with look angle
+  }
+}
+
+
+{ +Item Id: 72, Name: AlienBugBigRangedWeapon
+  Meshfile: Entities/Items/Weapons/Enemies/RangedAttackAIPrefab
+  Material: human
+  HoldType: 20
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  Mass: 12, type: float, display: false, formatter: Kilogram
+  { Child 0
+    Class: LauncherAI
+    BulletsPerShot: 8
+    BulletSpread: 0.2
+    ROF: 0, type: float
+    Range: 30, display: true
+    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
+    Damage: 35, display: true
+    AmmoCapacity: 250, display: true
+    AmmoUnlimited: true
+    AmmoType: SlimeAlienBigBug, display: true
+    ReloadDelay: 6.3, display: true
+    SfxBegin: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxHardAttack
+	# MaxFireAngle: 15 #we need bigger angle, as the bug firing angle is not perfectly aligned with look angle
+  }
+}
+
+# FREE 73-77
 
 { Item Id: 78, Name: AmmoInfinite       # Dummy ammo needed for weapons that have unlimited ammo (eg DrillAttachmentWeapon)
   Meshfile: Entities/Misc/DummyPrefab
@@ -8271,29 +8397,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: AlienTechnology
 }
 
-{ +Item Id: 180, Name: OtyughFireBallRangedWeapon
-  Meshfile: Entities/Items/Weapons/Enemies/RangedAttackPrefab
-  Material: human
-  HoldType: 20
-  StackSize: 1
-  Category: Weapons/Items
-  ShowUser: No
-  Mass: 12, type: float, display: false, formatter: Kilogram
-  { Child 0
-    Class: LauncherSS
-    ROF: 0, type: float
-    Range: 30, display: true
-    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
-    Damage: 35, display: true
-    AmmoCapacity: 250, display: true
-    AmmoUnlimited: true
-    AmmoType: OtyughFireBall, display: true
-    ReloadDelay: 6.3, display: true
-    SfxBegin: Enemies/Otyugh/Otyugh_SfxAttack_a2
-	# MaxFireAngle: 15 #we need bigger angle, as the bug firing angle is not perfectly aligned with look angle
-  }
-}
-
+# FREE 180-196
 
 /* ============================================ */
 # TEMPLATES
@@ -11193,7 +11297,23 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_2: 5, param1: hull|hullarmored|hullcombat|concrete|woodblock
   }
 }
-# free
+
+{ +Item Id: 534, Name: MeleeSpider01Small, Ref: MeleeTemplate
+  HoldType: 20
+  { Child 0
+    Class: Melee
+    ROF: 0, type: float
+    Range: 2.5
+    Damage: 10
+    Sphere: 0.05
+    SfxBegin: Enemies/Spiders/Spiders_SfxAttack
+    Buff: "PoisonBit,Stunned"
+    Buff_chance: "0.05,0.015"
+
+	DamageMultiplier_1: 5, param1: metal|metalhard
+    DamageMultiplier_2: 10, param1: hull|hullarmored|hullcombat|concrete|woodblock
+  }
+}
 { +Item Id: 535, Name: MeleeAssassin, Ref: MeleeTemplate
   HoldType: 20
   { Child 0
@@ -11256,9 +11376,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0, type: float
     Range: 3
     Damage: 150
-    SfxBegin: Enemies/Otyugh/Otyugh_SfxAttack
-    Buff: "OpenWound,InfectedWound"
-    Buff_chance: "0.4,0.15"
+    SfxBegin: Enemies/Worm/MonsterScreams-16
+    Buff: "FractureOpen"
+    Buff_chance: "0.4"
   }
 }
 
@@ -12346,6 +12466,17 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 	# MaxFireAngle: 15 #we need bigger angle, as the bug may be not perfectly rotated when firing
   }
 }
+{ +Item Id: 589, Name: stunDroneSmall, Ref: rocketlauncherDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/plasmaDronePrefab
+  { Child 0
+    Class: LauncherSS
+    ROF: 1, type: float
+    Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoType: stunCannonChargeDrone, display: true
+    SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
+    # PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
 { +Item Id: 590, Name: DroneBaseAttackMinigunWeapon, Ref: minigunDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/minigunDronePrefab
   { Child 0
@@ -12531,6 +12662,23 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Enemies/TalonGuardian/WhooshWideSlow
     Buff: "OpenWound,Stunned"
     Buff_chance: "0.15,0.15"
+  }
+}
+
+{ +Item Id: 599, Name: stunCannonChargeDrone, Ref: rocketDrone
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotYellowAlien
+  { Child 0
+    Class: Projectile
+    Damage: 0, display: true
+    BlastParticleIndex: 7
+    BlastRadius: 0, display: true
+    BlastDamage: 0, display: true
+    Speed: 100
+    Range: 500
+    Buff: "Stunned"
+    Buff_chance: "0.9"
+    DamageMultiplier_1: 3, param1: shield
+    BlastDamageMultiplier_1: 0, param1: shield
   }
 }
 
@@ -13114,7 +13262,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 { +Item Id: 799, Name: HWSEventHalloweenArmor
-  CustomIcon: ArmorHeavyEpic
   Class: Armor
   RecipeName: HeavyArmorEpic
   Meshfile: Entities/Misc/DummyPrefab
@@ -13265,10 +13412,33 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiTalonTurretEnemyBallistaCharged, display: true
   ShowUser: Yes
 }
-# ========================================= STATUS EFFECT TEST ==========================
-{ Item Id: 1200, Name: FlameThrowerDEBUG
+# ========================================= Suit Props ==========================
+{ +Item Id: 1150, Name: SuitPropsTemplate
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metalitem
+  Canhold: false
+  HoldType: 0
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Volume: 1, type: float, display: true, formatter: Liter
+  StackSize: 1
+  Info: SuitPropsGlobal, display: true
+  Category: Components
+  ShowUser: No
+}
+{ +Item Id: 1151, Name: SantaClausHat , Ref: SuitPropsTemplate
+  Info: bkiSantaClausHat, display: true
+  PropHead: SantaClausHat
+  ShowUser: Yes
+}
+{ +Item Id: 1152, Name: SnowmanHead , Ref: SuitPropsTemplate
+  Info: bkiSnowmanHead, display: true
+  PropHead: SnowmanHead
+  ShowUser: Yes
+}
+# ========================================= STATUS EFFECT TEST ==========================
+{ Item Id: 1200, Name: FlameThrowerDEBUG
+  Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
   PickupToToolbar: true
   Material: metalweapon
   HoldType: 16
@@ -13442,81 +13612,3 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 # =============================================================================
-
-{ +Item Id: 47, Name: MedicGun
-  Meshfile: Entities/Items/Weapons/MultiToolT1Prefab
-  CustomIcon: ChangeTool
-  PickupToToolbar: true
-  Material: metalweapon
-  HoldType: 16
-  StackSize: 1
-  Category: Weapons/Items
-  Info: A specialized injector gun for administering medical aid to an ally in the field., display: true
-  Mass: 4.1, type: float, display: true, formatter: Kilogram
-  Volume: 5.5, type: float, display: true, formatter: Liter
-  Durability: 250, display: false
-  DegradationProb: 1.0, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
-  RadialMenu: true
-  { Child 0
-    Class: Ranged
-    AllowRemote: true
-    AllowAt: "UnderWater,Space,Planet"
-    ROF: 0.25, type: float, display: true, formatter: ROF
-    Range: 2, display: false
-    NoiseStrength: 5, display: false
-    CameraShake: 1
-    IgnoreAtmo: true
-    Automatic: true
-    BulletSpread: 0
-    Recoil: 0.1
-    Damage: 1
-    UseSingleMagazine: true
-    AmmoCapacity: 6, display: true
-    AmmoType: Medikit04, display: true
-    ReloadDelay: 2.5, display: true
-    Buff: "Injector01"
-    Buff_chance: 1
-    SfxBegin: UseActions/oxygen_tank_open
-    SfxNoAmmo: Weapons/Misc/MagnumDryFire
-    SfxReload: Weapons/Player/Reload/PistolReloadNormal
-    ParticleTransform: Muzzle/Particle2
-
-    RadialText: Heal Ally
-    RadialDesc: Provides a small heal for another player
-    RadialIcon: TmpEff_Health
-  }
-  { Child 1
-    Class: Ranged
-    AllowRemote: true
-    AllowAt: "UnderWater,Space,Planet"
-    ROF: 0.25, type: float, display: true, formatter: ROF
-    Range: 2, display: false
-    NoiseStrength: 5, display: false
-    CameraShake: 1
-    IgnoreAtmo: true
-    Automatic: false
-    BulletSpread: 0
-    Recoil: 0.1
-    Damage: 1
-    UseSingleMagazine: true
-    AmmoCapacity: 6, display: true
-    AmmoType: Medikit04, display: true
-    ReloadDelay: 2.5, display: true
-    Buff: "Injector02"
-    Buff_chance: 1
-    SfxBegin: UseActions/oxygen_tank_open
-    SfxNoAmmo: Weapons/Misc/MagnumDryFire
-    SfxReload: Weapons/Player/Reload/PistolReloadNormal
-    ParticleTransform: Muzzle/Particle3
-
-    RadialText: Treat Ally
-    RadialDesc: Treats a wide variety of status effects for another player
-    RadialIcon: TmpEff_BadTrip
-  }
-
-  UnlockCost: 4500, display: true
-  UnlockLevel: 7, display: true
-  #TechTreeParent: SurvivalTool
-  TechTreeNames: AlienTechnology
-}
