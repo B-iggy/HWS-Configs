@@ -13436,6 +13436,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PropHead: SnowmanHead
   ShowUser: Yes
 }
+{ +Item Id: 1153, Name: CowboyHat , Ref: SuitPropsTemplate
+  Info: "HII Haaa", display: true
+  PropHead: CowboyHat
+  ShowUser: Yes
+}
 # ========================================= STATUS EFFECT TEST ==========================
 { Item Id: 1200, Name: FlameThrowerDEBUG
   Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
