@@ -1514,7 +1514,8 @@ HullCombatSmallBlocks
 
 
 { +Block Id: 242, Name: MediaControlBlock
-  IndexName: LCD
+  Info: bkiDecalsControlBlock, display: true
+  IndexName: DecalControl
   Class: DecalControl
   Group: cpgLCD
   Material: metallight, display: true
@@ -1528,9 +1529,14 @@ HullCombatSmallBlocks
   IsAccessible: true, type: bool
   IsActivateableInCP: true
   IsLockable: true
+  TemplateRoot: HullLargeBlocks
+  PickupTarget: SteelPlate
   HitPoints: 200, type: int, display: true
   IsOxygenTight: false, display: true
-  BlockSizeScale: 2      # attention: block is used on Base,MS,SS,GV
+  # HitPoints: 500, type: int, display: false
+  # Mass: 1000, type: float, display: true, formatter: Kilogram
+  # Volume: 80, type: float, display: true, formatter: Liter
+  StackSize: 50000
   # CanPickup: true
   IsActivateable: true
   Category: Devices
@@ -4875,70 +4881,73 @@ HullCombatSmallBlocks
   ChildShapes: "Wall, WallLShape, WallSloped, WallSloped3Corner, WallSlopedC, WallSlopedCMediumright, WallSlopedAright, WallSlopedCMediumleft, WallSlopedAleft, WallCornerRoundB, WallSlopedRound, WallEdgeRound, WallEdgeRound3Way, WallCornerRoundA, WallCornerRoundC, WallSloped3CornerLow, WallCorner, WallLow, CubeHalf, RampADouble, RampCLow, RampBMedium, RampD, CutCornerEMedium, Beam, CylinderThin, CylinderThinTJoint, CylinderL, PipesFence, FenceTop, RampCHalf, CornerHalfA3Medium"
 }
 
-/* { Block Id: 414, Name: WeaponSV06      #Bomb Unguided SV
-  Class: Weapon
-  IndexName: WeaponShip
-  Group: cpgWeapon
-  Material: metalhard
-  Shape: ModelEntity
-  ShowBlockName: true
-  WeaponItem: BombLauncherSSWeapon
-  Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
-  # Mesh-Damage-1: Mesh/D0
-  # Mesh-Damage-2: Mesh/D1
-  # Mesh-Damage-3: Mesh/D2
-  # Mesh-Damage-4: Mesh/D3
-  DropMeshfile: Entities/Misc/BagSmallPrefab
-  
-  IsTextureable: true   # !!!
-  IsGPUInstance: false  # !!!
-  Texture: 50 
-  SoundOpen: UseActions/WeaponOpenClose
-  SoundClose: UseActions/WeaponOpenClose
-  IsActivateable: true
-  IsRetractable: true, display: true
-
-  Place: WeaponDir
-  AllowPlacingAt: SS, display: true
-  SizeInBlocks: "1,3,1", display: true
-  Volume: 62.5, type: float, display: true, formatter: Liter
-  Mass: 521, type: float, display: true, formatter: Kilogram
-  Info: bkiWeaponShip, display: true
-  Category: Weapons/Items
-  BlockColor: "110,110,110"
-  StackSize: 500
-  MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
-  EnergyIn: 6, type: int, display: true, formatter: Watt
-  CPUIn: 1050, type: int, display: true
-  HitPoints: 530, type: int, display: true
-
- # UnlockCost: 10, display: true
- # UnlockLevel: 7, display: true
- # TechTreeParent: WeaponSV04
- # TechTreeNames: Small Vessel
-} */
+#{ Block Id: 414, Name: WeaponSV06      #Bomb Unguided SV
+#  Class: Weapon
+#  IndexName: WeaponShip
+#  Group: cpgWeapon
+#  Material: metalhard
+#  Shape: ModelEntity
+#  ShowBlockName: true
+#  WeaponItem: BombLauncherSSWeapon
+#  Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
+#  # Mesh-Damage-1: Mesh/D0
+#  # Mesh-Damage-2: Mesh/D1
+#  # Mesh-Damage-3: Mesh/D2
+#  # Mesh-Damage-4: Mesh/D3
+#  DropMeshfile: Entities/Misc/BagSmallPrefab
+#
+#  IsTextureable: true   # !!!
+#  IsGPUInstance: false  # !!!
+#  Texture: 50
+#  SoundOpen: UseActions/WeaponOpenClose
+#  SoundClose: UseActions/WeaponOpenClose
+#  IsActivateable: true
+#  IsRetractable: true, display: true
+#
+#  Place: WeaponDir
+#  AllowPlacingAt: SS, display: true
+#  SizeInBlocks: "1,3,1", display: true
+#  Volume: 62.5, type: float, display: true, formatter: Liter
+#  Mass: 521, type: float, display: true, formatter: Kilogram
+#  Info: bkiWeaponShip, display: true
+#  Category: Weapons/Items
+#  BlockColor: "110,110,110"
+#  StackSize: 500
+#  MaxCount: 4, type: int, display: true
+#  BlastParticleIndex: 4
+#  BlastRadius: 2
+#  BlastDamage: 50
+#  EnergyIn: 6, type: int, display: true, formatter: Watt
+#  CPUIn: 1050, type: int, display: true
+#  HitPoints: 530, type: int, display: true
+#
+# # UnlockCost: 10, display: true
+# # UnlockLevel: 7, display: true
+# # TechTreeParent: WeaponSV04
+# # TechTreeNames: Small Vessel
+#}
  
-/* { +Block Id: 415, Name: CommodityConsole
-  AllowedInBlueprint: false, display: true
-  Class: TraderNPC
-  Group: cpgTrading
-  # TraderEntity: Trader1
-  TraderType: TraderDefault
-  Material: human
-  Shape: ModelEntity
-  Model: @models/Blocks/Mothership/TradingConsolePrefab
-  Place: Free
-  Info: bkiTraderBlock, display: true
-  BlockColor: "110,110,110"
-  IsAccessible: true, type: bool
-  Mass: 80, type: float, display: true, formatter: Kilogram
-  AllowPlacingAt: Base, display: true
-  SizeInBlocks: "1,1,1", display: true
-  SizeInBlocksLocked: "Base,MS"
-} */
+#{ +Block Id: 415, Name: CommodityConsole
+#  AllowedInBlueprint: false, display: true
+#  Class: TraderNPC
+#  Group: cpgTrading
+#  # TraderEntity: Trader1
+#  TraderType: TraderDefault
+#  Material: human
+#  Shape: ModelEntity
+#  Model: @models/Blocks/Mothership/TradingConsolePrefab
+#  Place: Free
+#  Info: bkiTraderBlock, display: true
+#  BlockColor: "110,110,110"
+#  IsAccessible: true, type: bool
+#  Mass: 80, type: float, display: true, formatter: Kilogram
+#  AllowPlacingAt: Base, display: true
+#  SizeInBlocks: "1,1,1", display: true
+#  SizeInBlocksLocked: "Base,MS"
+#}
+
+#  415 available free
+
 { +Block Id: 416, Name: TrussCube
   Material: hullarmored, display: true
   Shape: New
@@ -12835,48 +12844,8 @@ HullCombatSmallBlocks
   UnlockLevel: 1, display: true
   TechTreeNames: "Base,Capital Vessel"
 }
-# Can be used?
-{ Block Id: 782, Name: GrassGreen01
-  Material: plants, display: true
-  Model: @models2/Entities/Misc/DummyPrefab
-  ShowUser: No
-}
-{ Block Id: 783, Name: GrassGreen02, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 784, Name: GrassGreen03, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 785, Name: GrassGreen04, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 786, Name: GrassGreen05, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 787, Name: GrassBrown01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 788, Name: GrassBrown02, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 789, Name: GrassLowGreen01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 790, Name: GrassLowBrown01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 791, Name: Flower01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 792, Name: Flower02, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 793, Name: Flower03, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 794, Name: Flower04, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# free available 782 - 794
 
 { +Block Id: 795, Name: Window_v1x1Inv, Ref: Window_v1x1
   Model: @models/Blocks/Windows/Standard/Window_v1x1InvPrefab
@@ -13333,27 +13302,8 @@ HullCombatSmallBlocks
     Prob: 1
   }
 }
-{ Block Id: 845, Name: GrassGreen06, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 846, Name: Plant01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 847, Name: GrassGreen01a, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 848, Name: GrassGreen03a, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 849, Name: GrassBrown02a, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 850, Name: GrassBlue01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 851, Name: GrassBlue02, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# free available 845 - 851
 
 { +Block Id: 852, Name: DrillAttachmentSVT2
   LootList: 37   /* still used? */
@@ -13363,7 +13313,7 @@ HullCombatSmallBlocks
   Shape: ModelEntity
   ShowBlockName: true
   CustomIcon: DrillAttachmentT2
-  WeaponItem: DrillAttachmentT2Weapon
+  WeaponItem: DrillAttachmentSVT2Weapon
   Model: @models/Blocks/WeaponsShip/DrillAttachmentT2RetractPrefab
   # Model: @models/Blocks/WeaponsShip/DrillAttachmentPrefab
   # Mesh-Damage-1: Mesh/D0
@@ -13403,12 +13353,8 @@ HullCombatSmallBlocks
   TechTreeNames: Small Vessel
 }
 
-{ Block Id: 853, Name: GrassBlue03, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 854, Name: GrassThick01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+# available free 853, 854
+
 { Block Id: 855, Name: Butte1
   Material: rockhard, display: true
   Shape: Deco
@@ -13470,12 +13416,9 @@ HullCombatSmallBlocks
     Prob: 1
   }
 }
-{ Block Id: 865, Name: Plant01Blue, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 866, Name: Plant01Brown, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# available free 865, 866
+
 { Block Id: 867, Name: OmicronWaterleaf
   Material: woodsoft, display: true
   Shape: Deco
@@ -13590,15 +13533,9 @@ HullCombatSmallBlocks
     Prob: 1
   }
 }
-{ Block Id: 872, Name: GrassGreen04aSnow, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 873, Name: GrassGreen03bSnow, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 874, Name: GrassGreen06Snow, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# available free 872 873 874
+
 { Block Id: 875, Name: AlienTreeBlue
   Material: woodhard, display: true
   Shape: Deco
@@ -15861,18 +15798,9 @@ HullCombatSmallBlocks
   }
   Model: @models2/Environment/Plants/SpeedTrees/ElderberryBushNoFruitPrefab
 }
-{ Block Id: 1048, Name: GrassGreen03b, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1049, Name: GrassBrown02b, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1050, Name: GrassType01Brown, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1051, Name: Plant01Red, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# available free 1048 - 1051
+
 { Block Id: 1052, Name: UmbrellaTree
   Material: woodhard, display: true
   Shape: Deco
@@ -18877,15 +18805,8 @@ HullCombatSmallBlocks
   # }
 }
 
-{ Block Id: 1269, Name: GrassType03Red, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1270, Name: GrassType01Red, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1271, Name: GrassBrown02c, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+# available free 1269 1270 1271
+
 { +Block Id: 1272, Name: LightLantern, Ref: LightMS01
   Model: @models/Blocks/Mothership/LightLanternPrefab
 }
@@ -20995,19 +20916,8 @@ HullCombatSmallBlocks
   ShowUser: No
 }
 
+# available free 1449 - 1452
 
-{ Block Id: 1449, Name: GrassBlue04, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1450, Name: FlowerBlue01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1451, Name: GrassBrown04, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1452, Name: GrassBrown06, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
 { +Block Id: 1453, Name: StandingHuman, Ref: NPCHumanTemplate
   Class: NPCDialogue
   # AllowedInBlueprint: false, display: true
@@ -21868,30 +21778,8 @@ HullCombatSmallBlocks
   AboveTerrainCheck: false
 }
 
-{ Block Id: 1519, Name: Flower05, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1520, Name: GrassGreen07, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1521, Name: GrassGreen08, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1522, Name: Reeds01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1523, Name: Seaweed01, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1524, Name: Seaweed02, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1525, Name: Seaweed03, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1526, Name: Seaweed04, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+# available free 1519 - 1526
+
 # Sprout
 { Block Id: 1527, Name: MushroomBellBrown01Stage1, Ref: PlantGrowingTemplate
   Model: @models2/Entities/Farming/Misc/MushroomBellBrown01Stage1Prefab
@@ -22229,18 +22117,9 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Windows/Heavy/HeavyWindowFInvPrefab
   SymType: 2
 }
-{ Block Id: 1562, Name: Plant02, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1563, Name: GrassBrown04a, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1564, Name: Plant01a, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1565, Name: GrassBrown02d, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# available free 1562 - 1565
+
 { Block Id: 1566, Name: BrainFungusHarvested, Ref: BrainFungus
   Class: PlantGrowing
   { Child PlantGrowing
@@ -22250,15 +22129,9 @@ HullCombatSmallBlocks
   }
   Model: @models2/Environment/Plants/FractalFlora/BrainFungusHarvestedPrefab
 }
-{ Block Id: 1567, Name: Flower06, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1568, Name: Seaweed05, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
-{ Block Id: 1569, Name: GrassBrown05, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# available free 1567 - 1569
+
 { Block Id: 1570, Name: DimpleDomeHarvested, Ref: DimpleDome
   Class: PlantGrowing
   { Child PlantGrowing
@@ -22290,9 +22163,9 @@ HullCombatSmallBlocks
   TechTreeParent: CloneChamber
   TechTreeNames: "Base,Capital Vessel"
 }
-{ Block Id: 1572, Name: GrassFern, Ref: GrassGreen01
-  Model: @models2/Entities/Misc/DummyPrefab
-}
+
+# available free 1572
+
 { Block Id: 1573, Name: PulpitFungusHarvested, Ref: PulpitFungus
   Class: PlantGrowing
   { Child PlantGrowing
