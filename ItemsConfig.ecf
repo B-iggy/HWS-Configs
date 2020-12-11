@@ -12939,7 +12939,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 7.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
 }
-{ +Item Id: 624, Name: OxygenBoost , Ref: ArmorBoostTemplate
+{ +Item Id: 624, Name: OxygenBoost, Ref: ArmorBoostTemplate
   Armor: -10, type: int, display: true
   Oxygen: 150, type: int, display: true
   PowerFac: -0.03, type: float, display: true
@@ -13003,7 +13003,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 # Epic Armor Booster
-{ Item Id: 650, Name: ArmorBoostEpic , Ref: ArmorBoost
+{ Item Id: 650, Name: ArmorBoostEpic, Ref: ArmorBoost
   Armor: 100, type: int, display: true
   Heat: -6, type: int, display: true
   Cold: -6, type: int, display: true
@@ -13012,12 +13012,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
   ShowUser: Yes
 }
-{ Item Id: 651, Name: JetpackBoostEpic , Ref: JetpackBoost
+{ Item Id: 651, Name: JetpackBoostEpic, Ref: JetpackBoost
   JetpackFac: -0.26, type: float, display: true
 
   ShowUser: Yes
 }
-{ Item Id: 652, Name: MultiBoostEpic , Ref: MultiBoost
+{ Item Id: 652, Name: MultiBoostEpic, Ref: MultiBoost
   Armor: 25, type: int, display: true
   Oxygen: 50, type: int, display: true
   Radiation: 3, type: int, display: true
@@ -13034,18 +13034,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
   ShowUser: Yes
 }
-{ Item Id: 653, Name: OxygenBoostEpic , Ref: OxygenBoost
+{ Item Id: 653, Name: OxygenBoostEpic, Ref: OxygenBoost
   Oxygen: 250, type: int, display: true
 
-  ShowUser: Yes
+  ShowUser: No
 }
-{ Item Id: 654, Name: InsulationBoostEpic , Ref: InsulationBoost
+{ Item Id: 654, Name: InsulationBoostEpic, Ref: InsulationBoost
   Heat: 75, type: int, display: true
   Cold: 40, type: int, display: true
 
   ShowUser: Yes
 }
-{ Item Id: 655, Name: MobilityBoostEpic , Ref: MobilityBoost
+{ Item Id: 655, Name: MobilityBoostEpic, Ref: MobilityBoost
   PowerFac: 0.2, type: float, display: true
   SpeedFac: 0.2, type: float, display: true
   StaminaFac: -0.3, type: float, display: true
@@ -13064,7 +13064,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 9.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
 }
-{ Item Id: 657, Name: EVABoostEpic , Ref: EVABoost
+{ Item Id: 657, Name: EVABoostEpic, Ref: EVABoost
   Armor: -40, type: int, display: true
   Cold: 300, type: int, display: true
 
@@ -13298,7 +13298,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 /* CATEGORIE: New Weapon Items id 800 - 1000 */
 
-{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer , Ref: AssaultRifleT2
+{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer, Ref: AssaultRifleT2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPlyPrefab
   ShowUser: No
 
@@ -13307,7 +13307,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeParent: ""
   TechTreeNames: Hidden
 }
-{ +Item Id: 801, Name: ZiraxShotgunPlayer , Ref: Shotgun2
+{ +Item Id: 801, Name: ZiraxShotgunPlayer, Ref: Shotgun2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   ShowUser: No
 
@@ -13345,70 +13345,70 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 350
   ShowUser: Yes
 }
-{ +Item Id: 1005, Name: Narcotics , Ref: TradingGoodsTemplate
+{ +Item Id: 1005, Name: Narcotics, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1006, Name: Robotics , Ref: TradingGoodsTemplate
+{ +Item Id: 1006, Name: Robotics, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1007, Name: Optronics , Ref: TradingGoodsTemplate
+{ +Item Id: 1007, Name: Optronics, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1008, Name: Leather , Ref: TradingGoodsTemplate
+{ +Item Id: 1008, Name: Leather, Ref: TradingGoodsTemplate
   MarketPrice: 260
   ShowUser: Yes
 }
-{ +Item Id: 1009, Name: ToxicWaste , Ref: TradingGoodsTemplate
+{ +Item Id: 1009, Name: ToxicWaste, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1010, Name: AlienOrganism , Ref: TradingGoodsTemplate
+{ +Item Id: 1010, Name: AlienOrganism, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1011, Name: AncientRelics , Ref: TradingGoodsTemplate
+{ +Item Id: 1011, Name: AncientRelics, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1012, Name: Coolant , Ref: TradingGoodsTemplate
+{ +Item Id: 1012, Name: Coolant, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1013, Name: Chemicals , Ref: TradingGoodsTemplate
+{ +Item Id: 1013, Name: Chemicals, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1014, Name: Filters , Ref: TradingGoodsTemplate
+{ +Item Id: 1014, Name: Filters, Ref: TradingGoodsTemplate
   MarketPrice: 25
   ShowUser: Yes
 }
-{ +Item Id: 1015, Name: SpareParts , Ref: TradingGoodsTemplate
+{ +Item Id: 1015, Name: SpareParts, Ref: TradingGoodsTemplate
   MarketPrice: 500
   ShowUser: Yes
 }
-{ +Item Id: 1016, Name: ScienceEquipment , Ref: TradingGoodsTemplate
+{ +Item Id: 1016, Name: ScienceEquipment, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1017, Name: MutatedSubstance , Ref: TradingGoodsTemplate
+{ +Item Id: 1017, Name: MutatedSubstance, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1018, Name: TechnicalArtifact , Ref: TradingGoodsTemplate
+{ +Item Id: 1018, Name: TechnicalArtifact, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1019, Name: ToxicLiquid , Ref: TradingGoodsTemplate
+{ +Item Id: 1019, Name: ToxicLiquid, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1020, Name: AlphaVirus , Ref: TradingGoodsTemplate
+{ +Item Id: 1020, Name: AlphaVirus, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
-{ +Item Id: 1021, Name: Tablet , Ref: TradingGoodsTemplate
+{ +Item Id: 1021, Name: Tablet, Ref: TradingGoodsTemplate
   ShowUser: Yes
 }
 # ========================================= Temporary Trading Goods ==========================
-{ +Item Id: 1100, Name: MeleeTalonGuardianCharged , Ref: TradingGoodsTemplate
+{ +Item Id: 1100, Name: MeleeTalonGuardianCharged, Ref: TradingGoodsTemplate
   Info: bkiStaffOfGuidance, display: true
   ShowUser: Yes
 }
-{ +Item Id: 1101, Name: TalonCrossbowWeaponCharged , Ref: TradingGoodsTemplate
+{ +Item Id: 1101, Name: TalonCrossbowWeaponCharged, Ref: TradingGoodsTemplate
   Info: bkiTalonCrossbowWeaponCharged, display: true
   ShowUser: Yes
 }
-{ +Item Id: 1102, Name: TurretEnemyBallistaCharged , Ref: TradingGoodsTemplate
+{ +Item Id: 1102, Name: TurretEnemyBallistaCharged, Ref: TradingGoodsTemplate
   Info: bkiTalonTurretEnemyBallistaCharged, display: true
   ShowUser: Yes
 }
@@ -13426,19 +13426,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Components
   ShowUser: No
 }
-{ +Item Id: 1151, Name: SantaClausHat , Ref: SuitPropsTemplate
+{ +Item Id: 1151, Name: SantaClausHat, Ref: SuitPropsTemplate
   Info: bkiSantaClausHat, display: true
   PropHead: SantaClausHat
   ShowUser: Yes
 }
-{ +Item Id: 1152, Name: SnowmanHead , Ref: SuitPropsTemplate
+{ +Item Id: 1152, Name: SnowmanHead, Ref: SuitPropsTemplate
   Info: bkiSnowmanHead, display: true
   PropHead: SnowmanHead
-  ShowUser: Yes
-}
-{ +Item Id: 1153, Name: CowboyHat , Ref: SuitPropsTemplate
-  Info: "HII Haaa", display: true
-  PropHead: CowboyHat
   ShowUser: Yes
 }
 # ========================================= STATUS EFFECT TEST ==========================
@@ -13573,27 +13568,27 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 
 # ========================================= SPECIAL ITEMS  ==========================
-{ +Item Id: 1300, Name: KeyCardBlack , Ref: TradingGoodsTemplate
+{ +Item Id: 1300, Name: KeyCardBlack, Ref: TradingGoodsTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
-{ +Item Id: 1301, Name: KeyCardBlue , Ref: TradingGoodsTemplate
+{ +Item Id: 1301, Name: KeyCardBlue, Ref: TradingGoodsTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
-{ +Item Id: 1302, Name: KeyCardGreen , Ref: TradingGoodsTemplate
+{ +Item Id: 1302, Name: KeyCardGreen, Ref: TradingGoodsTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
-{ +Item Id: 1303, Name: KeyCardYellow , Ref: TradingGoodsTemplate
+{ +Item Id: 1303, Name: KeyCardYellow, Ref: TradingGoodsTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
-{ +Item Id: 1304, Name: KeyCardRed , Ref: TradingGoodsTemplate
+{ +Item Id: 1304, Name: KeyCardRed, Ref: TradingGoodsTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
