@@ -12848,6 +12848,25 @@ HullCombatSmallBlocks
 
 # free available 782 - 794
 
+{ +Block Id: 794, Name: HWSBlockSpikeTrap
+  Class: Damage
+  Damage: 1000
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockSpikeTrap
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+}
+
 { +Block Id: 795, Name: Window_v1x1Inv, Ref: Window_v1x1
   Model: @models/Blocks/Windows/Standard/Window_v1x1InvPrefab
   ShowUser: NoButCSV

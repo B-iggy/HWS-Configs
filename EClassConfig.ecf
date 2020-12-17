@@ -9009,14 +9009,17 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 # HWS Content
 
-{ +Entity Name: HWSCyborgServant, Ref: DamagedCyborg
+{ +Entity Name: HWSCyborgServant, Ref: DamagedCyborgStatic
   Mesh: Enemies/AssaultCyborg/ServantCyborgPrefab
   SurfaceCategory: metal
   HeadTransform: Bip01_Head
-
   Faction: Cyborgs
-
   /* AI properties */
   AITask-1: TraderTalksTo
+}
 
+{ +Entity Name: HWSMedicCyborgStatic, Ref: DamagedCyborgStatic
+  Mesh: Enemies/AssaultCyborg/MedicCyborgPrefab
+  SurfaceCategory: metal
+  HeadTransform: Bip01_Head
 }

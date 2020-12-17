@@ -4036,7 +4036,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 #  Material: metalweapon
 #  HoldType: 0
 #  StackSize: 25
-#  Marketprice: 250, display: true
+#  MarketPrice: 250, display: true
 #  Canhold: false
 #  Category: Weapons/Items
 #  Mass: 250, type: float, display: true, formatter: Kilogram
@@ -13436,6 +13436,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PropHead: SnowmanHead
   ShowUser: Yes
 }
+{ +Item Id: 1153, Name: HWSHelmetPatron, Ref: SuitPropsTemplate
+  Info: bkiHWSHelmetPatron, display: true
+  PropHead: HWSHelmetPatron
+  ShowUser: Yes
+}
 # ========================================= STATUS EFFECT TEST ==========================
 { Item Id: 1200, Name: FlameThrowerDEBUG
   Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
@@ -13605,7 +13610,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 1, type: float, display: true, formatter: Kilogram
   Volume: 2, type: float, display: true, formatter: Liter
   Info: Don't write anything here, display: true
-  Category: Components 
+  Category: Components
+  MarketPrice: 100
   
   StackSize: 1
   ShowUser: Yes
