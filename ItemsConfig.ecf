@@ -13419,16 +13419,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PropHead: SnowmanHead
   ShowUser: Yes
 }
-{ +Item Id: 1153, Name: HWSHelmetPatron, Ref: SuitPropsTemplate
-  Info: bkiHWSHelmetPatron, display: true
-  PropHead: HWSHelmetPatron
-  ShowUser: Yes
-}
-{ +Item Id: 1154, Name: HWSNecklaceElementalPower, Ref: SuitPropsTemplate
-  Info: bkiHWSNecklaceElementalPower, display: true
-  PropHead: HWSNecklaceElementalPower
-  ShowUser: Yes
-}
 
 # ========================================= STATUS EFFECT TEST ==========================
 { Item Id: 1200, Name: FlameThrowerDEBUG
