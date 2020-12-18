@@ -1559,6 +1559,7 @@ HullCombatSmallBlocks
   Mesh-Damage-4: Mesh/D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
+  AllowedInBlueprint: false, display: true
   CustomIcon: WarpDrive
   AllowPlacingAt: MS, display: true
   SizeInBlocks: "3,2,5", display: true
@@ -12848,6 +12849,25 @@ HullCombatSmallBlocks
 
 # free available 782 - 794
 
+{ +Block Id: 793, Name: HWSBlockElementalStone
+  Class: NPCDialogue
+  IsAccessible: true, type: bool
+  Model: @hwsmodels/HWSBlockElementalStone
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+}
+
+
 { +Block Id: 794, Name: HWSBlockSpikeTrap
   Class: Damage
   Damage: 1000
@@ -12859,6 +12879,7 @@ HullCombatSmallBlocks
   Material: metal, display: true
   ShowBlockName: true
   Place: Free
+  AllowedInBlueprint: false, display: true
   AllowPlacingAt: "Base,MS,SS,HV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
