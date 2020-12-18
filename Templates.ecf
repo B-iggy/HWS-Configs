@@ -17,10 +17,43 @@
 
 ## Adding T1 devices as Input to T2 devices only works for single devices (eg Constructor T1/T2) - does not work for block groups (eg Cockpits T1/T2). For latter do not use T1 as Input 
 
+# Special trick for finding Admin Cores
+# { +Template Name: MutatedSubstance
+#   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     CrushedStone: 77777
+#   }
+# }
+# { +Template Name: AlphaVirus
+#   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     CrushedStone: 77777
+#   }
+# }
+#
+# { +Template Name: CoreNPCAdmin
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     MutatedSubstance: 66666666
+#   }
+# }
+# { +Template Name: CorePlayerAdmin
+#   CraftTime: 5
+#   Target: ""
+#   { Child Inputs
+#     AlphaVirus: 88888888
+#   }
+# }
+
  # =======================
- #  Reprocessed Ores  
+ #  Reprocessed Ores
  # =======================
- 
+
 { +Template Name: IronOre
   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
   CraftTime: 5
@@ -45,24 +78,24 @@
     CrushedStone: 15
   }
 }
-# { +Template Name: PentaxidOre
-#   BaseItem: true  # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
-#   CraftTime: 200
-#   OutputCount: 105
-#   Target: AdvC
-#   { Child Inputs
-#     PromethiumOre: 5
-#     ErestrumOre: 5
-#     ZascosiumOre: 5
-#     SathiumOre: 5
-#     CrushedStone: 5
-#     PentaxidOre: 100
-#   }
-# }
+{ +Template Name: PentaxidOre
+  BaseItem: true  # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
+  CraftTime: 200
+  OutputCount: 105
+  Target: AdvC
+  { Child Inputs
+    PromethiumOre: 5
+    ErestrumOre: 5
+    ZascosiumOre: 5
+    SathiumOre: 5
+    CrushedStone: 5
+    PentaxidOre: 100
+  }
+}
  # =======================
- #  Common Material Ingots 
+ #  Common Material Ingots
  # =======================
- 
+
 { +Template Name: IronIngot
   BaseItem: true #A1
   OutputCount: 10
@@ -94,9 +127,9 @@
 }
 
  # =======================
- #  Advanced Material Ingots 
+ #  Advanced Material Ingots
  # =======================
- 
+
 { +Template Name: CobaltIngot
   BaseItem: true #B1
   OutputCount: 10
@@ -128,7 +161,7 @@
 }
 
  # =======================
- #  Special Material Ingots 
+ #  Special Material Ingots
  # =======================
 
 { +Template Name: ErestrumIngot
@@ -152,7 +185,7 @@
 }
 
 { +Template Name: XenoSubstrate
-  BaseItem: true 
+  BaseItem: true
   CraftTime: 5
   Target: ""
   { Child Inputs
@@ -176,7 +209,7 @@
 
 
  # =======================
- #  Money and Payment Ingots 
+ #  Money and Payment Ingots
  # =======================
 
 { +Template Name: GoldIngot
@@ -190,9 +223,9 @@
 }
 
  # ============================
- #  Alloys and Composite materials 
+ #  Alloys and Composite materials
  # ============================
- 
+
 { +Template Name: ZascosiumAlloy
   OutputCount: 1
   CraftTime: 5
@@ -219,7 +252,6 @@
 { +Template Name: PentaxidElement
   OutputCount: 10
   CraftTime: 5
-  BaseItem: true
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     PentaxidOre: 5
@@ -234,7 +266,7 @@
     PentaxidOre: 5
   }
 }
- 
+
 { +Template Name: PromethiumPellets
   OutputCount: 10 #A1
   CraftTime: 5
@@ -245,7 +277,7 @@
 }
 
  # ============================
- #  Basic biological materials 
+ #  Basic biological materials
  # ============================
 
 { +Template Name: WaterJug
@@ -253,10 +285,10 @@
   CraftTime: 15
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    IceBlocks: 5
+    IceBlocks: 1
   }
 }
- 
+
 { +Template Name: WaterBottle
   BaseItem: true
   OutputCount: 10
@@ -278,9 +310,9 @@
   }
 }
 
- 
+
  # ==========================
- #  Basic building materials 
+ #  Basic building materials
  # ==========================
 
 { +Template Name: Cement
@@ -294,11 +326,11 @@
 
 { +Template Name: WoodPlanks
   BaseItem: true #A1
-  OutputCount: 20
+  OutputCount: 50
   CraftTime: 10
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    WoodLogs: 5
+    WoodLogs: 1
   }
 }
 
@@ -308,7 +340,7 @@
   CraftTime: 2
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    Fiber: 10
+    Fiber: 1
   }
 }
 
@@ -318,7 +350,7 @@
   CraftTime: 5
   Target: "SurvC,FoodP,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    Fiber: 10
+    Fiber: 4
     RockDust: 1
   }
 }
@@ -343,7 +375,7 @@
 }
 
  # ===============
- #  Energy items 
+ #  Energy items
  # ===============
 
 { +Template Name: EnergyCell
@@ -357,7 +389,7 @@
 }
 
 { +Template Name: EnergyCellLarge
-  OutputCount: 2 #A1 
+  OutputCount: 2 #A1
   CraftTime: 15
   DeconOverride: Stop
   Target: "LargeC,AdvC"
@@ -383,12 +415,11 @@
   { Child Inputs
     PromethiumPellets: 50
     HydrogenBottle: 10
-	SteelPlate: 1
   }
 }
 
  # ===================
- #  Basic Components 
+ #  Basic Components
  # ===================
 
 { +Template Name: SteelPlate
@@ -396,13 +427,13 @@
   CraftTime: 2
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    IronIngot: 5
+    IronIngot: 2
   }
 }
 
 # no longer used as ingredient, acts as vendor trash for now
 { +Template Name: MetalPieces
-  OutputCount: 10 
+  OutputCount: 10
   CraftTime: 2
   Target: ""
   { Child Inputs
@@ -415,8 +446,8 @@
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     CobaltIngot: 2
-    OpticalFiber: 2
-    Electronics: 5
+    CopperIngot: 1
+    SiliconIngot: 1
   }
 }
 
@@ -440,7 +471,7 @@
 }
 
 { +Template Name: OpticalFiber
-  OutputCount: 5 #A1
+  OutputCount: 2 #A1
   CraftTime: 2
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -505,7 +536,7 @@
 { +Template Name: PlatinBar
   BaseItem: true #A1
   OutputCount: 10 #A1
-  CraftTime: 10
+  CraftTime: 5
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC,Furn"
   { Child Inputs
     PlatinOre: 5
@@ -513,25 +544,24 @@
 }
 
 { +Template Name: PlatinOunce
-  OutputCount: 10
+  OutputCount: 9
   CraftTime: 15
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    PlatinBar: 5
+    PlatinBar: 1
   }
 }
-
  # =======================
- #  Composite Components 
- # ======================= 
+ #  Composite Components
+ # =======================
 
 { +Template Name: Computer
   CraftTime: 2 #A1
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 1
-    OpticalFiber: 2
-    Electronics: 10
+    OpticalFiber: 1
+    Electronics: 2
   }
 }
 
@@ -542,7 +572,6 @@
     SteelPlate: 2
     Nanotubes: 3
     Electronics: 1
-    MechanicalComponents: 2
   }
 }
 
@@ -559,8 +588,9 @@
 { +Template Name: SteelPlateArmored
   OutputCount: 10 #C1
   CraftTime: 4
-  Target: "LargeC,AdvC"
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
+    SteelPlate: 3
     SathiumIngot: 5
   }
 }
@@ -582,12 +612,11 @@
     Oscillator: 4
     Nanotubes: 3
     SteelPlate: 3
-	Electronics: 2
   }
 }
 
  # ======================
- #  Advanced Components 
+ #  Advanced Components
  # ======================
 
 { +Template Name: Oscillator
@@ -595,12 +624,9 @@
   CraftTime: 3 #C2
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    NeodymiumIngot: 4
-    GlassPlate: 1
-    Electronics: 2
-    OpticalFiber: 4
-    CobaltAlloy: 2
-    TitanPlates: 4
+    NeodymiumIngot: 5
+    CobaltIngot: 2
+    TitanRods: 5
   }
 }
 
@@ -608,10 +634,9 @@
   CraftTime: 3 #C1
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    TitanPlates: 4
+    TitanRods: 5
     NeodymiumIngot: 5
     CobaltIngot: 2
-	CopperIngot: 2
   }
 }
 
@@ -619,17 +644,15 @@
   CraftTime: 3 #D1
   Target: "LargeC,AdvC"
   { Child Inputs
-    EnergyMatrix: 2
     ErestrumIngot: 8
     ZascosiumIngot: 10
     FluxCoil: 1
-    Oscillator: 2
   }
 }
 
- # ================= 
- #  Currency Items 
- # ================= 
+ # =================
+ #  Currency Items
+ # =================
 
 { +Template Name: GoldCoins
   OutputCount: 5 #A2
@@ -640,27 +663,27 @@
   }
 }
 
- # ======================= 
- #  New structure blocks 
- # ======================= 
+ # =======================
+ #  New structure blocks
+ # =======================
 
 { +Template Name: SpawnNewBase
   CraftTime: 12 #A1 1
-  Target: "SurvC,HoverC,SmallC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     Core: 1
   }
 }
 # { +Template Name: SpawnNewBaseS
   # CraftTime: 12 #A1 1
-  # Target: "SurvC,HoverC,SmallC,BaseC,LargeC,AdvC"
+  # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   # { Child Inputs
     # Core: 1
   # }
 # }
 # { +Template Name: SpawnNewBaseM
   # CraftTime: 12 #A1 1
-  # Target: "SurvC,HoverC,SmallC,BaseC,LargeC,AdvC"
+  # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   # { Child Inputs
     # Core: 1
   # }
@@ -715,8 +738,8 @@
   # }
 # }
 
- # ======================= 
- #  Fixed Model Vessels 
+ # =======================
+ #  Fixed Model Vessels
  # =======================
 
 { +Template Name: PlayerBikeKit
@@ -735,13 +758,13 @@
   }
 }
 
- # ======================= 
+ # =======================
  #  Construction Blocks SMALL
- # ======================= 
+ # =======================
 
 { +Template Name: PlasticSmallBlocks
-  CraftTime: 2 
-  DeconOverride: Continue 
+  CraftTime: 2
+  DeconOverride: Continue
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     PlasticMaterial: 1
@@ -782,16 +805,16 @@
   }
 }
 
- # ======================= 
+ # =======================
  #  Construction Blocks LARGE
- # ======================= 
+ # =======================
 
 { +Template Name: PlasticLargeBlocks
-  CraftTime: 2  
+  CraftTime: 2
   DeconOverride: Continue
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    PlasticMaterial: 5
+    PlasticMaterial: 2
   }
 }
 
@@ -800,7 +823,7 @@
   DeconOverride: Continue
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    WoodPlanks: 2
+    WoodPlanks: 1
   }
 }
 
@@ -816,13 +839,13 @@
 }
 
 { +Template Name: ConcreteArmoredBlocks
-  CraftTime: 4 #A2
+  CraftTime: 1 #A2
   Target: "LargeC,AdvC"
   { Child Inputs
-    Cement: 5
+    Cement: 3
     RockDust: 6
     WaterJug: 6
-    SteelPlate: 5
+    SteelPlate: 2
   }
 }
 
@@ -862,17 +885,17 @@
 
 { +Template Name: AlienLargeBlocks
   CraftTime: 2 #C1 Ba CV 1 1500hp
-  Target: "AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 5
     SteelPlateArmored: 5
-    XenoSubstrate: 10
+    XenoSubstrate: 5
   }
 }
 
- # ======================= 
+ # =======================
  #  Creative Building Blocks
- # ======================= 
+ # =======================
 
  # Hidden - obsolete
 { +Template Name: HullDestroyed
@@ -896,7 +919,7 @@
   CraftTime: 2
   Target: ""
   { Child Inputs
-    SteelPlate: 2
+    SteelPlate: 1
   }
 }
 
@@ -908,9 +931,9 @@
   }
 }
 
-# ======================= 
- #  Building Blocks 
- # ======================= 
+# =======================
+ #  Building Blocks
+ # =======================
 
 { +Template Name: ArtMassBlocks
   CraftTime: 2 #A1 HV SV 1
@@ -925,23 +948,23 @@
   DeconOverride: Continue
   Target: "SurvC,BaseC,LargeC,AdvC"
   { Child Inputs
-    WoodPlanks: 2
+    WoodPlanks: 1
   }
 }
 
 { +Template Name: StairsBlocksConcrete
-  CraftTime: 1 #A1 1 
+  CraftTime: 1 #A1 1
   Target: "SurvC,BaseC,LargeC,AdvC"
   { Child Inputs
-    Cement: 2
+    Cement: 5
   }
 }
 
 { +Template Name: StairsBlocks
   CraftTime: 2 #A2
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 5
+    SteelPlate: 2
   }
 }
 
@@ -985,9 +1008,9 @@
   CraftTime: 8 #C2 Ba CV 1
   Target: "LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 6
+    SteelPlate: 5
     GlassPlate: 10
-    TitanPlates: 6
+    TitanPlates: 5
   }
 }
 
@@ -1012,7 +1035,7 @@
 }
 
 { +Template Name: HeavyWindowBlocks
-  CraftTime: 10  
+  CraftTime: 10
   Target: AdvC
   { Child Inputs
     SteelPlate: 10
@@ -1050,9 +1073,7 @@
   Target: "BaseC,LargeC,AdvC"
   { Child Inputs
     Electronics: 2
-    OpticalFiber: 4
     MechanicalComponents: 4
-    PlasticMaterial: 4
   }
 }
 
@@ -1061,23 +1082,21 @@
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     Electronics: 2
-    OpticalFiber: 2
     MechanicalComponents: 2
-    PlasticMaterial: 1
   }
 }
 
- # ======================= 
+ # =======================
  #      Deco Devices
- # ======================= 
+ # =======================
 
 { +Template Name: DecoBlocks
   CraftTime: 5 #A2
   Target: "LargeC,AdvC"
   { Child Inputs
-    WoodPlanks: 2
-    PlasticMaterial: 5
-    MechanicalComponents: 2
+    WoodPlanks: 1
+    PlasticMaterial: 1
+    MechanicalComponents: 1
   }
 }
 { +Template Name: DecoBlocks2
@@ -1085,9 +1104,9 @@
   Target: "LargeC,AdvC"
   { Child Inputs
     Electronics: 2
-    PlasticMaterial: 5
+    PlasticMaterial: 1
     MechanicalComponents: 2
-    GlassPlate: 2
+    GlassPlate: 1
   }
 }
 { +Template Name: DecoVesselBlocks
@@ -1095,10 +1114,9 @@
   Target: "LargeC,AdvC"
   { Child Inputs
     Electronics: 2
-    PlasticMaterial: 4
+    PlasticMaterial: 1
     MechanicalComponents: 2
     GlassPlate: 1
-    SteelPlate: 1
   }
 }
 
@@ -1108,7 +1126,6 @@
   { Child Inputs
     PlasticMaterial: 2
     WoodPlanks: 1
-    Fiber: 10
   }
 }
 
@@ -1130,13 +1147,11 @@
     Electronics: 3
     PlasticMaterial: 2
     Computer: 2
-    OpticalFiber: 10
-    GlassPlate: 1
   }
 }
 
 { +Template Name: AntennaBlocks
-  CraftTime: 10 #B1 
+  CraftTime: 10 #B1
   Target: "LargeC,AdvC"
   { Child Inputs
     Electronics: 3
@@ -1159,12 +1174,12 @@
   }
 }
 
- # ======================= 
- #      CPU and Core Devices 
- # ======================= 
+ # =======================
+ #      CPU and Core Devices
+ # =======================
 
 { +Template Name: CoreNoCPU
-  CraftTime: 700 #A1 1
+  CraftTime: 25 #A1 1
   Target: ""
   { Child Inputs
     SteelPlate: 6
@@ -1195,14 +1210,13 @@
 }
 { +Template Name: CPUExtenderHVT2
   CraftTime: 100 #A2 1
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 12
-    Electronics: 12
+    Electronics: 8
     Computer: 10
-    OpticalFiber: 16
-    TitanRods: 10
-    EnergyMatrix: 5
+    OpticalFiber: 6
+    FluxCoil: 1
   }
 }
 { +Template Name: CPUExtenderHVT3
@@ -1214,7 +1228,7 @@
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 4
-    SmallOptronicBridge: 3
+    SmallOptronicBridge: 1
   }
 }
 { +Template Name: CPUExtenderHVT4
@@ -1227,20 +1241,19 @@
     OpticalFiber: 12
     FluxCoil: 4
     PowerCoil: 2
-    SmallOptronicBridge: 4
-    SmallOptronicMatrix: 4
+    SmallOptronicBridge: 1
+    SmallOptronicMatrix: 1
   }
 }
 { +Template Name: CPUExtenderSVT2
   CraftTime: 140 #A2 1
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 12
     Electronics: 8
     Computer: 10
-    OpticalFiber: 18
-    TitanRods: 20
-    EnergyMatrix: 5
+    OpticalFiber: 6
+    FluxCoil: 2
   }
 }
 { +Template Name: CPUExtenderSVT3
@@ -1252,33 +1265,32 @@
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 8
-    SmallOptronicBridge: 3
+    SmallOptronicBridge: 2
   }
 }
 { +Template Name: CPUExtenderSVT4
   CraftTime: 500 #A4 1
   Target: "AdvC"
   { Child Inputs
-    SteelPlateArmored: 24
-    Electronics: 60
+    SteelPlate: 24
+    Electronics: 16
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 8
     PowerCoil: 2
-    SmallOptronicBridge: 4
-    SmallOptronicMatrix: 4
+    SmallOptronicBridge: 2
+    SmallOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderCVT2
   CraftTime: 170 #A2 1
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 12
     Electronics: 8
     Computer: 10
     OpticalFiber: 6
     FluxCoil: 4
-    EnergyMatrix: 3
   }
 }
 { +Template Name: CPUExtenderCVT3
@@ -1290,34 +1302,32 @@
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 14
-    LargeOptronicBridge: 3
+    LargeOptronicBridge: 2
   }
 }
 { +Template Name: CPUExtenderCVT4
   CraftTime: 800 #A4 1
   Target: "AdvC"
   { Child Inputs
-    SteelPlateArmored: 36
-    Electronics: 60
+    SteelPlate: 24
+    Electronics: 16
     Computer: 20
     OpticalFiber: 12
-    ZascosiumAlloy: 24
     FluxCoil: 14
     PowerCoil: 6
-    LargeOptronicBridge: 4
-    LargeOptronicMatrix: 4
+    LargeOptronicBridge: 2
+    LargeOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderBAT2
   CraftTime: 160 #A2 1
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 12
     Electronics: 8
     Computer: 10
     OpticalFiber: 6
     FluxCoil: 4
-    EnergyMatrix: 4
   }
 }
 { +Template Name: CPUExtenderBAT3
@@ -1329,7 +1339,7 @@
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 14
-    LargeOptronicBridge: 3
+    LargeOptronicBridge: 2
   }
 }
 { +Template Name: CPUExtenderBAT4
@@ -1342,13 +1352,13 @@
     OpticalFiber: 12
     FluxCoil: 14
     PowerCoil: 6
-    LargeOptronicBridge: 4
+    LargeOptronicBridge: 2
     LargeOptronicMatrix: 4
   }
 }
- # ======================= 
- #      Basic Devices 
- # ======================= 
+ # =======================
+ #      Basic Devices
+ # =======================
 
 { +Template Name: DoorBlocks
   CraftTime: 5 #A2 Ba CV 1
@@ -1368,12 +1378,11 @@
     Electronics: 2
     CobaltAlloy: 5
     TitanPlates: 3
-	Motor: 1
   }
 }
 
 { +Template Name: ForcefieldEmitterBlocks
-  CraftTime: 15 
+  CraftTime: 15
   Target: "LargeC,AdvC"
   { Child Inputs
     CapacitorComponent: 1
@@ -1389,13 +1398,12 @@
     MechanicalComponents: 4
     Electronics: 3
     SteelPlate: 2
-	Motor: 1
   }
 }
 
 { +Template Name: ShutterDoorLargeBlocks
   CraftTime: 5 #A2 Ba CV 5
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     MechanicalComponents: 20
     Motor: 1
@@ -1406,8 +1414,8 @@
 }
 
 { +Template Name: ShutterDoorSmallBlocks
-  CraftTime: 4 #A2 HV SV 5
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  CraftTime: 5 #A2 HV SV 5
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     MechanicalComponents: 10
     Motor: 1
@@ -1452,7 +1460,7 @@
 # }
 { +Template Name: RampLargeBlocks
   CraftTime: 5 #A1
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 20
     Motor: 2
@@ -1460,8 +1468,8 @@
   }
 }
 { +Template Name: RampSmallBlocks
-  CraftTime: 3 #A1
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  CraftTime: 5 #A1
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 10
     Motor: 1
@@ -1546,7 +1554,7 @@
 }
 
 { +Template Name: RemoteConnection
-  CraftTime: 10  
+  CraftTime: 10
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     Electronics: 3
@@ -1556,10 +1564,9 @@
 }
 
 { +Template Name: DetectorHVT1
-  CraftTime: 10  
-  Target: "SurvC,HoverC,SmallC,BaseC,LargeC,AdvC"
+  CraftTime: 10
+  Target: "SurvC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    PlasticMaterial: 4
     Electronics: 1
     OpticalFiber: 2
     Computer: 1
@@ -1568,9 +1575,8 @@
 
 { +Template Name: DetectorSVT1
   CraftTime: 10
-  Target: "HoverC,SmallC,BaseC,LargeC,AdvC"
+  Target: "SmallC,BaseC,LargeC,AdvC"
   { Child Inputs
-    PlasticMaterial: 4
     Electronics: 2
     OpticalFiber: 4
     Computer: 1
@@ -1578,7 +1584,7 @@
 }
 
 { +Template Name: DetectorCV
-  CraftTime: 20  
+  CraftTime: 20
   Target: "LargeC,AdvC"
   { Child Inputs
     Electronics: 12
@@ -1599,7 +1605,6 @@
     ZascosiumAlloy: 5
     OpticalFiber: 10
     Nanotubes: 10
-    SteelPlate: 24
   }
 }
 
@@ -1647,7 +1652,7 @@
   CraftTime: 60 #C2 Ba CV 10
   Target: "LargeC,AdvC"
   { Child Inputs
-    SteelPlateArmored: 40
+    SteelPlate: 5
     MechanicalComponents: 10
     Motor: 2
     Computer: 2
@@ -1666,7 +1671,6 @@
     TitanPlates: 100
     Motor: 3
     FluxCoil: 5
-    Cement: 20
   }
 }
 { +Template Name: RepairBayConsole
@@ -1690,7 +1694,6 @@
     TitanPlates: 10
     SteelPlate: 10
     CapacitorComponent: 10
-    Oscillator: 10
     EnergyMatrix: 4
     ZascosiumAlloy: 25
   }
@@ -1699,7 +1702,7 @@
   CraftTime: 100 #D1 12
   Target: "AdvC"
   { Child Inputs
-    SteelPlateArmored: 10
+    SteelPlate: 10
     TitanPlates: 20
     PowerCoil: 6
     CapacitorComponent: 15
@@ -1714,7 +1717,6 @@
   { Child Inputs
     PowerCoil: 4
     SteelPlate: 10
-    Oscillator: 8
     SteelPlateArmored: 10
     CapacitorComponent: 10
     EnergyMatrix: 4
@@ -1725,6 +1727,7 @@
   CraftTime: 100 #D1 12
   Target: "AdvC"
   { Child Inputs
+    SteelPlate: 10
     SteelPlateArmored: 10
     PowerCoil: 6
     CapacitorComponent: 15
@@ -1754,7 +1757,6 @@
     FluxCoil: 5
     ZascosiumAlloy: 25
     PowerCoil: 5
-    LaserKit: 1
     # AutoMinerCore: 1
   }
 }
@@ -1769,7 +1771,6 @@
     CapacitorComponent: 15
     ZascosiumAlloy: 75
     PowerCoil: 10
-    LaserKit: 2
     # AutoMinerCore: 1
   }
 }
@@ -1827,15 +1828,13 @@
   { Child Inputs
     SteelPlate: 12
     Electronics: 1
-	Computer: 1
   }
 }
 { +Template Name: ContainerExtensionLarge
-  CraftTime: 10 #A2 Ba CV 
+  CraftTime: 10 #A2 Ba CV
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 12
-	Electronics: 4
   }
 }
 { +Template Name: ContainerControllerSmall
@@ -1844,7 +1843,6 @@
   { Child Inputs
     SteelPlate: 2
     Electronics: 1
-	Computer: 1
   }
 }
 { +Template Name: ContainerExtensionSmall
@@ -1852,7 +1850,6 @@
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 2
-	Electronics: 1
   }
 }
 { +Template Name: ContainerHarvestControllerLarge
@@ -1860,8 +1857,7 @@
   Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 12
-    Electronics: 2
-	Computer: 1
+    Electronics: 1
   }
 }
 { +Template Name: ContainerHarvestControllerSmall
@@ -1870,7 +1866,6 @@
   { Child Inputs
     SteelPlate: 2
     Electronics: 1
-	Computer: 1
   }
 }
 
@@ -1880,7 +1875,6 @@
   { Child Inputs
     SteelPlate: 2
     Electronics: 1
-	Computer: 1
   }
 }
 { +Template Name: ContainerAmmoLarge
@@ -1889,7 +1883,6 @@
   { Child Inputs
     SteelPlate: 12
     MechanicalComponents: 2
-	Computer: 1
   }
 }
 
@@ -1910,7 +1903,6 @@
     SteelPlate: 5
     GlassPlate: 1
     OpticalFiber: 10
-	Electronics: 1
   }
 }
 
@@ -1921,7 +1913,6 @@
     SteelPlate: 2
     GlassPlate: 1
     OpticalFiber: 5
-	Electronics: 1
   }
 }
 
@@ -1932,7 +1923,6 @@
     SteelPlate: 2
     GlassPlate: 1
     OpticalFiber: 2
-	Electronics: 1
   }
 }
 
@@ -1940,10 +1930,9 @@
   CraftTime: 5 #A2 Ba HV SV CV 5
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    PlasticMaterial: 2
+    SteelPlate: 2
     GlassPlate: 1
     OpticalFiber: 2
-	Electronics: 1
   }
 }
 
@@ -1952,9 +1941,7 @@
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 5
-	PlasticMaterial: 2
     GlassPlate: 1
-	OpticalFiber: 2
   }
 }
 
@@ -1964,7 +1951,6 @@
   { Child Inputs
     SteelPlate: 10
     GlassPlate: 2
-	OpticalFiber: 5
   }
 }
 
@@ -1987,7 +1973,6 @@
     Nanotubes: 2
     Computer: 1
     SteelPlate: 10
-	Electronics: 12
   }
 }
 
@@ -1998,23 +1983,17 @@
     Nanotubes: 1
     Computer: 1
     SteelPlate: 5
-	Electronics: 10
   }
 }
 
 { +Template Name: MedicalStationBlocks
   CraftTime: 12 #A2 Ba CV 10
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
-    MechanicalComponents: 12
-    Nanotubes: 8
-    Computer: 8
-    OpticalFiber: 12
-    PlasticMaterial: 24
-    Motor: 4
-    Electronics: 16
-    CobaltAlloy: 8
-	SteelPlate: 8
+    MechanicalComponents: 6
+    Nanotubes: 2
+    Computer: 2
+    OpticalFiber: 3
   }
 }
 
@@ -2022,21 +2001,18 @@
   CraftTime: 12 #A2 Ba CV 10
   Target: "LargeC,AdvC"
   { Child Inputs
-    MechanicalComponents: 12
-    PlasticMaterial: 16
-	Electronics: 12
-    Nanotubes: 5
-    Computer: 4
-    OpticalFiber: 8
-	TitanPlates: 6
+    MechanicalComponents: 3
+    Nanotubes: 1
+    Computer: 1
+    OpticalFiber: 2
   }
 }
 
 { +Template Name: VentilatorBlocks
-  CraftTime: 5 #A2 Ba HV SV CV 3
-  Target: "SurvC,HoverC,SmallC,BaseC,LargeC,AdvC"
+  CraftTime: 10 #A2 Ba HV SV CV 3
+  Target: "BaseC,LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 6
+    SteelPlate: 12
     OpticalFiber: 3
     Motor: 1
   }
@@ -2172,8 +2148,6 @@
   Target: "BaseC,LargeC,AdvC"
   { Child Inputs
     Computer: 2
-    GlassPlate: 2
-    PlasticMaterial: 10
     Electronics: 3
     SteelPlate: 25
     OpticalFiber: 3
@@ -2214,7 +2188,7 @@
   }
 }
 
-{ +Template Name: GeneratorBA  
+{ +Template Name: GeneratorBA
   CraftTime: 25 #A1 Ba CV 1
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -2245,7 +2219,7 @@
   { Child Inputs
     SteelPlate: 10
     Motor: 2
-    Electronics: 2 
+    Electronics: 2
   }
 }
 
@@ -2360,14 +2334,13 @@
   CraftTime: 90 #C2 CV 10
   Target: "AdvC"
   { Child Inputs
-    EnergyMatrix: 20
-    Electronics: 30
-    Computer: 20
-    Oscillator: 24
-    SteelPlateArmored: 120
-    FluxCoil: 20
-    CapacitorComponent: 20
-    Nanotubes: 32
+    EnergyMatrix: 15
+    Oscillator: 10
+    Computer: 15
+    Electronics: 25
+    SteelPlateArmored: 65
+    PowerCoil: 7
+    CapacitorComponent: 10
     PentaxidElement: 5
   }
 }
@@ -2388,7 +2361,7 @@
 }
 
 { +Template Name: TeleporterBA
-  CraftTime: 250 
+  CraftTime: 250
   Target: "AdvC"
   { Child Inputs
     EnergyMatrix: 6
@@ -2402,7 +2375,7 @@
 }
 
 { +Template Name: TeleporterCV
-  CraftTime: 125 
+  CraftTime: 125
   Target: "AdvC"
   { Child Inputs
     EnergyMatrix: 4
@@ -2435,8 +2408,6 @@
     MechanicalComponents: 10
     FluxCoil: 20
     PowerCoil: 5
-    TitanPlates: 80
-    PentaxidElement: 50
   }
 }
 { +Template Name: ShieldGeneratorBAT2
@@ -2449,8 +2420,6 @@
     MechanicalComponents: 10
     FluxCoil: 25
     PowerCoil: 10
-    SteelPlateArmored: 80
-    PentaxidElement: 100
   }
 }
 { +Template Name: ShieldGeneratorCV
@@ -2463,7 +2432,6 @@
     MechanicalComponents: 10
     FluxCoil: 20
     PowerCoil: 7
-    PentaxidElement: 50
   }
 }
 { +Template Name: ShieldGeneratorCVT2
@@ -2476,8 +2444,6 @@
     MechanicalComponents: 10
     FluxCoil: 25
     PowerCoil: 14
-    SteelPlateArmored: 80
-    PentaxidElement: 100
   }
 }
 
@@ -2488,11 +2454,9 @@
     EnergyMatrix: 4
     Oscillator: 8
     CapacitorComponent: 5
-    MechanicalComponents: 10
+    MechanicalComponents: 2
     FluxCoil: 5
     PowerCoil: 1
-    TitanPlates: 10
-    PentaxidElement: 50
   }
 }
 { +Template Name: ShieldGeneratorHV
@@ -2502,11 +2466,9 @@
     EnergyMatrix: 5
     Oscillator: 8
     CapacitorComponent: 5
-    MechanicalComponents: 15
+    MechanicalComponents: 2
     FluxCoil: 5
-    PowerCoil: 2
-    TitanPlates: 20
-    PentaxidElement: 75
+    PowerCoil: 1
   }
 }
 
@@ -2516,7 +2478,6 @@
   { Child Inputs
     Nanotubes: 20
     TitanPlates: 10
-	GlassPlate: 4
     EnergyMatrix: 6
     CapacitorComponent: 5
     FluxCoil: 2
@@ -2528,7 +2489,6 @@
   { Child Inputs
     Nanotubes: 10
     SteelPlate: 10
-	PlasticMaterial: 10
     EnergyMatrix: 4
     CobaltAlloy: 50
   }
@@ -2543,7 +2503,6 @@
     MechanicalComponents: 5
     FluxCoil: 5
     PowerCoil: 1
-    Computer: 1
   }
 }
 
@@ -2556,7 +2515,6 @@
     MechanicalComponents: 5
     FluxCoil: 5
     PowerCoil: 1
-    Computer: 1
   }
 }
 
@@ -2628,7 +2586,6 @@
     Electronics: 1
     SteelPlate: 7
     OpticalFiber: 1
-    Computer: 1
   }
 }
 
@@ -2748,7 +2705,6 @@
     SteelPlate: 40
     OpticalFiber: 3
     Nanotubes: 5
-    Computer: 2
   }
 }
 
@@ -2760,7 +2716,6 @@
     MechanicalComponents: 3
     OpticalFiber: 2
     SteelPlate: 5
-	Motor: 2
   }
 }
 
@@ -2834,7 +2789,6 @@
     Electronics: 4
     OpticalFiber: 3
     Nanotubes: 5
-    Computer: 3
     CobaltAlloy: 15
   }
 }
@@ -2848,7 +2802,6 @@
     OpticalFiber: 4
     Nanotubes: 6
     CobaltAlloy: 25
-    Computer: 6
   }
 }
 { +Template Name: ThrusterJetRound2x5x2V2
@@ -2861,7 +2814,6 @@
     Nanotubes: 6
     CobaltAlloy: 25
     PlasticMaterial: 1
-    Computer: 8
   }
 }
 
@@ -2874,7 +2826,6 @@
     OpticalFiber: 5
     Nanotubes: 8
     CobaltAlloy: 35
-    Computer: 10
   }
 }
 
@@ -2887,7 +2838,6 @@
     OpticalFiber: 6
     Nanotubes: 10
     CobaltAlloy: 50
-    Computer: 12
   }
 }
 { +Template Name: ThrusterJetRound3x10x3V2
@@ -2900,7 +2850,6 @@
     Nanotubes: 10
     CobaltAlloy: 50
     PlasticMaterial: 2
-    Computer: 12
   }
 }
 
@@ -3073,16 +3022,16 @@
     SteelPlate: 1
   }
 }
-{ +Template Name: OxygenBottleSmall
-  DeconOverride: Stop
-  OutputCount: 1 #A1
-  CraftTime: 5
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC,FoodP"
-  { Child Inputs
-    WaterBottle: 3
-    PlasticMaterial: 1
-  }
-}
+#{ +Template Name: OxygenBottleSmall
+#  DeconOverride: Stop
+#  OutputCount: 3 #A1
+#  CraftTime: 10
+#  Target: "SurvC,SmallC,HoverC,BaseC,LargeC"
+#  { Child Inputs
+#    WaterJug: 2
+#    SteelPlate: 1
+#  }
+#}
 { +Template Name: HydrogenBottle
   OutputCount: 10 #A1
   DeconOverride: Stop
@@ -3156,7 +3105,7 @@
 }
 { +Template Name: RadarSuitT1
   CraftTime: 12 #A1 3
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  Target: "SuitC,SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
   }
 }
@@ -3192,7 +3141,7 @@
 # }
 
 { +Template Name: DrillT2
-  CraftTime: 20 #B1 
+  CraftTime: 20 #B1
   Target: "LargeC,AdvC"
   { Child Inputs
     MechanicalComponents: 5
@@ -3203,14 +3152,14 @@
 }
 
 { +Template Name: SurvivalTent
-  CraftTime: 17
-  Target: "SuitC,SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  CraftTime: 30
+  Target: ""
   { Child Inputs
     Fiber: 10
   }
 }
 { +Template Name: SurvivalTool
-  CraftTime: 3
+  CraftTime: 15
   Target: SuitC
   { Child Inputs
   }
@@ -3240,11 +3189,11 @@
 # ===============
 
 { +Template Name: EVABoost
-  CraftTime: 100  
+  CraftTime: 100
   Target: "HoverC,BaseC,SmallC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 1
-    OpticalFiber: 1 
+    OpticalFiber: 1
     Nanotubes: 2
     GoldIngot: 1
   }
@@ -3602,7 +3551,6 @@
     Oscillator: 8
     ZascosiumAlloy: 50
     PowerCoil: 3
-	LaserKit: 1
   }
 }
 /* Spaceship weapons */
@@ -3640,7 +3588,7 @@
 }
 
 { +Template Name: WeaponSV04 #"Plasma Cannon"
-  CraftTime: 30 #D1 20 
+  CraftTime: 30 #D1 20
   Target: AdvC
   { Child Inputs
     ZascosiumAlloy: 50
@@ -3699,7 +3647,7 @@
   }
 }
 
-{ +Template Name: TurretMSProjectileBlocks 
+{ +Template Name: TurretMSProjectileBlocks
 # { +Template Name: TurretMSMinigunRetract #"Minigun Turret"
   CraftTime: 30 #C1 CV 10 uses "15mmBullet"
   Target: "LargeC,AdvC"
@@ -3760,7 +3708,6 @@
     Motor: 5
     ZascosiumAlloy: 75
     Oscillator: 20
-	MechanicalComponents: 100
   }
 }
 
@@ -3773,7 +3720,6 @@
     Motor: 3
     ZascosiumAlloy: 100
     Oscillator: 20
-	MechanicalComponents: 80
   }
 }
 
@@ -3792,7 +3738,7 @@
 }
 
 
-{ +Template Name: TurretMSRocketBlocks 
+{ +Template Name: TurretMSRocketBlocks
   CraftTime: 30 #D1 CV 15 uses "FlakRocketMS"
   Target: "LargeC,AdvC"
   { Child Inputs
@@ -3805,7 +3751,7 @@
 }
 
 /* rocket */
-{ +Template Name: TurretBaseRocketBlocks 
+{ +Template Name: TurretBaseRocketBlocks
   CraftTime: 30 #C2 5 uses FastRocketBA
   Target: "LargeC,AdvC"
   { Child Inputs
@@ -3862,7 +3808,6 @@
     Motor: 2
     Oscillator: 4
     PowerCoil: 1
-	MechanicalComponents: 40
   }
 }
 
@@ -3890,7 +3835,7 @@
 }
 
 { +Template Name: TurretMSToolBlocks
-  CraftTime: 30 #D1 20 
+  CraftTime: 30 #D1 20
   Target: AdvC
   { Child Inputs
     ZascosiumAlloy: 50
@@ -3925,7 +3870,7 @@
 }
 
 { +Template Name: BioFuel
-  OutputCount: 1 #A1 
+  OutputCount: 1 #A1
   CraftTime: 28
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -3980,7 +3925,7 @@
 { +Template Name: 12.7mmBullet
   OutputCount: 15 #A2 1 Sniper
   CraftTime: 5
-  Target: "SurvC,SmallC,HoverC,SurvC,BaseC,LargeC,AdvC"
+  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 6
     CopperIngot: 2
@@ -4024,7 +3969,7 @@
 
 { +Template Name: PulseLaserChargePistol
   OutputCount: 75 #C2
-  DeconOverride: Continue 
+  DeconOverride: Continue
   CraftTime: 5
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -4035,7 +3980,7 @@
 
 { +Template Name: PulseLaserChargeRifle
   OutputCount: 50 #D1 1
-  DeconOverride: Continue 
+  DeconOverride: Continue
   CraftTime: 5
   Target: "LargeC,AdvC"
   { Child Inputs
@@ -4072,7 +4017,7 @@
 { +Template Name: 30mmBullet
   OutputCount: 70
   CraftTime: 5
-  Target: "BaseC,LargeC,AdvC"
+  Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 20
     NCPowder: 4
@@ -4093,7 +4038,7 @@
 
 { +Template Name: PulseLaserChargeSS #"Ls.Charge SV"
   OutputCount: 100 #D1
-  DeconOverride: Continue 
+  DeconOverride: Continue
   CraftTime: 7
   Target: "AdvC"
   { Child Inputs
@@ -4328,12 +4273,12 @@
 }
 
 
- # ============================== 
- #      Medical Items: Ointments 
- # ============================== 
+ # ==============================
+ #      Medical Items: Ointments
+ # ==============================
 
 { +Template Name: AntibioticOintment
-  DeconOverride: Stop 
+  DeconOverride: Stop
   CraftTime: 10
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC,SuitC"
   { Child Inputs
@@ -4362,10 +4307,10 @@
   }
 }
 
- # ============================== 
+ # ==============================
  #      Medical Items: Kits
- # ============================== 
- 
+ # ==============================
+
 { +Template Name: Bandages
   DeconOverride: Stop
   CraftTime: 25
@@ -4430,11 +4375,11 @@
   }
 }
 
- # ============================== 
+ # ==============================
  #      Medical Items: Pills
- # ============================== 
- 
-{ +Template Name: StomachPills 
+ # ==============================
+
+{ +Template Name: StomachPills
   OutputCount: 1
   CraftTime: 15
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC"
@@ -4491,10 +4436,10 @@
   }
 }
 
- # ============================== 
+ # ==============================
  #      Medical Items: Injections
- # ============================== 
- 
+ # ==============================
+
 { +Template Name: AntibioticInjection
   OutputCount: 1
   DeconOverride: Stop
@@ -4545,9 +4490,9 @@
 }
 
 
- # =========================== 
- #    Medical Boosters 
- # =========================== 
+ # ===========================
+ #    Medical Boosters
+ # ===========================
 
 { +Template Name: EnergyPills
   OutputCount: 1
@@ -4588,10 +4533,10 @@
   }
 }
 
- # =========================== 
- #    Food Basic Ingredients 
- # =========================== 
- 
+ # ===========================
+ #    Food Basic Ingredients
+ # ===========================
+
 { +Template Name: Flour
   DeconOverride: Stop
   CraftTime: 6
@@ -4631,12 +4576,12 @@
   }
 }
 
- # ======================= 
- #        Meals T1 
- # ======================= 
+ # =======================
+ #        Meals T1
+ # =======================
 { +Template Name: PowerBar
   DeconOverride: Stop
-  CraftTime: 8
+  CraftTime: 12
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC,SuitC"
   { Child Inputs
     PlantProtein: 2
@@ -4751,7 +4696,7 @@
   CraftTime: 2
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC,SuitC"
   { Child Inputs
-    Buds: 2 
+    Buds: 2
   }
 }
 { +Template Name: EnergyDrink
@@ -4918,7 +4863,7 @@
   CraftTime: 29
   Target: FoodP
   { Child Inputs
-    MushroomBrown:1 
+    MushroomBrown:1
     Vegetables: 2
     Cheese: 1
     Salami: 1
@@ -4973,10 +4918,10 @@
   }
 }
 
- # ======================= 
+ # =======================
  #        Sprouts
- # ======================= 
- 
+ # =======================
+
 { +Template Name: DurianRoot
   OutputCount: 2
   DeconOverride: Stop
@@ -5183,14 +5128,14 @@
     NutrientSolution: 1
   }
 }
- # ======================= 
- #        Farming 
- # ======================= 
+ # =======================
+ #        Farming
+ # =======================
 { +Template Name: GrowingPot
   BaseItem: true #C1 Ba CV 1
-  DeconOverride: Continue 
+  DeconOverride: Continue
   CraftTime: 10
-  Target: "BaseC,LargeC,AdvC"
+  Target: AdvC
   { Child Inputs
     Fiber: 4
     NutrientSolution: 1
@@ -5203,7 +5148,7 @@
   BaseItem: true #B1 Ba 1
   DeconOverride: Continue
   CraftTime: 10
-  Target: "HoverC,SmallC,BaseC,LargeC,AdvC"
+  Target: "BaseC,LargeC,AdvC"
   { Child Inputs
     Fiber: 4
     NutrientSolution: 1
@@ -5215,7 +5160,7 @@
   BaseItem: true #B1 Ba 1
   DeconOverride: Continue
   CraftTime: 10
-  Target: "SurvC,HoverC,SmallC,BaseC,LargeC,AdvC"
+  Target: "SurvC,BaseC,LargeC,AdvC"
   { Child Inputs
     Fiber: 4
     NutrientSolution: 1
@@ -5227,7 +5172,7 @@
 { +Template Name: NutrientSolution
   DeconOverride: Stop
   CraftTime: 10
-  Target: "SurvC,BaseC,LargeC,AdvC,FoodP"
+  Target: "SurvC,FoodP"
   { Child Inputs
     RockDust: 4
     WaterBottle: 5
@@ -5247,9 +5192,9 @@
   }
 }
 
- # ======================= 
- #  Biochemical Compounds 
- # ======================= 
+ # =======================
+ #  Biochemical Compounds
+ # =======================
 
 { +Template Name: ConfettiMossScrapings
   DeconOverride: Stop
@@ -5259,7 +5204,7 @@
   { Child Inputs
     AlienParts02: 1
     MushroomBrown: 1
-    PromethiumPellets: 1 
+    PromethiumPellets: 1
   }
 }
 { +Template Name: FireMossScrapings
@@ -5270,9 +5215,9 @@
   { Child Inputs
     AlienParts02: 1
     MushroomBrown: 1
-    PromethiumPellets: 2 
+    PromethiumPellets: 2
   }
-} 
+}
 { +Template Name: AlienParts02
   DeconOverride: Stop
   OutputCount: 4
@@ -5281,9 +5226,9 @@
   { Child Inputs
     Meat: 1
     AlienTooth: 1
-    NutrientSolution: 2 
+    NutrientSolution: 2
   }
-}  
+}
 { +Template Name: AlienParts01
   DeconOverride: Stop
   OutputCount: 4
@@ -5292,9 +5237,9 @@
   { Child Inputs
     Egg: 1
     AlienParts02: 1
-    NCPowder: 2 
+    NCPowder: 2
   }
-}  
+}
 { +Template Name: AlienParts03
   DeconOverride: Stop
   OutputCount: 4
@@ -5303,27 +5248,27 @@
   { Child Inputs
     Egg: 1
     AlienParts01: 2
-    NCPowder: 2 
+    NCPowder: 2
   }
-} 
+}
 { +Template Name: AlienThorn
  # DeconOverride: Stop
   OutputCount: 4
   CraftTime: 120
   Target: FoodP
   { Child Inputs
-    AlienTooth: 2 
-    NCPowder: 1 
+    AlienTooth: 2
+    NCPowder: 1
     PentaxidElement: 5
   }
-}  
- 
- # ======================= 
- #     SPECIAL BLOCKS 
- # ======================= 
- 
+}
+
+ # =======================
+ #     SPECIAL BLOCKS
+ # =======================
+
 /* Special Blocks (not placeable by players) */
-# needed for PickupTarget and TemplateRoot 
+# needed for PickupTarget and TemplateRoot
 { +Template Name: EntitySpawner1
   CraftTime: 2
   Target: ""
@@ -5356,12 +5301,12 @@
   }
 }
 { +Template Name: SmallOptronicBridge
-  BaseItem: true 
+  BaseItem: true
   DeconOverride: Stop
   CraftTime: 600
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 25
+    GoldIngot: 15
     Electronics: 125
     Oscillator: 80
   }
@@ -5372,18 +5317,18 @@
   CraftTime: 900
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 30
+    GoldIngot: 20
     Computer: 100
     EnergyMatrix: 20
   }
 }
 { +Template Name: LargeOptronicBridge
-  BaseItem: true 
+  BaseItem: true
   DeconOverride: Stop
   CraftTime: 600
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 50
+    GoldIngot: 15
     SmallOptronicBridge: 1
     Oscillator: 80
     ZascosiumAlloy: 50
@@ -5395,7 +5340,7 @@
   CraftTime: 900
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 75
+    GoldIngot: 20
     SmallOptronicMatrix: 1
     PowerCoil: 10
     ErestrumGel: 20
@@ -5404,7 +5349,7 @@
 { +Template Name: OxygenGeneratorSmall
   OutputCount: 1
   CraftTime: 40
-  Target: "SuitC,SurvC"
+  Target: "SuitC"
   { Child Inputs
     IronOre: 2
     CopperOre: 3
@@ -5412,7 +5357,7 @@
 }
 { +Template Name: MobileAirCon
   CraftTime: 45
-  Target: "SuitC,SurvC"
+  Target: "SuitC"
   { Child Inputs
     IronOre: 1
     CopperOre: 4
@@ -5420,7 +5365,7 @@
 }
 { +Template Name: ConstructorSurvival
   CraftTime: 45
-  Target: "SuitC,SurvC"
+  Target: "SuitC"
   { Child Inputs
     IronOre: 3
   }
@@ -5446,9 +5391,7 @@
   CraftTime: 2
   Target: ""
   { Child Inputs
-    ZascosiumAlloy: 10
-	GlassPlate: 2
-	OpticalFiber: 10
+    ZascosiumAlloy: 5
   }
 }
 
@@ -5456,10 +5399,7 @@
   CraftTime: 2
   Target: ""
   { Child Inputs
-    CobaltAlloy: 10
-	TitanPlates: 10
-	MechanicalComponents: 10
-	SteelPlateArmored: 5
+    CobaltAlloy: 5
   }
 }
 
