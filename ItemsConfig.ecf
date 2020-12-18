@@ -116,10 +116,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
 
-    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
   }
   { Child 1
     Class: Zoom
@@ -2167,10 +2163,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
 
-    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
 
      RadialText: Stabilizer - ON # add text
      RadialDesc: Compensators reduce the strain on the wielder for easy handling but less damage output # add text
@@ -4748,10 +4740,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 20, param1: shield
     DamageMultiplier_18: 10, param1: plastic
 
-    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
   }
   # { Child 0
     # Class: LauncherSS
@@ -6718,11 +6706,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_18: 5, param1: plastic
   }
 
-    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BlastDamage: "BlastDamage + Player.Skills['BlastDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
 
   UnlockLevel: 1
   TechTreeNames: Hidden

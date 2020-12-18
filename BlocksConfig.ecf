@@ -11648,9 +11648,6 @@ HullCombatSmallBlocks
   Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 40, display: true
 
-  Mod.RangeAU: "RangeAU + Player.Skills['RangeAU']"
-  Mod.RangeLY: "RangeLY + Player.Skills['RangeLY']"
-
   UnlockCost: 15, display: true
   UnlockLevel: 10, display: true
   TechTreeParent: PentaxidTank
