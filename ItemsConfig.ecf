@@ -13423,7 +13423,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1, type: float, display: true, formatter: Liter
   StackSize: 1
   Info: SuitPropsGlobal, display: true
-  Category: Components
+  Category: Deco Blocks
   ShowUser: No
 }
 { +Item Id: 1151, Name: SantaClausHat, Ref: SuitPropsTemplate
@@ -13441,6 +13441,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PropHead: HWSHelmetPatron
   ShowUser: Yes
 }
+{ +Item Id: 1154, Name: HWSNecklaceElementalPower, Ref: SuitPropsTemplate
+  Info: bkiHWSNecklaceElementalPower, display: true
+  PropHead: HWSNecklaceElementalPower
+  ShowUser: Yes
+}
+
 # ========================================= STATUS EFFECT TEST ==========================
 { Item Id: 1200, Name: FlameThrowerDEBUG
   Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
